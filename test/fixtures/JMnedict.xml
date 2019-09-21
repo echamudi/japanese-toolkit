@@ -288,6 +288,22 @@ various information fields.
 </trans>
 </entry>
 <entry>
+<ent_seq>5307278</ent_seq>
+<k_ele>
+<keb>済州国際空港</keb>
+</k_ele>
+<r_ele>
+<reb>さいしゅうこくさいくうこう</reb>
+</r_ele>
+<r_ele>
+<reb>チェジュこくさいくうこう</reb>
+</r_ele>
+<trans>
+<name_type>&place;</name_type>
+<trans_det>Jeju International Airport</trans_det>
+</trans>
+</entry>
+<entry>
 <ent_seq>5567603</ent_seq>
 <k_ele>
 <keb>独立行政法人国立国語研究所</keb>
