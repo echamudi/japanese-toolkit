@@ -23,6 +23,7 @@ program
       // sources object
       {
         jmdict: `${args.source}/JMdict_e`,
+        jmnedict: `${args.source}/JMnedict.xml`,
       },
       // destination file
       `${args.destination}/japanese.db`,
