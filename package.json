@@ -1,0 +1,35 @@
+{
+  "name": "japanese-db-maker",
+  "version": "0.1.0",
+  "description": "Japanese language resources database maker from open source materials.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ezhmd/japanese-db-maker.git"
+  },
+  "keywords": [
+    "japanese",
+    "jmdict",
+    "sqlite",
+    "json"
+  ],
+  "bin": "cli.js",
+  "author": "Ezzat Chamudi",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "commander": "^3.0.1",
+    "sqlite3": "^4.1.0",
+    "xml2json": "^0.11.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  }
+}
