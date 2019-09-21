@@ -29,6 +29,7 @@ program
       `${args.destination}/japanese.db`,
     );
 
+    console.log('');
     console.log('Completed!');
   });
 
