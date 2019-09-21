@@ -1,6 +1,6 @@
 # Japanese Db Maker
 
-Japanese language resources database maker from open source materials.
+Japanese language resources database maker from various open source materials.
 
 (This module is still under initial development)
 
