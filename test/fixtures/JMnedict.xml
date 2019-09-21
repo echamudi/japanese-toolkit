@@ -192,6 +192,26 @@ various information fields.
 </trans>
 </entry>
 <entry>
+<ent_seq>5001450</ent_seq>
+<r_ele>
+<reb>おかしなホテル</reb>
+</r_ele>
+<trans>
+<name_type>&work;</name_type>
+<trans_det>Plaza Suite (film)</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5001451</ent_seq>
+<r_ele>
+<reb>おかつ</reb>
+</r_ele>
+<trans>
+<name_type>&fem;</name_type>
+<trans_det>Okatsu</trans_det>
+</trans>
+</entry>
+<entry>
 <ent_seq>5294339</ent_seq>
 <k_ele>
 <keb>国語研究所</keb>
