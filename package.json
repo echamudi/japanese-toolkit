@@ -1,6 +1,6 @@
 {
   "name": "japanese-db-maker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   ],
   "bin": "cli.js",
   "author": "Ezzat Chamudi",
-  "license": "AGPL-3.0-only",
+  "license": "MPL-2.0",
   "dependencies": {
     "commander": "^3.0.1",
     "sqlite3": "^4.1.0",
