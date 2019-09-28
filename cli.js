@@ -20,10 +20,11 @@ program
     if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination, { recursive: true });
 
     await JapaneseDbMaker.buildSqlite(
-      // sources object
+      // source objects
       {
         jmdict: `${args.source}/JMdict_e`,
         jmnedict: `${args.source}/JMnedict.xml`,
+        kanjidic: `${args.source}/kanjidic2.xml`,
       },
       // destination file
       `${args.destination}/japanese.db`,
