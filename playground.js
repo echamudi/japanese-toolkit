@@ -1,5 +1,7 @@
+// Ignore this file, it's only used for trying functions
+
 const fs = require('fs');
-const { JMnedictUtil } = require('./index');
+const { KanjidicUtil } = require('./lib');
 
 function objectToJson(object, path, beautify = true) {
   /** @type {number} */
@@ -12,6 +14,6 @@ function objectToJson(object, path, beautify = true) {
   );
 }
 
-const jmnedict = new JMnedictUtil('./test/fixtures/JMnedict.xml');
+const kanjidic = new KanjidicUtil('./kanjidic2.xml');
 
-objectToJson(jmnedict.getJMnedictEntries(), './jmnedict.json');
+objectToJson(kanjidic.getKanjidicEntries(), './kanjidic.json');
