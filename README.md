@@ -8,16 +8,21 @@ Japanese language resources database maker from various open source materials.
 1. Download required materials
     - Download `JMdict_e.gz` from http://www.edrdg.org/jmdict/edict_doc.html.
     - Download `JMnedict.xml.gz` from https://www.edrdg.org/enamdict/enamdict_doc.html.
+    - Download `kanjidic2.xml.gz` from http://www.edrdg.org/wiki/index.php/KANJIDIC_Project.
 
-1. Extract all the files and put it in a folder (e.g. `sourceFolder`)
+1. Extract all the files and create folder structure as follow:
     ```
     myJpProject/
     ├── sourceFolder/
     │   ├── JMdict_e
-    │   └── JMnedict.xml
+    │   ├── JMnedict.xml
+    │   └── kanjidic2.xml
     └── destinationFolder/
-
+        └── (empty)
     ```
+
+    The file names must be the same as above.
+
 1. Open `myJpProject` folder in terminal.
 
 1. Run following commands
@@ -26,6 +31,8 @@ Japanese language resources database maker from various open source materials.
     npm install japanese-db-maker -g
     japanese-db-maker sqlite -s ./sourceFolder -d ./destinationFolder
     ```
+
+1. If it runs successfully, you'll get the result as `japanese.db` inside `destinationFolder` folder.
 
 ## Development
 
