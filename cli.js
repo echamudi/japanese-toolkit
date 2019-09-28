@@ -1,6 +1,7 @@
 #!/usr/bin/env node --max_old_space_size=8192
 
 const fs = require('fs');
+const path = require('path');
 const program = require('commander');
 const console = require('console');
 const {
@@ -22,9 +23,9 @@ program
     await JapaneseDbMaker.buildSqlite(
       // source objects
       {
-        jmdict: `${args.source}/JMdict_e`,
-        jmnedict: `${args.source}/JMnedict.xml`,
-        kanjidic: `${args.source}/kanjidic2.xml`,
+        jmdict: path.join(args.source, 'JMdict_e'),
+        jmnedict: path.join(args.source, 'JMnedict.xml'),
+        kanjidic: path.join(args.source, 'kanjidic2.xml'),
       },
       // destination file
       `${args.destination}/japanese.db`,
