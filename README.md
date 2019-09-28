@@ -27,6 +27,14 @@ Japanese language resources database maker from various open source materials.
     japanese-db-maker sqlite -s ./sourceFolder -d ./destinationFolder
     ```
 
+## Development
+
+### Testing
+```sh
+npm link .
+npm test
+```
+
 ## Authors
 
 * **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
