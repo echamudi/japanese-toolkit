@@ -1,0 +1,22 @@
+{
+  "name": "kanji",
+  "version": "0.1.0",
+  "description": "Get kanji characters in an array based on categorization",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ezhmd@github.com/ezhmd/kanji.git"
+  },
+  "author": "Ezzat Chamudi",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ezhmd/kanji/issues"
+  },
+  "homepage": "https://github.com/ezhmd/kanji#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
