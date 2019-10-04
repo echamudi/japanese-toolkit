@@ -5,34 +5,34 @@ Get kanji characters in an array based on categorization.
 ## Usage
 
 ```js
-const { kanken, jlpt } = require('kanji');
+const kanji = require('kanji');
 
 // Kanji Kentei
-console.log(kanken.lv10);
-console.log(kanken.lv09);
-console.log(kanken.lv08);
-console.log(kanken.lv07);
-console.log(kanken.lv06);
-console.log(kanken.lv05);
-console.log(kanken.lv04);
-console.log(kanken.lv03);
-console.log(kanken.lv02pre);
-console.log(kanken.lv02);
-console.log(kanken.lv01pre);
-console.log(kanken.lv01);
+console.log(kanji.kanken.lv10);
+console.log(kanji.kanken.lv09);
+console.log(kanji.kanken.lv08);
+console.log(kanji.kanken.lv07);
+console.log(kanji.kanken.lv06);
+console.log(kanji.kanken.lv05);
+console.log(kanji.kanken.lv04);
+console.log(kanji.kanken.lv03);
+console.log(kanji.kanken.lv02pre);
+console.log(kanji.kanken.lv02);
+console.log(kanji.kanken.lv01pre);
+console.log(kanji.kanken.lv01);
 
 // Old JLPT
-console.log(jlpt.old4);
-console.log(jlpt.old3);
-console.log(jlpt.old2);
-console.log(jlpt.old1);
+console.log(kanji.jlpt.old4);
+console.log(kanji.jlpt.old3);
+console.log(kanji.jlpt.old2);
+console.log(kanji.jlpt.old1);
 
 // New JLPT
-console.log(jlpt.n5);
-console.log(jlpt.n4);
-console.log(jlpt.n3);
-console.log(jlpt.n2);
-console.log(jlpt.n1);
+console.log(kanji.jlpt.n5);
+console.log(kanji.jlpt.n4);
+console.log(kanji.jlpt.n3);
+console.log(kanji.jlpt.n2);
+console.log(kanji.jlpt.n1);
 
 // Kyouiku Kanji
 console.log(kanji.grade.g01);
