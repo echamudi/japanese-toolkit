@@ -45,7 +45,8 @@ console.log(kanji.grade.g08); // Remaining of Joyo Kanji
 console.log(kanji.grade.g09); // Jinmeiyo Kanji
 console.log(kanji.grade.g10); // Variant of Joyo Kanji
 
-// Frequency 1-2501 Kanji taken from KANJIDIC, made by Alexandre Girardi
+// Frequency 1-2501 Kanji taken from KANJIDIC
+// The frequency list is made by Alexandre Girardi
 console.log(kanji.freq);
 
 // 13,108 kanji from KANJIDIC (JIS X 0208-1998, JIS X 0212-1990, JIS X 0213-2012)
