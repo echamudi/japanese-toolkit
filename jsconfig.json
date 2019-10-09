@@ -10,5 +10,5 @@
         "test/**/*.js",
         "types/**/*.ts",
         "index.js"
-    ],
+    ]
 }
