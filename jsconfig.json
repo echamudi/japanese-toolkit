@@ -2,7 +2,8 @@
     "compilerOptions": {
         "checkJs": true,
         "target": "es6",
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "moduleResolution": "node"
     },
     "include": [
         "lib/**/*.js",
