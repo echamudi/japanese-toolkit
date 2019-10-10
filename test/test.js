@@ -14,12 +14,15 @@ describe('japanese-db-maker', function () {
 
     console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
-    const os = process.platform;
-
-    await execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, {
+    // const os = process.platform;
+    /** @type {any} */
+    const execSyncProp = {
       timeout: 60000,
       stdio: 'inherit',
-    });
+    };
+
+    // TODO: doesn't work in ubuntu
+    execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, execSyncProp);
 
     console.log(`Please check the result at ${__dirname}/result`);
   });
