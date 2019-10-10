@@ -17,6 +17,7 @@ describe('japanese-db-maker', function () {
     const os = process.platform;
 
     await execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, {
+      timeout: 60000,
       stdio: 'inherit',
     });
 
