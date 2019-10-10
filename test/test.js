@@ -14,6 +14,8 @@ describe('japanese-db-maker', function () {
 
     console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
+    const os = process.platform;
+
     await execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, {
       stdio: 'inherit',
     });
