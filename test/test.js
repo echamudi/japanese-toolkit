@@ -8,10 +8,13 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
 describe('japanese-db-maker', function () {
-  it('exports database', function () {
+  it('exports database', async function () {
+    this.timeout(60000);
+    this.slow(30000);
+
     console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
-    execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, {
+    await execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, {
       stdio: 'inherit',
     });
 
@@ -19,8 +22,10 @@ describe('japanese-db-maker', function () {
   });
 
   it('extracts correctly', async function () {
-    // Random checks
+    this.timeout(60000);
+    this.slow(30000);
 
+    // Random checks
     const db = new sqlite3.Database(path.join(__dirname, 'result', 'japanese.db'));
 
     const [metadataTest] = await Promise.all([
@@ -31,6 +36,7 @@ describe('japanese-db-maker', function () {
       }),
     ]);
 
+    // Metadata check
     assert.deepStrictEqual(
       metadataTest.find((/** @type {Object} */ el) => el.key === 'jmdict-date').value,
       '2019-08-16',
