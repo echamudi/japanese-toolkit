@@ -8,24 +8,24 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
 describe('japanese-db-maker', function () {
-  // it('exports database', async function () {
-  //   this.timeout(60000);
-  //   this.slow(30000);
+  it('exports database', async function () {
+    this.timeout(60000);
+    this.slow(30000);
 
-  //   console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
+    console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
-  //   // const os = process.platform;
-  //   /** @type {any} */
-  //   const execSyncProp = {
-  //     timeout: 60000,
-  //     stdio: 'inherit',
-  //   };
+    // const os = process.platform;
+    /** @type {any} */
+    const execSyncProp = {
+      timeout: 60000,
+      stdio: 'inherit',
+    };
 
-  //   // TODO: doesn't work in ubuntu
-  //   execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, execSyncProp);
+    // TODO: doesn't work in ubuntu
+    execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, execSyncProp);
 
-  //   console.log(`Please check the result at ${__dirname}/result`);
-  // });
+    console.log(`Please check the result at ${__dirname}/result`);
+  });
 
   it('extracts correctly', async function () {
     this.timeout(60000);
