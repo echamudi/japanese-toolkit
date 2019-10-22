@@ -42,6 +42,16 @@ npm link .
 npm test
 ```
 
+## Acknowledgment
+
+The generated database file contains data from following sources.
+
+- JMdict https://www.edrdg.org/jmdict/edict_doc.html
+- JMnedict http://www.edrdg.org/enamdict/enamdict_doc.html
+- KANJIDIC Project http://www.edrdg.org/wiki/index.php/KANJIDIC_Project
+- Wanikani Audio https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
+- KanjiVG https://github.com/KanjiVG/kanjivg
+
 ## Authors
 
 * **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
