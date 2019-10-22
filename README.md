@@ -51,6 +51,7 @@ The generated database file contains data from following sources.
 - KANJIDIC Project http://www.edrdg.org/wiki/index.php/KANJIDIC_Project
 - Wanikani Audio https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
 - KanjiVG https://github.com/KanjiVG/kanjivg
+- Kanji https://github.com/ezhmd/kanji
 
 ## Authors
 
