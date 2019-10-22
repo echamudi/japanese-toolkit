@@ -4,6 +4,7 @@
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
+    "install": "node scripts/postinstall.js",
     "test": "mocha ./test/test.js"
   },
   "repository": {
