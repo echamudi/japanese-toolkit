@@ -3,7 +3,8 @@
         "checkJs": true,
         "target": "es6",
         "noImplicitAny": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "resolveJsonModule": true
     },
     "include": [
         "lib/**/*.js",
