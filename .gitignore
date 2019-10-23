@@ -61,4 +61,5 @@ typings/
 .next
 
 # sources
-test/result
+/test/result/
+/source/

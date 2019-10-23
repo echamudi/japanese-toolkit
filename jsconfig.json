@@ -2,12 +2,14 @@
     "compilerOptions": {
         "checkJs": true,
         "target": "es6",
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
     },
     "include": [
         "lib/**/*.js",
         "test/**/*.js",
         "types/**/*.ts",
         "index.js"
-    ],
+    ]
 }
