@@ -22,7 +22,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "commander": "^3.0.1",
-    "kanji": "^0.2.3",
+    "kanji": "^0.2.4",
     "sqlite3": "^4.1.0",
     "xml2json": "^0.11.2"
   },
