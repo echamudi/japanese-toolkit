@@ -109,7 +109,7 @@ describe('testing Kanji', function () {
             })
         });
 
-        it('has unique arrays for kanken categorization group', function() {
+        it('has no kanji overlaps between kanken levels', function() {
             const kanken = [
                 ...kanji.kanken.lv10,
                 ...kanji.kanken.lv09,
@@ -133,7 +133,7 @@ describe('testing Kanji', function () {
             })
         });
 
-        it('has unique arrays for new jlpt categorization group', function() {
+        it('has no kanji overlaps between new jlpt levels', function() {
             const jlpt = [
                 ...kanji.jlpt.n5,
                 ...kanji.jlpt.n4,
