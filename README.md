@@ -1,6 +1,8 @@
 # Kanji
 
-Get kanji characters in an array based on categorization.
+With Kanji you can:
+- Get kanji characters in an array based on categorization.
+- Get kanji composition tree.
 
 ## Usage
 
