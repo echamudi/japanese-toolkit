@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "download-source": "node ./scripts/download-source.js",
+    "extract-kanjivg-tree": "node ./scripts/download-source.js",
     "test": "mocha ./test/test.js"
   },
   "repository": {
