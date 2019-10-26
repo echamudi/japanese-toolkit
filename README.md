@@ -65,6 +65,12 @@ The rest of arrays are not ordered.
 | master | [![Build Status](https://travis-ci.org/ezhmd/kanji.svg?branch=master)](https://travis-ci.org/ezhmd/kanji) |
 | develop | [![Build Status](https://travis-ci.org/ezhmd/kanji.svg?branch=develop)](https://travis-ci.org/ezhmd/kanji) |
 
+```
+npm install
+npm run download-source
+npm run extract-kanjivg-tree
+```
+
 ### Testing
 ```
 npm test
