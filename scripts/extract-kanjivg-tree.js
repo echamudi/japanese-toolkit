@@ -11,6 +11,7 @@ fs.mkdirSync(path.join('.', 'lib', 'kanji-tree'), {recursive: true });
 
 // Only svg files
 files = files.filter((el) => el.slice(-3) === 'svg');
+files = files.filter((el) => el.length === 9); // Only standard type e.g. 0f9a8.svg
 
 // Test sample files
 // files = ['0f9a8.svg', '0f9ab.svg'];
@@ -71,8 +72,6 @@ function deleteEmpties(node) {
 // Execute
 files.forEach((fileNameSvg, index) => {
     const fileNameOnly = fileNameSvg.slice(0, fileNameSvg.length - 4);
-
-    if (fileNameOnly.length !== 5) return;
 
     const data = fs.readFileSync(path.join('.', 'source', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
     const svgObj = xml2json.toJson(data, {
