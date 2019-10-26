@@ -81,6 +81,7 @@ The items are collected from following sources.
 - 日本漢字能力検定級別漢字表 https://www.kanken.or.jp/kanken/outline/degree.html
 - 漢字辞典 https://kanjijoho.com
 - 辞典オンライン https://jitenon.jp
+- KanjiVG by Ulrich Apel https://github.com/KanjiVG/kanjivg
 
 ## Authors
 
