@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "download-source": "node ./scripts/download-source.js",
-    "extract-kanjium-data": "node ./scripts/download-source.js",
-    "extract-kanjivg-tree": "node ./scripts/download-source.js",
+    "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
+    "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
     "test": "mocha ./test/test.js"
   },
   "repository": {
