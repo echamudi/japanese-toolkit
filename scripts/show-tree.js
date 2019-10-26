@@ -2,31 +2,33 @@
  * Show kanji tree in CLI
  */
 
-const char = process.argv[2];
+const string = process.argv[2];
 const kanji = require('../');
-const root = kanji.kanjiTree(char);
 
-function printTree(node, path = ['└─ '], depth = 1, lastChild = true) {
+function printTree(node, path = [], depth = 0, lastChild = true) {
     let element;
+
     if (node.element) element = node.element;
     else element = '？';
 
-    console.log(path.slice(0, depth).join('') + element);
+    if (!lastChild) path[depth] = '├─ ';
+    else path[depth] = '└─ ';
 
-    if (!lastChild) path[depth - 1] = '│  '; // Still have sibling, previous is straight line
-    else path[depth - 1] = '   '; // No more sibling previous is empty
+    console.log(path.slice(0, depth + 1).join('') + element);
+
+    if (!lastChild) path[depth] = '│  ';
+    else path[depth] = '   ';
 
     if　(node.g) {
         const lastIndex = node.g.length - 1;
 
         node.g.forEach((element, index) => {
-            let lastChild = index === lastIndex;
-
-            if (!lastChild) path[depth] = '├─ ';
-            else path[depth] = '└─ ';
-
-            printTree(element, path, depth + 1, lastChild);
+            printTree(element, path, depth + 1, index === lastIndex);
         });
     }
 }
-printTree(root);
+
+string.split('').forEach((char, index) => {
+    const root = kanji.kanjiTree(char);
+    printTree(root, [], 0, index === string.length - 1);
+});
