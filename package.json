@@ -4,6 +4,7 @@
   "description": "Get kanji characters in an array based on categorization",
   "main": "index.js",
   "scripts": {
+    "download-source": "node ./scripts/download-source.js",
     "test": "mocha ./test/test.js"
   },
   "repository": {
