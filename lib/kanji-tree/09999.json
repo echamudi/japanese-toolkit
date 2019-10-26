@@ -1,0 +1,20 @@
+{
+  "element": "香",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "日"
+    }
+  ],
+  "radical": "general"
+}

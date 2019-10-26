@@ -1,0 +1,27 @@
+{
+  "element": "渺",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "眇",
+      "g": [
+        {
+          "element": "目"
+        },
+        {
+          "element": "少",
+          "g": [
+            {
+              "element": "小"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

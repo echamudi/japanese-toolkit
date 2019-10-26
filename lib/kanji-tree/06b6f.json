@@ -1,0 +1,28 @@
+{
+  "element": "歯",
+  "g": [
+    {
+      "element": "止",
+      "g": [
+        {
+          "element": "卜",
+          "original": "ト"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "米",
+          "variant": "true"
+        },
+        {
+          "element": "凵"
+        }
+      ]
+    }
+  ],
+  "original": "齒",
+  "radical": "general",
+  "variant": "true"
+}

@@ -1,0 +1,37 @@
+{
+  "element": "蹠",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "庶",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

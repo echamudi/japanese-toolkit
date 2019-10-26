@@ -1,0 +1,64 @@
+{
+  "element": "鬚",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "須",
+      "g": [
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "頁",
+          "g": [
+            {
+              "element": "貝",
+              "g": [
+                {
+                  "element": "目"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "element": "徠",
+  "g": [
+    {
+      "element": "彳",
+      "g": [
+        {
+          "element": "亻"
+        }
+      ]
+    },
+    {
+      "element": "來",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

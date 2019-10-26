@@ -1,0 +1,32 @@
+{
+  "element": "珂",
+  "g": [
+    {
+      "element": "王"
+    },
+    {
+      "element": "可",
+      "g": [
+        {
+          "element": "丁",
+          "g": [
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "丁",
+          "g": [
+            {
+              "element": "亅"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

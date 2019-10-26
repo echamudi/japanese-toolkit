@@ -1,0 +1,27 @@
+{
+  "element": "荵",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "忍",
+      "g": [
+        {
+          "element": "刃",
+          "g": [
+            {
+              "element": "刀"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

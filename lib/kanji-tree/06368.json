@@ -1,0 +1,27 @@
+{
+  "element": "捨",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "舎",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

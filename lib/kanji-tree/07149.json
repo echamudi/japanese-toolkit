@@ -1,0 +1,22 @@
+{
+  "element": "煉",
+  "g": [
+    {
+      "element": "火"
+    },
+    {
+      "element": "東",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "日"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

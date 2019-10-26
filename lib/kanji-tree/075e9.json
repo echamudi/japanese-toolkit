@@ -1,0 +1,27 @@
+{
+  "element": "痩",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "叟",
+      "g": [
+        {
+          "element": "申",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

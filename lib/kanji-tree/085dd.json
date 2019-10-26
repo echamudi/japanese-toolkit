@@ -1,0 +1,57 @@
+{
+  "element": "藝",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "g": [
+        {
+          "g": [
+            {
+              "element": "土"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "土"
+            }
+          ]
+        },
+        {
+          "element": "丸",
+          "g": [
+            {
+              "element": "九",
+              "g": [
+                {
+                  "element": "乙"
+                }
+              ]
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "云",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

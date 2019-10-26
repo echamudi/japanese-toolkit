@@ -1,0 +1,58 @@
+{
+  "element": "飜",
+  "g": [
+    {
+      "element": "番",
+      "g": [
+        {
+          "element": "釆",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "米"
+            }
+          ]
+        },
+        {
+          "element": "田"
+        }
+      ]
+    },
+    {
+      "element": "飛",
+      "g": [
+        {
+          "element": "升",
+          "g": [
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "升",
+          "g": [
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

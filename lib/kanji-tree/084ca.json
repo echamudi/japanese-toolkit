@@ -1,0 +1,27 @@
+{
+  "element": "蓊",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "翁",
+      "g": [
+        {
+          "element": "公",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "羽"
+        }
+      ]
+    }
+  ]
+}

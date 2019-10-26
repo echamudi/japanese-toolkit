@@ -1,0 +1,32 @@
+{
+  "element": "壷",
+  "g": [
+    {
+      "element": "士"
+    },
+    {
+      "element": "冖",
+      "g": [
+        {
+          "element": "亜",
+          "g": [
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "亜",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "二"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

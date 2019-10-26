@@ -1,0 +1,56 @@
+{
+  "element": "踐",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "戔",
+      "g": [
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "element": "柵",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "冊",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

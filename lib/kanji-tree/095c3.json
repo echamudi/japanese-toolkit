@@ -1,0 +1,22 @@
+{
+  "element": "闃",
+  "g": [
+    {
+      "element": "門"
+    },
+    {
+      "element": "目"
+    },
+    {
+      "element": "犬",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "堡",
+  "g": [
+    {
+      "element": "保",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "呆",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "土"
+    }
+  ]
+}

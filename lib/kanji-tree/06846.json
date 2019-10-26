@@ -1,0 +1,22 @@
+{
+  "element": "框",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "匡",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "王"
+        },
+        {
+          "element": "匚"
+        }
+      ]
+    }
+  ]
+}

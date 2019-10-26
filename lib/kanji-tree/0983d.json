@@ -1,0 +1,47 @@
+{
+  "element": "頽",
+  "g": [
+    {
+      "element": "禿",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "几",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "頁",
+      "g": [
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

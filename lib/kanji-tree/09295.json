@@ -1,0 +1,22 @@
+{
+  "element": "銕",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "夷",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "弓"
+        },
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

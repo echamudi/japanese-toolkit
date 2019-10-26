@@ -1,0 +1,66 @@
+{
+  "element": "謌",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "哥",
+      "g": [
+        {
+          "element": "可",
+          "g": [
+            {
+              "element": "丁",
+              "g": [
+                {
+                  "element": "一"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "丁",
+              "g": [
+                {
+                  "element": "亅"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "可",
+          "g": [
+            {
+              "element": "丁",
+              "g": [
+                {
+                  "element": "一"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "丁",
+              "g": [
+                {
+                  "element": "亅"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

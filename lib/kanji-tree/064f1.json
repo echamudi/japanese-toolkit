@@ -1,0 +1,27 @@
+{
+  "element": "擱",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "閣",
+      "g": [
+        {
+          "element": "門"
+        },
+        {
+          "element": "各",
+          "g": [
+            {
+              "element": "夂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

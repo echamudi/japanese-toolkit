@@ -1,0 +1,22 @@
+{
+  "element": "梱",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "困",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "木"
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "element": "賊",
+  "g": [
+    {
+      "element": "貝",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    },
+    {
+      "element": "戎",
+      "g": [
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            }
+          ]
+        },
+        {
+          "element": "十"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

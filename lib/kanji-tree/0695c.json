@@ -1,0 +1,27 @@
+{
+  "element": "楜",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "胡",
+      "g": [
+        {
+          "element": "古",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "月"
+        }
+      ]
+    }
+  ]
+}

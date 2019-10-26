@@ -1,0 +1,35 @@
+{
+  "element": "飛",
+  "g": [
+    {
+      "element": "升",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "升",
+      "g": [
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

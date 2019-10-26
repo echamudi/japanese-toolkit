@@ -1,0 +1,30 @@
+{
+  "element": "冑",
+  "g": [
+    {
+      "element": "由",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "丨"
+        },
+        {
+          "element": "田"
+        }
+      ]
+    },
+    {
+      "element": "月",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "二"
+        }
+      ]
+    }
+  ]
+}

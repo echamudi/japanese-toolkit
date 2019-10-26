@@ -1,0 +1,43 @@
+{
+  "element": "嬾",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "頼",
+      "g": [
+        {
+          "element": "束",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "頁",
+          "g": [
+            {
+              "element": "刀"
+            },
+            {
+              "element": "貝",
+              "g": [
+                {
+                  "element": "目"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

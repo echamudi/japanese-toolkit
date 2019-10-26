@@ -1,0 +1,22 @@
+{
+  "element": "軸",
+  "g": [
+    {
+      "element": "車"
+    },
+    {
+      "element": "由",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "丨"
+        },
+        {
+          "element": "田"
+        }
+      ]
+    }
+  ]
+}

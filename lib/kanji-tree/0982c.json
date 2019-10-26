@@ -1,0 +1,50 @@
+{
+  "element": "頬",
+  "g": [
+    {
+      "element": "夾",
+      "g": [
+        {
+          "element": "二",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人",
+              "g": [
+                {
+                  "element": "二"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "大"
+        }
+      ]
+    },
+    {
+      "element": "頁",
+      "g": [
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

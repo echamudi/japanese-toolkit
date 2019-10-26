@@ -1,0 +1,43 @@
+{
+  "element": "諺",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "彦",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "厂"
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

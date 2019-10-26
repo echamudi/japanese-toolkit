@@ -1,0 +1,37 @@
+{
+  "element": "藷",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "諸",
+      "g": [
+        {
+          "element": "言",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "者",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

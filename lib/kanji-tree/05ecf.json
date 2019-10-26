@@ -1,0 +1,45 @@
+{
+  "element": "廏",
+  "g": [
+    {
+      "element": "广",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "element": "皀",
+      "g": [
+        {
+          "element": "白",
+          "g": [
+            {
+              "element": "日"
+            }
+          ]
+        },
+        {
+          "element": "匕"
+        }
+      ]
+    },
+    {
+      "element": "殳",
+      "g": [
+        {
+          "element": "几",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

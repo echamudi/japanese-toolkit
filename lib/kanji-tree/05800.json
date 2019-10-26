@@ -1,0 +1,27 @@
+{
+  "element": "堀",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "屈",
+      "g": [
+        {
+          "element": "尸"
+        },
+        {
+          "element": "出",
+          "g": [
+            {
+              "element": "山"
+            },
+            {
+              "element": "凵"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

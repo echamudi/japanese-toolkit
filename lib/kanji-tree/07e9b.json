@@ -1,0 +1,67 @@
+{
+  "element": "纛",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "毒",
+          "g": [
+            {
+              "element": "三",
+              "g": [
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "三",
+                  "g": [
+                    {
+                      "element": "一"
+                    },
+                    {
+                      "element": "一"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "毋"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "縣",
+      "g": [
+        {
+          "element": "県",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "目"
+                }
+              ]
+            },
+            {
+              "element": "小"
+            }
+          ]
+        },
+        {
+          "element": "系",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "糸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

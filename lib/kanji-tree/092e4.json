@@ -1,0 +1,27 @@
+{
+  "element": "鋤",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "助",
+      "g": [
+        {
+          "element": "且",
+          "g": [
+            {
+              "element": "月"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "力"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "element": "演",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "寅",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "由",
+              "g": [
+                {
+                  "element": "田"
+                },
+                {
+                  "element": "丨"
+                },
+                {
+                  "element": "田"
+                }
+              ]
+            },
+            {
+              "element": "八"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "舒",
+  "g": [
+    {
+      "element": "舍",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "element": "舌",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "予",
+      "g": [
+        {
+          "element": "マ"
+        },
+        {
+          "element": "了",
+          "g": [
+            {
+              "element": "亅"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

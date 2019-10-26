@@ -1,0 +1,45 @@
+{
+  "element": "氈",
+  "g": [
+    {
+      "element": "亶",
+      "g": [
+        {
+          "element": "亠"
+        },
+        {
+          "g": [
+            {
+              "element": "回",
+              "g": [
+                {
+                  "element": "囗"
+                },
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "囗"
+                }
+              ]
+            },
+            {
+              "element": "旦",
+              "g": [
+                {
+                  "element": "日"
+                },
+                {
+                  "element": "一"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "毛"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "element": "裲",
+  "g": [
+    {
+      "element": "衤"
+    },
+    {
+      "element": "兩",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "入"
+        },
+        {
+          "element": "入"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "絶",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "色",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "element": "巴",
+          "g": [
+            {
+              "element": "己"
+            },
+            {
+              "element": "己"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

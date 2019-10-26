@@ -1,0 +1,46 @@
+{
+  "element": "鬆",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長"
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "松",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "公",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

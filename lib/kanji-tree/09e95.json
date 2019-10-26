@@ -1,0 +1,47 @@
+{
+  "element": "麕",
+  "g": [
+    {
+      "element": "鹿",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "比",
+          "g": [
+            {
+              "element": "匕"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

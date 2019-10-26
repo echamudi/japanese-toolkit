@@ -1,0 +1,37 @@
+{
+  "element": "矩",
+  "g": [
+    {
+      "element": "矢",
+      "g": [
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "巨",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "二"
+        },
+        {
+          "element": "二",
+          "g": [
+            {
+              "element": "匚"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "凛",
+  "g": [
+    {
+      "element": "冫"
+    },
+    {
+      "element": "禀",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "回",
+              "g": [
+                {
+                  "element": "囗"
+                },
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "囗"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "示"
+        }
+      ]
+    }
+  ]
+}

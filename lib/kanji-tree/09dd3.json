@@ -1,0 +1,37 @@
+{
+  "element": "鷓",
+  "g": [
+    {
+      "element": "庶",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "鳥",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

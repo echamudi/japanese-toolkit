@@ -1,0 +1,35 @@
+{
+  "element": "嬲",
+  "g": [
+    {
+      "element": "男",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "力"
+        }
+      ]
+    },
+    {
+      "element": "娚",
+      "g": [
+        {
+          "element": "女"
+        },
+        {
+          "element": "男",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "力"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

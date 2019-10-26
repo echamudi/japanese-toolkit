@@ -1,0 +1,32 @@
+{
+  "element": "試",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "式",
+      "g": [
+        {
+          "element": "弋"
+        },
+        {
+          "element": "工"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

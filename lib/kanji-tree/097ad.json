@@ -1,0 +1,42 @@
+{
+  "element": "鞭",
+  "g": [
+    {
+      "element": "革",
+      "g": [
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "便",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "更",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "乂",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

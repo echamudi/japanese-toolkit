@@ -1,0 +1,27 @@
+{
+  "element": "點",
+  "g": [
+    {
+      "element": "黑",
+      "g": [
+        {
+          "element": "里"
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "占",
+      "g": [
+        {
+          "element": "卜"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

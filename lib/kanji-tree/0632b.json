@@ -1,0 +1,27 @@
+{
+  "element": "挫",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "坐",
+      "g": [
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "土"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "element": "黶",
+  "g": [
+    {
+      "element": "厭",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "月"
+            }
+          ]
+        },
+        {
+          "element": "犬",
+          "g": [
+            {
+              "element": "大"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "黑",
+      "g": [
+        {
+          "element": "里"
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

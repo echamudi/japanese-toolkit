@@ -1,0 +1,42 @@
+{
+  "element": "敬",
+  "g": [
+    {
+      "element": "苟",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "element": "句",
+          "g": [
+            {
+              "element": "勹",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "攴",
+      "g": [
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

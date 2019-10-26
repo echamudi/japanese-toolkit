@@ -1,0 +1,47 @@
+{
+  "element": "鬣",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "巛"
+        },
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

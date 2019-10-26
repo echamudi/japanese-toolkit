@@ -1,0 +1,68 @@
+{
+  "element": "譲",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "襄",
+      "g": [
+        {
+          "element": "六",
+          "g": [
+            {
+              "element": "衣",
+              "g": [
+                {
+                  "element": "亠"
+                }
+              ]
+            },
+            {
+              "g": [
+                {
+                  "element": "八",
+                  "g": [
+                    {
+                      "element": "口"
+                    }
+                  ]
+                },
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "衣"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "element": "蕀",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "棘",
+      "g": [
+        {
+          "element": "朿",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "冂"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "朿",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "冂"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

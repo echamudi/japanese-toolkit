@@ -1,0 +1,32 @@
+{
+  "element": "嗜",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "耆",
+      "g": [
+        {
+          "element": "老",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "匕"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

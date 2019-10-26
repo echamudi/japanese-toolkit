@@ -1,0 +1,32 @@
+{
+  "element": "葎",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "律",
+      "g": [
+        {
+          "element": "彳",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        },
+        {
+          "element": "聿",
+          "g": [
+            {
+              "element": "⺕"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

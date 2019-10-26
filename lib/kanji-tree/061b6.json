@@ -1,0 +1,32 @@
+{
+  "element": "憶",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "意",
+      "g": [
+        {
+          "element": "音",
+          "g": [
+            {
+              "element": "立",
+              "g": [
+                {
+                  "element": "亠"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

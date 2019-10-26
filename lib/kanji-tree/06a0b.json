@@ -1,0 +1,27 @@
+{
+  "element": "樋",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "通",
+      "g": [
+        {
+          "element": "甬",
+          "g": [
+            {
+              "element": "マ"
+            },
+            {
+              "element": "用"
+            }
+          ]
+        },
+        {
+          "element": "辶"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "element": "鼡",
+  "g": [
+    {
+      "element": "臼",
+      "g": [
+        {
+          "element": "⺍",
+          "original": "つ"
+        }
+      ],
+      "variant": "true"
+    },
+    {
+      "element": "用",
+      "variant": "true"
+    }
+  ],
+  "original": "鼠",
+  "variant": "true"
+}

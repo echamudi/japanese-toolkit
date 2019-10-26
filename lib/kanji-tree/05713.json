@@ -1,0 +1,27 @@
+{
+  "element": "圓",
+  "g": [
+    {
+      "element": "囗"
+    },
+    {
+      "element": "員",
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "囗"
+    }
+  ]
+}

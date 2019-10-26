@@ -1,0 +1,32 @@
+{
+  "element": "彝",
+  "g": [
+    {
+      "element": "彑"
+    },
+    {
+      "g": [
+        {
+          "element": "米"
+        },
+        {
+          "element": "糸"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

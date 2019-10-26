@@ -1,0 +1,32 @@
+{
+  "element": "座",
+  "g": [
+    {
+      "element": "广",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "element": "坐",
+      "g": [
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "土"
+        }
+      ]
+    }
+  ]
+}

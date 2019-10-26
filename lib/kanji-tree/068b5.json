@@ -1,0 +1,32 @@
+{
+  "element": "梵",
+  "g": [
+    {
+      "element": "林",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "凡",
+      "g": [
+        {
+          "element": "几",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

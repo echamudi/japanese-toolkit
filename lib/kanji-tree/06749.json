@@ -1,0 +1,22 @@
+{
+  "element": "杉",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

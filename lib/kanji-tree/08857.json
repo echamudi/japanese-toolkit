@@ -1,0 +1,32 @@
+{
+  "element": "街",
+  "g": [
+    {
+      "element": "行",
+      "g": [
+        {
+          "element": "彳",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "圭",
+      "g": [
+        {
+          "element": "土"
+        },
+        {
+          "element": "土"
+        }
+      ]
+    },
+    {
+      "element": "行"
+    }
+  ]
+}

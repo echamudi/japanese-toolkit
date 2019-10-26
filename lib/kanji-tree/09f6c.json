@@ -1,0 +1,66 @@
+{
+  "element": "齬",
+  "g": [
+    {
+      "element": "齒",
+      "g": [
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "凵"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "吾",
+      "g": [
+        {
+          "element": "五",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

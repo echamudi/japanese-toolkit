@@ -1,0 +1,32 @@
+{
+  "element": "秤",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "平",
+      "g": [
+        {
+          "element": "干"
+        },
+        {
+          "element": "干",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

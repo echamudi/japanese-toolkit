@@ -1,0 +1,27 @@
+{
+  "element": "塘",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "唐",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "⺕"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

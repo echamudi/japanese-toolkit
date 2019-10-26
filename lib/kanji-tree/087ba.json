@@ -1,0 +1,32 @@
+{
+  "element": "螺",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "累",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "糸"
+        }
+      ]
+    }
+  ]
+}

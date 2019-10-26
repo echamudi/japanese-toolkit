@@ -1,0 +1,22 @@
+{
+  "element": "烟",
+  "g": [
+    {
+      "element": "火"
+    },
+    {
+      "element": "因",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "大"
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

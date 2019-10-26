@@ -1,0 +1,32 @@
+{
+  "element": "茅",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "矛",
+      "g": [
+        {
+          "element": "予",
+          "g": [
+            {
+              "element": "マ"
+            },
+            {
+              "element": "了",
+              "g": [
+                {
+                  "element": "亅"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

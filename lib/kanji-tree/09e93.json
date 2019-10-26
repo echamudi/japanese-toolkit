@@ -1,0 +1,37 @@
+{
+  "element": "麓",
+  "g": [
+    {
+      "element": "林",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "鹿",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "比",
+          "g": [
+            {
+              "element": "匕"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

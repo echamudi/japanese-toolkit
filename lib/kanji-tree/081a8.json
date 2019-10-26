@@ -1,0 +1,60 @@
+{
+  "element": "膨",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "彭",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "吉",
+              "g": [
+                {
+                  "element": "士",
+                  "g": [
+                    {
+                      "element": "豆"
+                    }
+                  ]
+                },
+                {
+                  "element": "豆",
+                  "g": [
+                    {
+                      "element": "吉",
+                      "g": [
+                        {
+                          "element": "口"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "豆"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

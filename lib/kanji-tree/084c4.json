@@ -1,0 +1,27 @@
+{
+  "element": "蓄",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "畜",
+      "g": [
+        {
+          "element": "玄",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "幺"
+            }
+          ]
+        },
+        {
+          "element": "田"
+        }
+      ]
+    }
+  ]
+}

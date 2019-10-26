@@ -1,0 +1,32 @@
+{
+  "element": "贋",
+  "g": [
+    {
+      "element": "雁",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "亻"
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "貝",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "商",
+  "g": [
+    {
+      "element": "立",
+      "g": [
+        {
+          "element": "亠"
+        }
+      ]
+    },
+    {
+      "element": "冏",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "鎹",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "送",
+      "g": [
+        {
+          "element": "八"
+        },
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        },
+        {
+          "element": "辶"
+        }
+      ]
+    }
+  ]
+}

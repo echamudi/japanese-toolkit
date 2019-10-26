@@ -1,0 +1,27 @@
+{
+  "element": "袱",
+  "g": [
+    {
+      "element": "衤"
+    },
+    {
+      "element": "伏",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "犬",
+          "g": [
+            {
+              "element": "大"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

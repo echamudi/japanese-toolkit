@@ -1,0 +1,42 @@
+{
+  "element": "寨",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "木"
+    }
+  ]
+}

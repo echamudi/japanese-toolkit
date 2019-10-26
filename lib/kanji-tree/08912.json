@@ -1,0 +1,35 @@
+{
+  "element": "褒",
+  "g": [
+    {
+      "element": "衣",
+      "g": [
+        {
+          "element": "亠"
+        }
+      ]
+    },
+    {
+      "element": "保",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "呆",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "衣"
+    }
+  ]
+}

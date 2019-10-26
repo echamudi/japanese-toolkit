@@ -1,0 +1,35 @@
+{
+  "element": "蛔",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "回",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

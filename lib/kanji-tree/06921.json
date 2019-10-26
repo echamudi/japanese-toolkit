@@ -1,0 +1,27 @@
+{
+  "element": "椡",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "到",
+      "g": [
+        {
+          "element": "至",
+          "g": [
+            {
+              "element": "厶"
+            },
+            {
+              "element": "土"
+            }
+          ]
+        },
+        {
+          "element": "刂"
+        }
+      ]
+    }
+  ]
+}

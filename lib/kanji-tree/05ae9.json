@@ -1,0 +1,40 @@
+{
+  "element": "嫩",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "敕",
+      "g": [
+        {
+          "element": "束",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "攴",
+          "g": [
+            {
+              "element": "乂",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

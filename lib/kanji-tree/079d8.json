@@ -1,0 +1,32 @@
+{
+  "element": "秘",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "必",
+      "g": [
+        {
+          "element": "心",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "心"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

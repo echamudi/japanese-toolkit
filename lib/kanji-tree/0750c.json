@@ -1,0 +1,42 @@
+{
+  "element": "甌",
+  "g": [
+    {
+      "element": "區",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "品",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "匚"
+        }
+      ]
+    },
+    {
+      "element": "瓦",
+      "g": [
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

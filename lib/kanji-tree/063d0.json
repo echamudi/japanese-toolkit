@@ -1,0 +1,27 @@
+{
+  "element": "提",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "是",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "鉅",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "巨",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "二"
+        },
+        {
+          "element": "二",
+          "g": [
+            {
+              "element": "匚"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

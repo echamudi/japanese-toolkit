@@ -1,0 +1,27 @@
+{
+  "element": "琺",
+  "g": [
+    {
+      "element": "王"
+    },
+    {
+      "element": "法",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "去",
+          "g": [
+            {
+              "element": "土"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

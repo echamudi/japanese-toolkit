@@ -1,0 +1,21 @@
+{
+  "element": "革",
+  "g": [
+    {
+      "element": "廿",
+      "g": [
+        {
+          "element": "十"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

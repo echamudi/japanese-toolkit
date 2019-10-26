@@ -1,0 +1,61 @@
+{
+  "element": "醴",
+  "g": [
+    {
+      "element": "酉",
+      "g": [
+        {
+          "element": "西"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "西"
+        }
+      ]
+    },
+    {
+      "element": "豊",
+      "g": [
+        {
+          "element": "曲",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        },
+        {
+          "element": "豆",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

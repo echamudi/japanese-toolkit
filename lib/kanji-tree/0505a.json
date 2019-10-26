@@ -1,0 +1,37 @@
+{
+  "element": "做",
+  "g": [
+    {
+      "element": "亻"
+    },
+    {
+      "element": "故",
+      "g": [
+        {
+          "element": "古",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "攴",
+          "g": [
+            {
+              "element": "乂",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

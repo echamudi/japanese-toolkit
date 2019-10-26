@@ -1,0 +1,32 @@
+{
+  "element": "賃",
+  "g": [
+    {
+      "element": "任",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "壬",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "士"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "貝",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    }
+  ]
+}

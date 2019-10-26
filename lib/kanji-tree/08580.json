@@ -1,0 +1,42 @@
+{
+  "element": "薀",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "温",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "g": [
+            {
+              "element": "日",
+              "g": [
+                {
+                  "element": "囚",
+                  "g": [
+                    {
+                      "element": "囗"
+                    },
+                    {
+                      "element": "人"
+                    },
+                    {
+                      "element": "囗"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "皿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "掉",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "卓",
+      "g": [
+        {
+          "element": "卜"
+        },
+        {
+          "element": "早",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "瓢",
+  "g": [
+    {
+      "element": "票",
+      "g": [
+        {
+          "element": "襾",
+          "g": [
+            {
+              "element": "西"
+            }
+          ]
+        },
+        {
+          "element": "示"
+        }
+      ]
+    },
+    {
+      "element": "瓜",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "厶"
+        }
+      ]
+    }
+  ]
+}

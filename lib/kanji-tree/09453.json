@@ -1,0 +1,27 @@
+{
+  "element": "鑓",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "遣",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        },
+        {
+          "element": "⻌"
+        }
+      ]
+    }
+  ]
+}

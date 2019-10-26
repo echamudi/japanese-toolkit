@@ -1,0 +1,27 @@
+{
+  "element": "拔",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "犬",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "犬",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

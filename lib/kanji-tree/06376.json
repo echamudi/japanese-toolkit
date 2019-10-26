@@ -1,0 +1,40 @@
+{
+  "element": "捶",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "垂",
+      "g": [
+        {
+          "element": "千",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "土"
+        },
+        {
+          "element": "土",
+          "g": [
+            {
+              "element": "千",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "element": "彰",
+  "g": [
+    {
+      "element": "章",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "早",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

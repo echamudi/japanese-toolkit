@@ -1,0 +1,32 @@
+{
+  "element": "渡",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "度",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

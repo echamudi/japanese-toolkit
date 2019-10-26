@@ -1,0 +1,40 @@
+{
+  "element": "形",
+  "g": [
+    {
+      "element": "幵",
+      "g": [
+        {
+          "element": "干",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "干",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "窩",
+  "g": [
+    {
+      "element": "穴",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "咼",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

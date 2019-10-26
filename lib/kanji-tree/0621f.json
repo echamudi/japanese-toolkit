@@ -1,0 +1,42 @@
+{
+  "element": "戟",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "早",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "戈",
+      "g": [
+        {
+          "element": "弋"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

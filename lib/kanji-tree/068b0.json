@@ -1,0 +1,51 @@
+{
+  "element": "械",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "戒",
+      "g": [
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            }
+          ]
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "element": "鰭",
+  "g": [
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "耆",
+      "g": [
+        {
+          "element": "老",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "匕"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

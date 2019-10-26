@@ -1,0 +1,32 @@
+{
+  "element": "黛",
+  "g": [
+    {
+      "element": "代",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "黒",
+      "g": [
+        {
+          "element": "里"
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "element": "馨",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "声",
+          "g": [
+            {
+              "element": "士"
+            }
+          ]
+        },
+        {
+          "element": "殳",
+          "g": [
+            {
+              "element": "几",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "又"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "香",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "鋸",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "居",
+      "g": [
+        {
+          "element": "尸"
+        },
+        {
+          "element": "古",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

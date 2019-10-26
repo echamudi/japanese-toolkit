@@ -1,0 +1,32 @@
+{
+  "element": "媒",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "某",
+      "g": [
+        {
+          "element": "甘",
+          "g": [
+            {
+              "element": "廿",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "廿"
+            }
+          ]
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

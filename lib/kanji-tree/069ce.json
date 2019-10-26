@@ -1,0 +1,22 @@
+{
+  "element": "槎",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "差",
+      "g": [
+        {
+          "element": "羊"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "工"
+        }
+      ]
+    }
+  ]
+}

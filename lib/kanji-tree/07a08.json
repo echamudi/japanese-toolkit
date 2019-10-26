@@ -1,0 +1,32 @@
+{
+  "element": "稈",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "旱",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "干",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

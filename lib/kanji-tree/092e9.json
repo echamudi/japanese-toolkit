@@ -1,0 +1,32 @@
+{
+  "element": "鋩",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "芒",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "element": "亡",
+          "g": [
+            {
+              "element": "亠",
+              "g": [
+                {
+                  "element": "匸"
+                }
+              ]
+            },
+            {
+              "element": "匸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

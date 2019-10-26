@@ -1,0 +1,28 @@
+{
+  "element": "州",
+  "g": [
+    {
+      "element": "丶"
+    },
+    {
+      "element": "川"
+    },
+    {
+      "element": "丶"
+    },
+    {
+      "element": "川"
+    },
+    {
+      "element": "丶"
+    },
+    {
+      "element": "川",
+      "g": [
+        {
+          "element": "丨"
+        }
+      ]
+    }
+  ]
+}

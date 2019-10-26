@@ -1,0 +1,30 @@
+{
+  "element": "圏",
+  "g": [
+    {
+      "element": "囗"
+    },
+    {
+      "element": "巻",
+      "g": [
+        {
+          "element": "𠔉",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "己"
+        }
+      ]
+    },
+    {
+      "element": "囗"
+    }
+  ]
+}

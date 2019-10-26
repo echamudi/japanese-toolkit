@@ -1,0 +1,27 @@
+{
+  "element": "羹",
+  "g": [
+    {
+      "element": "羔",
+      "g": [
+        {
+          "element": "羊"
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "美",
+      "g": [
+        {
+          "element": "羊"
+        },
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

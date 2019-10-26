@@ -1,0 +1,27 @@
+{
+  "element": "荏",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "任",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "壬",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "士"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

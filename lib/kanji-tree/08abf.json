@@ -1,0 +1,32 @@
+{
+  "element": "調",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "周",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

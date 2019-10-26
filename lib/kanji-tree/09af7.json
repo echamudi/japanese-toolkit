@@ -1,0 +1,57 @@
+{
+  "element": "髷",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "曲",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

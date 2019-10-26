@@ -1,0 +1,37 @@
+{
+  "element": "戊",
+  "g": [
+    {
+      "element": "丿",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "element": "戈",
+      "g": [
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

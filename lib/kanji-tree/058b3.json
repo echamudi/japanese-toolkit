@@ -1,0 +1,43 @@
+{
+  "element": "墳",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "賁",
+      "g": [
+        {
+          "element": "卉",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "element": "麪",
+  "g": [
+    {
+      "element": "麥",
+      "g": [
+        {
+          "element": "來",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "夂"
+        }
+      ]
+    },
+    {
+      "element": "正",
+      "g": [
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

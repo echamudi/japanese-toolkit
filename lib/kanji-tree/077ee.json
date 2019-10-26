@@ -1,0 +1,37 @@
+{
+  "element": "矮",
+  "g": [
+    {
+      "element": "矢",
+      "g": [
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "委",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "女"
+        }
+      ]
+    }
+  ]
+}

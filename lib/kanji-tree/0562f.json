@@ -1,0 +1,30 @@
+{
+  "element": "嘯",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "肅",
+      "g": [
+        {
+          "element": "聿",
+          "g": [
+            {
+              "element": "⺕"
+            }
+          ]
+        },
+        {
+          "element": "丨"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "聿"
+        }
+      ]
+    }
+  ]
+}

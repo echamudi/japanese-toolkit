@@ -1,0 +1,22 @@
+{
+  "element": "輌",
+  "g": [
+    {
+      "element": "車"
+    },
+    {
+      "element": "両",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "山"
+        }
+      ]
+    }
+  ]
+}

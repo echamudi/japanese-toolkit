@@ -1,0 +1,43 @@
+{
+  "element": "恆",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "亙",
+      "g": [
+        {
+          "element": "互",
+          "g": [
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "彑"
+        },
+        {
+          "element": "丶"
+        },
+        {
+          "element": "丶"
+        },
+        {
+          "element": "互",
+          "g": [
+            {
+              "element": "彑",
+              "g": [
+                {
+                  "element": "二"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "element": "楯",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "盾",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "十"
+        },
+        {
+          "element": "目"
+        }
+      ]
+    }
+  ]
+}

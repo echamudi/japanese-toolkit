@@ -1,0 +1,32 @@
+{
+  "element": "蘿",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "羅",
+      "g": [
+        {
+          "element": "罒"
+        },
+        {
+          "element": "維",
+          "g": [
+            {
+              "element": "糸"
+            },
+            {
+              "element": "隹",
+              "g": [
+                {
+                  "element": "亻"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "element": "殤",
+  "g": [
+    {
+      "element": "歹",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "夕"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "昜",
+          "g": [
+            {
+              "element": "旦",
+              "g": [
+                {
+                  "element": "日"
+                },
+                {
+                  "element": "一"
+                }
+              ]
+            },
+            {
+              "element": "勿",
+              "g": [
+                {
+                  "element": "勹",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

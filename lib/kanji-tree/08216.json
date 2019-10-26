@@ -1,0 +1,32 @@
+{
+  "element": "舖",
+  "g": [
+    {
+      "element": "舍",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "element": "舌",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "甫",
+      "g": [
+        {
+          "element": "用"
+        },
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "element": "風",
+  "g": [
+    {
+      "element": "几",
+      "g": [
+        {
+          "element": "丿"
+        }
+      ]
+    },
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

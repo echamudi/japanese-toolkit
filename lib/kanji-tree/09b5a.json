@@ -1,0 +1,19 @@
+{
+  "element": "魚",
+  "g": [
+    {
+      "element": "𠂊"
+    },
+    {
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

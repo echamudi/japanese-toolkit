@@ -1,0 +1,27 @@
+{
+  "element": "慥",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "造",
+      "g": [
+        {
+          "element": "告",
+          "g": [
+            {
+              "element": "牛"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "辶"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "認",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "忍",
+      "g": [
+        {
+          "element": "刃",
+          "g": [
+            {
+              "element": "刀"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

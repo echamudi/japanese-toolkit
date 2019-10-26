@@ -1,0 +1,52 @@
+{
+  "element": "蠍",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "歇",
+      "g": [
+        {
+          "element": "曷",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "g": [
+                {
+                  "element": "勹",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "欠"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "element": "鬼",
+  "g": [
+    {
+      "element": "丿"
+    },
+    {
+      "element": "田"
+    },
+    {
+      "element": "儿",
+      "g": [
+        {
+          "element": "八",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "厶"
+    }
+  ],
+  "radical": "general"
+}

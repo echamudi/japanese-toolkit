@@ -1,0 +1,35 @@
+{
+  "element": "劍",
+  "g": [
+    {
+      "element": "僉",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "刂"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "糠",
+  "g": [
+    {
+      "element": "米"
+    },
+    {
+      "element": "康",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "隶",
+          "g": [
+            {
+              "element": "⺕"
+            },
+            {
+              "element": "氺"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "element": "影",
+  "g": [
+    {
+      "element": "景",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "京",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "小"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

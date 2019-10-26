@@ -1,0 +1,50 @@
+{
+  "element": "窘",
+  "g": [
+    {
+      "element": "穴",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "君",
+      "g": [
+        {
+          "element": "尹",
+          "g": [
+            {
+              "element": "⺕",
+              "g": [
+                {
+                  "element": "尸"
+                }
+              ]
+            },
+            {
+              "element": "尸",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

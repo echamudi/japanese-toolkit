@@ -1,0 +1,30 @@
+{
+  "element": "図",
+  "g": [
+    {
+      "element": "囗"
+    },
+    {
+      "element": "⺍"
+    },
+    {
+      "element": "乂",
+      "g": [
+        {
+          "element": "⺍",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "乂"
+    },
+    {
+      "element": "囗"
+    }
+  ]
+}

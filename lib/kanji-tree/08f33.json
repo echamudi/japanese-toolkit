@@ -1,0 +1,42 @@
+{
+  "element": "輳",
+  "g": [
+    {
+      "element": "車"
+    },
+    {
+      "element": "奏",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "三",
+              "g": [
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "一"
+                }
+              ]
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

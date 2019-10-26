@@ -1,0 +1,58 @@
+{
+  "element": "購",
+  "g": [
+    {
+      "element": "貝",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    },
+    {
+      "element": "冓",
+      "g": [
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "三",
+              "g": [
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "再",
+                  "g": [
+                    {
+                      "element": "一"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "再",
+          "g": [
+            {
+              "element": "冉",
+              "g": [
+                {
+                  "element": "冂"
+                },
+                {
+                  "element": "土"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

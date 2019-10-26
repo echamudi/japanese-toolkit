@@ -1,0 +1,32 @@
+{
+  "element": "恍",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "光",
+      "g": [
+        {
+          "element": "⺌"
+        },
+        {
+          "element": "兀",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

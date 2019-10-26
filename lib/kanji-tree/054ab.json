@@ -1,0 +1,37 @@
+{
+  "element": "咫",
+  "g": [
+    {
+      "element": "尺",
+      "g": [
+        {
+          "element": "尸",
+          "g": [
+            {
+              "element": "八",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "只",
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "八"
+        }
+      ]
+    }
+  ]
+}

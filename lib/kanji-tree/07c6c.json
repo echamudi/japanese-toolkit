@@ -1,0 +1,47 @@
+{
+  "element": "籬",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "離",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "凶",
+              "g": [
+                {
+                  "element": "乂",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "凵"
+                }
+              ]
+            },
+            {
+              "element": "禸"
+            }
+          ]
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

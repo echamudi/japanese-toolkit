@@ -1,0 +1,32 @@
+{
+  "element": "稼",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "家",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "豕"
+        }
+      ]
+    }
+  ]
+}

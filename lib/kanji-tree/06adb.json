@@ -1,0 +1,32 @@
+{
+  "element": "櫛",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "節",
+      "g": [
+        {
+          "element": "竹"
+        },
+        {
+          "element": "即",
+          "g": [
+            {
+              "element": "艮"
+            },
+            {
+              "element": "卩",
+              "g": [
+                {
+                  "element": "厶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

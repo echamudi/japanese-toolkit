@@ -1,0 +1,27 @@
+{
+  "element": "遜",
+  "g": [
+    {
+      "element": "孫",
+      "g": [
+        {
+          "element": "子"
+        },
+        {
+          "element": "系",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "糸"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "辶"
+    }
+  ]
+}

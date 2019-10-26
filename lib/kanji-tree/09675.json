@@ -1,0 +1,27 @@
+{
+  "element": "陵",
+  "g": [
+    {
+      "element": "⻖"
+    },
+    {
+      "element": "坴",
+      "g": [
+        {
+          "element": "土"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "夂"
+        }
+      ]
+    }
+  ]
+}

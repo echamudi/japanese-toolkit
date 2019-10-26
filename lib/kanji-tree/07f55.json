@@ -1,0 +1,37 @@
+{
+  "element": "罕",
+  "g": [
+    {
+      "element": "罒",
+      "g": [
+        {
+          "element": "冖"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "八",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "干",
+      "g": [
+        {
+          "element": "罒"
+        },
+        {
+          "element": "十"
+        }
+      ]
+    }
+  ]
+}

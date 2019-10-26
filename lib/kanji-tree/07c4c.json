@@ -1,0 +1,32 @@
+{
+  "element": "籌",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "壽",
+      "g": [
+        {
+          "element": "士"
+        },
+        {
+          "g": [
+            {
+              "element": "工"
+            },
+            {
+              "element": "一"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "寸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

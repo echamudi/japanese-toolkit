@@ -1,0 +1,51 @@
+{
+  "element": "暢",
+  "g": [
+    {
+      "element": "申",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "丨"
+        }
+      ]
+    },
+    {
+      "element": "昜",
+      "g": [
+        {
+          "element": "旦",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "勿",
+          "g": [
+            {
+              "element": "勹",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

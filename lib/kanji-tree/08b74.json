@@ -1,0 +1,32 @@
+{
+  "element": "譴",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "遣",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        },
+        {
+          "element": "辶"
+        }
+      ]
+    }
+  ]
+}

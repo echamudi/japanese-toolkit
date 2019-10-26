@@ -1,0 +1,42 @@
+{
+  "element": "蕎",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "喬",
+      "g": [
+        {
+          "element": "呑",
+          "g": [
+            {
+              "element": "夭",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "大"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "冂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

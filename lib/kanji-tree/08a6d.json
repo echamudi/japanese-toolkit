@@ -1,0 +1,32 @@
+{
+  "element": "詭",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "危",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "element": "厄",
+          "g": [
+            {
+              "element": "厂"
+            },
+            {
+              "element": "卩"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

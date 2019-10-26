@@ -1,0 +1,42 @@
+{
+  "element": "跼",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "局",
+      "g": [
+        {
+          "element": "尸"
+        },
+        {
+          "element": "句",
+          "g": [
+            {
+              "element": "勹",
+              "g": [
+                {
+                  "element": "尸",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "軅",
+  "g": [
+    {
+      "element": "身"
+    },
+    {
+      "element": "雁",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "亻"
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

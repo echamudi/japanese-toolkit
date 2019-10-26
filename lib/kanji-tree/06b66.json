@@ -1,0 +1,27 @@
+{
+  "element": "武",
+  "g": [
+    {
+      "element": "一"
+    },
+    {
+      "element": "弋"
+    },
+    {
+      "element": "止",
+      "g": [
+        {
+          "element": "卜"
+        }
+      ]
+    },
+    {
+      "element": "弋",
+      "g": [
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

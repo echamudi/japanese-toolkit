@@ -1,0 +1,51 @@
+{
+  "element": "箋",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "戔",
+      "g": [
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

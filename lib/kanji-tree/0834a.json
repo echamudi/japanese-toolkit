@@ -1,0 +1,37 @@
+{
+  "element": "荊",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "刑",
+      "g": [
+        {
+          "element": "幵",
+          "g": [
+            {
+              "element": "干",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "干",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "刂"
+        }
+      ]
+    }
+  ]
+}

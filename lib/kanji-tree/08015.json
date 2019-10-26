@@ -1,0 +1,48 @@
+{
+  "element": "耕",
+  "g": [
+    {
+      "element": "耒",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "未",
+          "g": [
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "井",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "二",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

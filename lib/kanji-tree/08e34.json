@@ -1,0 +1,32 @@
+{
+  "element": "踴",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "勇",
+      "g": [
+        {
+          "element": "マ"
+        },
+        {
+          "element": "男",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "力"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "穗",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "惠",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

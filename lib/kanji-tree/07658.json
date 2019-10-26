@@ -1,0 +1,37 @@
+{
+  "element": "癘",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "萬",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "element": "禺",
+          "g": [
+            {
+              "element": "日",
+              "g": [
+                {
+                  "element": "田"
+                }
+              ]
+            },
+            {
+              "element": "禸",
+              "g": [
+                {
+                  "element": "田"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

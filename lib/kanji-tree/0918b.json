@@ -1,0 +1,45 @@
+{
+  "element": "醋",
+  "g": [
+    {
+      "element": "酉",
+      "g": [
+        {
+          "element": "西"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "西"
+        }
+      ]
+    },
+    {
+      "element": "昔",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

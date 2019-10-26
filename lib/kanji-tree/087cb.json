@@ -1,0 +1,40 @@
+{
+  "element": "蟋",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "悉",
+      "g": [
+        {
+          "element": "釆",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "米"
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

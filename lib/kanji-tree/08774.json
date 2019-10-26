@@ -1,0 +1,40 @@
+{
+  "element": "蝴",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "胡",
+      "g": [
+        {
+          "element": "古",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "月"
+        }
+      ]
+    }
+  ]
+}

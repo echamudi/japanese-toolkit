@@ -1,0 +1,69 @@
+{
+  "element": "瀰",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "彌",
+      "g": [
+        {
+          "element": "弓"
+        },
+        {
+          "element": "爾",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "element": "冂"
+            },
+            {
+              "element": "爻",
+              "g": [
+                {
+                  "element": "乂",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "乂",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "爻",
+              "g": [
+                {
+                  "element": "乂",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "乂",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

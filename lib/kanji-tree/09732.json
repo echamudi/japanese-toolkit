@@ -1,0 +1,32 @@
+{
+  "element": "露",
+  "g": [
+    {
+      "element": "雨"
+    },
+    {
+      "element": "路",
+      "g": [
+        {
+          "element": "足",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "各",
+          "g": [
+            {
+              "element": "夂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

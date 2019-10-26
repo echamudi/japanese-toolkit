@@ -1,0 +1,37 @@
+{
+  "element": "耨",
+  "g": [
+    {
+      "element": "耒",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "未",
+          "g": [
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "辱",
+      "g": [
+        {
+          "element": "辰",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "寸"
+        }
+      ]
+    }
+  ]
+}

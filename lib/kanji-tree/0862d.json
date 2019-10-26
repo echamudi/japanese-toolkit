@@ -1,0 +1,48 @@
+{
+  "element": "蘭",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "闌",
+      "g": [
+        {
+          "element": "門"
+        },
+        {
+          "element": "東",
+          "g": [
+            {
+              "element": "束",
+              "g": [
+                {
+                  "element": "木"
+                },
+                {
+                  "element": "日",
+                  "g": [
+                    {
+                      "element": "口"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "束",
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "木"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

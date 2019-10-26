@@ -1,0 +1,35 @@
+{
+  "element": "慝",
+  "g": [
+    {
+      "element": "匿",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "若",
+          "g": [
+            {
+              "element": "艹"
+            },
+            {
+              "element": "右",
+              "g": [
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "匚"
+        }
+      ]
+    },
+    {
+      "element": "心"
+    }
+  ]
+}

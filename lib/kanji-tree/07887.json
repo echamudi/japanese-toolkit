@@ -1,0 +1,37 @@
+{
+  "element": "碇",
+  "g": [
+    {
+      "element": "石",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "定",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

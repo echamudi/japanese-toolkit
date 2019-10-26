@@ -1,0 +1,32 @@
+{
+  "element": "樟",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "章",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "早",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

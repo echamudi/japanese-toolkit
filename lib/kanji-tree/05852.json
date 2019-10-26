@@ -1,0 +1,27 @@
+{
+  "element": "塒",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "時",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "寺",
+          "g": [
+            {
+              "element": "土"
+            },
+            {
+              "element": "寸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

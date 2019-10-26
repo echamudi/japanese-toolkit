@@ -1,0 +1,42 @@
+{
+  "element": "膵",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "萃",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "element": "卒",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "亠"
+                },
+                {
+                  "element": "从",
+                  "g": [
+                    {
+                      "element": "人"
+                    },
+                    {
+                      "element": "人"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

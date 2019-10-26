@@ -1,0 +1,76 @@
+{
+  "element": "襪",
+  "g": [
+    {
+      "element": "衤"
+    },
+    {
+      "element": "蔑",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "g": [
+            {
+              "element": "罒"
+            },
+            {
+              "element": "戍",
+              "g": [
+                {
+                  "element": "戌",
+                  "g": [
+                    {
+                      "element": "厂"
+                    },
+                    {
+                      "element": "戈",
+                      "g": [
+                        {
+                          "element": "弋",
+                          "g": [
+                            {
+                              "element": "厂"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "element": "一",
+                      "g": [
+                        {
+                          "element": "丶"
+                        }
+                      ]
+                    },
+                    {
+                      "element": "戈",
+                      "g": [
+                        {
+                          "element": "弋"
+                        },
+                        {
+                          "element": "丿"
+                        },
+                        {
+                          "element": "弋",
+                          "g": [
+                            {
+                              "element": "丶"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

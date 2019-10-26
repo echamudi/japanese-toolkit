@@ -1,0 +1,35 @@
+{
+  "element": "衡",
+  "g": [
+    {
+      "element": "行",
+      "g": [
+        {
+          "element": "彳",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "大"
+        }
+      ]
+    },
+    {
+      "element": "行"
+    }
+  ]
+}

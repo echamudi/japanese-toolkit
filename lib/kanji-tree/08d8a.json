@@ -1,0 +1,45 @@
+{
+  "element": "越",
+  "g": [
+    {
+      "element": "走",
+      "g": [
+        {
+          "element": "土"
+        }
+      ]
+    },
+    {
+      "element": "戉",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "厂"
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "榊",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "神",
+      "g": [
+        {
+          "element": "示"
+        },
+        {
+          "element": "申",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

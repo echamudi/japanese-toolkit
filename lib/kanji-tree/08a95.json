@@ -1,0 +1,37 @@
+{
+  "element": "誕",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "延",
+      "g": [
+        {
+          "element": "正",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "止",
+              "g": [
+                {
+                  "element": "卜"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "廴"
+        }
+      ]
+    }
+  ]
+}

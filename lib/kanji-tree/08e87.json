@@ -1,0 +1,37 @@
+{
+  "element": "躇",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "著",
+      "g": [
+        {
+          "element": "艹"
+        },
+        {
+          "element": "者",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

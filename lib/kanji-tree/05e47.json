@@ -1,0 +1,27 @@
+{
+  "element": "幇",
+  "g": [
+    {
+      "element": "封",
+      "g": [
+        {
+          "element": "圭",
+          "g": [
+            {
+              "element": "土"
+            },
+            {
+              "element": "土"
+            }
+          ]
+        },
+        {
+          "element": "寸"
+        }
+      ]
+    },
+    {
+      "element": "巾"
+    }
+  ]
+}

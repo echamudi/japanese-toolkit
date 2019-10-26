@@ -1,0 +1,42 @@
+{
+  "element": "敷",
+  "g": [
+    {
+      "element": "旉",
+      "g": [
+        {
+          "element": "甫",
+          "g": [
+            {
+              "element": "用"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "方",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "攴",
+      "g": [
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

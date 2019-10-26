@@ -1,0 +1,51 @@
+{
+  "element": "瀝",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "歴",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "林",
+          "g": [
+            {
+              "element": "禾",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "木"
+                }
+              ]
+            },
+            {
+              "element": "禾",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "木"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

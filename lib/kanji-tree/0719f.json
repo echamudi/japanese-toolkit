@@ -1,0 +1,47 @@
+{
+  "element": "熟",
+  "g": [
+    {
+      "element": "孰",
+      "g": [
+        {
+          "element": "享",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "子"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "丸",
+          "g": [
+            {
+              "element": "九",
+              "g": [
+                {
+                  "element": "乙"
+                }
+              ]
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "灬"
+    }
+  ]
+}

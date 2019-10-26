@@ -1,0 +1,37 @@
+{
+  "element": "稟",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "亠"
+        },
+        {
+          "element": "回",
+          "g": [
+            {
+              "element": "囗"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "囗"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

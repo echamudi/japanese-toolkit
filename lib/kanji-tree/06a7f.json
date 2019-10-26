@@ -1,0 +1,27 @@
+{
+  "element": "橿",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "一"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "element": "挟",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "夹",
+      "g": [
+        {
+          "element": "二",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人",
+              "g": [
+                {
+                  "element": "二"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

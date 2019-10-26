@@ -1,0 +1,40 @@
+{
+  "element": "瀋",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "審",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "番",
+          "g": [
+            {
+              "element": "釆",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "米"
+                }
+              ]
+            },
+            {
+              "element": "田"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

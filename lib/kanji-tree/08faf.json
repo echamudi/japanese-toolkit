@@ -1,0 +1,52 @@
+{
+  "element": "辯",
+  "g": [
+    {
+      "element": "辛",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "十"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "言",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "辛",
+          "g": [
+            {
+              "element": "立",
+              "g": [
+                {
+                  "element": "亠"
+                },
+                {
+                  "element": "厶"
+                }
+              ]
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

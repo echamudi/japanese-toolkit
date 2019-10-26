@@ -1,0 +1,47 @@
+{
+  "element": "鱇",
+  "g": [
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "康",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "隶",
+          "g": [
+            {
+              "element": "⺕"
+            },
+            {
+              "element": "氺"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

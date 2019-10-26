@@ -1,0 +1,27 @@
+{
+  "element": "堤",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "是",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

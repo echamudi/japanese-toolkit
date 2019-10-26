@@ -1,0 +1,59 @@
+{
+  "element": "殘",
+  "g": [
+    {
+      "element": "歹",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "夕"
+        }
+      ]
+    },
+    {
+      "element": "戔",
+      "g": [
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

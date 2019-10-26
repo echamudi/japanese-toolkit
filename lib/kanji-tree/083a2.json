@@ -1,0 +1,30 @@
+{
+  "element": "莢",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "夾",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

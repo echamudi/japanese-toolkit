@@ -1,0 +1,32 @@
+{
+  "element": "俯",
+  "g": [
+    {
+      "element": "亻"
+    },
+    {
+      "element": "府",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "付",
+          "g": [
+            {
+              "element": "亻"
+            },
+            {
+              "element": "寸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

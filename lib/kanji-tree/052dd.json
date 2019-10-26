@@ -1,0 +1,22 @@
+{
+  "element": "勝",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "劵",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "人"
+        },
+        {
+          "element": "力"
+        }
+      ]
+    }
+  ]
+}

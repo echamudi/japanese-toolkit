@@ -1,0 +1,42 @@
+{
+  "element": "儻",
+  "g": [
+    {
+      "element": "亻"
+    },
+    {
+      "element": "黨",
+      "g": [
+        {
+          "element": "尚",
+          "g": [
+            {
+              "element": "⺌"
+            },
+            {
+              "g": [
+                {
+                  "element": "冂"
+                },
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "黑",
+          "g": [
+            {
+              "element": "里"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

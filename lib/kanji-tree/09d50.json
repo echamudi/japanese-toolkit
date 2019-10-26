@@ -1,0 +1,35 @@
+{
+  "element": "鵐",
+  "g": [
+    {
+      "element": "巫",
+      "g": [
+        {
+          "element": "工"
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "工"
+        }
+      ]
+    },
+    {
+      "element": "鳥",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

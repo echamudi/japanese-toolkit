@@ -1,0 +1,27 @@
+{
+  "element": "拜",
+  "g": [
+    {
+      "element": "手"
+    },
+    {
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "丨"
+        }
+      ]
+    }
+  ]
+}

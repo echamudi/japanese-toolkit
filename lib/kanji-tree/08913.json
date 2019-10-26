@@ -1,0 +1,27 @@
+{
+  "element": "褓",
+  "g": [
+    {
+      "element": "衤"
+    },
+    {
+      "element": "保",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "呆",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "element": "廱",
+  "g": [
+    {
+      "element": "广",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "巛"
+        },
+        {
+          "element": "邑",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "巴",
+              "g": [
+                {
+                  "element": "己"
+                },
+                {
+                  "element": "己"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "隹",
+      "g": [
+        {
+          "element": "亻"
+        }
+      ]
+    }
+  ]
+}

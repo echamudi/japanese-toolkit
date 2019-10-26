@@ -1,0 +1,32 @@
+{
+  "element": "萍",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "泙",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "平",
+          "g": [
+            {
+              "element": "干"
+            },
+            {
+              "element": "干",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

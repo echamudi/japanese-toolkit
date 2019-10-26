@@ -1,0 +1,32 @@
+{
+  "element": "凭",
+  "g": [
+    {
+      "element": "任",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "壬",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "士"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "几",
+      "g": [
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

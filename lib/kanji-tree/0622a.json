@@ -1,0 +1,53 @@
+{
+  "element": "截",
+  "g": [
+    {
+      "element": "裁",
+      "g": [
+        {
+          "element": "土",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "戈",
+              "g": [
+                {
+                  "element": "弋"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

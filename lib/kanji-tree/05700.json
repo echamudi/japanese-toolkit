@@ -1,0 +1,37 @@
+{
+  "element": "圀",
+  "g": [
+    {
+      "element": "四",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "方",
+      "g": [
+        {
+          "element": "亠"
+        }
+      ]
+    },
+    {
+      "element": "四",
+      "g": [
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

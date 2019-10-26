@@ -1,0 +1,42 @@
+{
+  "element": "矗",
+  "g": [
+    {
+      "element": "直",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "目"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "直",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "目"
+            }
+          ]
+        },
+        {
+          "element": "直",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

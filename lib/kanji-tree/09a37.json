@@ -1,0 +1,47 @@
+{
+  "element": "騷",
+  "g": [
+    {
+      "element": "馬",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "蚤",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "叉"
+            },
+            {
+              "element": "丶"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "虫",
+          "g": [
+            {
+              "element": "中",
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

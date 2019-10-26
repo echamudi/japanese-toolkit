@@ -1,0 +1,27 @@
+{
+  "element": "蓋",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "盍",
+      "g": [
+        {
+          "element": "去",
+          "g": [
+            {
+              "element": "土"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "皿"
+        }
+      ]
+    }
+  ]
+}

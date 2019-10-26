@@ -1,0 +1,27 @@
+{
+  "element": "莎",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "沙",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "少",
+          "g": [
+            {
+              "element": "小"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

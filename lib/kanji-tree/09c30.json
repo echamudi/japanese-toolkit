@@ -1,0 +1,47 @@
+{
+  "element": "鰰",
+  "g": [
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "神",
+      "g": [
+        {
+          "element": "礻",
+          "g": [
+            {
+              "element": "示"
+            }
+          ]
+        },
+        {
+          "element": "申",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

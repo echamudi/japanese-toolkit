@@ -1,0 +1,32 @@
+{
+  "element": "秩",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "失",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "夫",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

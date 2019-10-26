@@ -1,0 +1,22 @@
+{
+  "element": "唖",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "亜",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "二"
+        }
+      ]
+    }
+  ]
+}

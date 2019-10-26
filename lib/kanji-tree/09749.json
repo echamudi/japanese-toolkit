@@ -1,0 +1,45 @@
+{
+  "element": "靉",
+  "g": [
+    {
+      "element": "雲",
+      "g": [
+        {
+          "element": "雨"
+        },
+        {
+          "element": "云",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "愛",
+      "g": [
+        {
+          "element": "⺤"
+        },
+        {
+          "g": [
+            {
+              "element": "冖"
+            },
+            {
+              "element": "心"
+            },
+            {
+              "element": "夂"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

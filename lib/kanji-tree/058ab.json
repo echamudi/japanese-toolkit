@@ -1,0 +1,38 @@
+{
+  "element": "墫",
+  "g": [
+    {
+      "element": "土"
+    },
+    {
+      "element": "尊",
+      "g": [
+        {
+          "element": "酋",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "element": "酉",
+              "g": [
+                {
+                  "element": "西"
+                },
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "西"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "寸"
+        }
+      ]
+    }
+  ]
+}

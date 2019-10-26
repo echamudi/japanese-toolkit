@@ -1,0 +1,22 @@
+{
+  "element": "練",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "東",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "日"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

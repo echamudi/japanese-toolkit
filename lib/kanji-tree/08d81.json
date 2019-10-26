@@ -1,0 +1,27 @@
+{
+  "element": "趁",
+  "g": [
+    {
+      "element": "走",
+      "g": [
+        {
+          "element": "土"
+        }
+      ]
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "剰",
+  "g": [
+    {
+      "element": "乗",
+      "g": [
+        {
+          "element": "千",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "木",
+          "g": [
+            {
+              "element": "千",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "刂"
+    }
+  ]
+}

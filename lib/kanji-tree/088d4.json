@@ -1,0 +1,32 @@
+{
+  "element": "裔",
+  "g": [
+    {
+      "element": "衣",
+      "g": [
+        {
+          "element": "亠"
+        }
+      ]
+    },
+    {
+      "element": "冏",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

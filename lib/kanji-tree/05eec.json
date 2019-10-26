@@ -1,0 +1,37 @@
+{
+  "element": "廬",
+  "g": [
+    {
+      "element": "广",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "element": "盧",
+      "g": [
+        {
+          "element": "虍",
+          "g": [
+            {
+              "element": "七",
+              "g": [
+                {
+                  "element": "一"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "皿"
+        }
+      ]
+    }
+  ]
+}

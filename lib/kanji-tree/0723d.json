@@ -1,0 +1,53 @@
+{
+  "element": "爽",
+  "g": [
+    {
+      "element": "大"
+    },
+    {
+      "element": "爻",
+      "g": [
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "爻",
+      "g": [
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "大"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "element": "邑",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "巴",
+      "g": [
+        {
+          "element": "己"
+        },
+        {
+          "element": "己"
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

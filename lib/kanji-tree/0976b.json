@@ -1,0 +1,32 @@
+{
+  "element": "靫",
+  "g": [
+    {
+      "element": "革",
+      "g": [
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "叉",
+      "g": [
+        {
+          "element": "又"
+        },
+        {
+          "element": "丶"
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

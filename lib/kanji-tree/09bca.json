@@ -1,0 +1,42 @@
+{
+  "element": "鯊",
+  "g": [
+    {
+      "element": "沙",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "少",
+          "g": [
+            {
+              "element": "小"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "element": "凍",
+  "g": [
+    {
+      "element": "冫"
+    },
+    {
+      "element": "東",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "日"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

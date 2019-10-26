@@ -1,0 +1,22 @@
+{
+  "element": "拾",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "合",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

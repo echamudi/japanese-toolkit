@@ -1,0 +1,60 @@
+{
+  "element": "譎",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "矛",
+          "g": [
+            {
+              "element": "予",
+              "g": [
+                {
+                  "element": "マ"
+                },
+                {
+                  "element": "了",
+                  "g": [
+                    {
+                      "element": "亅"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "冏",
+          "g": [
+            {
+              "element": "冂"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

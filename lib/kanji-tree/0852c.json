@@ -1,0 +1,42 @@
+{
+  "element": "蔬",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "疏",
+      "g": [
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "㐬",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "亠"
+                },
+                {
+                  "element": "厶"
+                }
+              ]
+            },
+            {
+              "element": "川"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

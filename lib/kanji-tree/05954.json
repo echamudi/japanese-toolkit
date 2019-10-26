@@ -1,0 +1,30 @@
+{
+  "element": "奔",
+  "g": [
+    {
+      "element": "大"
+    },
+    {
+      "element": "卉",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

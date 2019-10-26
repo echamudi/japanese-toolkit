@@ -1,0 +1,43 @@
+{
+  "element": "癩",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "頼",
+      "g": [
+        {
+          "element": "束",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "頁",
+          "g": [
+            {
+              "element": "刀"
+            },
+            {
+              "element": "貝",
+              "g": [
+                {
+                  "element": "目"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

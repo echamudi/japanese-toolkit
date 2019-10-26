@@ -1,0 +1,22 @@
+{
+  "element": "餉",
+  "g": [
+    {
+      "element": "飠"
+    },
+    {
+      "element": "向",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

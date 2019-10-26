@@ -1,0 +1,35 @@
+{
+  "element": "叛",
+  "g": [
+    {
+      "element": "半",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "十",
+          "g": [
+            {
+              "element": "二"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "反",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "苣",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "巨",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "二"
+        },
+        {
+          "element": "二",
+          "g": [
+            {
+              "element": "匚"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

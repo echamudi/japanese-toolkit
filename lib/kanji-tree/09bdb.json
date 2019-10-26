@@ -1,0 +1,42 @@
+{
+  "element": "鯛",
+  "g": [
+    {
+      "element": "魚",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "灬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "周",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

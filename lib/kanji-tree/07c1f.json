@@ -1,0 +1,32 @@
+{
+  "element": "簟",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "覃",
+      "g": [
+        {
+          "element": "襾",
+          "g": [
+            {
+              "element": "西"
+            }
+          ]
+        },
+        {
+          "element": "早",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

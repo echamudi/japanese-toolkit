@@ -1,0 +1,42 @@
+{
+  "element": "薹",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "臺",
+      "g": [
+        {
+          "element": "吉",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "士"
+                },
+                {
+                  "element": "冖"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "至",
+          "g": [
+            {
+              "element": "厶"
+            },
+            {
+              "element": "土"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

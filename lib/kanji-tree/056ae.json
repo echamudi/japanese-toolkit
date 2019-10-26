@@ -1,0 +1,37 @@
+{
+  "element": "嚮",
+  "g": [
+    {
+      "element": "郷",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "幺"
+            },
+            {
+              "element": "艮"
+            }
+          ]
+        },
+        {
+          "element": "⻏"
+        }
+      ]
+    },
+    {
+      "element": "向",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

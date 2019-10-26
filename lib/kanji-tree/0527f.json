@@ -1,0 +1,42 @@
+{
+  "element": "剿",
+  "g": [
+    {
+      "element": "巣",
+      "g": [
+        {
+          "element": "⺍",
+          "g": [
+            {
+              "element": "巛"
+            }
+          ]
+        },
+        {
+          "element": "果",
+          "g": [
+            {
+              "element": "田",
+              "g": [
+                {
+                  "element": "日"
+                }
+              ]
+            },
+            {
+              "element": "木",
+              "g": [
+                {
+                  "element": "田"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "刂"
+    }
+  ]
+}

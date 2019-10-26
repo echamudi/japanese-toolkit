@@ -1,0 +1,53 @@
+{
+  "element": "欄",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "闌",
+      "g": [
+        {
+          "element": "門"
+        },
+        {
+          "element": "柬",
+          "g": [
+            {
+              "element": "束",
+              "g": [
+                {
+                  "element": "木"
+                },
+                {
+                  "element": "日",
+                  "g": [
+                    {
+                      "element": "口"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "束",
+              "g": [
+                {
+                  "element": "口",
+                  "g": [
+                    {
+                      "element": "日"
+                    }
+                  ]
+                },
+                {
+                  "element": "木"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

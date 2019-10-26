@@ -1,0 +1,35 @@
+{
+  "element": "跚",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "冊",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

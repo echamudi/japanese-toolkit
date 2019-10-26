@@ -1,0 +1,60 @@
+{
+  "element": "丗",
+  "g": [
+    {
+      "element": "卅",
+      "g": [
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "廿",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "川",
+              "g": [
+                {
+                  "element": "丿",
+                  "g": [
+                    {
+                      "element": "廿",
+                      "g": [
+                        {
+                          "element": "丨"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "川",
+              "g": [
+                {
+                  "element": "十",
+                  "g": [
+                    {
+                      "element": "廿"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "川"
+        }
+      ]
+    },
+    {
+      "element": "廿"
+    }
+  ]
+}

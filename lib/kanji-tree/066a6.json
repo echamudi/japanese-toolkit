@@ -1,0 +1,22 @@
+{
+  "element": "暦",
+  "g": [
+    {
+      "element": "厂"
+    },
+    {
+      "element": "林",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "日"
+    }
+  ]
+}

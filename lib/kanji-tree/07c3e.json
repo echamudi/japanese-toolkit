@@ -1,0 +1,42 @@
+{
+  "element": "簾",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "廉",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "兼",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "g": [
+                {
+                  "element": "⺕"
+                },
+                {
+                  "element": "丨"
+                },
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "胸",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "匈",
+      "g": [
+        {
+          "element": "勹",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "凶",
+          "g": [
+            {
+              "element": "乂",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "凵"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

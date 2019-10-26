@@ -1,0 +1,35 @@
+{
+  "element": "應",
+  "g": [
+    {
+      "element": "雁",
+      "g": [
+        {
+          "element": "广"
+        },
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "亻"
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "心"
+    }
+  ]
+}

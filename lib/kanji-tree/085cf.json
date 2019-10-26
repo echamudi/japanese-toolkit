@@ -1,0 +1,59 @@
+{
+  "element": "藏",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "臧",
+      "g": [
+        {
+          "element": "爿"
+        },
+        {
+          "element": "爿",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "厂"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "臣"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

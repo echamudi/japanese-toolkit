@@ -1,0 +1,50 @@
+{
+  "element": "鼓",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士",
+              "g": [
+                {
+                  "element": "豆"
+                }
+              ]
+            },
+            {
+              "element": "豆",
+              "g": [
+                {
+                  "element": "吉",
+                  "g": [
+                    {
+                      "element": "口"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "豆"
+        }
+      ]
+    },
+    {
+      "element": "支",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

@@ -1,0 +1,27 @@
+{
+  "element": "楸",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "秋",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "火"
+        }
+      ]
+    }
+  ]
+}

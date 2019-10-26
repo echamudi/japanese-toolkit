@@ -1,0 +1,37 @@
+{
+  "element": "傘",
+  "g": [
+    {
+      "element": "人"
+    },
+    {
+      "g": [
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "从",
+          "g": [
+            {
+              "element": "人"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "十"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "element": "茴",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "回",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

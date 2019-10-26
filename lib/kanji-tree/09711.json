@@ -1,0 +1,27 @@
+{
+  "element": "霑",
+  "g": [
+    {
+      "element": "雨"
+    },
+    {
+      "element": "沾",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "占",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

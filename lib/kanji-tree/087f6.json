@@ -1,0 +1,52 @@
+{
+  "element": "蟶",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "聖",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "耳"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "王",
+          "g": [
+            {
+              "element": "壬",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "士"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

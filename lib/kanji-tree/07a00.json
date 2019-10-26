@@ -1,0 +1,37 @@
+{
+  "element": "稀",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "希",
+      "g": [
+        {
+          "element": "乂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "布",
+          "g": [
+            {
+              "element": "巾"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

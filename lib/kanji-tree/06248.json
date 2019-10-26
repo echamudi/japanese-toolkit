@@ -1,0 +1,27 @@
+{
+  "element": "扈",
+  "g": [
+    {
+      "element": "戸"
+    },
+    {
+      "element": "邑",
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "巴",
+          "g": [
+            {
+              "element": "己"
+            },
+            {
+              "element": "己"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

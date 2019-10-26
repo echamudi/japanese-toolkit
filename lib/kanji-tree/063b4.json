@@ -1,0 +1,30 @@
+{
+  "element": "掴",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "国",
+      "g": [
+        {
+          "element": "囗"
+        },
+        {
+          "element": "玉",
+          "g": [
+            {
+              "element": "王"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "囗"
+        }
+      ]
+    }
+  ]
+}

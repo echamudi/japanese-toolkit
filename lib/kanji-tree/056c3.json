@@ -1,0 +1,42 @@
+{
+  "element": "囃",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "雜",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "隹",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

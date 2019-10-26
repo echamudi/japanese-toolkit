@@ -1,0 +1,32 @@
+{
+  "element": "語",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "吾",
+      "g": [
+        {
+          "element": "五",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

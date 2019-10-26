@@ -1,0 +1,32 @@
+{
+  "element": "喀",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "客",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "各",
+          "g": [
+            {
+              "element": "夂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

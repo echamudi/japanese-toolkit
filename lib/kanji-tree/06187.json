@@ -1,0 +1,37 @@
+{
+  "element": "憇",
+  "g": [
+    {
+      "element": "甜",
+      "g": [
+        {
+          "element": "舌",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "甘",
+          "g": [
+            {
+              "element": "廿",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "廿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "心"
+    }
+  ]
+}

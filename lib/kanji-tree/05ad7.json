@@ -1,0 +1,37 @@
+{
+  "element": "嫗",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "區",
+      "g": [
+        {
+          "element": "匚"
+        },
+        {
+          "element": "品",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "匚"
+        }
+      ]
+    }
+  ]
+}

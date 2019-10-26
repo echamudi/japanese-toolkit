@@ -1,0 +1,32 @@
+{
+  "element": "苛",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "可",
+      "g": [
+        {
+          "element": "丁",
+          "g": [
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "丁",
+          "g": [
+            {
+              "element": "亅"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

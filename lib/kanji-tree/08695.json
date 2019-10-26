@@ -1,0 +1,32 @@
+{
+  "element": "蚕",
+  "g": [
+    {
+      "element": "天",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "大"
+        }
+      ]
+    },
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

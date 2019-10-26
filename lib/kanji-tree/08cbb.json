@@ -1,0 +1,27 @@
+{
+  "element": "費",
+  "g": [
+    {
+      "element": "弗",
+      "g": [
+        {
+          "element": "弓"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丨"
+        }
+      ]
+    },
+    {
+      "element": "貝",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    }
+  ]
+}

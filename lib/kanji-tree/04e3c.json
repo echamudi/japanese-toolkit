@@ -1,0 +1,35 @@
+{
+  "element": "丼",
+  "g": [
+    {
+      "element": "井",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "二",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "丶"
+    }
+  ]
+}

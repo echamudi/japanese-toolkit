@@ -1,0 +1,43 @@
+{
+  "element": "騙",
+  "g": [
+    {
+      "element": "馬",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "扁",
+      "g": [
+        {
+          "element": "戸"
+        },
+        {
+          "element": "冊",
+          "g": [
+            {
+              "element": "冂"
+            },
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

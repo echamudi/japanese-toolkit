@@ -1,0 +1,49 @@
+{
+  "element": "曩",
+  "g": [
+    {
+      "element": "日"
+    },
+    {
+      "element": "襄",
+      "g": [
+        {
+          "element": "衣",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        },
+        {
+          "element": "衣"
+        }
+      ]
+    }
+  ]
+}

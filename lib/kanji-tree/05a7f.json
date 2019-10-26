@@ -1,0 +1,27 @@
+{
+  "element": "婿",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "胥",
+      "g": [
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "月"
+        }
+      ]
+    }
+  ]
+}

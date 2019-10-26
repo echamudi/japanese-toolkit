@@ -1,0 +1,27 @@
+{
+  "element": "痺",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "卑",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "田",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "十"
+        }
+      ]
+    }
+  ]
+}

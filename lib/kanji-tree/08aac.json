@@ -1,0 +1,37 @@
+{
+  "element": "説",
+  "g": [
+    {
+      "element": "言",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "兌",
+      "g": [
+        {
+          "element": "八"
+        },
+        {
+          "element": "兄",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

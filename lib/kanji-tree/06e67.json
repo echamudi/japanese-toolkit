@@ -1,0 +1,27 @@
+{
+  "element": "湧",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "勇",
+      "g": [
+        {
+          "element": "マ"
+        },
+        {
+          "element": "男",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "力"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

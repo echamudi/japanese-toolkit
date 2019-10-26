@@ -1,0 +1,30 @@
+{
+  "element": "彩",
+  "g": [
+    {
+      "element": "采",
+      "g": [
+        {
+          "element": "⺤"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "彡",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

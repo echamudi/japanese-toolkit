@@ -1,0 +1,57 @@
+{
+  "element": "蹴",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "就",
+      "g": [
+        {
+          "element": "京",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "小"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "尤",
+          "g": [
+            {
+              "element": "尢",
+              "g": [
+                {
+                  "element": "儿",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

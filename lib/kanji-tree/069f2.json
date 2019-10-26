@@ -1,0 +1,32 @@
+{
+  "element": "槲",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "斛",
+      "g": [
+        {
+          "element": "角",
+          "g": [
+            {
+              "element": "𠂊"
+            }
+          ]
+        },
+        {
+          "element": "斗",
+          "g": [
+            {
+              "element": "丶"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

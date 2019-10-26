@@ -1,0 +1,27 @@
+{
+  "element": "租",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "且",
+      "g": [
+        {
+          "element": "月"
+        },
+        {
+          "element": "一"
+        }
+      ]
+    }
+  ]
+}

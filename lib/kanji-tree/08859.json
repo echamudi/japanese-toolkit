@@ -1,0 +1,40 @@
+{
+  "element": "衙",
+  "g": [
+    {
+      "element": "行",
+      "g": [
+        {
+          "element": "彳",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "吾",
+      "g": [
+        {
+          "element": "五",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "行"
+    }
+  ]
+}

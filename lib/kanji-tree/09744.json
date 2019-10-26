@@ -1,0 +1,50 @@
+{
+  "element": "靄",
+  "g": [
+    {
+      "element": "雨"
+    },
+    {
+      "element": "謁",
+      "g": [
+        {
+          "element": "言",
+          "g": [
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "element": "曷",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "匂",
+              "g": [
+                {
+                  "element": "勹",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "匕",
+                  "g": [
+                    {
+                      "element": "人"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

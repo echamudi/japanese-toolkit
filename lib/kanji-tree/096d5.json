@@ -1,0 +1,32 @@
+{
+  "element": "雕",
+  "g": [
+    {
+      "element": "周",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "隹",
+      "g": [
+        {
+          "element": "亻"
+        }
+      ]
+    }
+  ]
+}

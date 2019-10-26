@@ -1,0 +1,22 @@
+{
+  "element": "舁",
+  "g": [
+    {
+      "element": "臼"
+    },
+    {
+      "element": "廾",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "十"
+        }
+      ]
+    }
+  ]
+}

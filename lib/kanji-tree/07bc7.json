@@ -1,0 +1,38 @@
+{
+  "element": "篇",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "扁",
+      "g": [
+        {
+          "element": "戸"
+        },
+        {
+          "element": "冊",
+          "g": [
+            {
+              "element": "冂"
+            },
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "十"
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

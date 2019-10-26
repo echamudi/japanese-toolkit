@@ -1,0 +1,42 @@
+{
+  "element": "夥",
+  "g": [
+    {
+      "element": "果",
+      "g": [
+        {
+          "element": "田",
+          "g": [
+            {
+              "element": "日"
+            }
+          ]
+        },
+        {
+          "element": "木",
+          "g": [
+            {
+              "element": "田",
+              "g": [
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "多",
+      "g": [
+        {
+          "element": "夕"
+        },
+        {
+          "element": "夕"
+        }
+      ]
+    }
+  ]
+}

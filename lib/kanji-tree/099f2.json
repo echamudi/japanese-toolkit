@@ -1,0 +1,36 @@
+{
+  "element": "駲",
+  "g": [
+    {
+      "element": "馬",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "州",
+      "g": [
+        {
+          "element": "丶"
+        },
+        {
+          "element": "川"
+        },
+        {
+          "element": "丶"
+        },
+        {
+          "element": "川"
+        },
+        {
+          "element": "丶"
+        },
+        {
+          "element": "川"
+        }
+      ]
+    }
+  ]
+}

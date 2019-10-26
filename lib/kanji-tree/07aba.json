@@ -1,0 +1,42 @@
+{
+  "element": "窺",
+  "g": [
+    {
+      "element": "穴",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "規",
+      "g": [
+        {
+          "element": "夫",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        },
+        {
+          "element": "見",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

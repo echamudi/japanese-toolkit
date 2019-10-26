@@ -1,0 +1,38 @@
+{
+  "element": "棗",
+  "g": [
+    {
+      "element": "朿",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "朿",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "木",
+          "g": [
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

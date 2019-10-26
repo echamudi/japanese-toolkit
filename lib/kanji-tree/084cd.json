@@ -1,0 +1,32 @@
+{
+  "element": "蓍",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "耆",
+      "g": [
+        {
+          "element": "老",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "匕"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ]
+}

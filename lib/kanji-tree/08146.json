@@ -1,0 +1,45 @@
+{
+  "element": "腆",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "典",
+      "g": [
+        {
+          "element": "曲",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "廾",
+              "g": [
+                {
+                  "element": "丿",
+                  "g": [
+                    {
+                      "element": "十"
+                    }
+                  ]
+                },
+                {
+                  "element": "日",
+                  "g": [
+                    {
+                      "element": "十"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "element": "皷",
+  "g": [
+    {
+      "element": "鼓",
+      "g": [
+        {
+          "element": "吉",
+          "g": [
+            {
+              "element": "士",
+              "g": [
+                {
+                  "element": "豆"
+                }
+              ]
+            },
+            {
+              "element": "豆",
+              "g": [
+                {
+                  "element": "吉",
+                  "g": [
+                    {
+                      "element": "口"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "豆"
+        }
+      ]
+    },
+    {
+      "element": "皮"
+    }
+  ]
+}

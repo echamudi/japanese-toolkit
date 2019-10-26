@@ -1,0 +1,48 @@
+{
+  "element": "髭",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "此",
+      "g": [
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        },
+        {
+          "element": "匕"
+        }
+      ]
+    }
+  ]
+}

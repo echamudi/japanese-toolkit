@@ -1,0 +1,27 @@
+{
+  "element": "犁",
+  "g": [
+    {
+      "element": "利",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "刂"
+        }
+      ]
+    },
+    {
+      "element": "牛"
+    }
+  ]
+}

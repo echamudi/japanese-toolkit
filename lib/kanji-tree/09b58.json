@@ -1,0 +1,61 @@
+{
+  "element": "魘",
+  "g": [
+    {
+      "element": "厭",
+      "g": [
+        {
+          "element": "厂",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "月"
+            }
+          ]
+        },
+        {
+          "element": "犬",
+          "g": [
+            {
+              "element": "大"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "鬼",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "厶"
+        }
+      ]
+    }
+  ]
+}

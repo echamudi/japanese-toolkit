@@ -1,0 +1,40 @@
+{
+  "element": "偬",
+  "g": [
+    {
+      "element": "亻"
+    },
+    {
+      "element": "怱",
+      "g": [
+        {
+          "element": "匆",
+          "g": [
+            {
+              "element": "勿",
+              "g": [
+                {
+                  "element": "勹",
+                  "g": [
+                    {
+                      "element": "丿"
+                    }
+                  ]
+                },
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "心"
+        }
+      ]
+    }
+  ]
+}

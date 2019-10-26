@@ -1,0 +1,37 @@
+{
+  "element": "癪",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "積",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "責",
+          "g": [
+            {
+              "element": "貝",
+              "g": [
+                {
+                  "element": "目"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

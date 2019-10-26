@@ -1,0 +1,27 @@
+{
+  "element": "患",
+  "g": [
+    {
+      "element": "串",
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "心"
+    }
+  ]
+}

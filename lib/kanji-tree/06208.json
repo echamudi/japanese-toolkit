@@ -1,0 +1,20 @@
+{
+  "element": "戈",
+  "g": [
+    {
+      "element": "弋"
+    },
+    {
+      "element": "丿"
+    },
+    {
+      "element": "弋",
+      "g": [
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

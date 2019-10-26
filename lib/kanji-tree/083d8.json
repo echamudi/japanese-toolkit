@@ -1,0 +1,27 @@
+{
+  "element": "菘",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "松",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "公",
+          "g": [
+            {
+              "element": "八"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

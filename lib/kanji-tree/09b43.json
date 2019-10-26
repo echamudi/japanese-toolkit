@@ -1,0 +1,46 @@
+{
+  "element": "魃",
+  "g": [
+    {
+      "element": "鬼",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "厶"
+        }
+      ]
+    },
+    {
+      "element": "犬",
+      "g": [
+        {
+          "element": "大"
+        }
+      ]
+    },
+    {
+      "element": "丿"
+    },
+    {
+      "element": "犬",
+      "g": [
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

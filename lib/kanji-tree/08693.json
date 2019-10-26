@@ -1,0 +1,32 @@
+{
+  "element": "蚓",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "引",
+      "g": [
+        {
+          "element": "弓"
+        },
+        {
+          "element": "丨"
+        }
+      ]
+    }
+  ]
+}

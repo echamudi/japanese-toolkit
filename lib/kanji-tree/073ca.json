@@ -1,0 +1,30 @@
+{
+  "element": "珊",
+  "g": [
+    {
+      "element": "王"
+    },
+    {
+      "element": "冊",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

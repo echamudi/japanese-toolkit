@@ -1,0 +1,53 @@
+{
+  "element": "髱",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "包",
+      "g": [
+        {
+          "element": "勹",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "巳",
+          "g": [
+            {
+              "element": "己"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

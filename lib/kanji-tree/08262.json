@@ -1,0 +1,59 @@
+{
+  "element": "艢",
+  "g": [
+    {
+      "element": "舟"
+    },
+    {
+      "element": "嗇",
+      "g": [
+        {
+          "element": "巫",
+          "g": [
+            {
+              "element": "工",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "工",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "回",
+          "g": [
+            {
+              "element": "囗"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "囗"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

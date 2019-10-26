@@ -1,0 +1,30 @@
+{
+  "element": "典",
+  "g": [
+    {
+      "element": "曲",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    },
+    {
+      "element": "八"
+    }
+  ]
+}

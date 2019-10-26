@@ -1,0 +1,27 @@
+{
+  "element": "憫",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "閔",
+      "g": [
+        {
+          "element": "門"
+        },
+        {
+          "element": "文",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "乂"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

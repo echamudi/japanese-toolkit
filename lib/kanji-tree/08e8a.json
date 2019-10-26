@@ -1,0 +1,37 @@
+{
+  "element": "躊",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "壽",
+      "g": [
+        {
+          "element": "士"
+        },
+        {
+          "g": [
+            {
+              "element": "工"
+            },
+            {
+              "element": "一"
+            },
+            {
+              "element": "口"
+            },
+            {
+              "element": "寸"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "摩",
+  "g": [
+    {
+      "element": "麻",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "林",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "手"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "element": "蟄",
+  "g": [
+    {
+      "element": "執",
+      "g": [
+        {
+          "element": "幸",
+          "g": [
+            {
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "干",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "丸",
+          "g": [
+            {
+              "element": "九",
+              "g": [
+                {
+                  "element": "乙"
+                }
+              ]
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

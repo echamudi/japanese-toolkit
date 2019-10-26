@@ -1,0 +1,32 @@
+{
+  "element": "韃",
+  "g": [
+    {
+      "element": "革",
+      "g": [
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "達",
+      "g": [
+        {
+          "element": "土"
+        },
+        {
+          "element": "羊"
+        },
+        {
+          "element": "辶"
+        }
+      ]
+    }
+  ]
+}

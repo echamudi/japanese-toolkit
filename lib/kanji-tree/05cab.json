@@ -1,0 +1,22 @@
+{
+  "element": "岫",
+  "g": [
+    {
+      "element": "山"
+    },
+    {
+      "element": "由",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "丨"
+        },
+        {
+          "element": "田"
+        }
+      ]
+    }
+  ]
+}

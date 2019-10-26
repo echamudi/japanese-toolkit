@@ -1,0 +1,48 @@
+{
+  "element": "承",
+  "g": [
+    {
+      "element": "了",
+      "g": [
+        {
+          "element": "手"
+        },
+        {
+          "element": "亅",
+          "g": [
+            {
+              "element": "手"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "三",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "手",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "水",
+      "g": [
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

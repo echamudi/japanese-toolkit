@@ -1,0 +1,23 @@
+{
+  "element": "亀",
+  "g": [
+    {
+      "element": "𠂊",
+      "original": "勹",
+      "variant": "true"
+    },
+    {
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "日"
+        }
+      ]
+    }
+  ],
+  "original": "龜",
+  "radical": "general",
+  "variant": "true"
+}

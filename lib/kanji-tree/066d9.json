@@ -1,0 +1,32 @@
+{
+  "element": "曙",
+  "g": [
+    {
+      "element": "日"
+    },
+    {
+      "element": "署",
+      "g": [
+        {
+          "element": "罒"
+        },
+        {
+          "element": "者",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

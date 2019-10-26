@@ -1,0 +1,27 @@
+{
+  "element": "噤",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "禁",
+      "g": [
+        {
+          "element": "林",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "示"
+        }
+      ]
+    }
+  ]
+}

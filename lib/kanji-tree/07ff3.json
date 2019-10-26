@@ -1,0 +1,52 @@
+{
+  "element": "翳",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "医",
+          "g": [
+            {
+              "element": "匚"
+            },
+            {
+              "element": "矢",
+              "g": [
+                {
+                  "element": "天",
+                  "g": [
+                    {
+                      "element": "大"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "匚"
+            }
+          ]
+        },
+        {
+          "element": "殳",
+          "g": [
+            {
+              "element": "几",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "又"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "羽"
+    }
+  ]
+}

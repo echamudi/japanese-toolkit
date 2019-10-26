@@ -1,0 +1,32 @@
+{
+  "element": "陟",
+  "g": [
+    {
+      "element": "⻖"
+    },
+    {
+      "element": "歩",
+      "g": [
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        },
+        {
+          "element": "少",
+          "g": [
+            {
+              "element": "小"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "獸",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "犬",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "丶"
+        }
+      ]
+    }
+  ]
+}

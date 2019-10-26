@@ -1,0 +1,32 @@
+{
+  "element": "昼",
+  "g": [
+    {
+      "element": "尺",
+      "g": [
+        {
+          "element": "尸",
+          "g": [
+            {
+              "element": "八"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "旦",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "一"
+        }
+      ]
+    }
+  ]
+}

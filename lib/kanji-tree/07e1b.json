@@ -1,0 +1,27 @@
+{
+  "element": "縛",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "尃",
+      "g": [
+        {
+          "element": "甫",
+          "g": [
+            {
+              "element": "用"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "寸"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "element": "聹",
+  "g": [
+    {
+      "element": "耳"
+    },
+    {
+      "element": "寧",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "心"
+            },
+            {
+              "element": "罒",
+              "g": [
+                {
+                  "element": "皿"
+                }
+              ]
+            },
+            {
+              "element": "丁",
+              "g": [
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "亅"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

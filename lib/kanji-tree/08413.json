@@ -1,0 +1,32 @@
+{
+  "element": "萓",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "宜",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "且",
+          "g": [
+            {
+              "element": "月"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

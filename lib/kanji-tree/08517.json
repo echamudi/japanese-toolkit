@@ -1,0 +1,32 @@
+{
+  "element": "蔗",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "庶",
+      "g": [
+        {
+          "element": "广",
+          "g": [
+            {
+              "element": "厂"
+            }
+          ]
+        },
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

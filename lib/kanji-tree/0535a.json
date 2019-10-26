@@ -1,0 +1,27 @@
+{
+  "element": "博",
+  "g": [
+    {
+      "element": "十"
+    },
+    {
+      "element": "尃",
+      "g": [
+        {
+          "element": "甫",
+          "g": [
+            {
+              "element": "用"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "寸"
+        }
+      ]
+    }
+  ]
+}

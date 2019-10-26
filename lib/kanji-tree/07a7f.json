@@ -1,0 +1,32 @@
+{
+  "element": "穿",
+  "g": [
+    {
+      "element": "穴",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "八"
+        }
+      ]
+    },
+    {
+      "element": "牙",
+      "g": [
+        {
+          "element": "亅"
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "element": "題",
+  "g": [
+    {
+      "element": "是",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "疋",
+          "g": [
+            {
+              "element": "卜"
+            },
+            {
+              "element": "人"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "頁",
+      "g": [
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

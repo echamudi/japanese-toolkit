@@ -1,0 +1,32 @@
+{
+  "element": "潴",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "猪",
+      "g": [
+        {
+          "element": "⺨"
+        },
+        {
+          "element": "者",
+          "g": [
+            {
+              "element": "耂",
+              "g": [
+                {
+                  "element": "土"
+                }
+              ]
+            },
+            {
+              "element": "日"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

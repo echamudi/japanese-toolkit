@@ -1,0 +1,57 @@
+{
+  "element": "蠡",
+  "g": [
+    {
+      "element": "彖",
+      "g": [
+        {
+          "element": "彑",
+          "g": [
+            {
+              "element": "豕"
+            }
+          ]
+        },
+        {
+          "element": "豕"
+        }
+      ]
+    },
+    {
+      "g": [
+        {
+          "element": "虫",
+          "g": [
+            {
+              "element": "中",
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "虫",
+          "g": [
+            {
+              "element": "中",
+              "g": [
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

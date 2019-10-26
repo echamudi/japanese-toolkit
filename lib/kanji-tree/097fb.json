@@ -1,0 +1,37 @@
+{
+  "element": "韻",
+  "g": [
+    {
+      "element": "音",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "日"
+        }
+      ]
+    },
+    {
+      "element": "員",
+      "g": [
+        {
+          "element": "口"
+        },
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

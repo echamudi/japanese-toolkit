@@ -1,0 +1,22 @@
+{
+  "element": "輛",
+  "g": [
+    {
+      "element": "車"
+    },
+    {
+      "element": "兩",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "入"
+        },
+        {
+          "element": "入"
+        }
+      ]
+    }
+  ]
+}

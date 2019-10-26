@@ -1,0 +1,61 @@
+{
+  "element": "尠",
+  "g": [
+    {
+      "element": "甚",
+      "g": [
+        {
+          "element": "甘",
+          "g": [
+            {
+              "element": "廿",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "廿"
+            }
+          ]
+        },
+        {
+          "element": "匹",
+          "g": [
+            {
+              "element": "匚"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "匚"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "少",
+      "g": [
+        {
+          "element": "小",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        },
+        {
+          "element": "丿"
+        }
+      ]
+    }
+  ]
+}

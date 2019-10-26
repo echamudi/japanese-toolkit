@@ -1,0 +1,42 @@
+{
+  "element": "湊",
+  "g": [
+    {
+      "element": "氵"
+    },
+    {
+      "element": "奏",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "三",
+              "g": [
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "一"
+                },
+                {
+                  "element": "一"
+                }
+              ]
+            },
+            {
+              "element": "人"
+            }
+          ]
+        },
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

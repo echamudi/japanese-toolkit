@@ -1,0 +1,32 @@
+{
+  "element": "晃",
+  "g": [
+    {
+      "element": "日"
+    },
+    {
+      "element": "光",
+      "g": [
+        {
+          "element": "⺌"
+        },
+        {
+          "element": "兀",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

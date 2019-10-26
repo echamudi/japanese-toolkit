@@ -1,0 +1,32 @@
+{
+  "element": "侫",
+  "g": [
+    {
+      "element": "亻"
+    },
+    {
+      "element": "妄",
+      "g": [
+        {
+          "element": "亡",
+          "g": [
+            {
+              "element": "亠",
+              "g": [
+                {
+                  "element": "匸"
+                }
+              ]
+            },
+            {
+              "element": "匸"
+            }
+          ]
+        },
+        {
+          "element": "女"
+        }
+      ]
+    }
+  ]
+}

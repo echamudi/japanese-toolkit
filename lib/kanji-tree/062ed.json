@@ -1,0 +1,27 @@
+{
+  "element": "拭",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "式",
+      "g": [
+        {
+          "element": "弋"
+        },
+        {
+          "element": "工"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

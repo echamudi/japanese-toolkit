@@ -1,0 +1,37 @@
+{
+  "element": "搾",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "窄",
+      "g": [
+        {
+          "element": "穴",
+          "g": [
+            {
+              "element": "宀",
+              "g": [
+                {
+                  "element": "冖"
+                }
+              ]
+            },
+            {
+              "element": "八"
+            }
+          ]
+        },
+        {
+          "element": "乍",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

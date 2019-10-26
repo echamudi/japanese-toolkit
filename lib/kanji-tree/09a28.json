@@ -1,0 +1,40 @@
+{
+  "element": "騨",
+  "g": [
+    {
+      "element": "馬",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    },
+    {
+      "element": "単",
+      "g": [
+        {
+          "element": "⺍"
+        },
+        {
+          "element": "甲",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "一"
+            },
+            {
+              "element": "甲",
+              "g": [
+                {
+                  "element": "丨"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

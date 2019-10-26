@@ -1,0 +1,43 @@
+{
+  "element": "哉",
+  "g": [
+    {
+      "element": "土",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "口"
+    },
+    {
+      "element": "戈",
+      "g": [
+        {
+          "element": "弋"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "弋",
+          "g": [
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "element": "匣",
+  "g": [
+    {
+      "element": "匚"
+    },
+    {
+      "element": "甲",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "丨"
+        }
+      ]
+    },
+    {
+      "element": "匚"
+    }
+  ]
+}

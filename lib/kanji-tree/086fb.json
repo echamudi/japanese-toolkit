@@ -1,0 +1,45 @@
+{
+  "element": "蛻",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "兌",
+      "g": [
+        {
+          "element": "八"
+        },
+        {
+          "element": "兄",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

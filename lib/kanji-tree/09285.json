@@ -1,0 +1,22 @@
+{
+  "element": "銅",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "同",
+      "g": [
+        {
+          "element": "冂"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

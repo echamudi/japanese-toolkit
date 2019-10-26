@@ -1,0 +1,27 @@
+{
+  "element": "照",
+  "g": [
+    {
+      "element": "昭",
+      "g": [
+        {
+          "element": "日"
+        },
+        {
+          "element": "召",
+          "g": [
+            {
+              "element": "刀"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "灬"
+    }
+  ]
+}

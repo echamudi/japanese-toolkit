@@ -1,0 +1,32 @@
+{
+  "element": "蛋",
+  "g": [
+    {
+      "element": "疋",
+      "g": [
+        {
+          "element": "卜"
+        },
+        {
+          "element": "人"
+        }
+      ]
+    },
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

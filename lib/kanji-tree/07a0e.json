@@ -1,0 +1,40 @@
+{
+  "element": "税",
+  "g": [
+    {
+      "element": "禾",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "兌",
+      "g": [
+        {
+          "element": "八"
+        },
+        {
+          "element": "兄",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

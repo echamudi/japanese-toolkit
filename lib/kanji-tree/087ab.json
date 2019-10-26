@@ -1,0 +1,47 @@
+{
+  "element": "螫",
+  "g": [
+    {
+      "element": "赦",
+      "g": [
+        {
+          "element": "赤",
+          "g": [
+            {
+              "element": "土"
+            }
+          ]
+        },
+        {
+          "element": "攵",
+          "g": [
+            {
+              "element": "乂",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

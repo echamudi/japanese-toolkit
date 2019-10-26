@@ -1,0 +1,35 @@
+{
+  "element": "牽",
+  "g": [
+    {
+      "element": "玄",
+      "g": [
+        {
+          "element": "亠"
+        },
+        {
+          "element": "幺"
+        },
+        {
+          "element": "冖"
+        },
+        {
+          "element": "玄",
+          "g": [
+            {
+              "element": "幺",
+              "g": [
+                {
+                  "element": "厶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "牛"
+    }
+  ]
+}

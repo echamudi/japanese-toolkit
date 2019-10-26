@@ -1,0 +1,57 @@
+{
+  "element": "羇",
+  "g": [
+    {
+      "element": "罒"
+    },
+    {
+      "g": [
+        {
+          "element": "革",
+          "g": [
+            {
+              "element": "廿",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "奇",
+          "g": [
+            {
+              "element": "大"
+            },
+            {
+              "element": "可",
+              "g": [
+                {
+                  "element": "丁",
+                  "g": [
+                    {
+                      "element": "一"
+                    }
+                  ]
+                },
+                {
+                  "element": "口"
+                },
+                {
+                  "element": "丁",
+                  "g": [
+                    {
+                      "element": "亅"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

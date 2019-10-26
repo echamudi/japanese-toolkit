@@ -1,0 +1,27 @@
+{
+  "element": "毒",
+  "g": [
+    {
+      "element": "三",
+      "g": [
+        {
+          "element": "一"
+        },
+        {
+          "element": "三",
+          "g": [
+            {
+              "element": "一"
+            },
+            {
+              "element": "一"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "毋"
+    }
+  ]
+}

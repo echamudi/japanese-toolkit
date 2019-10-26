@@ -1,0 +1,37 @@
+{
+  "element": "董",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "重",
+      "g": [
+        {
+          "element": "千",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        },
+        {
+          "element": "里",
+          "g": [
+            {
+              "element": "千",
+              "g": [
+                {
+                  "element": "十"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

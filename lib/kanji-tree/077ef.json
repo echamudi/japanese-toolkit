@@ -1,0 +1,52 @@
+{
+  "element": "矯",
+  "g": [
+    {
+      "element": "矢",
+      "g": [
+        {
+          "element": "天",
+          "g": [
+            {
+              "element": "大"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "喬",
+      "g": [
+        {
+          "element": "呑",
+          "g": [
+            {
+              "element": "夭",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "大"
+                }
+              ]
+            },
+            {
+              "element": "口"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "冂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

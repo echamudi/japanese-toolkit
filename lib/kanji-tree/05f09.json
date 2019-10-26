@@ -1,0 +1,30 @@
+{
+  "element": "弉",
+  "g": [
+    {
+      "element": "壯",
+      "g": [
+        {
+          "element": "爿"
+        },
+        {
+          "element": "士"
+        }
+      ]
+    },
+    {
+      "element": "廾",
+      "g": [
+        {
+          "element": "十"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "十"
+        }
+      ]
+    }
+  ]
+}

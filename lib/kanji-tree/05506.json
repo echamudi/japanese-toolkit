@@ -1,0 +1,32 @@
+{
+  "element": "唆",
+  "g": [
+    {
+      "element": "口"
+    },
+    {
+      "element": "夋",
+      "g": [
+        {
+          "element": "允",
+          "g": [
+            {
+              "element": "厶"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "夂"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "element": "鵝",
+  "g": [
+    {
+      "element": "我",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            }
+          ]
+        },
+        {
+          "element": "亅"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "鳥",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

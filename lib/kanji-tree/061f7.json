@@ -1,0 +1,32 @@
+{
+  "element": "懷",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "g": [
+        {
+          "element": "衣",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "罒"
+        },
+        {
+          "element": "二"
+        },
+        {
+          "element": "二"
+        },
+        {
+          "element": "衣"
+        }
+      ]
+    }
+  ]
+}

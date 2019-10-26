@@ -1,0 +1,43 @@
+{
+  "element": "孵",
+  "g": [
+    {
+      "element": "卵",
+      "g": [
+        {
+          "element": "卯",
+          "g": [
+            {
+              "element": "丶"
+            },
+            {
+              "element": "卯",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "卩"
+            }
+          ]
+        },
+        {
+          "element": "丶"
+        }
+      ]
+    },
+    {
+      "element": "孚",
+      "g": [
+        {
+          "element": "⺤"
+        },
+        {
+          "element": "子"
+        }
+      ]
+    }
+  ]
+}

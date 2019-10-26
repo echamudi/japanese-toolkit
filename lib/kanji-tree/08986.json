@@ -1,0 +1,32 @@
+{
+  "element": "覆",
+  "g": [
+    {
+      "element": "西"
+    },
+    {
+      "element": "復",
+      "g": [
+        {
+          "element": "彳",
+          "g": [
+            {
+              "element": "亻"
+            }
+          ]
+        },
+        {
+          "element": "复",
+          "g": [
+            {
+              "element": "日"
+            },
+            {
+              "element": "夂"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

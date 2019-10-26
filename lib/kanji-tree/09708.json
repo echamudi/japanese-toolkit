@@ -1,0 +1,27 @@
+{
+  "element": "霈",
+  "g": [
+    {
+      "element": "雨"
+    },
+    {
+      "element": "沛",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "市",
+          "g": [
+            {
+              "element": "亠"
+            },
+            {
+              "element": "巾"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

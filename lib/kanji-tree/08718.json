@@ -1,0 +1,42 @@
+{
+  "element": "蜘",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "知",
+      "g": [
+        {
+          "element": "矢",
+          "g": [
+            {
+              "element": "天",
+              "g": [
+                {
+                  "element": "大"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "口"
+        }
+      ]
+    }
+  ]
+}

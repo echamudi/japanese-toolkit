@@ -1,0 +1,68 @@
+{
+  "element": "鬢",
+  "g": [
+    {
+      "element": "髟",
+      "g": [
+        {
+          "element": "長",
+          "g": [
+            {
+              "element": "厶"
+            }
+          ]
+        },
+        {
+          "element": "彡",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "丿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "賓",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "宀",
+              "g": [
+                {
+                  "element": "冖"
+                }
+              ]
+            },
+            {
+              "element": "少",
+              "g": [
+                {
+                  "element": "小"
+                },
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "悦",
+  "g": [
+    {
+      "element": "忄"
+    },
+    {
+      "element": "兌",
+      "g": [
+        {
+          "element": "八"
+        },
+        {
+          "element": "兄",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

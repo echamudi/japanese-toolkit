@@ -1,0 +1,22 @@
+{
+  "element": "姨",
+  "g": [
+    {
+      "element": "女"
+    },
+    {
+      "element": "夷",
+      "g": [
+        {
+          "element": "大"
+        },
+        {
+          "element": "弓"
+        },
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

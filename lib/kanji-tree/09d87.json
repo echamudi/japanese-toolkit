@@ -1,0 +1,27 @@
+{
+  "element": "鶇",
+  "g": [
+    {
+      "element": "東",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "日"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "鳥",
+      "g": [
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

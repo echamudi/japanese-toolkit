@@ -1,0 +1,38 @@
+{
+  "element": "魂",
+  "g": [
+    {
+      "element": "云",
+      "g": [
+        {
+          "element": "二"
+        },
+        {
+          "element": "厶"
+        }
+      ]
+    },
+    {
+      "element": "鬼",
+      "g": [
+        {
+          "element": "丿"
+        },
+        {
+          "element": "田"
+        },
+        {
+          "element": "儿",
+          "g": [
+            {
+              "element": "丿"
+            }
+          ]
+        },
+        {
+          "element": "厶"
+        }
+      ]
+    }
+  ]
+}

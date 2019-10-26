@@ -1,0 +1,27 @@
+{
+  "element": "蒲",
+  "g": [
+    {
+      "element": "艹"
+    },
+    {
+      "element": "浦",
+      "g": [
+        {
+          "element": "氵"
+        },
+        {
+          "element": "甫",
+          "g": [
+            {
+              "element": "用"
+            },
+            {
+              "element": "丶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

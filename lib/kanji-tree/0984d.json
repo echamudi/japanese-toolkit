@@ -1,0 +1,42 @@
+{
+  "element": "額",
+  "g": [
+    {
+      "element": "客",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "各",
+          "g": [
+            {
+              "element": "夂"
+            },
+            {
+              "element": "口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "頁",
+      "g": [
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

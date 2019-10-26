@@ -1,0 +1,42 @@
+{
+  "element": "剋",
+  "g": [
+    {
+      "element": "克",
+      "g": [
+        {
+          "element": "古",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "兄",
+              "g": [
+                {
+                  "element": "口"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "兄",
+          "g": [
+            {
+              "element": "儿",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "刂"
+    }
+  ]
+}

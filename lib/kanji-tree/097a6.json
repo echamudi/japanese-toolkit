@@ -1,0 +1,37 @@
+{
+  "element": "鞦",
+  "g": [
+    {
+      "element": "革",
+      "g": [
+        {
+          "element": "廿",
+          "g": [
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "秋",
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "火"
+        }
+      ]
+    }
+  ]
+}

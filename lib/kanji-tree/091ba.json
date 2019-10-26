@@ -1,0 +1,55 @@
+{
+  "element": "醺",
+  "g": [
+    {
+      "element": "酉",
+      "g": [
+        {
+          "element": "西"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "西"
+        }
+      ]
+    },
+    {
+      "element": "熏",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "千",
+              "g": [
+                {
+                  "element": "丿"
+                },
+                {
+                  "element": "十"
+                }
+              ]
+            },
+            {
+              "element": "黑",
+              "g": [
+                {
+                  "element": "里",
+                  "g": [
+                    {
+                      "element": "千"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "灬"
+        }
+      ]
+    }
+  ]
+}

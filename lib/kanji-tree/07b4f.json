@@ -1,0 +1,35 @@
+{
+  "element": "筏",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "伐",
+      "g": [
+        {
+          "element": "亻"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

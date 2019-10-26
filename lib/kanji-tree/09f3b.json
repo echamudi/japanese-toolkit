@@ -1,0 +1,36 @@
+{
+  "element": "鼻",
+  "g": [
+    {
+      "element": "自",
+      "g": [
+        {
+          "element": "目"
+        }
+      ]
+    },
+    {
+      "element": "畀",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "radical": "general"
+}

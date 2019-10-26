@@ -1,0 +1,63 @@
+{
+  "element": "齷",
+  "g": [
+    {
+      "element": "齒",
+      "g": [
+        {
+          "element": "止",
+          "g": [
+            {
+              "element": "卜"
+            }
+          ]
+        },
+        {
+          "g": [
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "凵"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "屋",
+      "g": [
+        {
+          "element": "尸"
+        },
+        {
+          "element": "至",
+          "g": [
+            {
+              "element": "土"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

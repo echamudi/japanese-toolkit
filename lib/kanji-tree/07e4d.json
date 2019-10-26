@@ -1,0 +1,27 @@
+{
+  "element": "繍",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "粛",
+      "g": [
+        {
+          "element": "聿",
+          "g": [
+            {
+              "element": "⺕"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        },
+        {
+          "element": "米"
+        }
+      ]
+    }
+  ]
+}

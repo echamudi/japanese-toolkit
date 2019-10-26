@@ -1,0 +1,43 @@
+{
+  "element": "麩",
+  "g": [
+    {
+      "element": "麥",
+      "g": [
+        {
+          "element": "來",
+          "g": [
+            {
+              "element": "木"
+            },
+            {
+              "element": "从",
+              "g": [
+                {
+                  "element": "人"
+                },
+                {
+                  "element": "人"
+                }
+              ]
+            },
+            {
+              "element": "木"
+            }
+          ]
+        },
+        {
+          "element": "夂"
+        }
+      ]
+    },
+    {
+      "element": "夫",
+      "g": [
+        {
+          "element": "大"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "element": "楚",
+  "g": [
+    {
+      "element": "林",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    },
+    {
+      "element": "疋",
+      "g": [
+        {
+          "element": "卜"
+        },
+        {
+          "element": "人"
+        }
+      ]
+    }
+  ]
+}

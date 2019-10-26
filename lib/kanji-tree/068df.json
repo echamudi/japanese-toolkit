@@ -1,0 +1,22 @@
+{
+  "element": "棟",
+  "g": [
+    {
+      "element": "木"
+    },
+    {
+      "element": "東",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "日"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

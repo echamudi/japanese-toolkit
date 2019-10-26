@@ -1,0 +1,35 @@
+{
+  "element": "辣",
+  "g": [
+    {
+      "element": "辛",
+      "g": [
+        {
+          "element": "立",
+          "g": [
+            {
+              "element": "亠"
+            }
+          ]
+        },
+        {
+          "element": "十"
+        }
+      ]
+    },
+    {
+      "element": "束",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "口"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

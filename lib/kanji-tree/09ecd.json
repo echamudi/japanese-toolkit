@@ -1,0 +1,24 @@
+{
+  "element": "黍",
+  "g": [
+    {
+      "g": [
+        {
+          "element": "禾",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "木"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "氺"
+    }
+  ],
+  "radical": "general"
+}

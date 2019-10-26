@@ -1,0 +1,37 @@
+{
+  "element": "縡",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "宰",
+      "g": [
+        {
+          "element": "宀",
+          "g": [
+            {
+              "element": "冖"
+            }
+          ]
+        },
+        {
+          "element": "辛",
+          "g": [
+            {
+              "element": "立",
+              "g": [
+                {
+                  "element": "亠"
+                }
+              ]
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

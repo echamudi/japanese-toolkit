@@ -1,0 +1,32 @@
+{
+  "element": "庭",
+  "g": [
+    {
+      "element": "广",
+      "g": [
+        {
+          "element": "厂"
+        }
+      ]
+    },
+    {
+      "element": "廷",
+      "g": [
+        {
+          "element": "壬",
+          "g": [
+            {
+              "element": "丿"
+            },
+            {
+              "element": "士"
+            }
+          ]
+        },
+        {
+          "element": "廴"
+        }
+      ]
+    }
+  ]
+}

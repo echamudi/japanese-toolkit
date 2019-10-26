@@ -1,0 +1,40 @@
+{
+  "element": "鉞",
+  "g": [
+    {
+      "element": "金"
+    },
+    {
+      "element": "戉",
+      "g": [
+        {
+          "element": "厂"
+        },
+        {
+          "element": "戈",
+          "g": [
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "厂"
+                }
+              ]
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

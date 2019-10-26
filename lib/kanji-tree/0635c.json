@@ -1,0 +1,27 @@
+{
+  "element": "捜",
+  "g": [
+    {
+      "element": "扌"
+    },
+    {
+      "element": "叟",
+      "g": [
+        {
+          "element": "申",
+          "g": [
+            {
+              "element": "田"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        },
+        {
+          "element": "又"
+        }
+      ]
+    }
+  ]
+}

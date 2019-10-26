@@ -1,0 +1,27 @@
+{
+  "element": "磋",
+  "g": [
+    {
+      "element": "石",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "差",
+      "g": [
+        {
+          "element": "羊"
+        },
+        {
+          "element": "丿"
+        },
+        {
+          "element": "工"
+        }
+      ]
+    }
+  ]
+}

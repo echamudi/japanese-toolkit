@@ -1,0 +1,22 @@
+{
+  "element": "策",
+  "g": [
+    {
+      "element": "竹"
+    },
+    {
+      "element": "朿",
+      "g": [
+        {
+          "element": "木"
+        },
+        {
+          "element": "冂"
+        },
+        {
+          "element": "木"
+        }
+      ]
+    }
+  ]
+}

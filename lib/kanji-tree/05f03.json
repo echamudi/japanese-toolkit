@@ -1,0 +1,30 @@
+{
+  "element": "弃",
+  "g": [
+    {
+      "element": "亠"
+    },
+    {
+      "element": "弁",
+      "g": [
+        {
+          "element": "厶"
+        },
+        {
+          "element": "廾",
+          "g": [
+            {
+              "element": "十"
+            },
+            {
+              "element": "丿"
+            },
+            {
+              "element": "十"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

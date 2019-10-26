@@ -1,0 +1,57 @@
+{
+  "element": "螻",
+  "g": [
+    {
+      "element": "虫",
+      "g": [
+        {
+          "element": "中",
+          "g": [
+            {
+              "element": "口"
+            },
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "婁",
+      "g": [
+        {
+          "g": [
+            {
+              "element": "串",
+              "g": [
+                {
+                  "element": "口"
+                }
+              ]
+            },
+            {
+              "element": "串",
+              "g": [
+                {
+                  "element": "中",
+                  "g": [
+                    {
+                      "element": "口"
+                    },
+                    {
+                      "element": "丨"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "女"
+        }
+      ]
+    }
+  ]
+}

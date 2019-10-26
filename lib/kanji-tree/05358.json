@@ -1,0 +1,32 @@
+{
+  "element": "単",
+  "g": [
+    {
+      "element": "⺍",
+      "g": [
+        {
+          "element": "丶"
+        }
+      ]
+    },
+    {
+      "element": "甲",
+      "g": [
+        {
+          "element": "田"
+        },
+        {
+          "element": "一"
+        },
+        {
+          "element": "甲",
+          "g": [
+            {
+              "element": "丨"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

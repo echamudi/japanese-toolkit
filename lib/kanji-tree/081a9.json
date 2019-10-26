@@ -1,0 +1,45 @@
+{
+  "element": "膩",
+  "g": [
+    {
+      "element": "月"
+    },
+    {
+      "element": "貳",
+      "g": [
+        {
+          "element": "弍",
+          "g": [
+            {
+              "element": "弋"
+            },
+            {
+              "element": "二"
+            }
+          ]
+        },
+        {
+          "element": "貝",
+          "g": [
+            {
+              "element": "目"
+            }
+          ]
+        },
+        {
+          "element": "弍",
+          "g": [
+            {
+              "element": "弋",
+              "g": [
+                {
+                  "element": "丶"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "跪",
+  "g": [
+    {
+      "element": "足",
+      "g": [
+        {
+          "element": "口"
+        }
+      ]
+    },
+    {
+      "element": "危",
+      "g": [
+        {
+          "element": "𠂊"
+        },
+        {
+          "element": "厄",
+          "g": [
+            {
+              "element": "厂"
+            },
+            {
+              "element": "卩"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

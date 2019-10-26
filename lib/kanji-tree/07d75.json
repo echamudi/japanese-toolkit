@@ -1,0 +1,27 @@
+{
+  "element": "絵",
+  "g": [
+    {
+      "element": "糸"
+    },
+    {
+      "element": "会",
+      "g": [
+        {
+          "element": "人"
+        },
+        {
+          "element": "云",
+          "g": [
+            {
+              "element": "二"
+            },
+            {
+              "element": "厶"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "element": "瘢",
+  "g": [
+    {
+      "element": "疒"
+    },
+    {
+      "element": "般",
+      "g": [
+        {
+          "element": "舟"
+        },
+        {
+          "element": "殳",
+          "g": [
+            {
+              "element": "几",
+              "g": [
+                {
+                  "element": "丿"
+                }
+              ]
+            },
+            {
+              "element": "又"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
