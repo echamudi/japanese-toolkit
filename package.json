@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ezhmd/kanji#readme",
   "devDependencies": {
+    "csvtojson": "^2.0.10",
     "mocha": "^6.2.0",
     "xml2json": "^0.11.2"
   }
