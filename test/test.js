@@ -2,6 +2,8 @@
 
 const assert = require('assert');
 const kanji = require('../');
+const jsonLoader = require('../lib/json-loader');
+const path = require('path');
 
 const allArrays = [
     kanji.kanken.lv10, // 0
@@ -39,6 +41,12 @@ const allArrays = [
 ];
 
 describe('testing Kanji', function () {
+    describe('testing json loader', function () {
+        it('loads json', function () {
+            assert.deepStrictEqual(jsonLoader(path.join('.','test','fixtures','simple-array.json')), ['A', 'B']);
+        });
+    });
+
     describe('testing kanji tree', function () {
         it('exports correct object', function () {
             assert.deepStrictEqual(kanji.kanjiTree('国'),
