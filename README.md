@@ -84,8 +84,9 @@ console.log(kanji.kanjiTree('国'));
 } */
 ```
 
-Everytime you call `kanjiTree`, it reads the tree json in lib folder. If you call the same character frequently, please use memoization
-techniques to reduce file read.
+### Note
+
+Everytime you access the kanji collection properties or call `kanjiTree` function, it reads the json file from the lib folder. If you call the same character frequently, please use memoization techniques to reduce file read.
 
 ## Development
 
