@@ -36,8 +36,8 @@ const allArrays = [
     kanji.grade.g08, // 27
     kanji.grade.g09, // 28
     kanji.grade.g10, // 29
-    kanji.freq, // 30
-    kanji.all // 31
+    kanji.freq.list, // 30
+    kanji.all.list // 31
 ];
 
 describe('testing Kanji', function () {
@@ -132,12 +132,12 @@ describe('testing Kanji', function () {
         });
 
         it('has freq properties', function () {
-            assert.deepStrictEqual(Array.isArray(kanji.freq), true);
+            assert.deepStrictEqual(Array.isArray(kanji.freq.list), true);
         });
 
         it('has all properties', function () {
             // 13,108 kanji from KANJIDIC (JIS X 0208-1998, JIS X 0212-1990, JIS X 0213-2012)
-            assert.deepStrictEqual(Array.isArray(kanji.all), true);
+            assert.deepStrictEqual(Array.isArray(kanji.all.list), true);
         });
     });
 
