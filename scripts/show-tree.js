@@ -11,13 +11,13 @@ function printTree(node, path = [], depth = 0, lastChild = true) {
     if (node.element) element = node.element;
     else element = '？';
 
-    if (!lastChild) path[depth] = '├─ ';
-    else path[depth] = '└─ ';
+    if (!lastChild) path[depth] = '├─ '; // still has sibling
+    else path[depth] = '└─ '; // last item
 
     console.log(path.slice(0, depth + 1).join('') + element);
 
-    if (!lastChild) path[depth] = '│  ';
-    else path[depth] = '   ';
+    if (!lastChild) path[depth] = '│  '; // still has sibling
+    else path[depth] = '   '; // no more item
 
     if　(node.g) {
         const lastIndex = node.g.length - 1;
@@ -28,6 +28,7 @@ function printTree(node, path = [], depth = 0, lastChild = true) {
     }
 }
 
+// Allow argument of multiple characterrs
 string.split('').forEach((char, index) => {
     const root = kanji.kanjiTree(char);
     printTree(root, [], 0, index === string.length - 1);
