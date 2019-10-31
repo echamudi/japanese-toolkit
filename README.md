@@ -4,11 +4,9 @@ With Kanji you can:
 - Get kanji characters in an array based on categorization.
 - Get kanji composition tree.
 
-## Usage
+## Usage as Module
 
-### As module
-
-#### Kanji collections
+### Kanji collections
 
 ```js
 const kanji = require('kanji');
@@ -63,7 +61,7 @@ console.log(kanji.all);
 The kanji characters in the frequency list array are ordered from most popular to least popular.
 The rest of arrays are not ordered.
 
-#### Kanji composition tree
+### Kanji composition tree
 
 ```js
 const kanji = require('kanji');
@@ -86,18 +84,19 @@ console.log(kanji.kanjiTree('国'));
 } */
 ```
 
-#### Note
+### Note
 
 Everytime you access the kanji collection properties or call `kanjiTree` function, it reads the json file from the lib folder. If you call the same character frequently, please use memoization techniques to reduce file read.
 
-### As CLI tool
+## Usage as CLI tool
 
 Install kanji tool
 ```
 npm install -g kanji
 ```
 
-#### Show kanji tree
+### Show kanji tree
+
 ```sh
 kanji-tree 焼き鳥
 ```
