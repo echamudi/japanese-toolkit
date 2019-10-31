@@ -1,7 +1,7 @@
 const { execSync } = require('child_process');
 const assert = require('assert');
 
-describe('kanji-tree CLI', function() {
+describe('testing kanji-tree CLI', function() {
     it('shows correct kanji tree for 焼き鳥', function() {
         const result = execSync('kanji-tree 焼き鳥').toString();
         assert.deepStrictEqual(result, `├─ 焼
