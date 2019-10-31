@@ -46,9 +46,16 @@ describe('japanese-db-maker', function () {
       });
     });
 
-    const [dictIndexRows, metadataRows] = await Promise.all([
+    const kanjivgTreeSelections = new Promise((resolve) => {
+      db.all('SELECT * FROM kanjivg_tree WHERE kanji= \'圧\'', function (err, rows) {
+        resolve(rows);
+      });
+    });
+
+    const [dictIndexRows, metadataRows, kanjivgTreeRows] = await Promise.all([
       dictIndexSelections,
       metadataSelections,
+      kanjivgTreeSelections,
     ]);
 
     // dict_index check
@@ -71,6 +78,13 @@ describe('japanese-db-maker', function () {
     assert.deepStrictEqual(
       metadataRows.find((/** @type {Object} */ el) => el.key === 'jmnedict-date').value,
       '2019-09-20',
+    );
+
+    // kanjivg_tree check
+    assert.deepStrictEqual(
+      kanjivgTreeRows.some((/** @type {Object} */ el) => el.kanji === '圧'
+        && el.tree_json === '{"element":"圧","g":[{"element":"厂"},{"element":"土"}]}'),
+      true,
     );
 
     // TODO: Add more checks
