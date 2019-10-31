@@ -142,6 +142,7 @@ Output
 npm install
 npm run download-source
 npm run extract-kanjivg-tree
+npm run extract-kanjium-data
 ```
 
 ### Testing
