@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Show kanji tree in CLI
  */

@@ -7,8 +7,7 @@
     "download-source": "node ./scripts/download-source.js",
     "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
     "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
-    "show-tree": "node ./scripts/show-tree.js",
-    "test": "mocha ./test/test.js"
+    "test": "mocha ./test/test.js && mocha ./test/test-cli.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,9 @@
   "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/ezhmd/kanji/issues"
+  },
+  "bin": {
+    "kanji-tree": "./bin/kanji-tree.js"
   },
   "homepage": "https://github.com/ezhmd/kanji#readme",
   "devDependencies": {
