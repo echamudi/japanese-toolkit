@@ -9,9 +9,6 @@ const console = require('console');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
-/**
- * @typedef {import("sqlite3").Database} Database
- */
 describe('japanese-db-maker', function () {
   it('exports database', function () {
     this.timeout(60000);
