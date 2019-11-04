@@ -63,3 +63,6 @@ typings/
 # sources
 /test/result/
 /source/
+
+#playground for quick testing
+/playground.js
