@@ -1,4 +1,4 @@
-# Japanese Db Maker
+# Japanese DB Maker
 
 Japanese language resources database maker from various open source materials.
 
@@ -61,9 +61,9 @@ See also the list of [contributors](https://github.com/ezhmd/japanese-db-maker/g
 
 ## License
 
-Code and documentation copyright 2019 the [Japanese Db Maker Project Authors](https://github.com/ezhmd/japanese-db-maker/graphs/contributors). 
+Copyright © 2020 [Ezzat Chamudi](https://github.com/ezhmd) and [Japanese DB Maker Project Authors](https://github.com/{{username}}/{{repo}}/graphs/contributors)
 
-Japanese Db Maker code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this Japanese Db Maker project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+Japanese DB Maker code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this Japanese DB Maker project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Libraries, dependencies, and tools used in this project are tied with their own licenses respectively.
 
