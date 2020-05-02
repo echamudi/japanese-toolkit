@@ -151,16 +151,12 @@ npm test
 ```
 ## References
 
-The items are collected from following sources.
+The items are collected from following sources:
 
 - JLPT Study by Peter van der Woude https://jlptstudy.net
 - Jonathan Waller JLPT Kanji List http://www.tanos.co.uk/jlpt/
 - KANJIDIC Project http://www.edrdg.org/wiki/index.php/KANJIDIC_Project
-- Kanshudo Kanji Collections https://www.kanshudo.com/collections
-- nihongo-pro.com https://nihongo-pro.com/
 - 日本漢字能力検定級別漢字表 https://www.kanken.or.jp/kanken/outline/degree.html
-- 漢字辞典 https://kanjijoho.com
-- 辞典オンライン https://jitenon.jp
 - KanjiVG by Ulrich Apel https://github.com/KanjiVG/kanjivg
 
 ## Authors
