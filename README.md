@@ -150,7 +150,7 @@ npm run extract-kanjium-data
 npm test
 ```
 
-## Sources
+## Acknowledgment
 
 The items are collected from following sources:
 
@@ -168,6 +168,8 @@ The items are collected from following sources:
 See also the list of [contributors](https://github.com/ezhmd/kanji/graphs/contributors) who participated in this project.
 
 ## License
+
+Copyright © 2020 Ezzat Chamudi
 
 Kanji code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this Kanji project are released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
 
