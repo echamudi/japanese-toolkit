@@ -1,6 +1,16 @@
 #!/usr/bin/env node
 
 /**
+ * Copyright (c) 2020 Ezzat Chamudi
+ * Copyright (c) 2020 Project Authors
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * 
+ */
+
+/**
  * Show kanji tree in CLI
  */
 
@@ -21,7 +31,7 @@ function printTree(node, path = [], depth = 0, lastChild = true) {
     if (!lastChild) path[depth] = '│  '; // still has sibling
     else path[depth] = '   '; // no more item
 
-    if　(node.g) {
+    if (node.g) {
         const lastIndex = node.g.length - 1;
 
         node.g.forEach((element, index) => {

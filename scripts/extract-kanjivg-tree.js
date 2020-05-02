@@ -1,4 +1,14 @@
 /**
+ * Copyright (c) 2020 Ezzat Chamudi
+ * Copyright (c) 2020 Project Authors
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * 
+ */
+
+/**
  * This script will extract selected properties of kanjivg svg files to json
  */
 
@@ -7,7 +17,7 @@ const fs = require('fs');
 const xml2json = require('xml2json');
 
 let files = fs.readdirSync(path.join('.', 'source', 'kanjivg', 'kanji'));
-fs.mkdirSync(path.join('.', 'lib', 'kanji-tree'), {recursive: true });
+fs.mkdirSync(path.join('.', 'lib', 'kanji-tree'), { recursive: true });
 
 // Only svg files
 files = files.filter((el) => el.slice(-3) === 'svg');
@@ -46,8 +56,8 @@ function deleteEmpties(node) {
         while (true) {
 
             label_for:
-            for(let i = 0; i < node['g'].length; i++) {
-                if(Object.keys(node['g'][i]).length === 0) {
+            for (let i = 0; i < node['g'].length; i++) {
+                if (Object.keys(node['g'][i]).length === 0) {
                     node['g'].splice(i, 1);
                     continue label_while;
                 }
@@ -85,13 +95,13 @@ files.forEach((fileNameSvg, index) => {
 
     // sort keys and convert to string
     let jsonString;
-    if(root.g !== undefined) {
+    if (root.g !== undefined) {
         jsonString = JSON.stringify(root.g[0], Object.keys(root.g[0]).sort(), 2);
     } else {
         jsonString = '{}';
     }
 
-    fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', fileNameOnly + '.json'), jsonString, function(err) {
+    fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', fileNameOnly + '.json'), jsonString, function (err) {
         if (err) {
             console.log(err);
         }
@@ -105,7 +115,7 @@ KanjiVG is copyright © 2009-2018 Ulrich Apel and released under the Creative Co
 `;
 
 // Add notice
-fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', '_notice.txt'), notice, function(err) {
+fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', '_notice.txt'), notice, function (err) {
     if (err) {
         console.log(err);
     }
