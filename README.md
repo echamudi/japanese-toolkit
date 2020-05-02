@@ -149,7 +149,8 @@ npm run extract-kanjium-data
 ```
 npm test
 ```
-## References
+
+## Sources
 
 The items are collected from following sources:
 
@@ -158,6 +159,7 @@ The items are collected from following sources:
 - KANJIDIC Project http://www.edrdg.org/wiki/index.php/KANJIDIC_Project
 - 日本漢字能力検定級別漢字表 https://www.kanken.or.jp/kanken/outline/degree.html
 - KanjiVG by Ulrich Apel https://github.com/KanjiVG/kanjivg
+- Kanjium by Uros Ozvatic https://github.com/mifunetoshiro/kanjium
 
 ## Authors
 
