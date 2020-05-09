@@ -2,8 +2,6 @@
 
 Japanese language resources database maker from various open source materials.
 
-(This module is still under initial development)
-
 # Usage
 1. Download required materials
     - Download `JMdict_e.gz` from http://www.edrdg.org/jmdict/edict_doc.html.
