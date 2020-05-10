@@ -4,9 +4,10 @@
 // Descriptions are taken from:
 // https://www.edrdg.org/jmdict/edict_doc.html
 // https://www.edrdg.org/enamdict/enamdict_doc.html
+// Copyright (C) 2017 The Electronic Dictionary Research and Development Group.
 
-declare namespace JMdict {
-  interface JMdict {
+export namespace JMdict {
+  export interface JMdict {
     JMdict: [
       {
         /**
@@ -83,7 +84,7 @@ declare namespace JMdict {
    * fields. Synonyms are not included; they may be indicated in the
    * cross-reference field associated with the sense element.
    */
-  interface k_ele {
+  export interface k_ele {
     /**
      * This element will contain a word or short phrase in Japanese 
      * which is written using at least one non-kana character (usually kanji,
@@ -142,7 +143,7 @@ declare namespace JMdict {
    * kanji element, i.e. in the case of a word or phrase written
    * entirely in kana, these elements will define the entry.
    */
-  interface r_ele {
+  export interface r_ele {
     /**
      * this element content is restricted to kana and related
      * characters such as chouon and kurikaeshi. Kana usage will be
@@ -217,7 +218,7 @@ declare namespace JMdict {
    * are several distinctly different meanings of the word, multiple
    * sense elements will be employed.
    */
-  interface sense {
+  export interface sense {
     /**
      * These elements, if present, indicate that the sense is restricted
      * to the lexeme represented by the keb and/or reb.
@@ -311,7 +312,7 @@ declare namespace JMdict {
    * than English, the language is indicated by the xml:lang attribute.
    * The element value (if any) is the source word or phrase.
    */
-  interface lsource {
+  export interface lsource {
     /**
      * The xml:lang attribute defines the language(s) from which
      * a loanword is drawn.  It will be coded using the three-letter language 
@@ -348,7 +349,7 @@ declare namespace JMdict {
    * Japanese word. This element would normally be present, however it 
    * may be omitted in entries which are purely for a cross-reference.
    */
-  interface gloss {
+  export interface gloss {
     /**
      * The xml:lang attribute defines the target language of the
      * gloss. It will be coded using the three-letter language code from
@@ -377,8 +378,8 @@ declare namespace JMdict {
   }
 }
 
-declare namespace JMnedict {
-  interface JMnedict {
+export namespace JMnedict {
+  export interface JMnedict {
     JMnedict: [
       {
         /**
@@ -398,7 +399,7 @@ declare namespace JMnedict {
    * name translation elements. Each entry must have at 
    * least one reading element and one sense element. Others are optional.
    */
-  interface entry {
+  export interface entry {
     /**
      * A unique numeric sequence number for each entry
      */
@@ -453,7 +454,7 @@ declare namespace JMnedict {
    * fields. Synonyms are not included; they may be indicated in the
    * cross-reference field associated with the sense element.
    */
-  interface k_ele extends JMdict.k_ele {
+  export interface k_ele extends JMdict.k_ele {
     /**
      * This element will contain a word or short phrase in Japanese 
      * which is written using at least one non-kana character (usually kanji,
@@ -514,7 +515,7 @@ declare namespace JMnedict {
    * kanji element, i.e. in the case of a word or phrase written
    * entirely in kana, these elements will define the entry.
    */
-  interface r_ele {
+  export interface r_ele {
     /**
      * this element content is restricted to kana and related
      * characters such as chouon and kurikaeshi. Kana usage will be
@@ -581,7 +582,7 @@ declare namespace JMnedict {
    * The trans element will record the translational equivalent
    * of the Japanese name, plus other related information. 
    */
-  interface trans {
+  export interface trans {
 
     /**
      * The type of name, recorded in the appropriate entity codes.
