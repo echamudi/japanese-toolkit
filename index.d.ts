@@ -28,7 +28,7 @@ export namespace JMdict {
    * general information and sense elements. Each entry must have at 
    * least one reading element and one sense element. Others are optional.
    */
-  interface entry {
+  export interface entry {
     /**
      * A unique numeric sequence number for each entry
      */
