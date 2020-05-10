@@ -9,7 +9,7 @@
     "include": [
         "lib/**/*.js",
         "test/**/*.js",
-        "types/**/*.ts",
+        "index.d.ts",
         "index.js"
     ]
 }
