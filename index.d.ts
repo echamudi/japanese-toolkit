@@ -1,4 +1,4 @@
-// Type definitions for various 
+// Type definitions for japanese-db-maker
 // Project: japanese-db-maker
 // Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
 //
