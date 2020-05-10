@@ -1,6 +1,6 @@
 {
   "name": "japanese-db-maker",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
