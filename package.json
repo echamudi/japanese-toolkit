@@ -24,6 +24,7 @@
     "lib",
     "scripts",
     "cli.js",
+    "index.d.ts",
     "index.js",
     "LICENSE",
     "README.md"
