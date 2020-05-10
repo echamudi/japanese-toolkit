@@ -1,10 +1,13 @@
 // Type definitions for various 
-// Project: japanese-db
+// Project: japanese-db-maker
 // Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
+//
 // Descriptions are taken from:
 // https://www.edrdg.org/jmdict/edict_doc.html
 // https://www.edrdg.org/enamdict/enamdict_doc.html
 // Copyright (C) 2017 The Electronic Dictionary Research and Development Group.
+
+import { JMdictUtil, JMnedictUtil, KanjidicUtil, JapaneseDbMaker } from "./lib";
 
 export namespace JMdict {
   export interface JMdict {
@@ -606,4 +609,11 @@ export namespace JMnedict {
      */
     trans_det?: string[]
   }
+}
+
+export {
+  JMdictUtil,
+  JMnedictUtil,
+  KanjidicUtil,
+  JapaneseDbMaker
 }
