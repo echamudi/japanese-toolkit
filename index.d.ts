@@ -7,8 +7,6 @@
 // https://www.edrdg.org/enamdict/enamdict_doc.html
 // Copyright (C) 2017 The Electronic Dictionary Research and Development Group.
 
-import { JMdictUtil, JMnedictUtil, KanjidicUtil, JapaneseDbMaker } from "./lib";
-
 export namespace JMdict {
   export interface JMdict {
     JMdict: [
@@ -611,9 +609,7 @@ export namespace JMnedict {
   }
 }
 
-export {
-  JMdictUtil,
-  JMnedictUtil,
-  KanjidicUtil,
-  JapaneseDbMaker
-}
+export { default as JMdictUtil } from "./lib/JMdictUtil";
+export { default as JapaneseDbMaker } from "./lib/JapaneseDbMaker";
+export { default as JMnedictUtil } from "./lib/JMnedictUtil";
+export { default as KanjidicUtil } from "./lib/KanjidicUtil";
