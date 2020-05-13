@@ -9,12 +9,12 @@ const console = require('console');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
-describe('japanese-db-maker', function () {
+describe('japanese-db', function () {
   it('exports database', function () {
     this.timeout(60000);
     this.slow(30000);
 
-    console.log(`> japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
+    console.log(`> japanese-db sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
     // const os = process.platform;
     /** @type {any} */
@@ -24,7 +24,7 @@ describe('japanese-db-maker', function () {
     };
 
     // TODO: doesn't work in ubuntu
-    execSync(`japanese-db-maker sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, execSyncProp);
+    execSync(`japanese-db sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`, execSyncProp);
 
     console.log(`Please check the result at ${__dirname}/result`);
   });

@@ -1,5 +1,5 @@
 {
-  "name": "japanese-db-maker",
+  "name": "japanese-db",
   "version": "0.6.2",
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ezhmd/japanese-db-maker.git"
+    "url": "git://github.com/ezhmd/japanese-db.git"
   },
   "keywords": [
     "japanese",
