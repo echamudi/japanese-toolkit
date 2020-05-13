@@ -1,6 +1,6 @@
 # Japanese DB Maker
 
-[![Build Status](https://travis-ci.org/ezhmd/japanese-db-maker.svg?branch=master)](https://travis-ci.org/ezhmd/japanese-db-maker) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db-maker?label=downloads)](https://www.npmjs.com/package/japanese-db-maker)
+[![Build Status](https://travis-ci.org/ezhmd/japanese-db.svg?branch=master)](https://travis-ci.org/ezhmd/japanese-db) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db-maker?label=downloads)](https://www.npmjs.com/package/japanese-db-maker)
 
 Japanese language resources database maker from various open source materials.
 
