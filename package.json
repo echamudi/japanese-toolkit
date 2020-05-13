@@ -1,6 +1,6 @@
 {
   "name": "japanese-db",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
@@ -21,13 +21,14 @@
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "files": [
-    "lib",
-    "scripts",
+    "LICENSE",
+    "README.md",
     "cli.js",
     "index.d.ts",
     "index.js",
-    "LICENSE",
-    "README.md"
+    "lib",
+    "scripts",
+    "types"
   ],
   "dependencies": {
     "commander": "^3.0.1",
