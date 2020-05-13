@@ -2,9 +2,9 @@
 // Project: japanese-db-maker
 // Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
 
-import * as JMdict from './jmdict';
-import * as JMnedict from './jmnedict';
-import * as JapaneseDB from './japanesedb';
+import * as JMdict from './types/jmdict';
+import * as JMnedict from './types/jmnedict';
+import * as JapaneseDB from './types/japanesedb';
 
 export { JMdict };
 export { JMnedict };
