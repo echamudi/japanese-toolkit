@@ -21,13 +21,14 @@
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "files": [
-    "lib",
-    "scripts",
+    "LICENSE",
+    "README.md",
     "cli.js",
     "index.d.ts",
     "index.js",
-    "LICENSE",
-    "README.md"
+    "lib",
+    "scripts",
+    "types"
   ],
   "dependencies": {
     "commander": "^3.0.1",
