@@ -1,5 +1,5 @@
-// Type definitions for japanese-db-maker
-// Project: japanese-db-maker
+// Type definitions for japanese-db
+// Project: japanese-db
 // Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
 
 import * as JMdict from './types/jmdict';
@@ -11,6 +11,6 @@ export { JMnedict };
 export { JapaneseDB };
 
 export { default as JMdictUtil } from "./lib/JMdictUtil";
-export { default as JapaneseDbMaker } from "./lib/JapaneseDbMaker";
+export { default as JapaneseDB } from "./lib/JapaneseDB";
 export { default as JMnedictUtil } from "./lib/JMnedictUtil";
 export { default as KanjidicUtil } from "./lib/KanjidicUtil";

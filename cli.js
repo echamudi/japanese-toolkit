@@ -5,7 +5,7 @@ const path = require('path');
 const program = require('commander');
 const console = require('console');
 const {
-  JapaneseDbMaker,
+  JapaneseDB,
 } = require('./index');
 
 program
@@ -21,7 +21,7 @@ program
 
       if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination, { recursive: true });
 
-      await JapaneseDbMaker.buildSqlite(
+      await JapaneseDB.buildSqlite(
         // source objects
         {
           jmdict: path.join(args.source, 'JMdict_e'),
