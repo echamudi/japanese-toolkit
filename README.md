@@ -1,6 +1,6 @@
 # Japanese DB Maker
 
-[![Build Status](https://travis-ci.org/ezhmd/japanese-db-maker.svg?branch=master)](https://travis-ci.org/ezhmd/japanese-db-maker) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db-maker?label=downloads)](https://www.npmjs.com/package/japanese-db-maker)
+[![Build Status](https://travis-ci.org/ezhmd/japanese-db.svg?branch=master)](https://travis-ci.org/ezhmd/japanese-db) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db?label=downloads)](https://www.npmjs.com/package/japanese-db)
 
 Japanese language resources database maker from various open source materials.
 
@@ -28,8 +28,8 @@ Japanese language resources database maker from various open source materials.
 1. Run following commands
 
     ```sh
-    npm install japanese-db-maker -g
-    japanese-db-maker sqlite -s ./sourceFolder -d ./destinationFolder
+    npm install japanese-db -g
+    japanese-db sqlite -s ./sourceFolder -d ./destinationFolder
     ```
 
 1. If it runs successfully, you'll get the result as `japanese.db` inside `destinationFolder` folder.
@@ -57,7 +57,7 @@ The generated database file contains data from following sources.
 
 * **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
 
-See also the list of [contributors](https://github.com/ezhmd/japanese-db-maker/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ezhmd/japanese-db/graphs/contributors) who participated in this project.
 
 ## License
 
