@@ -1,4 +1,4 @@
-# Japanese DB Maker
+# Japanese DB
 
 [![Build Status](https://travis-ci.org/ezhmd/japanese-db.svg?branch=master)](https://travis-ci.org/ezhmd/japanese-db) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db?label=downloads)](https://www.npmjs.com/package/japanese-db)
 
@@ -63,7 +63,7 @@ See also the list of [contributors](https://github.com/ezhmd/japanese-db/graphs/
 
 Copyright © 2020 [Ezzat Chamudi](https://github.com/ezhmd)
 
-Japanese DB Maker code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+Japanese DB code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Libraries, dependencies, and tools used in this project are tied with their own licenses respectively.
 
