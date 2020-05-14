@@ -40,27 +40,27 @@ describe('japanese-db', function () {
       db = new sqlite3.Database(path.join(__dirname, 'result', 'japanese.db'));
     });
 
-    it('extracts dict_index table correctly', async function () {
-      // TODO
-    });
-    it('extracts jmdict_entities table correctly', async function () {
-      // TODO
-    });
-    it('extracts jmdict_jsons table correctly', async function () {
-      // TODO
-    });
-    it('extracts jmnedict_entities table correctly', async function () {
-      // TODO
-    });
-    it('extracts jmnedict_jsons table correctly', async function () {
-      // TODO
-    });
-    it('extracts kanji_groups table correctly', async function () {
-      // TODO
-    });
-    it('extracts kanjidic table correctly', async function () {
-      // TODO
-    });
+    // it('extracts dict_index table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts jmdict_entities table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts jmdict_jsons table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts jmnedict_entities table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts jmnedict_jsons table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts kanji_groups table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts kanjidic table correctly', async function () {
+    //   // TODO
+    // });
 
     it('extracts kanjivg_tree table correctly', async function () {
       const result = await new Promise((resolve) => {
@@ -98,18 +98,18 @@ describe('japanese-db', function () {
       );
     });
 
-    it('extracts related_antonyms table correctly', async function () {
-      // TODO
-    });
-    it('extracts related_lookalikes table correctly', async function () {
-      // TODO
-    });
-    it('extracts related_synonyms table correctly', async function () {
-      // TODO
-    });
-    it('extracts related_variants table correctly', async function () {
-      // TODO
-    });
+    // it('extracts related_antonyms table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts related_lookalikes table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts related_synonyms table correctly', async function () {
+    //   // TODO
+    // });
+    // it('extracts related_variants table correctly', async function () {
+    //   // TODO
+    // });
 
     it('extracts wanikani_audio table correctly', async function () {
       const result = await new Promise((resolve) => {
