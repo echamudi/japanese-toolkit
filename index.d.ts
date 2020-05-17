@@ -1,6 +1,6 @@
 // Type definitions for japanese-db
 // Project: japanese-db
-// Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
+// Definitions by: Ezzat Chamudi <https://github.com/echamudi>
 
 import * as JMdict from './types/jmdict';
 import * as JMnedict from './types/jmnedict';
