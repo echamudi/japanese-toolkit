@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ezhmd@github.com/ezhmd/kanji.git"
+    "url": "git+https://echamudi@github.com/echamudi/kanji.git"
   },
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/ezhmd/kanji/issues"
+    "url": "https://github.com/echamudi/kanji/issues"
   },
   "bin": {
     "kanji-tree": "./bin/kanji-tree.js"
   },
-  "homepage": "https://github.com/ezhmd/kanji#readme",
+  "homepage": "https://github.com/echamudi/kanji#readme",
   "devDependencies": {
     "csvtojson": "^2.0.10",
     "mocha": "^6.2.0",

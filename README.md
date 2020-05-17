@@ -135,8 +135,8 @@ Output
 
 | Branch | Status |
 | - | - |
-| master | [![Build Status](https://travis-ci.org/ezhmd/kanji.svg?branch=master)](https://travis-ci.org/ezhmd/kanji) |
-| develop | [![Build Status](https://travis-ci.org/ezhmd/kanji.svg?branch=develop)](https://travis-ci.org/ezhmd/kanji) |
+| master | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji) |
+| develop | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=develop)](https://travis-ci.org/echamudi/kanji) |
 
 ```
 npm install
@@ -172,9 +172,9 @@ The items are collected from following sources:
 
 ## Authors
 
-* **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
+* **Ezzat Chamudi** - [echamudi](https://github.com/echamudi)
 
-See also the list of [contributors](https://github.com/ezhmd/kanji/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/echamudi/kanji/graphs/contributors) who participated in this project.
 
 ## License
 
