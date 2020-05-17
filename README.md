@@ -150,6 +150,15 @@ npm run extract-kanjium-data
 npm test
 ```
 
+## Contributing
+
+This project is following [git-flow branching model](https://github.com/echamudi/echamudi-docs/blob/master/git-strategy/gitflow.png). 
+- Please create a branch from `develop`.
+- Name it something descriptive other than `master`, `develop`, `release-*`, or `hotfix-*`.
+- Open a pull request to `develop`.
+
+Make sure your contributions are compatible with the license of this project.
+
 ## Acknowledgment
 
 The items are collected from following sources:
