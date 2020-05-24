@@ -21,6 +21,13 @@
   "bin": {
     "kanji-tree": "./bin/kanji-tree.js"
   },
+  "files": [
+    "/bin",
+    "/lib",
+    "/index.js",
+    "LICENSE",
+    "README.md"
+  ],
   "homepage": "https://github.com/echamudi/kanji#readme",
   "devDependencies": {
     "csvtojson": "^2.0.10",
