@@ -1,6 +1,6 @@
 {
   "name": "kanji",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Get kanji characters in an array based on categorization",
   "main": "index.js",
   "scripts": {
