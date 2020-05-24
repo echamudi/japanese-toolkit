@@ -1,6 +1,2 @@
 /source
-/node_modules
-
-# ignore generated libraries
-/lib/kanji-tree
-/lib/kanjium
+node_modules
