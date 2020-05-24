@@ -1,0 +1,19 @@
+{
+  "name": "furigana",
+  "version": "0.1.0",
+  "description": "[⏳WIP] Generate furigana from a Japanese sentence",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echamudi/furigana.git"
+  },
+  "author": "Ezzat Chamudi",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/echamudi/furigana/issues"
+  },
+  "homepage": "https://github.com/echamudi/furigana#readme"
+}
