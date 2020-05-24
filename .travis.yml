@@ -9,6 +9,9 @@ os:
 
 install:
   - npm install --only=prod
+  - npm run download-source
+  - npm run extract-kanjivg-tree
+  - npm run extract-kanjium-data
   - npm link --only=prod
   - npm install -g mocha
 
