@@ -4,7 +4,8 @@
 
 Japanese language resources database maker from various open source materials.
 
-# Usage
+## Usage
+
 1. Download required materials
     - Download `JMdict_e.gz` from http://www.edrdg.org/jmdict/edict_doc.html.
     - Download `JMnedict.xml.gz` from https://www.edrdg.org/enamdict/enamdict_doc.html.
@@ -33,6 +34,44 @@ Japanese language resources database maker from various open source materials.
     ```
 
 1. If it runs successfully, you'll get the result as `japanese.db` inside `destinationFolder` folder.
+
+## Copyright Notices
+
+If you are using the generated database in your project, you'll need to mention the following copyright notices & licenses.
+
+JMdict, JMnedict, and KANJIDIC License:
+
+> Copyright (C) 2017 The Electronic Dictionary Research and Development Group. Creative Commons Attribution-ShareAlike Licence (V3.0)
+
+Additional licenses for KANJIDIC:
+
+> Jack HALPERN: The SKIP codes. Creative Commons Attribution-ShareAlike 4.0 International
+> 
+> Christian WITTERN and Koichi YASUOKA: The Pinyin information.
+> 
+> Urs APP: the Four Corner codes and the Morohashi information.
+> 
+> Mark SPAHN and Wolfgang HADAMITZKY: the kanji descriptors from their dictionary.
+> 
+> Charles MULLER: the Korean readings.
+> 
+> Joseph DE ROO: the De Roo codes.
+
+Other notices from [kanji](https://github.com/echamudi/kanji) module:
+
+> JLPT Study by Peter van der Woude https://jlptstudy.net
+>
+> Jonathan Waller JLPT Kanji List http://www.tanos.co.uk/jlpt/
+>
+> 日本漢字能力検定級別漢字表 https://www.kanken.or.jp/kanken/outline/degree.html
+>
+> KanjiVG by Ulrich Apel https://github.com/KanjiVG/kanjivg
+>
+> Kanjium by Uros Ozvatic https://github.com/mifunetoshiro/kanjium
+
+If you feel helped by this free japanese-db converter tool, I would appreciate the following notice:
+
+> The database in this app/project is genereted by using japanese-db tool by Ezzat Chamudi. (https://github.com/echamudi/japanese-db)
 
 ## Development
 
