@@ -69,7 +69,7 @@ Other notices from [kanji](https://github.com/echamudi/kanji) module:
 >
 > Kanjium by Uros Ozvatic https://github.com/mifunetoshiro/kanjium
 
-If you feel helped by this free japanese-db converter tool, I would appreciate the following notice:
+If you feel helped by this free japanese-db converter tool, I would appreciate if you can add the following notice:
 
 > The database in this app/project is genereted by using japanese-db tool by Ezzat Chamudi. (https://github.com/echamudi/japanese-db)
 
