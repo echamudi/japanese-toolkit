@@ -1,6 +1,6 @@
 {
   "name": "furigana",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "[⏳WIP] Furigana toolkit for Japanese sentences",
   "main": "index.js",
   "scripts": {
