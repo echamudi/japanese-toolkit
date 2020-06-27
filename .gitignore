@@ -4,3 +4,4 @@ node_modules
 # These folders will be generated in postinstall script
 /lib/kanji-tree
 /lib/kanjium
+/lib/kanjidic
