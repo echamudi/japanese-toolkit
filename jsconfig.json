@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "checkJs": true,
+        "target": "es6",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "lib/**/*.js",
+        "test/**/*.js",
+        "index.js"
+    ]
+}
