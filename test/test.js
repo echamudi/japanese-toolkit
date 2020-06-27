@@ -81,13 +81,19 @@ describe('testing Kanji', function () {
         });
 
         it('throws wrong non string input', function () {
+            // @ts-ignore
             assert.throws(() => { kanji.kanjiTree(10) }, new Error('char input must be string'));
+            // @ts-ignore
             assert.throws(() => { kanji.kanjiTree({}) }, new Error('char input must be string'));
-            assert.doesNotThrow(() => { kanji.kanjiTree(new String('国')) });
             assert.doesNotThrow(() => { kanji.kanjiTree('国') });
         });
 
+        it('throws wrong wrong kanji length', function () {
+            assert.throws(() => { kanji.kanjiTree('𦥑') }, new Error('kanjiTree only supports 1 character length'));
+        });
+
         it('throws wrong input length', function () {
+            assert.throws(() => { kanji.kanjiTree('abc') }, new Error('wrong length of string'));
             assert.throws(() => { kanji.kanjiTree('国際') }, new Error('wrong length of string'));
             assert.throws(() => { kanji.kanjiTree('') }, new Error('wrong length of string'));
         });
