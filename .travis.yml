@@ -11,8 +11,7 @@ install:
   # Prepare libraries
   - npm install
   - npm run download-source
-  - npm run extract-kanjivg-tree
-  - npm run extract-kanjium-data
+  - npm run extract-data
   - npm install rimraf -g
   - rimraf node_modules
 
