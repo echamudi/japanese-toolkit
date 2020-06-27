@@ -45,8 +45,6 @@ function traverse(node) {
             traverse(element);
         });
     }
-
-    return;
 };
 
 function deleteEmpties(node) {
@@ -74,8 +72,6 @@ function deleteEmpties(node) {
             delete node.g;
         }
     }
-
-    return;
 }
 
 
