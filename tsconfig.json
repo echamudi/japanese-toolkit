@@ -1,14 +1,16 @@
 {
     "compilerOptions": {
+        "allowJs": true,
         "checkJs": true,
-        "target": "es6",
+        "target": "ES2015",
         "noImplicitAny": true,
+        "rootDir": "./lib",
+        "outDir": "./dist",
+        "declaration": true,
         "moduleResolution": "node",
         "resolveJsonModule": true
     },
     "include": [
-        "lib/**/*.js",
-        "test/**/*.js",
-        "index.js"
+        "lib/**/*.js"
     ]
 }
