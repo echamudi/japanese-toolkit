@@ -12,7 +12,7 @@
 
 const assert = require('assert');
 const kanji = require('../');
-const jsonLoader = require('../lib/json-loader');
+const jsonLoader = require('../dist/json-loader');
 const path = require('path');
 
 const collectionArray = [
