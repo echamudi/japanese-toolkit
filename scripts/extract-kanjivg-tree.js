@@ -17,7 +17,7 @@ const fs = require('fs');
 const xml2json = require('xml2json');
 
 let files = fs.readdirSync(path.join('.', 'raw-data', 'kanjivg', 'kanji'));
-fs.mkdirSync(path.join('.', 'lib', 'kanji-tree'), { recursive: true });
+fs.mkdirSync(path.join('.', 'dist', 'kanji-tree'), { recursive: true });
 
 // Only svg files
 files = files.filter((el) => el.slice(-3) === 'svg');
@@ -97,7 +97,7 @@ files.forEach((fileNameSvg, index) => {
         jsonString = '{}';
     }
 
-    fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', fileNameOnly + '.json'), jsonString, function (err) {
+    fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', fileNameOnly + '.json'), jsonString, function (err) {
         if (err) {
             console.log(err);
         }
@@ -111,7 +111,7 @@ KanjiVG is copyright © 2009-2018 Ulrich Apel and released under the Creative Co
 `;
 
 // Add notice
-fs.writeFileSync(path.join('.', 'lib', 'kanji-tree', '_notice.txt'), notice, function (err) {
+fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', '_notice.txt'), notice, function (err) {
     if (err) {
         console.log(err);
     }

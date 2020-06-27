@@ -13,7 +13,7 @@ const path = require('path');
 const csvtojson = require('csvtojson');
 
 (async () => {
-    const targetDir = path.join('.', 'lib', 'kanjium');
+    const targetDir = path.join('.', 'dist', 'kanjium');
     const csvtojsonConfig = {
         delimiter: '\t',
         noheader: 'true',

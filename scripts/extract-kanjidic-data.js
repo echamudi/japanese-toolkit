@@ -34,7 +34,7 @@ const sleep = promisify(setTimeout);
     //     JSON.stringify(jmdictObj, null, 2)
     // );
 
-    const targetDir = path.resolve(__dirname, '../lib/kanjidic');
+    const targetDir = path.resolve(__dirname, '../dist/kanjidic');
 
     fs.mkdirSync(targetDir, { recursive: true });
 
