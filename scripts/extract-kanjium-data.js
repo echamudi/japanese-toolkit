@@ -33,7 +33,7 @@ const csvtojson = require('csvtojson');
 
         const objRaw = await csvtojson(csvtojsonConfig)
             .fromFile(
-                path.join(__dirname, '..', 'source', 'kanjium-' + name + '.txt')
+                path.join(__dirname, '..', 'raw-data', 'kanjium-' + name + '.txt')
             );
 
         objRaw.forEach((el) => {

@@ -16,7 +16,7 @@ const path = require('path');
 const fs = require('fs');
 const xml2json = require('xml2json');
 
-let files = fs.readdirSync(path.join('.', 'source', 'kanjivg', 'kanji'));
+let files = fs.readdirSync(path.join('.', 'raw-data', 'kanjivg', 'kanji'));
 fs.mkdirSync(path.join('.', 'lib', 'kanji-tree'), { recursive: true });
 
 // Only svg files
@@ -79,7 +79,7 @@ function deleteEmpties(node) {
 files.forEach((fileNameSvg, index) => {
     const fileNameOnly = fileNameSvg.slice(0, fileNameSvg.length - 4);
 
-    const data = fs.readFileSync(path.join('.', 'source', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
+    const data = fs.readFileSync(path.join('.', 'raw-data', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
     const svgObj = xml2json.toJson(data, {
         object: true,
         arrayNotation: true,
