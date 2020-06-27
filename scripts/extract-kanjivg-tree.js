@@ -92,7 +92,7 @@ files.forEach((fileNameSvg, index) => {
     // sort keys and convert to string
     let jsonString;
     if (root.g !== undefined) {
-        jsonString = JSON.stringify(root.g[0], Object.keys(root.g[0]).sort(), 2);
+        jsonString = JSON.stringify(root.g[0], Object.keys(root.g[0]).sort());
     } else {
         jsonString = '{}';
     }
