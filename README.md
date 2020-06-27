@@ -1,5 +1,7 @@
 # Kanji
 
+[![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji)
+
 With Kanji you can:
 - Get kanji characters in an array based on categorization.
 - Get kanji composition tree.
