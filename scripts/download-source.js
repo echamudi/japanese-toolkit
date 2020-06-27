@@ -54,6 +54,13 @@ fs.writeFileSync('./raw-data/_notice.txt', notice, function(err) {
                 response.pipe(fs.createWriteStream('./raw-data/kanjium-variants.txt'));
                 resolve();
             });
+        }))(),
+        (() => new Promise((resolve, reject) => {
+            // Download KANJIDIC
+            https.get('https://raw.githubusercontent.com/echamudi/jp-resources-mirror/master/kanjidic2.xml.gz', (response) => {
+                response.pipe(fs.createWriteStream('./raw-data/kanjidic2.xml.gz'));
+                resolve();
+            });
         }))()
     ]);
 

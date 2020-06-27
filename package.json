@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "download-source": "node ./scripts/download-source.js",
-    "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
     "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
+    "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
+    "extract-kanjidic-data": "node ./scripts/extract-kanjidic-data.js",
+    "extract-data": "npm run extract-kanjivg-tree && npm run extract-kanjium-data && npm run extract-kanjidic-data",
     "test": "mocha ./test/test.js && mocha ./test/test-cli.js"
   },
   "repository": {
