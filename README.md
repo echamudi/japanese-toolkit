@@ -80,17 +80,25 @@ console.log(kanji.kanjiTree('国'));
 /* Result:
 {
     element: "国",
-    g: [{ element: "囗" },
-    {
-        element: "玉",
-        g: [
-            { element: "王" },
-            { element: "丶" }
-        ]
-    },
-    { element: "囗" }
+    g: [{
+            element: "囗"
+        },
+        {
+            element: "玉",
+            g: [{
+                    element: "王"
+                },
+                {
+                    element: "丶"
+                }
+            ]
+        },
+        {
+            element: "囗"
+        }
     ]
-} */
+}
+*/
 ```
 
 ### Note
