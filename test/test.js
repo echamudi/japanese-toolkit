@@ -153,6 +153,13 @@ describe('testing Kanji', function () {
 
     describe('random test content', function() {
         it('has correct related kanji content', function () {
+            assert.deepStrictEqual(kanji.jlpt.n1.includes('垣'), true);
+            assert.deepStrictEqual(kanji.jlpt.n2.includes('授'), true);
+            assert.deepStrictEqual(kanji.jlpt.n3.includes('交'), true);
+            assert.deepStrictEqual(kanji.jlpt.n4.includes('体'), true);
+            assert.deepStrictEqual(kanji.jlpt.n5.includes('一'), true);
+
+            // Kanjium
             assert.deepStrictEqual(kanji.related.antonyms["悪"], ["善", "美", "好", "良"]);
             assert.deepStrictEqual(kanji.related.lookalikes["会"], ["今", "令", "合"]);
             assert.deepStrictEqual(kanji.related.synonyms["悪"], ["醜", "粗", "憎"]);
