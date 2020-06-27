@@ -40,7 +40,12 @@ const sleep = promisify(setTimeout);
 
     for (let i = 0; i < kanjidicObj.kanjidic2[0].character.length; i++) {
         const character = kanjidicObj.kanjidic2[0].character[i];
-        const ucs = character.codepoint[0].cp_value.filter((el) => el.cp_type === "ucs")[0].$t;
+        const ucs = character
+            .codepoint[0]
+            .cp_value
+            .filter((el) => el.cp_type === "ucs")[0]
+            .$t
+            .toLowerCase();
         
         const targetFilePath = path.join(targetDir, ucs + '.json');
 
