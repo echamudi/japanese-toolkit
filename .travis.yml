@@ -7,7 +7,7 @@ node_js:
 os: 
   - linux
 
-install:
+script:
   # Prepare libraries
   - npm install
   - npm run download-source
@@ -21,5 +21,5 @@ install:
   - npm link --only=prod
   - npm install -g mocha
 
-script:
+  # Run test
   - npm test
