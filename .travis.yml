@@ -6,12 +6,14 @@ node_js:
 
 os: 
   - linux
+  - windows
 
 install:
   # Prepare libraries
   - npm install
   - npm run download-source
   - npm run extract-data
+  - npm run compile
   - npm install rimraf -g
   - rimraf node_modules
 
