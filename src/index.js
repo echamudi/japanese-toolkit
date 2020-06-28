@@ -135,3 +135,5 @@ const Related = {
 module.exports.related = Related;
 
 module.exports.kanjiTree = require('./kanji-tree.js');
+
+module.exports.readings = require('./kanjidic.js').readings;
