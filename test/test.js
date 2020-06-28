@@ -99,7 +99,7 @@ describe('testing Kanji', function () {
         });
     });
 
-    describe('testing flat file kanji list', function () {
+    describe('flat file kanji list: check properties', function () {
         it('has kanji kentei properties', function () {
             assert.deepStrictEqual(Array.isArray(kanji.kanken.lv10()), true);
             assert.deepStrictEqual(Array.isArray(kanji.kanken.lv09()), true);
@@ -157,23 +157,24 @@ describe('testing Kanji', function () {
         });
     });
 
-    describe('random test content', function() {
-        it('has correct related kanji content', function () {
+    describe('flat file kanji list: random content check', function() {
+        it('has correct JLPT kanji content', function () {
             assert.deepStrictEqual(kanji.jlpt.n1().includes('垣'), true);
             assert.deepStrictEqual(kanji.jlpt.n2().includes('授'), true);
             assert.deepStrictEqual(kanji.jlpt.n3().includes('交'), true);
             assert.deepStrictEqual(kanji.jlpt.n4().includes('体'), true);
             assert.deepStrictEqual(kanji.jlpt.n5().includes('一'), true);
+        });
 
-            // Kanjium
+        it('has correct kanjium content', function() {
             assert.deepStrictEqual(kanji.related.antonyms()["悪"], ["善", "美", "好", "良"]);
             assert.deepStrictEqual(kanji.related.lookalikes()["会"], ["今", "令", "合"]);
             assert.deepStrictEqual(kanji.related.synonyms()["悪"], ["醜", "粗", "憎"]);
             assert.deepStrictEqual(kanji.related.variants()["万"], ["萬"]);
-        });
+        })
     });
 
-    describe('uniqueness test', function () {
+    describe('flat file kanji list: uniqueness test', function () {
         it('has unique arrays for all', function () {
             collectionArray.forEach((array, index) => {
                 const set = new Set();
@@ -224,6 +225,29 @@ describe('testing Kanji', function () {
                 if (!set.has(char)) set.add(char);
                 else throw new Error('Wrong, char ' + char);
             })
+        });
+    });
+
+    describe('kanjidic', function() {
+        it('outputs correct readings', function() {
+            assert.deepStrictEqual(kanji.readings('𪀚'), 
+            {
+                on: [],
+                kun: [],
+                nanori: []
+            });
+
+            assert.deepStrictEqual(kanji.readings('食'), 
+            {
+                on: [ 'ショク', 'ジキ' ],
+                kun: [ 'く.う', 'く.らう', 'た.べる', 'は.む' ],
+                nanori: [ 'ぐい' ]
+            });
+            assert.deepStrictEqual(kanji.readings('丙'), { on: [ 'ヘイ' ], kun: [ 'ひのえ' ], nanori: [] });
+
+            assert.throws(() => { kanji.readings('') }, new Error('wrong length of string'));
+            assert.throws(() => { kanji.readings('aa') }, new Error('wrong length of string'));
+            assert.deepStrictEqual(kanji.readings('る'), null);
         });
     });
 });
