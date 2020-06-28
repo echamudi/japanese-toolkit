@@ -40,8 +40,6 @@ function readings(char) {
         throw new Error("f readings code logic error");
     })();
 
-    console.log(unicode);
-
     const filePath = path.join(__dirname, 'kanjidic', unicode + '.json');
 
     if (!fs.existsSync(filePath)) return null;
