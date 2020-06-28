@@ -4,7 +4,7 @@
         "checkJs": true,
         "target": "ES2015",
         "noImplicitAny": true,
-        "rootDir": "./lib",
+        "rootDir": "./src",
         "outDir": "./dist",
         "declaration": true,
         "moduleResolution": "node",
