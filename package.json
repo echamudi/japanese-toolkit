@@ -27,6 +27,8 @@
   },
   "files": [
     "/bin",
+    "/data",
+    "/dist",
     "/src",
     "/index.js",
     "LICENSE",
