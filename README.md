@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji)
 
 With Kanji you can:
+
+- Get readings information of kanji characters.
 - Get kanji characters in an array based on categorization.
 - Get kanji composition tree.
 
@@ -15,7 +17,7 @@ Get the readings of kanji
 ```js
 const kanji = require('kanji');
 
-kanji.reading('食')
+kanji.readings('食')
 /* Result:
 {
   on: [ 'ショク', 'ジキ' ],
