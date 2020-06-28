@@ -40,8 +40,8 @@ const csvtojson = require('csvtojson');
             obj[el.key] = el.val.split(',')
         });
     
-        // Save antonyms
-        fs.writeFileSync(path.join(targetDir, 'kanjium-' + name + '.json'), JSON.stringify(obj, null, 2));
+        // Save
+        fs.writeFileSync(path.join(targetDir, 'kanjium-' + name + '.json'), JSON.stringify(obj));
     }
 
     extractKanjium('antonyms');
