@@ -9,6 +9,7 @@
     "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
     "extract-kanjidic-data": "node ./scripts/extract-kanjidic-data.js",
     "extract-data": "npm run extract-kanjivg-tree && npm run extract-kanjium-data && npm run extract-kanjidic-data",
+    "watch": "npx tsc --watch",
     "test": "mocha ./test/test.js && mocha ./test/test-cli.js"
   },
   "repository": {
@@ -32,6 +33,7 @@
   ],
   "homepage": "https://github.com/echamudi/kanji#readme",
   "devDependencies": {
+    "typescript": "^3.9.5",
     "@types/node": "^14.0.14",
     "csvtojson": "^2.0.10",
     "mocha": "^6.2.0",
