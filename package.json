@@ -10,6 +10,7 @@
     "extract-kanjidic-data": "node ./scripts/extract-kanjidic-data.js",
     "extract-data": "npm run extract-kanjivg-tree && npm run extract-kanjium-data && npm run extract-kanjidic-data",
     "watch": "npx tsc --watch",
+    "compile": "npx tsc",
     "test": "mocha ./test/test.js && mocha ./test/test-cli.js"
   },
   "repository": {
