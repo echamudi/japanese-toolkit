@@ -27,7 +27,7 @@
   },
   "files": [
     "/bin",
-    "/lib",
+    "/src",
     "/index.js",
     "LICENSE",
     "README.md"
