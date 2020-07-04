@@ -173,3 +173,6 @@ export function fitObj(writing: string, reading: string): any {
 // TODO
 // Fix this fitObj('糀谷駅', 'こうじゃえき')
 // fix this console.log(fitObj('飛田給駅', 'とびたきゅうえき'));
+
+// Create scoring system?
+console.log(fitObj('飛田給駅', 'とびたきゅうえき'));
