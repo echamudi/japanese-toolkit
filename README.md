@@ -11,7 +11,7 @@
      Example:
 
      ```js
-     readings(根本)
+     readings('根本')
      
      // Output:
           [
