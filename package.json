@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/echamudi/furigana/issues"
   },
-  "homepage": "https://github.com/echamudi/furigana#readme"
+  "homepage": "https://github.com/echamudi/furigana#readme",
+  "dependencies": {
+    "kanji": "^0.9.2",
+    "wanakana": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/wanakana": "^4.0.0",
+    "@types/node": "^14.0.14",
+    "mocha": "^8.0.1",
+    "typescript": "^3.9.6"
+  }
 }
