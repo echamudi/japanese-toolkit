@@ -2,7 +2,7 @@
   "name": "furigana",
   "version": "0.1.2",
   "description": "[⏳WIP] Furigana toolkit for Japanese sentences",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
