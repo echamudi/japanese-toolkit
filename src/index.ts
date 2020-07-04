@@ -39,7 +39,7 @@ function readingMatch(s1: string, s2: string): boolean {
     return s1_mod === s2_mod;
 };
 
-export function fitObj(writing: string, reading: string): any {
+export function fitObj(writing: string, reading: string): {k: string, r: string, m: number}[] | undefined {
     // console.log(writing, reading);
     if (writing.length !== 0 && reading.length === 0) return undefined;
     if (writing.length === 0 && reading.length !== 0) return undefined;
@@ -53,10 +53,22 @@ export function fitObj(writing: string, reading: string): any {
 
     // If writing is only one character
     if (!isKana(writing) && isOneChar) {
+        let score = 0;
+
+        const r: string[] = readingLib[writing];
+
+        for (let i = 0; i < r.length; i++) {
+            if(readingMatch(reading, r[i])) {
+                score = 1;
+                break;
+            }
+        }
+
         return [
             {
                 k: writing,
-                r: reading
+                r: reading,
+                m: score
             }
         ]
     }
@@ -68,7 +80,8 @@ export function fitObj(writing: string, reading: string): any {
         writingArray.forEach((writingChar, index) => {
             ret.push({
                 k: writingChar,
-                r: readingArray[index]
+                r: readingArray[index],
+                m: 1
             });
         });
 
@@ -87,12 +100,10 @@ export function fitObj(writing: string, reading: string): any {
         return [
             {
                 k: writingArray[0],
-                r: toHiragana(readingArray[0])
+                r: toHiragana(readingArray[0]),
+                m: 1
             },
-            ...fitObj(
-                writingArray.slice(1).join(''),
-                reading.slice(1)
-            )
+            ...trial
         ]
     }
 
@@ -110,6 +121,8 @@ export function fitObj(writing: string, reading: string): any {
         }
     });
 
+    let results: ({k: string, r: string, m: number}[])[] = [];
+
     // If there is at least one match, traverse for each possibility
     if (doesFirstCharMatch) {
         for (let i = 0; i < firstCharMatches.length; i++) {
@@ -119,36 +132,19 @@ export function fitObj(writing: string, reading: string): any {
             );
 
             if (trial !== undefined) {
-                return [
+                results.push([
                     {
                         k: writingArray[0],
-                        r: firstCharMatches[i]
+                        r: firstCharMatches[i],
+                        m: 1
                     },
                     ...trial
-                ]
+                ]);
             };
         }
     }
 
     // If it doesn't match
-
-    // Try inflicted first reading char
-    // for (let i = 1; i < readingArray.length; i++) {
-    //     const trial = fitObj(
-    //         writingArray.slice(1).join(''),
-    //         reading.slice(i)
-    //     );
-
-    //     if (trial !== undefined) {
-    //         return [
-    //             {
-    //                 k: writingArray[0],
-    //                 r: reading.slice(0, i)
-    //             },
-    //             ...trial
-    //         ]
-    //     };
-    // }
 
     for (let i = 1; i < readingArray.length; i++) {
         const trial = fitObj(
@@ -157,17 +153,32 @@ export function fitObj(writing: string, reading: string): any {
         );
 
         if (trial !== undefined) {
-            return [
+            results.push([
                 {
                     k: writingArray[0],
-                    r: reading.slice(0, i)
+                    r: reading.slice(0, i),
+                    m: 0
                 },
                 ...trial
-            ]
+            ]);
         };
     }
 
-    return undefined;
+    // Find the best reading
+
+    let highestScore = -1;
+    let currentResult: any;
+    
+    results.forEach((result) => {
+        const currentScore = result.reduce((ax, el) => ax + el.m, 0);
+
+        if (currentScore > highestScore) {
+            currentResult = result;
+            highestScore = currentScore;
+        }
+    });
+
+    return currentResult;
 };
 
 // TODO
@@ -175,4 +186,4 @@ export function fitObj(writing: string, reading: string): any {
 // fix this console.log(fitObj('飛田給駅', 'とびたきゅうえき'));
 
 // Create scoring system?
-console.log(fitObj('飛田給駅', 'とびたきゅうえき'));
+console.log(fitObj('勿来', 'なこそ'));
