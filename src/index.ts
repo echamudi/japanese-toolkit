@@ -118,7 +118,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
     if (isWritingKana && writingHiragana === readingHiragana) {
         return [
             {
-                w: writingHiragana,
+                w: writing,
                 r: readingHiragana,
                 match: 1 as 0 | 1,
                 isKanji: false,
