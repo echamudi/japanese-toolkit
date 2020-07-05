@@ -134,22 +134,33 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
      * writing = 'まで漢字', reading = 'までかんじ'
      */
     if (isKana(writingArray[0]) && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
-        const trial = fitObj(
-            writingArray.slice(1).join(''),
-            reading.slice(1)
-        )
+        let matchCounter = 0;
 
-        if (trial === undefined) return undefined;
+        for (let i = 0; i < writingArray.length; i++) {
+            if (toHiragana(writingArray[i]) === toHiragana(readingArray[i])) {
+                matchCounter++;
+                continue;
+            }
+
+            break;
+        }
+
+        const next = fitObj(
+            writingArray.slice(matchCounter).join(''),
+            reading.slice(matchCounter)
+        );
+
+        if (next === undefined) return undefined;
 
         return [
             {
-                w: writingArray[0],
-                r: toHiragana(readingArray[0]),
+                w: writingArray.slice(0, matchCounter).join(''),
+                r: toHiragana(readingArray.slice(0, matchCounter).join('')),
                 match: 1 as 0 | 1,
                 isKanji: true,
                 returnId: 3
             },
-            ...trial
+            ...next
         ];
     }
 
@@ -173,7 +184,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
         }
     });
 
-    let results: ReturnType<typeof fitObj>[] = [];
+    let possibleResults: ReturnType<typeof fitObj>[] = [];
 
     /**
      * If there is at least one match, traverse for each possibility
@@ -191,7 +202,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
             );
 
             if (trial !== undefined) {
-                results.push([
+                possibleResults.push([
                     {
                         w: writingArray[0],
                         r: firstCharMatches[i],
@@ -219,18 +230,52 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
             reading.slice(i)
         );
 
-        if (trial !== undefined) {
-            results.push([
-                {
-                    w: writingArray[0],
-                    r: reading.slice(0, i),
-                    match: 0 as 0 | 1,
+        // If current path is not possible, don't push to the possibleResults
+        if (trial === undefined) continue;
+
+        const currentObj = {
+            w: writingArray[0],
+            r: reading.slice(0, i),
+            match: 0 as 0 | 1,
+            isKanji: true,
+            returnId: 5
+        };
+
+        /**
+         * If next matchObj is a match
+         */
+        if (trial[0].match === 1) {
+            possibleResults.push([
+                currentObj,
+                ...trial
+            ]);
+        };
+
+        /*
+        If next matchObj is not a match, merge with current
+        From:
+            { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
+            [
+                { w: '二', r: 'いうえお', match: 0, ... }
+            ]
+        To:
+            [
+                { w: '一二', r: 'あいうえお', match: 0, ... }
+            ]
+        */
+        if (trial[0].match === 0) {
+            const chunk = trial.splice(0, 1)[0];
+
+            possibleResults.push([{
+                    w: currentObj.w + chunk.w,
+                    r: currentObj.r + chunk.r,
+                    match: 0,
                     isKanji: true,
                     returnId: 5
                 },
                 ...trial
             ]);
-        };
+        }
     }
 
     // Find the best reading
@@ -238,7 +283,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
     let highestScore = -1;
     let currentResult: ReturnType<typeof fitObj>;
     
-    results.forEach((result) => {
+    possibleResults.forEach((result) => {
         const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;
 
         if (currentScore > highestScore) {
@@ -253,6 +298,9 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
 // TODO
 
 // console.log(fitObj('私はボーブさんと仕事が飛田給駅にしてます', 'あしはぼーぶさんとしごとがとびたきゅうえきにしてます'));
-// console.log(fitObj('はあ給駅', 'はあああああえき'));
-// console.log(fitObj('食一二三', 'しょくあいうえおかきくけこ'));
+// console.log(fitObj(
+//     '田中さんは安足間駅と風合瀬駅と小牛田駅に行ったことがある', 
+//     'たなかさんはあんたろまえきとかそせえきとこごたえきにいったことがある'));
+// console.log(fitObj('一二', 'あいうえお'));
+// console.log(fitObj('食一二三午後', 'しょくあいうえおごごご'));
 // console.log(readingLib['食']);
