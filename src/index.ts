@@ -1,5 +1,5 @@
 // import * as kanji from 'kanji';
-import { isKana, toHiragana, isKanji } from 'wanakana';
+import { isKana, toHiragana, isKanji, tokenize } from 'wanakana';
 import * as fs from 'fs';
 import { join } from 'path';
 
@@ -72,7 +72,20 @@ interface matchObj {
 export function fitObj(writing: string, reading: string): matchObj[] | null {
 
     const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
-    let n = 0;
+    
+    // Validate writing
+    const isWritingValid = tokenize(writing, {detailed: true})
+        .map((el: any) => el.type)
+        .every((el: any) => 
+            el === 'kanji' ||
+            el === 'hiragana' ||
+            el === 'katakana'
+        );
+    if (!isWritingValid) throw new Error('Currently, writing argument can only contain kanji and kana only');
+
+    // Validate reading
+    const isReadingValid = isKana(reading);
+    if (!isReadingValid) throw new Error('Currently, reading argument can only contain kana only');
 
     function executor(writing: string, reading: string): ReturnType<typeof fitObj> {
         if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
@@ -85,7 +98,6 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
 
         if (writing.length !== 0 && reading.length === 0) return null;
         if (writing.length === 0 && reading.length !== 0) return null;
-        if (!isKana(reading)) throw new Error('Reading must be kana only');
 
         const writingArray = [...writing];
         const readingArray = [...reading];
