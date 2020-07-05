@@ -70,230 +70,235 @@ interface matchObj {
  * @param reading must be kana only, no kanji, no punctuation marks, no numbers. 
  */
 export function fitObj(writing: string, reading: string): matchObj[] | undefined {
-    if (writing.length !== 0 && reading.length === 0) return undefined;
-    if (writing.length === 0 && reading.length !== 0) return undefined;
-    if (!isKana(reading)) throw new Error('Reading must be kana only');
 
-    const writingArray = [...writing];
-    const readingArray = [...reading];
-    const isOneChar = writingArray.length === 1;
-    const writingHiragana = toHiragana(writing);
-    const readingHiragana = toHiragana(reading);
-
-    const isWritingKanji = isKanji(writing);
-    const isWritingKana  = isKana(writing);
-
-    /**
-     * If writing is only one character
-     * example: writing = '今', reading = 'きょう'
-     */
-    if (!isKana(writing) && isOneChar) {
-        let match: 0 | 1 = 0;
-
-        const r: string[] = readingLib[writing];
-
-        for (let i = 0; i < r.length; i++) {
-            if(readingMatch(reading, r[i])) {
-                match = 1;
+    function possibilities(writing: string, reading: string): ReturnType<typeof fitObj> {
+        if (writing.length !== 0 && reading.length === 0) return undefined;
+        if (writing.length === 0 && reading.length !== 0) return undefined;
+        if (!isKana(reading)) throw new Error('Reading must be kana only');
+    
+        const writingArray = [...writing];
+        const readingArray = [...reading];
+        const isOneChar = writingArray.length === 1;
+        const writingHiragana = toHiragana(writing);
+        const readingHiragana = toHiragana(reading);
+    
+        const isWritingKanji = isKanji(writing);
+        const isWritingKana  = isKana(writing);
+    
+        /**
+         * If writing is only one character
+         * example: writing = '今', reading = 'きょう'
+         */
+        if (!isKana(writing) && isOneChar) {
+            let match: 0 | 1 = 0;
+    
+            const r: string[] = readingLib[writing];
+    
+            for (let i = 0; i < r.length; i++) {
+                if(readingMatch(reading, r[i])) {
+                    match = 1;
+                    break;
+                }
+            }
+    
+            return [
+                {
+                    w: writing,
+                    r: reading,
+                    match,
+                    isKanji: true,
+                    returnId: 1
+                }
+            ]
+        }
+    
+        /**
+         * If writing kana matches exaclty like the reading kana
+         * example: writing = 'くろ', reading = 'くろ'
+         * example: writing = 'ボーブは', reading = 'ぼーぶは'
+         */
+        if (isWritingKana && writingHiragana === readingHiragana) {
+            return [
+                {
+                    w: writing,
+                    r: readingHiragana,
+                    match: 1 as 0 | 1,
+                    isKanji: false,
+                    returnId: 2
+                }
+            ];
+        };
+    
+        /**
+         * If first leter is hiragana and matches
+         * example:
+         *            v                    v
+         * writing = 'まで漢字', reading = 'までかんじ'
+         */
+        if (isKana(writingArray[0]) && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
+            let matchCounter = 0;
+    
+            for (let i = 0; i < writingArray.length; i++) {
+                if (toHiragana(writingArray[i]) === toHiragana(readingArray[i])) {
+                    matchCounter++;
+                    continue;
+                }
+    
                 break;
             }
+    
+            const next = fitObj(
+                writingArray.slice(matchCounter).join(''),
+                reading.slice(matchCounter)
+            );
+    
+            if (next === undefined) return undefined;
+    
+            return [
+                {
+                    w: writingArray.slice(0, matchCounter).join(''),
+                    r: toHiragana(readingArray.slice(0, matchCounter).join('')),
+                    match: 1 as 0 | 1,
+                    isKanji: true,
+                    returnId: 3
+                },
+                ...next
+            ];
         }
-
-        return [
-            {
-                w: writing,
-                r: reading,
-                match,
-                isKanji: true,
-                returnId: 1
-            }
-        ]
-    }
-
-    /**
-     * If writing kana matches exaclty like the reading kana
-     * example: writing = 'くろ', reading = 'くろ'
-     * example: writing = 'ボーブは', reading = 'ぼーぶは'
-     */
-    if (isWritingKana && writingHiragana === readingHiragana) {
-        return [
-            {
-                w: writing,
-                r: readingHiragana,
-                match: 1 as 0 | 1,
-                isKanji: false,
-                returnId: 2
-            }
-        ];
-    };
-
-    /**
-     * If first leter is hiragana and matches
-     * example:
-     *            v                    v
-     * writing = 'まで漢字', reading = 'までかんじ'
-     */
-    if (isKana(writingArray[0]) && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
-        let matchCounter = 0;
-
-        for (let i = 0; i < writingArray.length; i++) {
-            if (toHiragana(writingArray[i]) === toHiragana(readingArray[i])) {
-                matchCounter++;
-                continue;
-            }
-
-            break;
+    
+        /**
+         * If first leter is hiragana and doesn't match, return undefined
+         * example:
+         *            v                    v
+         * writing = 'まで漢字', reading = 'はでかんじ'
+         */
+        if (isKana(writingArray[0]) && writingHiragana !== readingHiragana) {
+            return undefined;
         }
-
-        const next = fitObj(
-            writingArray.slice(matchCounter).join(''),
-            reading.slice(matchCounter)
-        );
-
-        if (next === undefined) return undefined;
-
-        return [
-            {
-                w: writingArray.slice(0, matchCounter).join(''),
-                r: toHiragana(readingArray.slice(0, matchCounter).join('')),
-                match: 1 as 0 | 1,
-                isKanji: true,
-                returnId: 3
-            },
-            ...next
-        ];
-    }
-
-    /**
-     * If first leter is hiragana and doesn't match, return undefined
-     * example:
-     *            v                    v
-     * writing = 'まで漢字', reading = 'はでかんじ'
-     */
-    if (isKana(writingArray[0]) && writingHiragana !== readingHiragana) {
-        return undefined;
-    }
-
-    let doesFirstCharMatch = false;
-    let firstCharMatches: string[] = [];
-
-    readingLib[writingArray[0]].forEach((charReading) => {
-        if (readingMatch(reading.slice(0, charReading.length), charReading)) {
-            doesFirstCharMatch = true;
-            firstCharMatches.push(charReading);
+    
+        let doesFirstCharMatch = false;
+        let firstCharMatches: string[] = [];
+    
+        readingLib[writingArray[0]].forEach((charReading) => {
+            if (readingMatch(reading.slice(0, charReading.length), charReading)) {
+                doesFirstCharMatch = true;
+                firstCharMatches.push(charReading);
+            }
+        });
+    
+        let possibleResults: ReturnType<typeof fitObj>[] = [];
+    
+        /**
+         * If there is at least one match, traverse for each possibility
+         * example:
+         *
+         * writing = '田地', reading = 'でんち'
+         * According to dict, '田' can match 'で' and 'でん'
+         * we will traverse to both path ['で', 'でん']
+         */
+        if (doesFirstCharMatch) {
+            for (let i = 0; i < firstCharMatches.length; i++) {
+                const trial = fitObj(
+                    writingArray.slice(1).join(''),
+                    reading.slice(firstCharMatches[i].length)
+                );
+    
+                if (trial !== undefined) {
+                    possibleResults.push([
+                        {
+                            w: writingArray[0],
+                            r: firstCharMatches[i],
+                            match: 1 as 0 | 1,
+                            isKanji: true,
+                            returnId: 4
+                        },
+                        ...trial
+                    ]);
+                };
+            }
         }
-    });
-
-    let possibleResults: ReturnType<typeof fitObj>[] = [];
-
-    /**
-     * If there is at least one match, traverse for each possibility
-     * example:
-     *
-     * writing = '田地', reading = 'でんち'
-     * According to dict, '田' can match 'で' and 'でん'
-     * we will traverse to both path ['で', 'でん']
-     */
-    if (doesFirstCharMatch) {
-        for (let i = 0; i < firstCharMatches.length; i++) {
+    
+        /**
+         * If it doesn't match anything, assume for each letter
+         * example:
+         *
+         * writing = '食は', reading = 'あいうえおは'
+         * According to dict, '食' can't match anything
+         * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
+         */
+        // Set limit to lookup reading upto 6 chars
+        const readingCharsLimit = Math.min(readingArray.length, 6);
+    
+        for (let i = 1; i <= readingCharsLimit; i++) {
             const trial = fitObj(
                 writingArray.slice(1).join(''),
-                reading.slice(firstCharMatches[i].length)
+                reading.slice(i)
             );
-
-            if (trial !== undefined) {
+    
+            // If current path is not possible, don't push to the possibleResults
+            if (trial === undefined) continue;
+    
+            const currentObj = {
+                w: writingArray[0],
+                r: reading.slice(0, i),
+                match: 0 as 0 | 1,
+                isKanji: true,
+                returnId: 5
+            };
+    
+            /**
+             * If next matchObj is a match
+             */
+            if (trial[0].match === 1) {
                 possibleResults.push([
-                    {
-                        w: writingArray[0],
-                        r: firstCharMatches[i],
-                        match: 1 as 0 | 1,
-                        isKanji: true,
-                        returnId: 4
-                    },
+                    currentObj,
                     ...trial
                 ]);
             };
-        }
-    }
-
-    /**
-     * If it doesn't match anything, assume for each letter
-     * example:
-     *
-     * writing = '食は', reading = 'あいうえおは'
-     * According to dict, '食' can't match anything
-     * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
-     */
-    // Set limit to lookup reading upto 6 chars
-    const readingCharsLimit = Math.min(readingArray.length, 6);
-
-    for (let i = 1; i <= readingCharsLimit; i++) {
-        const trial = fitObj(
-            writingArray.slice(1).join(''),
-            reading.slice(i)
-        );
-
-        // If current path is not possible, don't push to the possibleResults
-        if (trial === undefined) continue;
-
-        const currentObj = {
-            w: writingArray[0],
-            r: reading.slice(0, i),
-            match: 0 as 0 | 1,
-            isKanji: true,
-            returnId: 5
-        };
-
-        /**
-         * If next matchObj is a match
-         */
-        if (trial[0].match === 1) {
-            possibleResults.push([
-                currentObj,
-                ...trial
-            ]);
-        };
-
-        /*
-        If next matchObj is not a match, merge with current
-        From:
-            { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
-            [
-                { w: '二', r: 'いうえお', match: 0, ... }
-            ]
-        To:
-            [
-                { w: '一二', r: 'あいうえお', match: 0, ... }
-            ]
-        */
-        if (trial[0].match === 0) {
-            const chunk = trial.splice(0, 1)[0];
-
-            possibleResults.push([{
-                    w: currentObj.w + chunk.w,
-                    r: currentObj.r + chunk.r,
-                    match: 0,
-                    isKanji: true,
-                    returnId: 5
-                },
-                ...trial
-            ]);
-        }
-    }
-
-    // Find the best reading
-
-    let highestScore = -1;
-    let currentResult: ReturnType<typeof fitObj>;
     
-    possibleResults.forEach((result) => {
-        const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;
-
-        if (currentScore > highestScore) {
-            currentResult = result;
-            highestScore = currentScore;
+            /*
+            If next matchObj is not a match, merge with current
+            From:
+                { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
+                [
+                    { w: '二', r: 'いうえお', match: 0, ... }
+                ]
+            To:
+                [
+                    { w: '一二', r: 'あいうえお', match: 0, ... }
+                ]
+            */
+            if (trial[0].match === 0) {
+                const chunk = trial.splice(0, 1)[0];
+    
+                possibleResults.push([{
+                        w: currentObj.w + chunk.w,
+                        r: currentObj.r + chunk.r,
+                        match: 0,
+                        isKanji: true,
+                        returnId: 5
+                    },
+                    ...trial
+                ]);
+            }
         }
-    });
 
-    return currentResult;
+        // Find the best reading
+
+        let highestScore = -1;
+        let currentResult: ReturnType<typeof fitObj>;
+        
+        possibleResults.forEach((result) => {
+            const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;
+
+            if (currentScore > highestScore) {
+                currentResult = result;
+                highestScore = currentScore;
+            }
+        });
+
+        return currentResult;
+    };
+
+    return possibilities(writing, reading);
 };
