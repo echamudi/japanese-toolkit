@@ -56,5 +56,13 @@ describe('hoy', function () {
             { w: '畑', r: 'はた' },
             { w: '駅', r: 'えき' }
         ]);
+
+        assert.deepStrictEqual(furigana.fitObj('田中さんはすごいと思います', 'たなかさんはすごいとおもいます').map(filterFitObj), [
+            { w: '田', r: 'た' },
+            { w: '中', r: 'なか' },
+            { w: 'さんはすごいと', r: 'さんはすごいと' },
+            { w: '思', r: 'おも' },
+            { w: 'います', r: 'います' }
+        ]);
     })
 })
