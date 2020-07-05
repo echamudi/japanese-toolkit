@@ -156,7 +156,5 @@ describe('hoy', function () {
                 { w: 'です', r: 'です' }
             ]
         );
-
-
     })
 });
