@@ -224,7 +224,10 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
      * According to dict, '食' can't match anything
      * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
      */
-    for (let i = 1; i < readingArray.length; i++) {
+    // Set limit to lookup reading upto 6 chars
+    const readingCharsLimit = Math.min(readingArray.length, 6);
+
+    for (let i = 1; i <= readingCharsLimit; i++) {
         const trial = fitObj(
             writingArray.slice(1).join(''),
             reading.slice(i)
@@ -294,13 +297,3 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
 
     return currentResult;
 };
-
-// TODO
-
-// console.log(fitObj('私はボーブさんと仕事が飛田給駅にしてます', 'あしはぼーぶさんとしごとがとびたきゅうえきにしてます'));
-// console.log(fitObj(
-//     '田中さんは安足間駅と風合瀬駅と小牛田駅に行ったことがある', 
-//     'たなかさんはあんたろまえきとかそせえきとこごたえきにいったことがある'));
-// console.log(fitObj('一二', 'あいうえお'));
-// console.log(fitObj('食一二三午後', 'しょくあいうえおごごご'));
-// console.log(readingLib['食']);
