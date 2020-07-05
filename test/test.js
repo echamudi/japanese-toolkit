@@ -1,61 +1,60 @@
 const furigana = require('..');
 const assert = require('assert');
 
+function filterFitObj(obj) {
+    // return obj;
+    return { w: obj.w, r: obj.r };
+}
+
 describe('hoy', function () {
     it('test furigana', function () {
-        assert.deepStrictEqual(furigana.fitObj('く', 'く'), [
-            { k: 'く', r: 'く' }
+        assert.deepStrictEqual(furigana.fitObj('く', 'く').map(filterFitObj), [
+            { w: 'く', r: 'く' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('コヤ', 'こや'), [
-            { k: 'コ', r: 'こ' },
-            { k: 'ヤ', r: 'や' }
+        assert.deepStrictEqual(furigana.fitObj('コヤ', 'こや').map(filterFitObj), [
+            { w: 'コヤ', r: 'こや' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('食', 'しょく'), [
-            { k: '食', r: 'しょく' }
+        assert.deepStrictEqual(furigana.fitObj('食', 'しょく').map(filterFitObj), [
+            { w: '食', r: 'しょく' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('一', 'ひろし'), [
-            { k: '一', r: 'ひろし' }
+        assert.deepStrictEqual(furigana.fitObj('一', 'ひろし').map(filterFitObj), [
+            { w: '一', r: 'ひろし' }
         ]);
 
         assert.deepStrictEqual(furigana.fitObj('ひ', 'は'), undefined);
         assert.deepStrictEqual(furigana.fitObj('はは', 'は'), undefined);
         assert.deepStrictEqual(furigana.fitObj('は', 'はた'), undefined);
 
-        assert.deepStrictEqual(furigana.fitObj('私は', 'わたしは'), [
-            { k: '私', r: 'わたし' },
-            { k: 'は', r: 'は' }
+        assert.deepStrictEqual(furigana.fitObj('私は', 'わたしは').map(filterFitObj), [
+            { w: '私', r: 'わたし' },
+            { w: 'は', r: 'は' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('彼女は一番です', 'かのじょはいちばんです'), [
-            { k: '彼', r: 'かの' },
-            { k: '女', r: 'じょ' },
-            { k: 'は', r: 'は' },
-            { k: '一', r: 'いち' },
-            { k: '番', r: 'ばん' },
-            { k: 'で', r: 'で' },
-            { k: 'す', r: 'す' }
+        assert.deepStrictEqual(furigana.fitObj('彼女は一番です', 'かのじょはいちばんです').map(filterFitObj), [
+            { w: '彼', r: 'かの' },
+            { w: '女', r: 'じょ' },
+            { w: 'は', r: 'は' },
+            { w: '一', r: 'いち' },
+            { w: '番', r: 'ばん' },
+            { w: 'です', r: 'です' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('一は一と行っています', 'よこいちはにのまえといっています'), [
-            { k: '一', r: 'よこいち' },
-            { k: 'は', r: 'は' },
-            { k: '一', r: 'にのまえ' },
-            { k: 'と', r: 'と' },
-            { k: '行', r: 'い' },
-            { k: 'っ', r: 'っ' },
-            { k: 'て', r: 'て' },
-            { k: 'い', r: 'い' },
-            { k: 'ま', r: 'ま' },
-            { k: 'す', r: 'す' }
+        assert.deepStrictEqual(furigana.fitObj('一は一と行っています', 'よこいちはにのまえといっています').map(filterFitObj), [
+            { w: '一', r: 'よこいち' },
+            { w: 'は', r: 'は' },
+            { w: '一', r: 'にのまえ' },
+            { w: 'と', r: 'と' },
+            { w: '行', r: 'い' },
+            { w: 'っています', r: 'っています' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('軍畑駅', 'いくさばたえき'), [
-            { k: '軍', r: 'いくさ' },
-            { k: '畑', r: 'はた' },
-            { k: '駅', r: 'えき' }
+        assert.deepStrictEqual(furigana.fitObj('軍畑駅', 'いくさばたえき').map(filterFitObj), [
+            { w: '軍', r: 'いくさ' },
+            { w: '畑', r: 'はた' },
+            { w: '駅', r: 'えき' }
         ]);
     })
 })
