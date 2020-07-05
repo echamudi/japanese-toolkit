@@ -147,7 +147,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 break;
             }
     
-            const next = fitObj(
+            const next = executor(
                 writingArray.slice(matchCounter).join(''),
                 reading.slice(matchCounter)
             );
@@ -198,7 +198,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
          */
         if (doesFirstCharMatch) {
             for (let i = 0; i < firstCharMatches.length; i++) {
-                const trial = fitObj(
+                const trial = executor(
                     writingArray.slice(1).join(''),
                     reading.slice(firstCharMatches[i].length)
                 );
@@ -230,7 +230,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
         const readingCharsLimit = Math.min(readingArray.length, 6);
     
         for (let i = 1; i <= readingCharsLimit; i++) {
-            const trial = fitObj(
+            const trial = executor(
                 writingArray.slice(1).join(''),
                 reading.slice(i)
             );
