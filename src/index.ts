@@ -69,7 +69,7 @@ interface matchObj {
  * @param writing must be kanji + kana only
  * @param reading must be kana only, no kanji, no punctuation marks, no numbers. 
  */
-export function fitObj(writing: string, reading: string): matchObj[] | undefined {
+export function fitObj(writing: string, reading: string): matchObj[] | null {
 
     const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
     let n = 0;
@@ -83,16 +83,16 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
             }
         }
 
-        if (writing.length !== 0 && reading.length === 0) return undefined;
-        if (writing.length === 0 && reading.length !== 0) return undefined;
+        if (writing.length !== 0 && reading.length === 0) return null;
+        if (writing.length === 0 && reading.length !== 0) return null;
         if (!isKana(reading)) throw new Error('Reading must be kana only');
 
         const writingArray = [...writing];
         const readingArray = [...reading];
 
         if (readingArray.length < writingArray.length) {
-            memo[writing][reading] = undefined;
-            return undefined;
+            memo[writing][reading] = null;
+            return null;
         };
 
         const isOneChar = writingArray.length === 1;
@@ -173,9 +173,9 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 reading.slice(matchCounter)
             );
     
-            if (next === undefined) {
-                memo[writing][reading] = undefined;
-                return undefined;
+            if (next === null) {
+                memo[writing][reading] = null;
+                return null;
             };
             
             memo[writing][reading] = [
@@ -199,8 +199,8 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
         if (isKana(writingArray[0]) && writingHiragana !== readingHiragana) {
-            memo[writing][reading] = undefined;
-            return undefined;
+            memo[writing][reading] = null;
+            return null;
         }
     
         let doesFirstCharMatch = false;
@@ -230,7 +230,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     reading.slice(firstCharMatches[i].length)
                 );
     
-                if (trial !== undefined) {
+                if (trial !== null) {
                     possibleResults.push([
                         {
                             w: writingArray[0],
@@ -259,10 +259,10 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 reading.slice(i)
             );
 
-            trial = trial ? [...trial] : undefined;
+            trial = trial ? [...trial] : null;
 
             // If current path is not possible, don't push to the possibleResults
-            if (trial === undefined) continue;
+            if (trial === null) continue;
     
             const currentObj = {
                 w: writingArray[0],
@@ -314,7 +314,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
         // Find the best reading
 
         let highestScore = -1;
-        let currentResult: ReturnType<typeof fitObj>;
+        let currentResult: ReturnType<typeof fitObj> = null;
         
         possibleResults.forEach((result) => {
             const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;

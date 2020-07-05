@@ -24,9 +24,9 @@ describe('hoy', function () {
             { w: '一', r: 'ひろし' }
         ]);
 
-        assert.deepStrictEqual(furigana.fitObj('ひ', 'は'), undefined);
-        assert.deepStrictEqual(furigana.fitObj('はは', 'は'), undefined);
-        assert.deepStrictEqual(furigana.fitObj('は', 'はた'), undefined);
+        assert.deepStrictEqual(furigana.fitObj('ひ', 'は'), null);
+        assert.deepStrictEqual(furigana.fitObj('はは', 'は'), null);
+        assert.deepStrictEqual(furigana.fitObj('は', 'はた'), null);
 
         assert.deepStrictEqual(furigana.fitObj('私は', 'わたしは').map(filterFitObj), [
             { w: '私', r: 'わたし' },
