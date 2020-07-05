@@ -71,7 +71,7 @@ interface matchObj {
  */
 export function fitObj(writing: string, reading: string): matchObj[] | undefined {
 
-    function possibilities(writing: string, reading: string): ReturnType<typeof fitObj> {
+    function executor(writing: string, reading: string): ReturnType<typeof fitObj> {
         if (writing.length !== 0 && reading.length === 0) return undefined;
         if (writing.length === 0 && reading.length !== 0) return undefined;
         if (!isKana(reading)) throw new Error('Reading must be kana only');
@@ -300,5 +300,5 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
         return currentResult;
     };
 
-    return possibilities(writing, reading);
+    return executor(writing, reading);
 };
