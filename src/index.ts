@@ -65,6 +65,10 @@ interface matchObj {
     returnId?: number
 };
 
+/**
+ * @param writing must be kanji + kana only
+ * @param reading must be kana only, no kanji, no punctuation marks, no numbers. 
+ */
 export function fitObj(writing: string, reading: string): matchObj[] | undefined {
     if (writing.length !== 0 && reading.length === 0) return undefined;
     if (writing.length === 0 && reading.length !== 0) return undefined;
