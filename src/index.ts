@@ -71,13 +71,30 @@ interface matchObj {
  */
 export function fitObj(writing: string, reading: string): matchObj[] | undefined {
 
+    const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
+    let n = 0;
+
     function executor(writing: string, reading: string): ReturnType<typeof fitObj> {
+        if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
+            return memo[writing][reading];
+        } else {
+            if (!Object.prototype.hasOwnProperty.call(memo, writing)) {
+                memo[writing] = {};
+            }
+        }
+
         if (writing.length !== 0 && reading.length === 0) return undefined;
         if (writing.length === 0 && reading.length !== 0) return undefined;
         if (!isKana(reading)) throw new Error('Reading must be kana only');
-    
+
         const writingArray = [...writing];
         const readingArray = [...reading];
+
+        if (readingArray.length < writingArray.length) {
+            memo[writing][reading] = undefined;
+            return undefined;
+        };
+
         const isOneChar = writingArray.length === 1;
         const writingHiragana = toHiragana(writing);
         const readingHiragana = toHiragana(reading);
@@ -100,8 +117,8 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     break;
                 }
             }
-    
-            return [
+
+            memo[writing][reading] = [
                 {
                     w: writing,
                     r: reading,
@@ -109,7 +126,9 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     isKanji: true,
                     returnId: 1
                 }
-            ]
+            ];
+
+            return memo[writing][reading];
         }
     
         /**
@@ -118,7 +137,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
          * example: writing = 'ボーブは', reading = 'ぼーぶは'
          */
         if (isWritingKana && writingHiragana === readingHiragana) {
-            return [
+            memo[writing][reading] = [
                 {
                     w: writing,
                     r: readingHiragana,
@@ -127,6 +146,8 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     returnId: 2
                 }
             ];
+
+            return memo[writing][reading];
         };
     
         /**
@@ -152,9 +173,12 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 reading.slice(matchCounter)
             );
     
-            if (next === undefined) return undefined;
-    
-            return [
+            if (next === undefined) {
+                memo[writing][reading] = undefined;
+                return undefined;
+            };
+            
+            memo[writing][reading] = [
                 {
                     w: writingArray.slice(0, matchCounter).join(''),
                     r: toHiragana(readingArray.slice(0, matchCounter).join('')),
@@ -164,6 +188,8 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 },
                 ...next
             ];
+
+            return memo[writing][reading];
         }
     
         /**
@@ -173,6 +199,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
         if (isKana(writingArray[0]) && writingHiragana !== readingHiragana) {
+            memo[writing][reading] = undefined;
             return undefined;
         }
     
@@ -226,15 +253,14 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
          * According to dict, '食' can't match anything
          * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
          */
-        // Set limit to lookup reading upto 6 chars
-        const readingCharsLimit = Math.min(readingArray.length, 6);
-    
-        for (let i = 1; i <= readingCharsLimit; i++) {
-            const trial = executor(
+        for (let i = 1; i <= readingArray.length; i++) {
+            let trial = executor(
                 writingArray.slice(1).join(''),
                 reading.slice(i)
             );
-    
+
+            trial = trial ? [...trial] : undefined;
+
             // If current path is not possible, don't push to the possibleResults
             if (trial === undefined) continue;
     
@@ -245,7 +271,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                 isKanji: true,
                 returnId: 5
             };
-    
+
             /**
              * If next matchObj is a match
              */
@@ -254,6 +280,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     currentObj,
                     ...trial
                 ]);
+                continue;
             };
     
             /*
@@ -280,6 +307,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
                     },
                     ...trial
                 ]);
+                continue;
             }
         }
 
@@ -297,6 +325,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | undefined
             }
         });
 
+        memo[writing][reading] = currentResult;
         return currentResult;
     };
 
