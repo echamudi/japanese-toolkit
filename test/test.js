@@ -57,12 +57,33 @@ describe('hoy', function () {
             { w: '駅', r: 'えき' }
         ]);
 
+        // Merge kana test
         assert.deepStrictEqual(furigana.fitObj('田中さんはすごいと思います', 'たなかさんはすごいとおもいます').map(filterFitObj), [
             { w: '田', r: 'た' },
             { w: '中', r: 'なか' },
             { w: 'さんはすごいと', r: 'さんはすごいと' },
             { w: '思', r: 'おも' },
             { w: 'います', r: 'います' }
+        ]);
+
+        // Merge unmatched kanji test
+        assert.deepStrictEqual(furigana.fitObj('食一二三午後', 'しょくあいうえおごご').map(filterFitObj), [
+            { w: '食', r: 'しょく' },
+            { w: '一二三', r: 'あいうえお' },
+            { w: '午', r: 'ご' },
+            { w: '後', r: 'ご' }
+        ]);
+
+        assert.deepStrictEqual(furigana.fitObj('安足間駅と風合瀬駅はすごい', 'あんたろまえきとかそせえきはすごい').map(filterFitObj), [
+            { w: '安', r: 'あん' },
+            { w: '足', r: 'た' },
+            { w: '間', r: 'ろま' },
+            { w: '駅', r: 'えき' },
+            { w: 'と', r: 'と' },
+            { w: '風合', r: 'かそ' },
+            { w: '瀬', r: 'せ' },
+            { w: '駅', r: 'えき' },
+            { w: 'はすごい', r: 'はすごい' }
         ]);
     })
 })
