@@ -86,6 +86,23 @@ describe('hoy', function () {
             { w: 'はすごい', r: 'はすごい' }
         ]);
 
+        // Numbers
+        assert.deepStrictEqual(furigana.fitObj('５０人', 'ごじゅうにん').map(filterFitObj), [
+            { w: '５０', r: 'ごじゅう' },
+            { w: '人', r: 'にん' }
+        ]);
+
+        assert.deepStrictEqual(furigana.fitObj('五十人', 'ごじゅうにん').map(filterFitObj), [
+            { w: '五', r: 'ご' },
+            { w: '十', r: 'じゅう' },
+            { w: '人', r: 'にん' }
+        ]);
+
+        assert.deepStrictEqual(furigana.fitObj('50人', 'ごじゅうにん').map(filterFitObj), [
+            { w: '50', r: 'ごじゅう' },
+            { w: '人', r: 'にん' }
+        ]);
+
         // Long tests
         assert.deepStrictEqual(
             furigana.fitObj(
@@ -156,5 +173,9 @@ describe('hoy', function () {
                 { w: 'です', r: 'です' }
             ]
         );
-    })
+    });
+
+    // Known issues
+    // console.log(fitObj('今日50,000人がいます', 'きょうごじゅうまんにんがいます'));
+    // console.log(fitObj('勿来駅', 'なこそ駅'));
 });
