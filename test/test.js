@@ -180,6 +180,25 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes reading text shorter than thw writing', () => {
+        assert.deepStrictEqual(
+            fit('工場に１０００人がいます', 'こうじょうにせんにんがいます', { type: 'object' }),
+            [
+                { w: '工', r: 'こう' },
+                { w: '場', r: 'じょう' },
+                { w: 'に', r: 'に' },
+                { w: '１０００', r: 'せん' },
+                { w: '人', r: 'にん' },
+                { w: 'がいます', r: 'がいます' },
+            ],
+        );
+
+        assert.deepStrictEqual(
+            fit('工場に１０００人がいます', 'こうじょうにせんにんがいます', { type: 'string' }),
+            '工[こう] 場[じょう]に １０００[せん] 人[にん]がいます',
+        );
+    });
+
     it('passes long string tests', () => {
         assert.deepStrictEqual(
             fit(

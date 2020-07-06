@@ -78,10 +78,12 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const writingArray = [...writing];
         const readingArray = [...reading];
 
-        if (readingArray.length < writingArray.length) {
-            memo[writing][reading] = null;
-            return null;
-        }
+        // eslint-disable-next-line no-irregular-whitespace
+        // Commented to allow reading less than writing char: e.g. １０００　＝＞　せん
+        // if (readingArray.length < writingArray.length) {
+        //     memo[writing][reading] = null;
+        //     return null;
+        // }
 
         const isOneChar = writingArray.length === 1;
         const writingHiragana = toHiragana(writing);
@@ -243,7 +245,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * According to dict, '食' can't match anything
          * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
          */
-        for (let i = 1; i <= readingArray.length; i += 1) {
+        for (let i = readingArray.length; i >= 0; i -= 1) {
             let trial = executor(
                 writingArray.slice(1).join(''),
                 reading.slice(i),
