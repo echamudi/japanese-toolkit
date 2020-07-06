@@ -8,23 +8,46 @@ describe('fitObj', () => {
             { w: 'く', r: 'く' },
         ]);
 
+        assert.deepStrictEqual(
+            fit('く', 'く'),
+            'く',
+        );
+
         assert.deepStrictEqual(fit('コヤ', 'こや', { type: 'object' }), [
             { w: 'コヤ', r: 'こや' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('コヤ', 'こや'),
+            'コヤ',
+        );
 
         assert.deepStrictEqual(fit('食', 'しょく', { type: 'object' }), [
             { w: '食', r: 'しょく' },
         ]);
 
-        assert.deepStrictEqual(fit('一', 'ひろし', { type: 'object' }), [
-            { w: '一', r: 'ひろし' },
+        assert.deepStrictEqual(
+            fit('食', 'しょく'),
+            '食[しょく]',
+        );
+
+        assert.deepStrictEqual(fit('裕', 'ひろし', { type: 'object' }), [
+            { w: '裕', r: 'ひろし' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('裕', 'ひろし'),
+            '裕[ひろし]',
+        );
     });
 
     it('passes null tests', () => {
         assert.deepStrictEqual(fit('ひ', 'は', { type: 'object' }), null);
+        assert.deepStrictEqual(fit('ひ', 'は'), null);
         assert.deepStrictEqual(fit('はは', 'は', { type: 'object' }), null);
+        assert.deepStrictEqual(fit('はは', 'は'), null);
         assert.deepStrictEqual(fit('は', 'はた', { type: 'object' }), null);
+        assert.deepStrictEqual(fit('は', 'はた'), null);
     });
 
     it('passes multi-letter kanji letters', () => {
@@ -34,21 +57,36 @@ describe('fitObj', () => {
             { w: '下', r: 'した' },
         ]);
 
+        assert.deepStrictEqual(
+            fit('九段下', 'くだんした'),
+            '九[く] 段[だん] 下[した]',
+        );
+
         assert.deepStrictEqual(fit('軍畑駅', 'いくさばたえき', { type: 'object' }), [
             { w: '軍', r: 'いくさ' },
             { w: '畑', r: 'はた' },
             { w: '駅', r: 'えき' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('軍畑駅', 'いくさばたえき'),
+            '軍[いくさ] 畑[はた] 駅[えき]',
+        );
     });
 
     it('passes merge kana tests', () => {
-        assert.deepStrictEqual(fit('田中さんはすごいと思います', 'たなかさんはすごいとおもいます', { type: 'object' }), [
+        assert.deepStrictEqual(fit('田中さんとボーブさんはすごいと思います', 'たなかさんとぼーぶさんはすごいとおもいます', { type: 'object' }), [
             { w: '田', r: 'た' },
             { w: '中', r: 'なか' },
-            { w: 'さんはすごいと', r: 'さんはすごいと' },
+            { w: 'さんとボーブさんはすごいと', r: 'さんとぼーぶさんはすごいと' },
             { w: '思', r: 'おも' },
             { w: 'います', r: 'います' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('田中さんとボーブさんはすごいと思います', 'たなかさんとぼーぶさんはすごいとおもいます'),
+            '田[た] 中[なか]さんとボーブさんはすごいと 思[おも]います',
+        );
     });
 
     it('passes some basic tests', () => {
@@ -84,17 +122,29 @@ describe('fitObj', () => {
             { w: '後', r: 'ご' },
         ]);
 
-        assert.deepStrictEqual(fit('安足間駅と風合瀬駅はすごい', 'あんたろまえきとかそせえきはすごい', { type: 'object' }), [
-            { w: '安', r: 'あん' },
-            { w: '足', r: 'た' },
-            { w: '間', r: 'ろま' },
+        assert.deepStrictEqual(
+            fit('食一二三午後', 'しょくあいうえおごご'),
+            '食[しょく] 一二三[あいうえお] 午[ご] 後[ご]',
+        );
+
+        assert.deepStrictEqual(fit('高輪ゲートウェイ駅と風合瀬駅は大きい', 'たかなわゲートウェイえきとかそせえきはおおきい', { type: 'object' }), [
+            { w: '高', r: 'たか' },
+            { w: '輪', r: 'なわ' },
+            { w: 'ゲートウェイ', r: 'げえとうぇい' },
             { w: '駅', r: 'えき' },
             { w: 'と', r: 'と' },
             { w: '風合', r: 'かそ' },
             { w: '瀬', r: 'せ' },
             { w: '駅', r: 'えき' },
-            { w: 'はすごい', r: 'はすごい' },
+            { w: 'は', r: 'は' },
+            { w: '大', r: 'おお' },
+            { w: 'きい', r: 'きい' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('高輪ゲートウェイ駅と風合瀬駅は大きい', 'たかなわゲートウェイえきとかそせえきはおおきい'),
+            '高[たか] 輪[なわ]ゲートウェイ 駅[えき]と 風合[かそ] 瀬[せ] 駅[えき]は 大[おお]きい',
+        );
     });
 
     it('passes number tests', () => {
@@ -103,16 +153,31 @@ describe('fitObj', () => {
             { w: '人', r: 'にん' },
         ]);
 
+        assert.deepStrictEqual(
+            fit('５０人', 'ごじゅうにん'),
+            '５０[ごじゅう] 人[にん]',
+        );
+
         assert.deepStrictEqual(fit('五十人', 'ごじゅうにん', { type: 'object' }), [
             { w: '五', r: 'ご' },
             { w: '十', r: 'じゅう' },
             { w: '人', r: 'にん' },
         ]);
 
+        assert.deepStrictEqual(
+            fit('五十人', 'ごじゅうにん', { type: 'string' }),
+            '五[ご] 十[じゅう] 人[にん]',
+        );
+
         assert.deepStrictEqual(fit('50人', 'ごじゅうにん', { type: 'object' }), [
             { w: '50', r: 'ごじゅう' },
             { w: '人', r: 'にん' },
         ]);
+
+        assert.deepStrictEqual(
+            fit('50人', 'ごじゅうにん', { type: 'string' }),
+            '50[ごじゅう] 人[にん]',
+        );
     });
 
     it('passes long string tests', () => {
@@ -172,6 +237,15 @@ describe('fitObj', () => {
                 { w: '百', r: 'お' }, { w: '蔵', r: 'ろい' },
             ],
         );
+
+        assert.deepStrictEqual(
+            fit(
+                '東江と審と安居院と生明と安栖と馬酔木と東奥と明父と旦来と流井と行町と雷と五百蔵',
+                'あがりえとあきらとあぐいとあざみとあずまいとあせびとあちおくとあぢちとあっそとあらいとあるきまちといかづちといおろい',
+                { type: 'string' },
+            ),
+            '東[あがり] 江[え]と 審[あきら]と 安[あ] 居[ぐ] 院[い]と 生[あざ] 明[み]と 安[あ] 栖[ずまい]と 馬酔木[あせび]と 東[あち] 奥[おく]と 明[あ] 父[ちち]と 旦来[あっそ]と 流[あら] 井[い]と 行[あるき] 町[まち]と 雷[いかづち]と 五[い] 百[お] 蔵[ろい]',
+        );
     });
 
     it('passes long reading tests', () => {
@@ -195,4 +269,5 @@ describe('fitObj', () => {
     // Known issues
     // console.log(fitObj('今日50,000人がいます', 'きょうごじゅうまんにんがいます'));
     // console.log(fitObj('勿来駅', 'なこそ駅'));
+    // console.log(fit('学校に１０００人がいます', 'がっこうにせんにんがいます'))/
 });
