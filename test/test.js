@@ -55,7 +55,7 @@ describe('fitObj', function () {
         ]);
     });
 
-    it('some basic tests', function () {
+    it('passes some basic tests', function () {
         assert.deepStrictEqual(furigana.fitObj('私は', 'わたしは').map(filterFitObj), [
             { w: '私', r: 'わたし' },
             { w: 'は', r: 'は' }
