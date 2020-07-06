@@ -66,8 +66,8 @@ interface matchObj {
 };
 
 /**
- * @param writing must be kanji + kana only
- * @param reading must be kana only, no kanji, no punctuation marks, no numbers. 
+ * @param writing
+ * @param reading
  */
 export function fitObj(writing: string, reading: string): matchObj[] | null {
 
@@ -79,13 +79,13 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
         .every((el: any) => 
             el === 'kanji' ||
             el === 'hiragana' ||
-            el === 'katakana'
-        );
-    if (!isWritingValid) throw new Error('Currently, writing argument can only contain kanji and kana only');
+            el === 'katakana' // TODO: add numbers and english character
+        ) || writing === '';
+    // if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana only.');
 
     // Validate reading
-    const isReadingValid = isKana(reading);
-    if (!isReadingValid) throw new Error('Currently, reading argument can only contain kana only');
+    const isReadingValid = isKana(reading) || reading === '';
+    if (!isReadingValid) throw new Error('Currently, reading argument accept kana only.');
 
     function executor(writing: string, reading: string): ReturnType<typeof fitObj> {
         if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
@@ -98,6 +98,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
 
         if (writing.length !== 0 && reading.length === 0) return null;
         if (writing.length === 0 && reading.length !== 0) return null;
+        if (writing.length === 0 && reading.length === 0) return [];
 
         const writingArray = [...writing];
         const readingArray = [...reading];
@@ -218,7 +219,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
         let doesFirstCharMatch = false;
         let firstCharMatches: string[] = [];
     
-        readingLib[writingArray[0]].forEach((charReading) => {
+        readingLib[writingArray[0]]?.forEach((charReading) => {
             if (readingMatch(reading.slice(0, charReading.length), charReading)) {
                 doesFirstCharMatch = true;
                 firstCharMatches.push(charReading);
