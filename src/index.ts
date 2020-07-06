@@ -48,9 +48,10 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
 
     // Validate writing
-    const isWritingValid = tokenize(writingText, { detailed: true })
-        .map((el: any) => el.type)
-        .every((el: any) => el === 'kanji'
+    const isWritingValid = (
+        tokenize(writingText, { detailed: true }) as unknown as Record<string, unknown>[])
+        .map((el) => el.type)
+        .every((el) => el === 'kanji'
             || el === 'hiragana'
             || el === 'katakana'
             || el === 'englishNumeral'
