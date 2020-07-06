@@ -6,8 +6,8 @@ function filterFitObj(obj) {
     return { w: obj.w, r: obj.r };
 }
 
-describe('hoy', function () {
-    it('test furigana', function () {
+describe('fitObj', function () {
+    it('passes single letter tests', function () {
         assert.deepStrictEqual(furigana.fitObj('く', 'く').map(filterFitObj), [
             { w: 'く', r: 'く' }
         ]);
@@ -23,11 +23,39 @@ describe('hoy', function () {
         assert.deepStrictEqual(furigana.fitObj('一', 'ひろし').map(filterFitObj), [
             { w: '一', r: 'ひろし' }
         ]);
+    });
 
+    it('passes null tests', function () {
         assert.deepStrictEqual(furigana.fitObj('ひ', 'は'), null);
         assert.deepStrictEqual(furigana.fitObj('はは', 'は'), null);
         assert.deepStrictEqual(furigana.fitObj('は', 'はた'), null);
+    });
 
+    it('passes multi-letter kanji letters', function () {
+        assert.deepStrictEqual(furigana.fitObj('九段下', 'くだんした').map(filterFitObj), [
+            { w: '九', r: 'く' },
+            { w: '段', r: 'だん' },
+            { w: '下', r: 'した' }
+        ]);
+
+        assert.deepStrictEqual(furigana.fitObj('軍畑駅', 'いくさばたえき').map(filterFitObj), [
+            { w: '軍', r: 'いくさ' },
+            { w: '畑', r: 'はた' },
+            { w: '駅', r: 'えき' }
+        ]);
+    });
+
+    it('passes merge kana tests', function () {
+        assert.deepStrictEqual(furigana.fitObj('田中さんはすごいと思います', 'たなかさんはすごいとおもいます').map(filterFitObj), [
+            { w: '田', r: 'た' },
+            { w: '中', r: 'なか' },
+            { w: 'さんはすごいと', r: 'さんはすごいと' },
+            { w: '思', r: 'おも' },
+            { w: 'います', r: 'います' }
+        ]);
+    });
+
+    it('some basic tests', function () {
         assert.deepStrictEqual(furigana.fitObj('私は', 'わたしは').map(filterFitObj), [
             { w: '私', r: 'わたし' },
             { w: 'は', r: 'は' }
@@ -50,23 +78,9 @@ describe('hoy', function () {
             { w: '行', r: 'い' },
             { w: 'っています', r: 'っています' }
         ]);
+    });
 
-        assert.deepStrictEqual(furigana.fitObj('軍畑駅', 'いくさばたえき').map(filterFitObj), [
-            { w: '軍', r: 'いくさ' },
-            { w: '畑', r: 'はた' },
-            { w: '駅', r: 'えき' }
-        ]);
-
-        // Merge kana test
-        assert.deepStrictEqual(furigana.fitObj('田中さんはすごいと思います', 'たなかさんはすごいとおもいます').map(filterFitObj), [
-            { w: '田', r: 'た' },
-            { w: '中', r: 'なか' },
-            { w: 'さんはすごいと', r: 'さんはすごいと' },
-            { w: '思', r: 'おも' },
-            { w: 'います', r: 'います' }
-        ]);
-
-        // Merge unmatched kanji test
+    it('passes unmatched kanji tests', function () {
         assert.deepStrictEqual(furigana.fitObj('食一二三午後', 'しょくあいうえおごご').map(filterFitObj), [
             { w: '食', r: 'しょく' },
             { w: '一二三', r: 'あいうえお' },
@@ -85,8 +99,9 @@ describe('hoy', function () {
             { w: '駅', r: 'えき' },
             { w: 'はすごい', r: 'はすごい' }
         ]);
+    });
 
-        // Numbers
+    it('passes number tests', function () {
         assert.deepStrictEqual(furigana.fitObj('５０人', 'ごじゅうにん').map(filterFitObj), [
             { w: '５０', r: 'ごじゅう' },
             { w: '人', r: 'にん' }
@@ -102,34 +117,35 @@ describe('hoy', function () {
             { w: '50', r: 'ごじゅう' },
             { w: '人', r: 'にん' }
         ]);
+    });
 
-        // Long tests
+    it('passes long string tests', function () {
         assert.deepStrictEqual(
             furigana.fitObj(
                 '田中さんは安足間駅と風合瀬駅と小牛田駅に行ったことがある', 
                 'たなかさんはあんたろまえきとかそせえきとこごたえきにいったことがある'
-                ).map(filterFitObj), 
-            [
-                { w: '田', r: 'た' },
-                { w: '中', r: 'なか' },
-                { w: 'さんは', r: 'さんは' },
-                { w: '安', r: 'あん' },
-                { w: '足', r: 'た' },
-                { w: '間', r: 'ろま' },
-                { w: '駅', r: 'えき' },
-                { w: 'と', r: 'と' },
-                { w: '風合', r: 'かそ' },
-                { w: '瀬', r: 'せ' },
-                { w: '駅', r: 'えき' },
-                { w: 'と', r: 'と' },
-                { w: '小', r: 'こ' },
-                { w: '牛', r: 'ご' },
-                { w: '田', r: 'た' },
-                { w: '駅', r: 'えき' },
-                { w: 'に', r: 'に' },
-                { w: '行', r: 'い' },
-                { w: 'ったことがある', r: 'ったことがある' }
-            ]
+                ).map(filterFitObj),
+                [
+                    { w: '田', r: 'た' },
+                    { w: '中', r: 'なか' },
+                    { w: 'さんは', r: 'さんは' },
+                    { w: '安', r: 'あん' },
+                    { w: '足', r: 'た' },
+                    { w: '間', r: 'ろま' },
+                    { w: '駅', r: 'えき' },
+                    { w: 'と', r: 'と' },
+                    { w: '風合', r: 'かそ' },
+                    { w: '瀬', r: 'せ' },
+                    { w: '駅', r: 'えき' },
+                    { w: 'と', r: 'と' },
+                    { w: '小', r: 'こ' },
+                    { w: '牛', r: 'ご' },
+                    { w: '田', r: 'た' },
+                    { w: '駅', r: 'えき' },
+                    { w: 'に', r: 'に' },
+                    { w: '行', r: 'い' },
+                    { w: 'ったことがある', r: 'ったことがある' }
+                ]
         );
 
         assert.deepStrictEqual(
@@ -158,7 +174,9 @@ describe('hoy', function () {
                 { w: '百', r: 'お' },   { w: '蔵', r: 'ろい' }
             ]
         );
+    });
 
+    it('passes long reading tests', function () {
         assert.deepStrictEqual(
             furigana.fitObj(
                 '十十です', 
