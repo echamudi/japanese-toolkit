@@ -345,4 +345,28 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
     return executor(writingText, readingText);
 }
 
-export function fit() { }
+interface FitConfig {
+    type?: 'object' | 'string'
+}
+
+export function fit(writing: string, reading: string, config?: FitConfig) {
+    const fitObjResult = fitObj(writing, reading);
+
+    if (config?.type === 'object') {
+        if (fitObjResult === null) return null;
+        return fitObjResult.map((el) => ({ w: el.w, r: el.r }));
+    }
+
+    {
+        let finalString = '';
+
+        if (fitObjResult === null) return null;
+
+        fitObjResult.forEach((el) => {
+            if (el.isKanji) finalString += `${el.w}[${el.r}] `;
+            if (!el.isKanji) finalString += `${el.w}`;
+        });
+
+        return finalString;
+    }
+}
