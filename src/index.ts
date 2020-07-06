@@ -5,6 +5,8 @@ import {
 import * as fs from 'fs';
 import { join } from 'path';
 
+import { FitConfig, MatchDetailed, Match } from './types';
+
 const dakuten: {[x: string]: string} = JSON.parse(`{
     "が": "か", "ぎ": "き", "ぐ": "く", "げ": "け", "ご": "こ",
     "ざ": "さ", "じ": "し", "ず": "す", "ぜ": "せ", "ぞ": "そ",
@@ -38,40 +40,11 @@ function readingMatch(s1: string, s2: string): boolean {
     return s1Mod === s2Mod;
 }
 
-interface matchObj {
-    /**
-     * Writing
-     */
-    w: string,
-
-    /**
-     * Reading
-     */
-    r: string,
-
-    /**
-     * 1 - matches according to kanjilib
-     * 0 - doesn't match according to kanjilib
-     */
-    match: 0 | 1,
-
-    /**
-     * true writing contains kanji only
-     * flase writing contains writing only
-     */
-    isKanji: boolean,
-
-    /**
-     * debug return id
-     */
-    returnId?: number
-}
-
 /**
  * @param writingText
  * @param readingText
  */
-export function fitObj(writingText: string, readingText: string): matchObj[] | null {
+export function fitObj(writingText: string, readingText: string): MatchDetailed[] | null {
     const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
 
     // Validate writing
@@ -81,7 +54,8 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
             || el === 'hiragana'
             || el === 'katakana'
             || el === 'englishNumeral'
-            || el === 'japaneseNumeral') || writingText === '';
+            || el === 'japaneseNumeral'
+            || el === 'japanesePunctuation') || writingText === '';
     if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana only.');
 
     // Validate reading
@@ -197,7 +171,7 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
                     w: writingArray.slice(0, matchCounter).join(''),
                     r: toHiragana(readingArray.slice(0, matchCounter).join('')),
                     match: 1 as 0 | 1,
-                    isKanji: true,
+                    isKanji: false,
                     returnId: 3,
                 },
                 ...next,
@@ -288,7 +262,7 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
                 };
 
                 /**
-                 * If next matchObj is a match
+                 * If next MatchDetailed is a match
                  */
                 if (trial[0]?.match === 1) {
                     possibleResults.push([
@@ -298,7 +272,7 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
                 }
 
                 /*
-                If next matchObj is not a match, merge with current
+                If next MatchDetailed is not a match, merge with current
                 From:
                     { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
                     [
@@ -345,11 +319,11 @@ export function fitObj(writingText: string, readingText: string): matchObj[] | n
     return executor(writingText, readingText);
 }
 
-interface FitConfig {
-    type?: 'object' | 'string'
-}
+export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
+export function fit(writing: string, reading: string, config: {type: 'string'}): string | null;
+export function fit(writing: string, reading: string): string | null;
 
-export function fit(writing: string, reading: string, config?: FitConfig) {
+export function fit(writing: string, reading: string, config?: FitConfig): Match[] | string | null {
     const fitObjResult = fitObj(writing, reading);
 
     if (config?.type === 'object') {
@@ -358,15 +332,15 @@ export function fit(writing: string, reading: string, config?: FitConfig) {
     }
 
     {
-        let finalString = '';
-
         if (fitObjResult === null) return null;
 
+        const tokens: string[] = [];
+
         fitObjResult.forEach((el) => {
-            if (el.isKanji) finalString += `${el.w}[${el.r}] `;
-            if (!el.isKanji) finalString += `${el.w}`;
+            if (el.isKanji) tokens.push(` ${el.w}[${el.r}]`);
+            if (!el.isKanji) tokens.push(`${el.w}`);
         });
 
-        return finalString;
+        return tokens.join('').trim();
     }
 }
