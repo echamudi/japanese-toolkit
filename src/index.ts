@@ -79,9 +79,11 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
         .every((el: any) => 
             el === 'kanji' ||
             el === 'hiragana' ||
-            el === 'katakana' // TODO: add numbers and english character
+            el === 'katakana' ||
+            el === 'englishNumeral' ||
+            el === 'japaneseNumeral'
         ) || writing === '';
-    // if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana only.');
+    if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana only.');
 
     // Validate reading
     const isReadingValid = isKana(reading) || reading === '';
@@ -162,7 +164,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
 
             return memo[writing][reading];
         };
-    
+
         /**
          * If first leter is hiragana and matches
          * example:
@@ -171,7 +173,7 @@ export function fitObj(writing: string, reading: string): matchObj[] | null {
          */
         if (isKana(writingArray[0]) && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
             let matchCounter = 0;
-    
+
             for (let i = 0; i < writingArray.length; i++) {
                 if (toHiragana(writingArray[i]) === toHiragana(readingArray[i])) {
                     matchCounter++;
