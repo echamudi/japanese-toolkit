@@ -245,59 +245,78 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * writing = '食は', reading = 'あいうえおは'
          * According to dict, '食' can't match anything
          * we will traverse all possibilities ['あ', 'あい', 'あいう', 'あいうえ', ...]
+         *
+         * The i in this loop is going with this pattern:
+         * 3 2 1 0 6 5 4 9 8 7 12 11 10 ...
          */
-        for (let i = readingArray.length; i >= 0; i -= 1) {
-            let trial = executor(
-                writingArray.slice(1).join(''),
-                reading.slice(i),
-            );
+        {
+            let start = 3;
+            let i = 3;
+            let nextStop = 0;
 
-            trial = trial ? [...trial] : null;
+            for (;;) {
+                let trial = executor(
+                    writingArray.slice(1).join(''),
+                    reading.slice(i),
+                );
 
-            // Only push to possibleResults if the current path is possible
-            if (trial !== null) {
-                const currentObj = {
-                    w: writingArray[0],
-                    r: reading.slice(0, i),
-                    match: 0 as 0 | 1,
-                    isKanji: true,
-                    returnId: 5,
-                };
+                trial = trial ? [...trial] : null;
 
-                /**
-                 * If next MatchDetailed is a match
-                 */
-                if (trial[0]?.match === 1) {
-                    possibleResults.push([
-                        currentObj,
-                        ...trial,
-                    ]);
-                }
-
-                /*
-                If next MatchDetailed is not a match, merge with current
-                From:
-                    { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
-                    [
-                        { w: '二', r: 'いうえお', match: 0, ... }
-                    ]
-                To:
-                    [
-                        { w: '一二', r: 'あいうえお', match: 0, ... }
-                    ]
-                */
-                {
-                    const chunk = trial.splice(0, 1)[0];
-
-                    possibleResults.push([{
-                        w: currentObj.w + chunk.w,
-                        r: currentObj.r + chunk.r,
-                        match: 0,
+                // Only push to possibleResults if the current path is possible
+                if (trial !== null) {
+                    const currentObj = {
+                        w: writingArray[0],
+                        r: reading.slice(0, i),
+                        match: 0 as 0 | 1,
                         isKanji: true,
                         returnId: 5,
-                    },
-                    ...trial,
-                    ]);
+                    };
+
+                    /**
+                     * If next MatchDetailed is a match
+                     */
+                    if (trial[0]?.match === 1) {
+                        possibleResults.push([
+                            currentObj,
+                            ...trial,
+                        ]);
+
+                    /*
+                    If next MatchDetailed is not a match, merge with current
+                    From:
+                        { w: '一', r: 'あ', match: 0, ... }      <-- currentObj
+                        [
+                            { w: '二', r: 'いうえお', match: 0, ... }
+                        ]
+                    To:
+                        [
+                            { w: '一二', r: 'あいうえお', match: 0, ... }
+                        ]
+                    */
+                    } else {
+                        const chunk = trial.splice(0, 1)[0];
+
+                        possibleResults.push([{
+                            w: currentObj.w + chunk.w,
+                            r: currentObj.r + chunk.r,
+                            match: 0,
+                            isKanji: true,
+                            returnId: 5,
+                        },
+                        ...trial,
+                        ]);
+                    }
+                }
+
+                if (i === readingArray.length) break;
+
+                // Loop calculation
+                if (i === nextStop) {
+                    nextStop = start + 1;
+                    start = nextStop + 2;
+                    i = start;
+                } else {
+                    i -= 1;
                 }
             }
         }
