@@ -27,6 +27,7 @@
     "@typescript-eslint/parser": "^3.5.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.0.1",
     "typescript": "^3.9.6"
