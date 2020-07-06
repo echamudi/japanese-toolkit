@@ -45,7 +45,7 @@ function readingMatch(s1: string, s2: string): boolean {
  * @param readingText
  */
 export function fitObj(writingText: string, readingText: string): MatchDetailed[] | null {
-    const memo: {[x: string]: {[x: string]: ReturnType<typeof fitObj>} } = {};
+    const memo: Record<string, Record<string, ReturnType<typeof fitObj>>> = {};
 
     // Validate writing
     const isWritingValid = (
