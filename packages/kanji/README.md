@@ -166,16 +166,27 @@ Output
 | master | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji) |
 | develop | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=develop)](https://travis-ci.org/echamudi/kanji) |
 
+### Preparation
+
 ```
 npm install
 npm run download-source
 npm run extract-data
+```
+
+### Watch
+```
 npm run watch
 ```
 
 ### Testing
 ```
 npm test
+```
+
+### Compile
+```
+npm run compile
 ```
 
 ## Contributing
