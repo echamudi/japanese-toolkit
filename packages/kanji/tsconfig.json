@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "target": "ES2015",
+        "noImplicitAny": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declaration": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src/**/*.js"
+    ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "kanji",
+  "version": "0.9.2",
+  "description": "Get kanji characters in an array based on categorization",
+  "main": "./dist/index.js",
+  "scripts": {
+    "download-source": "node ./scripts/download-source.js",
+    "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
+    "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
+    "extract-kanjidic-data": "node ./scripts/extract-kanjidic-data.js",
+    "extract-data": "npm run extract-kanjivg-tree && npm run extract-kanjium-data && npm run extract-kanjidic-data",
+    "watch": "npx tsc --watch",
+    "compile": "npx tsc",
+    "test": "mocha ./test/test.js && mocha ./test/test-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://echamudi@github.com/echamudi/kanji.git"
+  },
+  "author": "Ezzat Chamudi",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/echamudi/kanji/issues"
+  },
+  "bin": {
+    "kanji-tree": "./bin/kanji-tree.js"
+  },
+  "files": [
+    "/bin",
+    "/data",
+    "/dist",
+    "/src",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/echamudi/kanji#readme",
+  "devDependencies": {
+    "typescript": "^3.9.5",
+    "@types/node": "^14.0.14",
+    "csvtojson": "^2.0.10",
+    "mocha": "^6.2.0",
+    "xml2json": "^0.11.2"
+  }
+}
