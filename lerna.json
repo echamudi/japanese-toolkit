@@ -1,6 +1,8 @@
 {
   "packages": [
-    "packages/*"
+    "packages/kyarakuta",
+    "packages/kanji",
+    "packages/japanese-toolkit"
   ],
   "version": "0.1.0-alpha.0"
 }
