@@ -1,6 +1,6 @@
 {
   "name": "kanji",
-  "version": "0.10.0-alpha.0",
+  "version": "0.10.0-alpha.1",
   "description": "Get kanji characters in an array based on categorization",
   "main": "./dist/index.js",
   "scripts": {
@@ -35,10 +35,10 @@
     "README.md"
   ],
   "devDependencies": {
-    "typescript": "^3.9.5",
     "@types/node": "^14.0.14",
     "csvtojson": "^2.0.10",
     "mocha": "^6.2.0",
+    "typescript": "^3.9.5",
     "xml2json": "^0.11.2"
   }
 }
