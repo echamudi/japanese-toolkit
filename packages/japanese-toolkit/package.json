@@ -1,0 +1,16 @@
+{
+    "name": "japanese-toolkit",
+    "version": "0.1.0-alpha.0",
+    "description": "[⏳ WIP] All-in-one Japanese toolkit package",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://echamudi@github.com/echamudi/japanese-toolkit.git"
+    },
+    "homepage": "https://github.com/echamudi/japanese-toolkit",
+    "author": "Ezzat Chamudi",
+    "license": "MPL-2.0"
+}
