@@ -4,11 +4,12 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v2
@@ -17,20 +18,24 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd ./packages/kanji
+    - name: Install libraries
+      working-directory: packages/kanji
+      run: |
+        npm install
+        npm run download-source
+        npm run extract-data
+        npm run compile
+        npm install rimraf -g
+        rimraf node_modules
 
-    # Prepare libraries
-    - run: npm install
-    - run: npm run download-source
-    - run: npm run extract-data
-    - run: npm run compile
-    - run: npm install rimraf -g
-    - run: rimraf node_modules
+    - name: Production Preparation
+      working-directory: packages/kanji
+      run: |
+        npm install --only=prod
+        npm link --only=prod
+        npm install -g mocha
 
-    # Production only
-    - run: npm install --only=prod
-    - run: npm link --only=prod
-    - run: npm install -g mocha
-
-    # Run test
-    - run: npm test
+    - name: Run test
+      working-directory: packages/kanji
+      run: |
+        npm test
