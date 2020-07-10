@@ -17,6 +17,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: cd ./packages/kanji
+
     # Prepare libraries
     - run: npm install
     - run: npm run download-source
