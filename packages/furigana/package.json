@@ -4,6 +4,8 @@
   "description": "[⏳WIP] Furigana toolkit for Japanese sentences",
   "main": "./dist/index.js",
   "scripts": {
+    "build": "node ./scripts/build-readings.js && npx tsc",
+    "watch": "npx tsc --watch",
     "test": "npx mocha ./test/test.js"
   },
   "repository": {

@@ -3,6 +3,7 @@
     "packages/kyarakuta",
     "packages/kanji",
     "packages/goi",
+    "packages/furigana",
     "packages/japanese-toolkit"
   ],
   "version": "0.10.0-alpha.4"
