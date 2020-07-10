@@ -1,0 +1,35 @@
+name: Test Japanese Toolkit
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Lerna Boostrap
+      run: |
+        npm install
+        npx lerna bootstrap
+
+    - name: Test Kanji
+      run: |
+        npm run build:kanji
+        npm run test:kanji
+
+    - name: Test furigana
+      run: |
+        npm run build:furigana
+        npm run test:kanji
