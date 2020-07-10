@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "script": {
+    "alpha": "npx lerna publish --npm-tag next"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
