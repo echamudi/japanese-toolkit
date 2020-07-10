@@ -1,6 +1,6 @@
 {
     "name": "japanese-toolkit",
-    "version": "0.1.0-alpha.0",
+    "version": "0.10.0",
     "description": "[⏳ WIP] All-in-one Japanese toolkit package",
     "main": "index.js",
     "scripts": {
