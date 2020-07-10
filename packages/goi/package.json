@@ -1,6 +1,6 @@
 {
     "name": "goi",
-    "version": "0.1.0-alpha.0",
+    "version": "0.10.0-alpha.4",
     "description": "[⏳ WIP] Japanese writing and reading pairs",
     "main": "index.js",
     "scripts": {
