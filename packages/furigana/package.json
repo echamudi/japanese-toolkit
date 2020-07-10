@@ -1,7 +1,7 @@
 {
   "name": "furigana",
   "version": "0.2.0-alpha.0",
-  "description": "[⏳WIP] Furigana toolkit for Japanese sentences",
+  "description": "Fit kana text into Japanese writing",
   "main": "./dist/index.js",
   "scripts": {
     "build": "node ./scripts/build-readings.js && npx tsc",
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/echamudi/japanese-toolkit/tree/master/packages/furigana#readme",
   "dependencies": {
-    "kanji": "^0.9.2",
     "wanakana": "^4.0.2"
   },
   "devDependencies": {
@@ -32,6 +31,7 @@
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.0.1",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "kanji": "^0.9.2"
   }
 }

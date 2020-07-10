@@ -19,12 +19,12 @@ export interface MatchDetailed extends Match {
 
     /**
      * true writing contains kanji only
-     * flase writing contains writing only
+     * false writing contains writing only
      */
     isKanji: boolean,
 
     /**
-     * debug return id
+     * return source (for debugging purpose)
      */
     returnId?: number
 }

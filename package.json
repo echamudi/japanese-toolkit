@@ -8,6 +8,8 @@
     "test:kanji": "cd packages/kanji && npm test",
     "test:furigana": "cd packages/furigana && npm test",
 
+    "test": "npm run test:kanji && npm run test:furigana",
+
     "alpha": "npx lerna publish --dist-tag next"
   },
   "devDependencies": {
