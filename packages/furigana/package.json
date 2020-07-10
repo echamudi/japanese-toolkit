@@ -1,7 +1,7 @@
 {
   "name": "furigana",
   "version": "0.2.0-alpha.0",
-  "description": "[⏳WIP] Furigana toolkit for Japanese sentences",
+  "description": "Fit kana text into Japanese writing",
   "main": "./dist/index.js",
   "scripts": {
     "build": "node ./scripts/build-readings.js && npx tsc",

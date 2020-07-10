@@ -1,7 +1,7 @@
 {
     "name": "kyarakuta",
     "version": "0.1.0-alpha.0",
-    "description": "[⏳ WIP] Japanese strings and characters manipulator.",
+    "description": "[⏳ WIP] Japanese strings and characters manipulator",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
