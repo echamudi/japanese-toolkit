@@ -1,6 +1,6 @@
 # Furigana
 
-[⏳Work in Progress] Furigana toolkit for Japanese sentences
+Fit f
 
 ## Features Plan
 
@@ -38,3 +38,11 @@
 Copyright © 2020 Ezzat Chamudi
 
 MPL-2.0
+
+### Other Licenses
+
+Contains reading definitions from KANJIDIC
+
+Copyright The Electronic Dictionary Research and Development Group
+
+Creative Commons Attribution-ShareAlike Licence (V3.0)
