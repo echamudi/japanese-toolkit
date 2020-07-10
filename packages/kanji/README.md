@@ -1,7 +1,5 @@
 # Kanji
 
-[![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji)
-
 With Kanji you can:
 
 - Get readings information of kanji characters.
@@ -160,11 +158,6 @@ Output
 ```
 
 ## Development
-
-| Branch | Status |
-| - | - |
-| master | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=master)](https://travis-ci.org/echamudi/kanji) |
-| develop | [![Build Status](https://travis-ci.org/echamudi/kanji.svg?branch=develop)](https://travis-ci.org/echamudi/kanji) |
 
 ### Preparation
 
