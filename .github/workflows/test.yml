@@ -32,4 +32,4 @@ jobs:
     - name: Test furigana
       run: |
         npm run build:furigana
-        npm run test:kanji
+        npm run test:furigana
