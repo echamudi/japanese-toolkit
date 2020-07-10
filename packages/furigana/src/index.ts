@@ -57,7 +57,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             || el === 'englishNumeral'
             || el === 'japaneseNumeral'
             || el === 'japanesePunctuation') || writingText === '';
-    if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana only.');
+    if (!isWritingValid) throw new Error('Currently, writing argument accept kanji, kana, and numbers only.');
 
     // Validate reading
     const isReadingValid = isKana(readingText) || readingText === '';
