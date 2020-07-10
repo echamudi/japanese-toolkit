@@ -5,15 +5,12 @@
   "main": "./dist/index.js",
   "scripts": {
     "download-source": "node ./scripts/download-source.js",
-
     "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
     "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
     "extract-kanjidic-data": "node ./scripts/extract-kanjidic-data.js",
     "extract-data": "npm run extract-kanjivg-tree && npm run extract-kanjium-data && npm run extract-kanjidic-data",
-
     "test:package": "npx mocha ./test/test.js",
     "test:cli": "npm link . && npx mocha ./test/test-cli.js",
-
     "build": "npm run download-source && npm run extract-data && npx tsc",
     "watch": "npx tsc --watch",
     "test": "npm run test:package && npm run test:cli"
