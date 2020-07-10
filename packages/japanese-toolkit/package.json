@@ -4,7 +4,9 @@
     "description": "[⏳ WIP] All-in-one Japanese toolkit package",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "",
+        "watch": "",
+        "test": ""
     },
     "repository": {
         "type": "git",

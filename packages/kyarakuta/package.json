@@ -4,8 +4,10 @@
     "description": "[⏳ WIP] Japanese strings and characters manipulator",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+        "build": "",
+        "watch": "",
+        "test": ""
+        },
     "repository": {
         "type": "git",
         "url": "git+https://echamudi@github.com/echamudi/japanese-toolkit.git"

@@ -4,7 +4,9 @@
     "description": "[⏳ WIP] Japanese writing and reading pairs",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "",
+        "watch": "",
+        "test": ""
     },
     "repository": {
         "type": "git",
