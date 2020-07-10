@@ -18,6 +18,12 @@
     "url": "https://github.com/echamudi/japanese-toolkit/issues"
   },
   "homepage": "https://github.com/echamudi/japanese-toolkit/tree/master/packages/furigana#readme",
+  "files": [
+    "/dist",
+    "/src",
+    "LICENSE",
+    "README.md"
+  ],
   "dependencies": {
     "wanakana": "^4.0.2"
   },
