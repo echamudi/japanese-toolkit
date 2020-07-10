@@ -24,7 +24,7 @@ export interface MatchDetailed extends Match {
     isKanji: boolean,
 
     /**
-     * debug return id
+     * return source (for debugging purpose)
      */
     returnId?: number
 }
