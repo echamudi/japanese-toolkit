@@ -15,6 +15,8 @@ function getBlockNames(string: string): {char: string, block: string | undefined
         const codePoint = char.codePointAt(0);
         if (codePoint === undefined) throw new Error('Hmm, please open an issue in the github repo.');
         
+        // TODO: add guessing by the last used characters
+
         // Get block name
         let block = undefined;
 
