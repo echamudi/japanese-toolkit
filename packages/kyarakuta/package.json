@@ -2,17 +2,27 @@
     "name": "kyarakuta",
     "version": "0.10.0",
     "description": "[⏳ WIP] Japanese strings and characters manipulator",
-    "main": "index.js",
+    "main": "./dist/index.js",
     "scripts": {
-        "build": "",
-        "watch": "",
-        "test": ""
-        },
+        "build": "node ./scripts/download-source.js && node ./scripts/build-nameslist.js && tsc",
+        "watch": "npx tsc --watch",
+        "test": "npx mocha ./test/test.js"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://echamudi@github.com/echamudi/japanese-toolkit.git"
     },
+    "files": [
+        "/dist",
+        "/src",
+        "LICENSE",
+        "README.md"
+    ],
     "homepage": "https://github.com/echamudi/japanese-toolkit/tree/master/packages/kyarakuta",
     "author": "Ezzat Chamudi",
-    "license": "MPL-2.0"
+    "license": "MPL-2.0",
+    "devDependencies": {
+        "mocha": "^8.0.1",
+        "typescript": "^3.9.6"
+    }
 }
