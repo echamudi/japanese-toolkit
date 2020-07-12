@@ -8,8 +8,7 @@
 import getBlockNames from './get-block-names';
 import some from './some';
 import every from './every';
-import isKana from './is-kana';
-import isCJK from './is-cjk';
+import { isKana, isCJK } from './is-within-ranges';
 
 export {
     getBlockNames,

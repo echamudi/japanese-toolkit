@@ -5,9 +5,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { CJKranges } from './ranges';
+import { Ranges } from './types/types';
+import { KanaRanges, CJKranges } from './ranges';
 
-export default function isCJK(string: string): boolean {
+export function isWithinRanges(string: string, ranges: Ranges): boolean {
     const cpArray: Readonly<number[]> = [...string].map((char) => {
         const cp = char.codePointAt(0);
         if (cp === undefined) throw new Error();
@@ -15,6 +16,14 @@ export default function isCJK(string: string): boolean {
     });
 
     return cpArray.every((cp) => {
-        return CJKranges.some((range) => range[0] <= cp && cp <= range[1]);
+        return ranges.some((range) => range[0] <= cp && cp <= range[1]);
     });
+}
+
+export function isKana(string: string): boolean {
+    return isWithinRanges(string, KanaRanges);
+}
+
+export function isCJK(string: string): boolean {
+    return isWithinRanges(string, CJKranges);
 }
