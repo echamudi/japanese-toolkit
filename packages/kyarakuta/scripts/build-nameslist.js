@@ -67,7 +67,7 @@ export const SubBlocksLibrary: SubBlocksLibraryInterface = JSON.parse(\`
 ${JSON.stringify(SubBlocksLibrary)}
 \`);
 
-export const BlockRangesList: BlockRange[] = JSON.parse(\`
+export const BlockRangesList: ReadonlyArray<BlockRange> = JSON.parse(\`
 ${JSON.stringify(BlockRangesList)}
 \`);
 `;
