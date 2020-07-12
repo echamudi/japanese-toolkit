@@ -6,24 +6,36 @@
  */
 
 import { SubBlocksLibrary, BlockRangesList } from './gen/blocks-library';
+import { BlockRange } from './types/types';
 
 function getBlockNames(string: string): {char: string, block: string | undefined, subblock: string | undefined}[] {
     const charArray = [...string];
     const result: ReturnType<typeof getBlockNames> = [];
 
+    const blockRangesMemo: BlockRange[] = [];
+
     charArray.forEach((char) => {
         const codePoint = char.codePointAt(0);
         if (codePoint === undefined) throw new Error('Hmm, please open an issue in the github repo.');
-        
-        // TODO: add guessing by the last used characters
 
-        // Get block name
-        let block = undefined;
+        let block: string | undefined = undefined;
 
-        for (let i = 0; i < BlockRangesList.length; i++) {
-            if (BlockRangesList[i].start <= codePoint && codePoint <= BlockRangesList[i].end) {
-                block = BlockRangesList[i].block;
+        // Get block name from memo
+        for (let i = 0; i < blockRangesMemo.length; i++) {
+            if (blockRangesMemo[i].start <= codePoint && codePoint <= blockRangesMemo[i].end) {
+                block = blockRangesMemo[i].block;
                 break;
+            }
+        }
+
+        // If it's not memoized yet, get block name from the full list
+        if (block === undefined) {
+            for (let i = 0; i < BlockRangesList.length; i++) {
+                if (BlockRangesList[i].start <= codePoint && codePoint <= BlockRangesList[i].end) {
+                    block = BlockRangesList[i].block;
+                    blockRangesMemo.push(BlockRangesList[i]);
+                    break;
+                }
             }
         }
 
