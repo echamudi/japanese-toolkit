@@ -171,4 +171,16 @@ describe('kyarakuta', function () {
             { block: 'Katakana' }
         ]), true);
     });
+
+    it('runs kana', () => {
+        assert.deepStrictEqual(kyarakuta.isKana('アパート'), true);
+        assert.deepStrictEqual(kyarakuta.isKana('これはアパートです'), true);
+        assert.deepStrictEqual(kyarakuta.isKana('アパート Apartment'), false);
+        assert.deepStrictEqual(kyarakuta.isKana('お願い'), false);
+        assert.deepStrictEqual(kyarakuta.isKana(''), true);
+
+        // Spaces are not allowed
+        assert.deepStrictEqual(kyarakuta.isKana(' '), false);
+        assert.deepStrictEqual(kyarakuta.isKana('　'), false);
+    });
 });
