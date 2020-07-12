@@ -82,6 +82,17 @@ kyarakuta.some('アパート', [
 All characters must satisfy at least one of the inputted blocks.
 
 ```js
+kyarakuta.every('اهلا', [
+  { block: 'Arabic' }
+]);
+// Output: true
+
+kyarakuta.every('アパート', [
+  { block: 'Hiragana' },
+  { block: 'Katakana' }
+]);
+// Output: true
+
 kyarakuta.every('アパート', [
   { block: 'Hiragana' },
   { block: 'Katakana' }
