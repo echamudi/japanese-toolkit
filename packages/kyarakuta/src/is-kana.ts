@@ -5,14 +5,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import getBlockNames from './get-block-names';
-import some from './some';
-import every from './every';
-import isKana from './is-kana';
+import every from "./every";
 
-export {
-    getBlockNames,
-    some,
-    every,
-    isKana
+export default function isKana(string: string): boolean {
+    return every(string, [{block: 'Hiragana'}, {block: 'Katakana'}])
 }
