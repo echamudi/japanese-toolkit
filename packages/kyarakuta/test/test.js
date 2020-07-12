@@ -81,5 +81,94 @@ describe('kyarakuta', function () {
                 }
             ]
         );
+
+        // Extremes
+        assert.deepStrictEqual(
+            kyarakuta.getBlockNames(''),
+            []
+        );
+    });
+
+    it('runs some', () => {
+        assert.deepStrictEqual(kyarakuta.some('A 食 🧐', [
+            {
+                block: 'C0 Controls and Basic Latin (Basic Latin)',
+                subblock: undefined     // 'undefined' means any subblock
+            }
+        ]), true);
+
+        assert.deepStrictEqual(kyarakuta.some('abcあいう', [
+            {
+                block: 'Hiragana',
+                subblock: 'Hiragana letters'
+            }
+        ]), true);
+
+        assert.deepStrictEqual(kyarakuta.some('abcあいう', [
+            {
+                block: 'Arabic',
+                subblock: undefined
+            }
+        ]), false);
+
+        assert.deepStrictEqual(kyarakuta.some('アパート', [
+            { block: 'Hiragana' },
+            { block: 'Katakana' }
+        ]), true);
+
+        // Extremes
+        assert.deepStrictEqual(kyarakuta.some('アパート', []), true);
+        assert.deepStrictEqual(kyarakuta.some('', []), true);
+        assert.deepStrictEqual(kyarakuta.some('', [
+            { block: 'Hiragana' },
+            { block: 'Katakana' }
+        ]), true);
+    });
+
+    it('runs every', () => {
+        assert.deepStrictEqual(kyarakuta.every('アパート', [
+            { block: 'Hiragana' },
+            { block: 'Katakana' }
+        ]), true);
+
+        assert.deepStrictEqual(kyarakuta.every('アパート Apartment', [
+            { block: 'Hiragana' },
+            { block: 'Katakana' }
+        ]), false);
+
+        assert.deepStrictEqual(kyarakuta.every('Aa食', [
+            {
+                block: undefined,    // 'undefined' means any block
+                subblock: 'Uppercase Latin alphabet'
+            },
+            {
+                block: undefined,
+                subblock: 'Lowercase Latin alphabet'
+            }
+        ]), false);
+
+        assert.deepStrictEqual(kyarakuta.every('ABcd', [
+            {
+                subblock: 'Uppercase Latin alphabet'
+            },
+            {
+                subblock: 'Lowercase Latin alphabet'
+            }
+        ]), true);
+
+        // Extremes Test
+        assert.deepStrictEqual(kyarakuta.every('AB 穂', []), true);
+        assert.deepStrictEqual(kyarakuta.every('',  [
+            {
+                subblock: 'Uppercase Latin alphabet'
+            },
+            {
+                subblock: 'Lowercase Latin alphabet'
+            }
+        ]), true);
+        assert.deepStrictEqual(kyarakuta.every('', [
+            { block: 'Hiragana' },
+            { block: 'Katakana' }
+        ]), true);
     });
 });
