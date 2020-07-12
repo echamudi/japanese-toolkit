@@ -11,7 +11,7 @@ const assert = require('assert');
 const kyarakuta = require('..');
 
 describe('kyarakuta', function () {
-    it('runs ok', function() {
+    it('runs getBlockNames', function () {
         assert.deepStrictEqual(
             kyarakuta.getBlockNames('Hello! おはよう、田中さん！ 😁👋'),
             [
