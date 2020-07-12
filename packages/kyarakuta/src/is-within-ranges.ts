@@ -8,22 +8,28 @@
 import { Ranges } from './types/types';
 import { KanaRanges, CJKranges } from './ranges';
 
-export function isWithinRanges(string: string, ranges: Ranges): boolean {
+function isWithinRanges(string: string, rangesCollection: Ranges[] ): boolean {
     const cpArray: Readonly<number[]> = [...string].map((char) => {
         const cp = char.codePointAt(0);
         if (cp === undefined) throw new Error();
         return cp;
     });
 
-    return cpArray.every((cp) => {
-        return ranges.some((range) => range[0] <= cp && cp <= range[1]);
-    });
+    return cpArray.every((cp) => 
+        rangesCollection.some((ranges) => 
+            ranges.some((range) => range[0] <= cp && cp <= range[1])
+        )
+    );
 }
 
 export function isKana(string: string): boolean {
-    return isWithinRanges(string, KanaRanges);
+    return isWithinRanges(string, [KanaRanges]);
 }
 
 export function isCJK(string: string): boolean {
-    return isWithinRanges(string, CJKranges);
+    return isWithinRanges(string, [CJKranges]);
+}
+
+export function isJapanese(string: string): boolean {
+    return isWithinRanges(string, [KanaRanges, CJKranges]);
 }
