@@ -19,8 +19,8 @@ export interface BlockRange {
 /**
  * [start, end]
  */
-export type RangeTuple = Readonly<[number, number]>;
-export type Ranges = ReadonlyArray<RangeTuple>;
+export type RangeTuple = [number, number];
+export type Ranges = RangeTuple[];
 
 export interface BlockCondition {
     block?: string | undefined,
