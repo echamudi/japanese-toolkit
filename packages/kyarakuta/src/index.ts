@@ -6,4 +6,11 @@
  */
 
 import getBlockNames from './get-block-names';
-export { getBlockNames };
+import some from './some';
+import every from './every';
+
+export {
+    getBlockNames,
+    some,
+    every
+}
