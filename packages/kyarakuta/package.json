@@ -6,7 +6,7 @@
     "scripts": {
         "build": "node ./scripts/download-source.js && node ./scripts/build-nameslist.js && tsc",
         "watch": "npx tsc --watch",
-        "test": "npx mocha ./test/test.js"
+        "test": "npx jest \"./test/.*\\.test\\.js\""
     },
     "repository": {
         "type": "git",
