@@ -172,7 +172,7 @@ describe('kyarakuta', function () {
         ]), true);
     });
 
-    it('runs kana', () => {
+    it('runs isKana', () => {
         assert.deepStrictEqual(kyarakuta.isKana('アパート'), true);
         assert.deepStrictEqual(kyarakuta.isKana('これはアパートです'), true);
         assert.deepStrictEqual(kyarakuta.isKana('アパート Apartment'), false);
@@ -183,4 +183,16 @@ describe('kyarakuta', function () {
         assert.deepStrictEqual(kyarakuta.isKana(' '), false);
         assert.deepStrictEqual(kyarakuta.isKana('　'), false);
     });
+
+    it('runs isCJK', () => {
+        assert.deepStrictEqual(kyarakuta.isCJK('全国'), true);
+        assert.deepStrictEqual(kyarakuta.isCJK('𠚢𠀋'), true);
+        assert.deepStrictEqual(kyarakuta.isCJK(''), true);
+        assert.deepStrictEqual(kyarakuta.isCJK('a'), false);
+        assert.deepStrictEqual(kyarakuta.isCJK('はよ'), false);
+        assert.deepStrictEqual(kyarakuta.isCJK('全国は'), false);
+
+        assert.deepStrictEqual(kyarakuta.isCJK('　'), false);
+    });
+
 });
