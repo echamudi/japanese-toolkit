@@ -16,17 +16,25 @@ const kyarakuta = require('kyarakuta');
 ### Get Unicode block names
 
 ```js
-kyarakuta.getBlockNames('みんな幸せ〜😆');
+kyarakuta.getBlockNames('Abc　食べ物 اهلا 😆');
 ```
+
 Output:
 ```js
 [
-  { char: 'み', block: 'Hiragana', subblock: 'Hiragana letters' },
-  { char: 'ん', block: 'Hiragana', subblock: 'Hiragana letters' },
-  { char: 'な', block: 'Hiragana', subblock: 'Hiragana letters' },
-  { char: '幸', block: 'CJK Unified Ideographs', subblock: undefined },
-  { char: 'せ', block: 'Hiragana', subblock: 'Hiragana letters' },
-  { char: '〜', block: 'CJK Symbols and Punctuation', subblock: 'CJK punctuation' },
+  { char: 'A', block: 'C0 Controls and Basic Latin (Basic Latin)', subblock: 'Uppercase Latin alphabet' },
+  { char: 'b', block: 'C0 Controls and Basic Latin (Basic Latin)', subblock: 'Lowercase Latin alphabet' },
+  { char: 'c', block: 'C0 Controls and Basic Latin (Basic Latin)', subblock: 'Lowercase Latin alphabet' },
+  { char: '　', block: 'CJK Symbols and Punctuation', subblock: 'CJK symbols and punctuation'  },
+  { char: '食', block: 'CJK Unified Ideographs', subblock: undefined },
+  { char: 'べ', block: 'Hiragana', subblock: 'Hiragana letters' },
+  { char: '物', block: 'CJK Unified Ideographs', subblock: undefined },
+  { char: ' ', block: 'C0 Controls and Basic Latin (Basic Latin)', subblock: 'ASCII punctuation and symbols' },
+  { char: 'ا', block: 'Arabic', subblock: 'Based on ISO 8859-6' },
+  { char: 'ه', block: 'Arabic', subblock: 'Based on ISO 8859-6' },
+  { char: 'ل', block: 'Arabic', subblock: 'Based on ISO 8859-6' },
+  { char: 'ا', block: 'Arabic', subblock: 'Based on ISO 8859-6' },
+  { char: ' ', block: 'C0 Controls and Basic Latin (Basic Latin)', subblock: 'ASCII punctuation and symbols' },
   { char: '😆', block: 'Emoticons', subblock: 'Faces' }
 ]
 ```
