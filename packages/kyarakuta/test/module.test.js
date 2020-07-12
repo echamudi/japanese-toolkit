@@ -191,8 +191,13 @@ describe('kyarakuta', function () {
         assert.deepStrictEqual(kyarakuta.isCJK('a'), false);
         assert.deepStrictEqual(kyarakuta.isCJK('はよ'), false);
         assert.deepStrictEqual(kyarakuta.isCJK('全国は'), false);
-
         assert.deepStrictEqual(kyarakuta.isCJK('　'), false);
     });
 
+    it('runs isJapanese', () => {
+        assert.deepStrictEqual(kyarakuta.isJapanese('全国は'), true);
+        assert.deepStrictEqual(kyarakuta.isJapanese('このハンバーガはめっちゃうまい'), true);
+        assert.deepStrictEqual(kyarakuta.isJapanese('、、。'), false);
+        assert.deepStrictEqual(kyarakuta.isJapanese('　'), false);
+    });
 });
