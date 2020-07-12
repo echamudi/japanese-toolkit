@@ -6,15 +6,21 @@
  */
 
 export interface SubBlocksLibraryInterface {
-    blocks: Record<number, string>;
-    codePoints: Record<number, number>;
+    readonly blocks: Record<number, string>;
+    readonly codePoints: Record<number, number>;
 }
 
 export interface BlockRange {
-    block: string,
-    start: number,
-    end: number
+    readonly block: string,
+    readonly start: number,
+    readonly end: number
 };
+
+/**
+ * [start, end]
+ */
+export type RangeTuple = Readonly<[number, number]>;
+export type Ranges = ReadonlyArray<RangeTuple>;
 
 export interface BlockCondition {
     block?: string | undefined,
