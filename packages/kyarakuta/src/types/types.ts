@@ -15,3 +15,8 @@ export interface BlockRange {
     start: number,
     end: number
 };
+
+export interface BlockCondition {
+    block?: string | undefined,
+    subblock?: string | undefined
+}
