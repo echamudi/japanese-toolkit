@@ -9,10 +9,12 @@ import getBlockNames from './get-block-names';
 import some from './some';
 import every from './every';
 import isKana from './is-kana';
+import isCJK from './is-cjk';
 
 export {
     getBlockNames,
     some,
     every,
-    isKana
+    isKana,
+    isCJK
 }
