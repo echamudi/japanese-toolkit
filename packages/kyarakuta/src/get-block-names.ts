@@ -8,7 +8,7 @@
 import { SubBlocksLibrary, BlockRangesList } from './gen/blocks-library';
 import { BlockRange } from './types/types';
 
-function getBlockNames(string: string): {char: string, block: string | undefined, subblock: string | undefined}[] {
+export default function getBlockNames(string: string): {char: string, block: string | undefined, subblock: string | undefined}[] {
     const charArray = [...string];
     const result: ReturnType<typeof getBlockNames> = [];
 
@@ -48,5 +48,3 @@ function getBlockNames(string: string): {char: string, block: string | undefined
 
     return result;
 }
-
-export default getBlockNames;
