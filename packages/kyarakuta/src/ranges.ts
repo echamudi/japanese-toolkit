@@ -5,7 +5,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export const CJKranges: Readonly<[number, number][]> = [
+import { Ranges } from "./types/types";
+
+export const CJKranges: Ranges = [
     [0x4E00, 0x9FFF], // CJK Unified Ideographs
     [0x3400, 0x4DBF], // CJK Unified Ideographs Extension A
     [0x20000, 0x2A6DF], // CJK Unified Ideographs Extension B
@@ -24,5 +26,10 @@ export const CJKranges: Readonly<[number, number][]> = [
     // [0x3200, 0x32FF], // Enclosed CJK Letters and Months
     // [0x3300, 0x33FF], // CJK Compatibility
     // [0xFE30, 0xFE4F], // CJK Compatibility Forms
-]
+];
 
+export const KanaRanges: Ranges = [
+    [0x3040, 0x309F], // Hiragana
+    [0x30A0, 0x30FF], // Katakana
+    [0x31F0, 0x31FF], // Katakana Phonetic Extensions
+];
