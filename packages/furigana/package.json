@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node ./scripts/build-readings.js && npx tsc",
     "watch": "npx tsc --watch",
-    "test": "npx mocha ./test/test.js"
+    "test": "npx jest ./test/test.js"
   },
   "repository": {
     "type": "git",
