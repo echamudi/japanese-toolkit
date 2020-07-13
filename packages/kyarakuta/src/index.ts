@@ -5,16 +5,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import getBlockNames from './get-block-names';
-import some from './some';
-import every from './every';
-import { isKana, isCJK, isJapanese } from './is-within-ranges';
+export { default as getBlockNames } from './get-block-names';
 
-export {
-    getBlockNames,
-    some,
-    every,
-    isKana,
-    isCJK,
-    isJapanese
-}
+export { default as some } from './some';
+
+export { default as every } from './every';
+
+export { isKana, isCJK, isJapanese } from './is-within-ranges';
+export { toHiragana, toKatakana } from './converter';
