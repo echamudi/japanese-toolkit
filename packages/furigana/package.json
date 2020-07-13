@@ -1,6 +1,6 @@
 {
   "name": "furigana",
-  "version": "0.11.0-alpha.0",
+  "version": "0.11.0",
   "description": "Fit kana text into Japanese writing",
   "main": "./dist/index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.22.0",
-    "kanji": "^0.10.0",
+    "kanji": "^0.11.0",
     "mocha": "^8.0.1",
     "typescript": "^3.9.6"
   }

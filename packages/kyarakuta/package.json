@@ -1,6 +1,6 @@
 {
     "name": "kyarakuta",
-    "version": "0.11.0-alpha.0",
+    "version": "0.11.0",
     "description": "[⏳ WIP] Japanese strings and characters manipulator",
     "main": "./dist/index.js",
     "scripts": {
