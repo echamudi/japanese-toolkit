@@ -128,6 +128,57 @@ kyarakuta.every('ABcd', [
 // Output: true
 ```
 
+## Japanese Specific Utilities
+
+### Is Kana
+
+Check if all characters in a string is kana.
+
+```js
+kyarakuta.isKana('アパート'); // true;
+kyarakuta.isKana('これはアパートです'); // true
+kyarakuta.isKana('アパート Apartment'), // false
+```
+
+Kana is all characters within "Hiragana" and "Katakana" blocks.
+
+## Is CJK
+
+Check if all characters in a string belong to CJK blocks.
+
+```js
+kyarakuta.isCJK('全国'); // true
+kyarakuta.isCJK('𠚢𠀋'); // true
+kyarakuta.isCJK(''); // true
+kyarakuta.isCJK('a'); // false
+kyarakuta.isCJK('はよ'); // false
+kyarakuta.isCJK('全国は'); // false
+```
+
+### Is Japanese
+
+Japanese script mixes hiragana, katakana, kanji, and romaji.
+But in this function, 'isJapanese' checks whether a string only contains Kana and CJK characters.
+No spaces and punctuations are allowed.
+
+```js
+kyarakuta.isJapanese('全国は'); // true
+kyarakuta.isJapanese('このハンバーガはめっちゃうまい'); // true
+kyarakuta.isJapanese('すごい！'); // false, contains punctuation
+kyarakuta.isJapanese('これは　すごい') ;// false, contains space
+kyarakuta.isJapanese('Hello'); // false
+kyarakuta.isJapanese('Hello世界'); // false
+```
+
+### To Hiragana and To Katakana
+
+Converts katakana to hiragana or hiragana to katakana
+
+```js
+kyarakuta.toHiragana('インドネシア'); // いんどねしあ
+kyarakuta.toKatakana('いんどねしあ'); // インドネシア
+```
+
 ## License
 
 Copyright © 2020 Ezzat Chamudi
