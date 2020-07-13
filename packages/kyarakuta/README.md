@@ -142,7 +142,7 @@ kyarakuta.isKana('アパート Apartment'), // false
 
 Kana is all characters within "Hiragana" and "Katakana" blocks.
 
-## Is CJK
+### Is CJK
 
 Check if all characters in a string belong to CJK blocks.
 
