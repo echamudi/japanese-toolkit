@@ -2,7 +2,6 @@
   "packages": [
     "packages/kyarakuta",
     "packages/kanji",
-    "packages/goi",
     "packages/furigana",
     "packages/japanese-toolkit"
   ],
