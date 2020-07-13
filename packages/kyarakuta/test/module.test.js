@@ -197,8 +197,11 @@ describe('kyarakuta', function () {
     it('runs isJapanese', () => {
         assert.deepStrictEqual(kyarakuta.isJapanese('全国は'), true);
         assert.deepStrictEqual(kyarakuta.isJapanese('このハンバーガはめっちゃうまい'), true);
-        assert.deepStrictEqual(kyarakuta.isJapanese('、、。'), false);
+        assert.deepStrictEqual(kyarakuta.isJapanese('すごい！'), false);
+        assert.deepStrictEqual(kyarakuta.isJapanese('・・！！'), false);
         assert.deepStrictEqual(kyarakuta.isJapanese('　'), false);
+        assert.deepStrictEqual(kyarakuta.isJapanese('Hello'), false);
+        assert.deepStrictEqual(kyarakuta.isJapanese('Hello世界'), false);
     });
 
     describe('kana converter', () => {
