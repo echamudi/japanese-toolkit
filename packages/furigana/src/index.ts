@@ -1,7 +1,7 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, tokenize,
-} from 'wanakana';
+    isKana, toHiragana,
+} from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
 
@@ -48,16 +48,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     const memo: Record<string, Record<string, ReturnType<typeof fitObj>>> = {};
 
     // Validate writing
-    const isWritingValid = (
-        tokenize(writingText, { detailed: true }) as unknown as Record<string, unknown>[])
-        .map((el) => el.type)
-        .every((el) => el === 'kanji'
-            || el === 'hiragana'
-            || el === 'katakana'
-            || el === 'englishNumeral'
-            || el === 'japaneseNumeral'
-            || el === 'japanesePunctuation') || writingText === '';
-    if (!isWritingValid) throw new Error('Currently, writing argument accept kanji, kana, and numbers only.');
+    // const isWritingValid = isJapanese(writingText);
+    // if (!isWritingValid) throw new Error('Currently, writing argument accept kanji and kana.');
 
     // Validate reading
     const isReadingValid = isKana(readingText) || readingText === '';
@@ -152,6 +144,10 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             let matchCounter = 0;
 
             for (let i = 0; i < writingArray.length; i += 1) {
+                if (writingArray[i] === undefined || readingArray[i] === undefined) {
+                    break;
+                }
+
                 if (toHiragana(writingArray[i]) !== toHiragana(readingArray[i])) {
                     break;
                 } else {
