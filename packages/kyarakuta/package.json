@@ -4,7 +4,7 @@
     "description": "[⏳ WIP] Japanese strings and characters manipulator",
     "main": "./dist/index.js",
     "scripts": {
-        "build": "node ./scripts/download-source.js && node ./scripts/build-nameslist.js && tsc",
+        "build": "node ./scripts/download-source.js && node ./scripts/build-nameslist.js && node ./scripts/build-kanamap.js && tsc",
         "watch": "npx tsc --watch",
         "test": "npx jest \"./test/.*\\.test\\.js\""
     },
