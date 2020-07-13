@@ -1,5 +1,5 @@
 const kanji = require('kanji');
-const wanakana = require('wanakana');
+const kyarakuta = require('kyarakuta');
 const fs = require('fs');
 const path = require('path');
 
@@ -21,7 +21,7 @@ kanji.all.list().forEach((char, index) => {
     const readingsArray = fin[char];
 
     readingsObj.on.forEach((reading) => {
-        readingsArray.push(wanakana.toHiragana(reading));
+        readingsArray.push(kyarakuta.toHiragana(reading));
     });
 
     readingsObj.kun.forEach((reading) => {
