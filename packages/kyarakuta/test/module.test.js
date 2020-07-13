@@ -240,6 +240,7 @@ describe('kyarakuta', function () {
         it('passes some random tests', () => {
             assert.deepStrictEqual(kyarakuta.toHiragana('食事用フォーク'), '食事用ふぉおく');
             assert.deepStrictEqual(kyarakuta.toHiragana('ABCリード'), 'ABCりいど');
+            assert.deepStrictEqual(kyarakuta.toKatakana('とてもおいしい'), 'トテモオイシイ');
             assert.deepStrictEqual(kyarakuta.toKatakana('ABCりいど'), 'ABCリイド');
         });
     });
