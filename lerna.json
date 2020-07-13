@@ -2,8 +2,7 @@
   "packages": [
     "packages/kyarakuta",
     "packages/kanji",
-    "packages/furigana",
-    "packages/japanese-toolkit"
+    "packages/furigana"
   ],
   "version": "0.10.0"
 }
