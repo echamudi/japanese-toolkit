@@ -200,4 +200,47 @@ describe('kyarakuta', function () {
         assert.deepStrictEqual(kyarakuta.isJapanese('、、。'), false);
         assert.deepStrictEqual(kyarakuta.isJapanese('　'), false);
     });
+
+    describe('kana converter', () => {
+        it('passes basic conversion', () => {
+            assert.deepStrictEqual(kyarakuta.toHiragana('インドネシア'), 'いんどねしあ');
+            assert.deepStrictEqual(kyarakuta.toKatakana('いんどねしあ'), 'インドネシア');
+            assert.deepStrictEqual(kyarakuta.toHiragana('じゃかるた'), 'じゃかるた');
+            assert.deepStrictEqual(kyarakuta.toKatakana('ジャカルタ'), 'ジャカルタ');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ばー'), 'ばー');
+            assert.deepStrictEqual(kyarakuta.toKatakana('バー'), 'バー');
+            assert.deepStrictEqual(kyarakuta.toHiragana('コレはおいしい'), 'これはおいしい');
+            assert.deepStrictEqual(kyarakuta.toKatakana('コレはおいしい'), 'コレハオイシイ');
+        });
+
+        it('converts katakana dash to vowel in toHiragana conversion', () => {
+            // Convert Katakana dash to vowel
+            assert.deepStrictEqual(kyarakuta.toHiragana('バー'), 'ばあ');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ジー'), 'じい');
+            assert.deepStrictEqual(kyarakuta.toHiragana('グー'), 'ぐう');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ケー'), 'けえ');
+            // Could be おお or おう. But we'll stick with the first one.
+            assert.deepStrictEqual(kyarakuta.toHiragana('オー'), 'おお');
+            
+            // Should not convert letter one kanji
+            assert.deepStrictEqual(kyarakuta.toHiragana('バ一'), 'ば一');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ジ一'), 'じ一');
+            assert.deepStrictEqual(kyarakuta.toHiragana('グ一'), 'ぐ一');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ケ一'), 'け一');
+            assert.deepStrictEqual(kyarakuta.toHiragana('オ一'), 'お一');
+
+            // Should not convert if the original is hiragana
+            assert.deepStrictEqual(kyarakuta.toHiragana('ばー'), 'ばー');
+            assert.deepStrictEqual(kyarakuta.toHiragana('じー'), 'じー');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ぐー'), 'ぐー');
+            assert.deepStrictEqual(kyarakuta.toHiragana('けー'), 'けー');
+            assert.deepStrictEqual(kyarakuta.toHiragana('おー'), 'おー');
+        });
+
+        it('passes some random tests', () => {
+            assert.deepStrictEqual(kyarakuta.toHiragana('食事用フォーク'), '食事用ふぉおく');
+            assert.deepStrictEqual(kyarakuta.toHiragana('ABCリード'), 'ABCりいど');
+            assert.deepStrictEqual(kyarakuta.toKatakana('ABCりいど'), 'ABCリイド');
+        });
+    });
 });
