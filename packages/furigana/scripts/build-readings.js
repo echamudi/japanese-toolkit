@@ -14,7 +14,7 @@ kanji.all.list().forEach((char, index) => {
     try {
         readingsObj = kanji.readings(char);
     } catch {
-        console.log('err', char);
+        // console.log('not found: ', char);
         return;
     }
     fin[char] = [];
