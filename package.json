@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "watch": "npx lerna run --parallel watch",
     "install": "npx lerna exec -- npm install && npx lerna bootstrap",
     "alpha": "npx lerna publish --dist-tag next"
   },
