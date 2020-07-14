@@ -11,9 +11,6 @@ const sqlite3 = require('sqlite3').verbose();
 
 describe('japanese-db', function () {
   it('exports database', function () {
-    this.timeout(60000);
-    this.slow(30000);
-
     console.log(`> japanese-db sqlite -s ${__dirname}/fixtures -d ${__dirname}/result`);
 
     // const os = process.platform;
@@ -30,9 +27,6 @@ describe('japanese-db', function () {
   });
 
   describe('extracts correctly', function () {
-    this.timeout(60000);
-    this.slow(30000);
-
     /** @type { import("sqlite3").Database } */
     let db;
 
