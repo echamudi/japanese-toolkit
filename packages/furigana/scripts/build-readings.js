@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const kanji = require('kanji');
 const kyarakuta = require('kyarakuta');
 const fs = require('fs');
@@ -9,7 +10,7 @@ const path = require('path');
  */
 const fin = {};
 
-kanji.all.list().forEach((char, index) => {
+kanji.all.list().forEach((char) => {
     let readingsObj;
     try {
         readingsObj = kanji.readings(char);
@@ -38,5 +39,5 @@ kanji.all.list().forEach((char, index) => {
 const dir = path.resolve(__dirname, '../dist');
 const filename = path.resolve(dir, 'readings.json');
 
-fs.mkdirSync(path.resolve(__dirname, '../dist'), {recursive: true});
+fs.mkdirSync(path.resolve(__dirname, '../dist'), { recursive: true });
 fs.writeFileSync(filename, JSON.stringify(fin));

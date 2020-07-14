@@ -5,8 +5,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import getBlockNames from "./get-block-names";
-import { BlockCondition } from "./types/types";
+import getBlockNames from './get-block-names';
+import { BlockCondition } from './types/types';
 
 export default function every(string: string, conditions: BlockCondition[]): boolean {
     if (string.length === 0) return true;
@@ -14,15 +14,14 @@ export default function every(string: string, conditions: BlockCondition[]): boo
 
     const stringBlocks = getBlockNames(string);
 
-    const result = stringBlocks.every((stringBlock) =>
-        conditions.some((condition) => {
-            if (condition.block !== undefined && condition.block !== stringBlock.block)
-                return false;
-            if (condition.subblock !== undefined && condition.subblock !== stringBlock.subblock)
-                return false;
-            return true;
-        })
-    );
+    const result = stringBlocks.every((stringBlock) => conditions.some((condition) => {
+        if (condition.block !== undefined && condition.block !== stringBlock.block) return false;
+        if (condition.subblock !== undefined && condition.subblock !== stringBlock.subblock) {
+            return false;
+        }
+
+        return true;
+    }));
 
     return result;
 }

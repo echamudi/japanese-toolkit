@@ -2,9 +2,19 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "watch": "npx lerna run --parallel watch",
+    "install": "npx lerna exec -- npm install && npx lerna bootstrap",
     "alpha": "npx lerna publish --dist-tag next"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "typescript": "^3.9.6"
   }
 }

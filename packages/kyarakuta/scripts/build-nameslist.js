@@ -1,9 +1,10 @@
 const fs = require('fs');
 
 const namesListRaw = fs.readFileSync(
-    __dirname + '/../raw-data/NamesList.txt', {
-    encoding: 'utf-8'
-}).toString().split('\n');
+    `${__dirname}/../raw-data/NamesList.txt`, {
+        encoding: 'utf-8',
+    },
+).toString().split('\n');
 
 /** @type {Map<{name: string, subname: string}, number>} */
 const block2id = new Map();
@@ -11,7 +12,7 @@ const block2id = new Map();
 /** @type {import('./../src/types/types').SubBlocksLibraryInterface} */
 const SubBlocksLibrary = {
     blocks: {},
-    codePoints: {}
+    codePoints: {},
 };
 
 /** @type {import('./../src/types/types').BlockRange[]} */
@@ -21,16 +22,16 @@ let currentBlock = '';
 let currentSubBlock = '';
 let currentId = 0;
 
-for (let i = 0; i < namesListRaw.length; i++) {
-    let matchBlock = namesListRaw[i].match(/^@@\t(.*?)\t(.*?)\t(.*?)$/);
-    let matchSubBlock = namesListRaw[i].match(/^@\t\t(.*?)$/);
-    let matchLetter = namesListRaw[i].match(/^([0-9a-fA-F]+)\t(.*?)$/);
+for (let i = 0; i < namesListRaw.length; i += 1) {
+    const matchBlock = namesListRaw[i].match(/^@@\t(.*?)\t(.*?)\t(.*?)$/);
+    const matchSubBlock = namesListRaw[i].match(/^@\t\t(.*?)$/);
+    const matchLetter = namesListRaw[i].match(/^([0-9a-fA-F]+)\t(.*?)$/);
 
     if (matchBlock) {
         currentBlock = matchBlock[2];
 
         BlockRangesList.push({
-            block: matchBlock[2],
+            block: currentBlock,
             start: parseInt(matchBlock[1], 16),
             end: parseInt(matchBlock[3], 16),
         });
@@ -51,7 +52,7 @@ for (let i = 0; i < namesListRaw.length; i++) {
         const name = currentSubBlock;
         const letterId = parseInt(matchLetter[1], 16);
 
-        if (block2id.get(name) === undefined) throw new Error('Can\'t find name ' + name);
+        if (block2id.get(name) === undefined) throw new Error(`Can't find name ${name}`);
         const nameId = block2id.get(name);
 
         SubBlocksLibrary.codePoints[letterId] = nameId;
@@ -72,5 +73,5 @@ ${JSON.stringify(BlockRangesList)}
 \`);
 `;
 
-fs.mkdirSync(__dirname + '/../src/gen', { recursive: true });
-fs.writeFileSync(__dirname + '/../src/gen/blocks-library.ts', script);
+fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
+fs.writeFileSync(`${__dirname}/../src/gen/blocks-library.ts`, script);

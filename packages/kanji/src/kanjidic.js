@@ -5,7 +5,7 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- * 
+ *
  */
 
 const fs = require('fs');
@@ -20,7 +20,7 @@ function readings(char) {
     // @ts-ignore
     if (!(typeof char === 'string' || char instanceof String)) {
         throw new Error('char input must be string');
-    };
+    }
 
     const numberOfLetters = [...char].length;
     if (numberOfLetters < 1 || numberOfLetters > 1) throw new Error('wrong length of string');
@@ -37,36 +37,31 @@ function readings(char) {
             ).toString(16);
         }
 
-        throw new Error("f readings code logic error");
+        throw new Error('f readings code logic error');
     })();
 
-    const filePath = path.join(__dirname, 'kanjidic', unicode + '.json');
+    const filePath = path.join(__dirname, 'kanjidic', `${unicode}.json`);
 
     if (!fs.existsSync(filePath)) return null;
 
     const charObj = JSON.parse(fs.readFileSync(filePath).toString());
 
     const on = charObj
-        ?.reading_meaning
-        ?.[0]
-        ?.rmgroup
-        ?.[0]
+        ?.reading_meaning?.[0]
+        ?.rmgroup?.[0]
         ?.reading
         .filter((/** @type {{[x: string]: string}} */ el) => el.r_type === 'ja_on')
         .map((/** @type {{[x: string]: string}} */ el) => el.$t);
 
     const kun = charObj
-        ?.reading_meaning
-        ?.[0]
-        ?.rmgroup
-        ?.[0]
+        ?.reading_meaning?.[0]
+        ?.rmgroup?.[0]
         ?.reading
         .filter((/** @type {{[x: string]: string}} */ el) => el.r_type === 'ja_kun')
         .map((/** @type {{[x: string]: string}} */ el) => el.$t);
 
     const nanori = charObj
-        ?.reading_meaning
-        ?.[0]
+        ?.reading_meaning?.[0]
         .nanori;
 
     return { on: on ?? [], kun: kun ?? [], nanori: nanori ?? [] };

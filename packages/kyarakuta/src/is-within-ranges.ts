@@ -8,18 +8,18 @@
 import { Ranges } from './types/types';
 import { KanaRanges, CJKranges } from './ranges';
 
-function isWithinRanges(string: string, rangesCollection: Ranges[] ): boolean {
+function isWithinRanges(string: string, rangesCollection: Ranges[]): boolean {
     const cpArray: Readonly<number[]> = [...string].map((char) => {
         const cp = char.codePointAt(0);
         if (cp === undefined) throw new Error();
         return cp;
     });
 
-    return cpArray.every((cp) => 
-        rangesCollection.some((ranges) => 
-            ranges.some((range) => range[0] <= cp && cp <= range[1])
-        )
-    );
+    return cpArray.every((cp) =>
+        // eslint-disable-next-line implicit-arrow-linebreak
+        rangesCollection.some((ranges) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            ranges.some((range) => range[0] <= cp && cp <= range[1])));
 }
 
 export function isKana(string: string): boolean {

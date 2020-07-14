@@ -7,13 +7,13 @@ fs.mkdirSync('./raw-data/', { recursive: true });
 (async () => {
     console.log('Downloading required files');
     await Promise.all([
-        (() => new Promise((resolve, reject) => {
+        (() => new Promise((resolve) => {
             // Download Names List
             https.get('https://raw.githubusercontent.com/echamudi/unicode-mirror/master/13.0.0/ucd/NamesList.txt', (response) => {
                 response.pipe(fs.createWriteStream('./raw-data/NamesList.txt'));
                 resolve();
             });
-        }))()
+        }))(),
     ]);
     console.log('Download done!');
 })();
