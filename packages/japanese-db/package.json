@@ -4,7 +4,6 @@
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
-    "install": "node scripts/postinstall.js",
     "build": "node scripts/postinstall.js",
     "watch": "",
     "test": "npm link . && mocha ./test/test.js && npm unlink ."
