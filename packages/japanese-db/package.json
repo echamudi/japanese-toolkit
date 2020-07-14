@@ -4,9 +4,10 @@
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
+    "test:build-db": "npx rimraf ./test/result && npx . sqlite -s ./test/fixtures -d ./test/result",
     "build": "node scripts/postinstall.js",
     "watch": "",
-    "test": "npm link . && npx rimraf ./test/result && npx jest ./test/test.js && npm unlink ."
+    "test": "npm run test:build-db && npx jest ./test/test.js"
   },
   "repository": {
     "type": "git",
