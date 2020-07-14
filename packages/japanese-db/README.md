@@ -1,7 +1,5 @@
 # Japanese DB
 
-[![Build Status](https://travis-ci.org/echamudi/japanese-db.svg?branch=master)](https://travis-ci.org/echamudi/japanese-db) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db?label=downloads)](https://www.npmjs.com/package/japanese-db)
-
 Japanese language resources database maker from various open source materials.
 
 ## Usage
