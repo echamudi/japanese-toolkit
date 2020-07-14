@@ -23,8 +23,8 @@ jobs:
       run: |
         npm install
         npx lerna bootstrap
-        npx lerna run build
+        npx lerna run --concurrency 1 --stream build
 
     - name: Test Packages
       run: |
-        npx lerna run test
+        npx lerna run --concurrency 1 --stream test
