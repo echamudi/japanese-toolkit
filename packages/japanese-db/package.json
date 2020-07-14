@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install": "node scripts/postinstall.js",
+    "build": "node scripts/postinstall.js",
+    "watch": "",
     "test": "mocha ./test/test.js"
   },
   "repository": {
