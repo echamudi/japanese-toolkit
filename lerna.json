@@ -1,6 +1,7 @@
 {
   "packages": [
     "packages/kyarakuta",
+    "packages/japanese-db",
     "packages/kanji",
     "packages/furigana"
   ],
