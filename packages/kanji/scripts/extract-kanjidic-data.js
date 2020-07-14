@@ -5,24 +5,25 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- * 
+ *
  */
 
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const xml2json = require('xml2json');
 const { promisify } = require('util');
 
 const gunzip = promisify(zlib.gunzip);
-const sleep = promisify(setTimeout);
+// const sleep = promisify(setTimeout);
 
 (async () => {
     const kanjidicGzipPath = path.resolve(__dirname, '../raw-data/kanjidic2.xml.gz');
     const kanjidicGzipBuffer = fs.readFileSync(kanjidicGzipPath);
 
     const kanjidicXml = await gunzip(kanjidicGzipBuffer);
-    
+
     const kanjidicObj = xml2json.toJson(kanjidicXml, {
         object: true,
         arrayNotation: true,
@@ -30,7 +31,7 @@ const sleep = promisify(setTimeout);
 
     // Generate JSON for debugging
     // fs.writeFileSync(
-    //     path.resolve(__dirname, '../raw-data/kanjidic2.json'), 
+    //     path.resolve(__dirname, '../raw-data/kanjidic2.json'),
     //     JSON.stringify(jmdictObj, null, 2)
     // );
 
@@ -38,19 +39,19 @@ const sleep = promisify(setTimeout);
 
     fs.mkdirSync(targetDir, { recursive: true });
 
-    for (let i = 0; i < kanjidicObj.kanjidic2[0].character.length; i++) {
+    for (let i = 0; i < kanjidicObj.kanjidic2[0].character.length; i += 1) {
         const character = kanjidicObj.kanjidic2[0].character[i];
         const ucs = character
             .codepoint[0]
             .cp_value
-            .filter((el) => el.cp_type === "ucs")[0]
+            .filter((el) => el.cp_type === 'ucs')[0]
             .$t
             .toLowerCase();
-        
-        const targetFilePath = path.join(targetDir, ucs + '.json');
+
+        const targetFilePath = path.join(targetDir, `${ucs}.json`);
 
         if (fs.existsSync(targetFilePath)) {
-            throw new Error('duplicate: ' + targetFilePath);
+            throw new Error(`duplicate: ${targetFilePath}`);
         }
 
         // if (character.literal[0].length > 1) {
@@ -60,7 +61,7 @@ const sleep = promisify(setTimeout);
         fs.writeFileSync(
             targetFilePath,
             JSON.stringify(character),
-            { encoding: 'utf-8' }
+            { encoding: 'utf-8' },
         );
     }
 
@@ -70,12 +71,11 @@ Data taken from KANJIDIC http://www.edrdg.org/wiki/index.php/KANJIDIC_Project
 Creative Commons Attribution-ShareAlike Licence (V3.0)
 Copyright (C) The Electronic Dictionary Research and Development Group.
 `;
-        
-        // Add notice
-        fs.writeFileSync(path.join(targetDir, '_notice.txt'), notice, function(err) {
-            if (err) {
-                console.log(err);
-            }
-        });
-        
+
+    // Add notice
+    fs.writeFileSync(path.join(targetDir, '_notice.txt'), notice, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
 })();

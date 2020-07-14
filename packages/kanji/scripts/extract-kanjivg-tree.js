@@ -5,7 +5,7 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- * 
+ *
  */
 
 /**
@@ -14,6 +14,7 @@
 
 const path = require('path');
 const fs = require('fs');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const xml2json = require('xml2json');
 
 let files = fs.readdirSync(path.join('.', 'raw-data', 'kanjivg', 'kanji'));
@@ -30,7 +31,9 @@ files = files.filter((el) => el.length === 9); // Only standard type e.g. 0f9a8.
 const props = new Set(['g', 'kvg:element', 'kvg:original', 'kvg:variant', 'kvg:partial', 'kvg:radical', 'kvg:phon']);
 
 // Delete unecessary props
-function traverse(node) {
+function traverse(outerNode) {
+    const node = outerNode;
+
     Object.keys(node).forEach((key) => {
         if (!props.has(key)) {
             delete node[key];
@@ -40,31 +43,35 @@ function traverse(node) {
         }
     });
 
-    if (node['g']) {
-        node['g'].forEach(element => {
+    if (node.g) {
+        node.g.forEach((element) => {
             traverse(element);
         });
     }
-};
+}
 
-function deleteEmpties(node) {
+function deleteEmpties(outerNode) {
+    const node = outerNode;
+
     if (node.g) {
         // Delete empty object
-        label_while:
-        while (true) {
+        for (;;) {
+            let shouldContinue = false;
 
-            label_for:
-            for (let i = 0; i < node['g'].length; i++) {
-                if (Object.keys(node['g'][i]).length === 0) {
-                    node['g'].splice(i, 1);
-                    continue label_while;
+            for (let i = 0; i < node.g.length; i += 1) {
+                if (Object.keys(node.g[i]).length === 0) {
+                    node.g.splice(i, 1);
+                    shouldContinue = true;
+                    break;
                 }
             }
 
-            break;
+            if (!shouldContinue) {
+                break;
+            }
         }
 
-        node['g'].forEach(element => {
+        node.g.forEach((element) => {
             deleteEmpties(element);
         });
 
@@ -74,9 +81,8 @@ function deleteEmpties(node) {
     }
 }
 
-
 // Execute
-files.forEach((fileNameSvg, index) => {
+files.forEach((fileNameSvg) => {
     const fileNameOnly = fileNameSvg.slice(0, fileNameSvg.length - 4);
 
     const data = fs.readFileSync(path.join('.', 'raw-data', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
@@ -97,7 +103,7 @@ files.forEach((fileNameSvg, index) => {
         jsonString = '{}';
     }
 
-    fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', fileNameOnly + '.json'), jsonString, function (err) {
+    fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', `${fileNameOnly}.json`), jsonString, (err) => {
         if (err) {
             console.log(err);
         }
@@ -111,7 +117,7 @@ KanjiVG is copyright © 2009-2018 Ulrich Apel and released under the Creative Co
 `;
 
 // Add notice
-fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', '_notice.txt'), notice, function (err) {
+fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', '_notice.txt'), notice, (err) => {
     if (err) {
         console.log(err);
     }
