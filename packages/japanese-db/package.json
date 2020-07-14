@@ -22,15 +22,14 @@
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "files": [
-    "LICENSE",
-    "README.md",
+    "/lib",
+    "/source",
+    "/types",
     "cli.js",
-    "index.d.ts",
     "index.js",
-    "lib",
-    "scripts",
-    "types",
-    "source"
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
   ],
   "dependencies": {
     "commander": "^5.1.0",
