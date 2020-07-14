@@ -14,7 +14,7 @@ export interface BlockRange {
     readonly block: string,
     readonly start: number,
     readonly end: number
-};
+}
 
 /**
  * [start, end]

@@ -5,7 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Ranges } from "./types/types";
+import { Ranges } from './types/types';
 
 export const CJKranges: Ranges = [
     [0x4E00, 0x9FFF], // CJK Unified Ideographs
