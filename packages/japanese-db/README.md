@@ -1,7 +1,5 @@
 # Japanese DB
 
-[![Build Status](https://travis-ci.org/echamudi/japanese-db.svg?branch=master)](https://travis-ci.org/echamudi/japanese-db) [![NPM Downloads](https://img.shields.io/npm/dm/japanese-db?label=downloads)](https://www.npmjs.com/package/japanese-db)
-
 Japanese language resources database maker from various open source materials.
 
 ## Usage
@@ -81,15 +79,6 @@ npm link .
 npm test
 ```
 
-## Contributing
-
-This project is following [git-flow branching model](https://github.com/echamudi/echamudi-docs/blob/master/git-strategy/gitflow.png). 
-- Please create a branch from `develop`.
-- Name it something descriptive other than `master`, `develop`, `release-*`, or `hotfix-*`.
-- Open a pull request to `develop`.
-
-Make sure your contributions are compatible with the license of this project.
-
 ## Acknowledgment
 
 The generated database file contains data from following sources.
@@ -100,12 +89,6 @@ The generated database file contains data from following sources.
 - Wanikani Audio https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
 - KanjiVG https://github.com/KanjiVG/kanjivg
 - Kanji https://github.com/echamudi/kanji
-
-## Authors
-
-* **Ezzat Chamudi** - [echamudi](https://github.com/echamudi)
-
-See also the list of [contributors](https://github.com/echamudi/japanese-db/graphs/contributors) who participated in this project.
 
 ## License
 

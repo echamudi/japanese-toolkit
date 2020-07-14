@@ -4,8 +4,10 @@
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
-    "install": "node scripts/postinstall.js",
-    "test": "mocha ./test/test.js"
+    "test:build-db": "npx rimraf ./test/result && npx . sqlite -s ./test/fixtures -d ./test/result",
+    "build": "node scripts/postinstall.js",
+    "watch": "",
+    "test": "npm run test:build-db && npx jest ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -21,27 +23,24 @@
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "files": [
-    "LICENSE",
-    "README.md",
+    "/lib",
+    "/source",
+    "/types",
     "cli.js",
-    "index.d.ts",
     "index.js",
-    "lib",
-    "scripts",
-    "types"
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
   ],
   "dependencies": {
     "commander": "^5.1.0",
-    "kanji": "^0.6.1",
+    "kanji": "^0.11.0",
     "sqlite3": "^4.2.0",
     "xml2json": "^0.12.0"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "mocha": "^7.1.2",
-    "tslint": "^6.1.2",
+    "jest": "^26.1.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.2"
   }
 }
