@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/postinstall.js",
     "watch": "",
-    "test": "npm link . && npx jest ./test/test.js && npm unlink ."
+    "test": "npm link . && npx rimraf ./test/result && npx jest ./test/test.js && npm unlink ."
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "jest": "^26.1.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.2"
   }
 }
