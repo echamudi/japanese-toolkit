@@ -512,24 +512,24 @@ class JapaneseDBTool {
           /** @type {Object<string, Object<string, number>>} */
           const all = {};
 
-          kanji.kanken.lv10.forEach((char) => { all[char] = { kanken: 100 }; });
-          kanji.kanken.lv09.forEach((char) => { all[char] = { kanken: 90 }; });
-          kanji.kanken.lv08.forEach((char) => { all[char] = { kanken: 80 }; });
-          kanji.kanken.lv07.forEach((char) => { all[char] = { kanken: 70 }; });
-          kanji.kanken.lv06.forEach((char) => { all[char] = { kanken: 60 }; });
-          kanji.kanken.lv05.forEach((char) => { all[char] = { kanken: 50 }; });
-          kanji.kanken.lv04.forEach((char) => { all[char] = { kanken: 40 }; });
-          kanji.kanken.lv03.forEach((char) => { all[char] = { kanken: 30 }; });
-          kanji.kanken.lv02pre.forEach((char) => { all[char] = { kanken: 25 }; });
-          kanji.kanken.lv02.forEach((char) => { all[char] = { kanken: 20 }; });
-          kanji.kanken.lv01pre.forEach((char) => { all[char] = { kanken: 15 }; });
-          kanji.kanken.lv01.forEach((char) => { all[char] = { kanken: 10 }; });
+          kanji.kanken.lv10().forEach((char) => { all[char] = { kanken: 100 }; });
+          kanji.kanken.lv09().forEach((char) => { all[char] = { kanken: 90 }; });
+          kanji.kanken.lv08().forEach((char) => { all[char] = { kanken: 80 }; });
+          kanji.kanken.lv07().forEach((char) => { all[char] = { kanken: 70 }; });
+          kanji.kanken.lv06().forEach((char) => { all[char] = { kanken: 60 }; });
+          kanji.kanken.lv05().forEach((char) => { all[char] = { kanken: 50 }; });
+          kanji.kanken.lv04().forEach((char) => { all[char] = { kanken: 40 }; });
+          kanji.kanken.lv03().forEach((char) => { all[char] = { kanken: 30 }; });
+          kanji.kanken.lv02pre().forEach((char) => { all[char] = { kanken: 25 }; });
+          kanji.kanken.lv02().forEach((char) => { all[char] = { kanken: 20 }; });
+          kanji.kanken.lv01pre().forEach((char) => { all[char] = { kanken: 15 }; });
+          kanji.kanken.lv01().forEach((char) => { all[char] = { kanken: 10 }; });
 
-          kanji.jlpt.n5.forEach((char) => { all[char].jlptNew = 5; });
-          kanji.jlpt.n4.forEach((char) => { all[char].jlptNew = 4; });
-          kanji.jlpt.n3.forEach((char) => { all[char].jlptNew = 3; });
-          kanji.jlpt.n2.forEach((char) => { all[char].jlptNew = 2; });
-          kanji.jlpt.n1.forEach((char) => { all[char].jlptNew = 1; });
+          kanji.jlpt.n5().forEach((char) => { all[char].jlptNew = 5; });
+          kanji.jlpt.n4().forEach((char) => { all[char].jlptNew = 4; });
+          kanji.jlpt.n3().forEach((char) => { all[char].jlptNew = 3; });
+          kanji.jlpt.n2().forEach((char) => { all[char].jlptNew = 2; });
+          kanji.jlpt.n1().forEach((char) => { all[char].jlptNew = 1; });
 
           db.run(`CREATE TABLE kanji_groups (
             kanji TEXT,
@@ -560,7 +560,7 @@ class JapaneseDBTool {
             PRIMARY KEY(kanji)
           )`);
 
-          const allKanji = kanji.all.list;
+          const allKanji = kanji.all.list();
 
           allKanji.forEach((char) => {
             if (char.length !== 1) return;
@@ -602,12 +602,10 @@ class JapaneseDBTool {
           db.run('CREATE TABLE related_synonyms (kanji TEXT, array TEXT, PRIMARY KEY(kanji))');
           db.run('CREATE TABLE related_variants (kanji TEXT, array TEXT, PRIMARY KEY(kanji))');
 
-          const {
-            antonyms,
-            lookalikes,
-            synonyms,
-            variants,
-          } = kanji.related;
+          const antonyms = kanji.related.antonyms();
+          const lookalikes = kanji.related.lookalikes();
+          const synonyms = kanji.related.synonyms();
+          const variants = kanji.related.variants();
 
           Object.keys(antonyms).forEach((char) => {
             db.run('INSERT INTO related_antonyms VALUES (?,?)',
