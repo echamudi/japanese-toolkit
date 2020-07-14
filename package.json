@@ -6,7 +6,8 @@
     "install": "npx lerna exec -- npm install && npx lerna bootstrap",
     "build": "npx lerna run build",
     "test": "npx lerna run test",
-    "alpha": "npx lerna publish --dist-tag next"
+    "publish:next": "npx lerna publish --dist-tag next",
+    "publish:latest": "npx lerna publish"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.6.1",
