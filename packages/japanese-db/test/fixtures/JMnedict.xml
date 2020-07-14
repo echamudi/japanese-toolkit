@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<!DOCTYPE JMnedict [
+<!--
+	This is the DTD of the Japanese-Multilingual Named Entity
+	Dictionary file. It is based on the JMdict DTD, and carries
+	many fields from it. It is used for a quick-and-dirty conversion
+	of the ENAMDICT entries, plus the name entries from EDICTH.
+-->
+<!-- Rev 1.08 
+	Matching revision numbers with the JMdict DTD, which was changed
+	to delete the <info> and <example> elements
+-->
+<!ELEMENT JMnedict (entry*)>
+<!--                                                                   -->
+<!ELEMENT entry (ent_seq, k_ele*, r_ele+, trans+)*>
+	<!-- Entries consist of kanji elements, reading elements 
+	name translation elements. Each entry must have at 
+	least one reading element and one sense element. Others are optional.
+	-->
+<!ELEMENT ent_seq (#PCDATA)>
+    <!-- A unique numeric sequence number for each entry
+    -->
+<!ELEMENT k_ele (keb, ke_inf*, ke_pri*)>
+	<!-- The kanji element, or in its absence, the reading element, is 
+	the defining component of each entry.
+	The overwhelming majority of entries will have a single kanji
+	element associated with an entity name in Japanese. Where there are 
+	multiple kanji elements within an entry, they will be orthographical
+	variants of the same word, either using variations in okurigana, or
+	alternative and equivalent kanji. Common "mis-spellings" may be 
+	included, provided they are associated with appropriate information
+	fields. Synonyms are not included; they may be indicated in the
+	cross-reference field associated with the sense element.
+	-->
+<!ELEMENT keb (#PCDATA)>
+	<!-- This element will contain an entity name in Japanese 
+	which is written using at least one non-kana character (usually
+	kanji, but can be other characters). The valid 
+	characters are kanji, kana, related characters such as chouon and 
+	kurikaeshi, and in exceptional cases, letters from other alphabets.
+	-->
+<!ELEMENT ke_inf (#PCDATA)>
+	<!-- This is a coded information field related specifically to the 
+	orthography of the keb, and will typically indicate some unusual
+	aspect, such as okurigana irregularity.
+	-->
+<!ELEMENT ke_pri (#PCDATA)>
+	<!-- This and the equivalent re_pri field are provided to record
+	information about the relative priority of the entry, and are for
+	use either by applications which want to concentrate on entries of 
+	a particular priority, or to generate subset files. The reason
+	both the kanji and reading elements are tagged is because on
+	occasions a priority is only associated with a particular
+	kanji/reading pair.
+	-->
+<!--                                                                   -->
+<!ELEMENT r_ele (reb, re_restr*, re_inf*, re_pri*)>
+	<!-- The reading element typically contains the valid readings
+	of the word(s) in the kanji element using modern kanadzukai. 
+	Where there are multiple reading elements, they will typically be
+	alternative readings of the kanji element. In the absence of a 
+	kanji element, i.e. in the case of a word or phrase written
+	entirely in kana, these elements will define the entry.
+	-->
+<!ELEMENT reb (#PCDATA)>
+	<!-- this element content is restricted to kana and related
+	characters such as chouon and kurikaeshi. Kana usage will be
+	consistent between the keb and reb elements; e.g. if the keb
+	contains katakana, so too will the reb.
+	-->
+<!ELEMENT re_restr (#PCDATA)>
+	<!-- This element is used to indicate when the reading only applies
+	to a subset of the keb elements in the entry. In its absence, all
+	readings apply to all kanji elements. The contents of this element 
+	must exactly match those of one of the keb elements.
+	-->
+<!ELEMENT re_inf (#PCDATA)>
+	<!-- General coded information pertaining to the specific reading.
+	Typically it will be used to indicate some unusual aspect of 
+	the reading. -->
+<!ELEMENT re_pri (#PCDATA)>
+	<!-- See the comment on ke_pri above. -->
+<!ELEMENT trans (name_type*, xref*, trans_det*)>
+	<!-- The trans element will record the translational equivalent
+	of the Japanese name, plus other related information. 
+	-->
+<!ELEMENT name_type (#PCDATA)>
+	<!-- The type of name, recorded in the appropriate entity codes.
+	-->
+<!ELEMENT xref (#PCDATA)*>
+    <!-- This element is used to indicate a cross-reference to another
+    entry with a similar or related meaning or sense. The content of
+    this element is typically a keb or reb element in another entry. In some
+    cases a keb will be followed by a reb and/or a sense number to provide
+    a precise target for the cross-reference. Where this happens, a JIS
+    "centre-dot" (0x2126) is placed between the components of the 
+    cross-reference.
+	-->
+<!ELEMENT trans_det (#PCDATA)>
+	<!-- The actual translations of the name, usually as a transcription
+	into the target language.
+	-->
+<!ATTLIST trans_det xml:lang CDATA #IMPLIED>
+	<!-- The xml:lang attribute defines the target language of the
+	translated name. It will be coded using the three-letter language 
+	code from the ISO 639-2 standard. When absent, the value "eng" 
+	(i.e. English) is the default value. The bibliographic (B) codes
+	are used.-->
+<!-- The following entity codes are used for common elements within the
+various information fields.
+-->
+<!ENTITY surname "family or surname">
+<!ENTITY place "place name">
+<!ENTITY unclass "unclassified name">
+<!ENTITY company "company name">
+<!ENTITY product "product name">
+<!ENTITY work "work of art, literature, music, etc. name">
+<!ENTITY masc "male given name or forename">
+<!ENTITY fem "female given name or forename">
+<!ENTITY person "full name of a particular person">
+<!ENTITY given "given name or forename, gender not specified">
+<!ENTITY station "railway station">
+<!ENTITY organization "organization name">
+<!ENTITY ok "old or irregular kana form">
+]>
+<!-- JMnedict created: 2019-09-20 -->
+<JMnedict>
+<entry>
+<ent_seq>2092920</ent_seq>
+<k_ele>
+<keb>ＩＫＥＡ</keb>
+</k_ele>
+<r_ele>
+<reb>イケア</reb>
+</r_ele>
+<trans>
+<name_type>&company;</name_type>
+<trans_det>IKEA</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5000007</ent_seq>
+<k_ele>
+<keb>〆谷</keb>
+</k_ele>
+<r_ele>
+<reb>しめたに</reb>
+</r_ele>
+<trans>
+<name_type>&surname;</name_type>
+<trans_det>Shimetani</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5000013</ent_seq>
+<k_ele>
+<keb>６３ビル</keb>
+</k_ele>
+<r_ele>
+<reb>ろくじゅうさんビル</reb>
+</r_ele>
+<trans>
+<name_type>&place;</name_type>
+<trans_det>63 building (in Seoul)</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5000014</ent_seq>
+<k_ele>
+<keb>ＡＮＣ</keb>
+</k_ele>
+<r_ele>
+<reb>エーエヌシー</reb>
+</r_ele>
+<trans>
+<name_type>&organization;</name_type>
+<trans_det>African National Congress</trans_det>
+<trans_det>ANC</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5000033</ent_seq>
+<k_ele>
+<keb>ＪＡ広島病院前駅</keb>
+</k_ele>
+<r_ele>
+<reb>ジェーエーひろしまびょういんまええき</reb>
+</r_ele>
+<trans>
+<name_type>&station;</name_type>
+<trans_det>JA Hiroshimabyōinmae Station</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5000899</ent_seq>
+<r_ele>
+<reb>いすゞ</reb>
+</r_ele>
+<trans>
+<name_type>&fem;</name_type>
+<trans_det>Isuzu</trans_det>
+</trans>
+<trans>
+<name_type>&company;</name_type>
+<trans_det>Isuzu (Japanese automobile manufacturer)</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5001450</ent_seq>
+<r_ele>
+<reb>おかしなホテル</reb>
+</r_ele>
+<trans>
+<name_type>&work;</name_type>
+<trans_det>Plaza Suite (film)</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5001451</ent_seq>
+<r_ele>
+<reb>おかつ</reb>
+</r_ele>
+<trans>
+<name_type>&fem;</name_type>
+<trans_det>Okatsu</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5001664</ent_seq>
+<k_ele>
+<keb>輝夜姫</keb>
+</k_ele>
+<k_ele>
+<keb>かぐや姫</keb>
+</k_ele>
+<r_ele>
+<reb>かぐやひめ</reb>
+</r_ele>
+<trans>
+<name_type>&person;</name_type>
+<trans_det>Kaguya-Hime (main character of Taketori Monogatari)</trans_det>
+<trans_det>Princess Kaguya</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5007198</ent_seq>
+<r_ele>
+<reb>やふみ</reb>
+</r_ele>
+<r_ele>
+<reb>ヤフミ</reb>
+</r_ele>
+<trans>
+<name_type>&fem;</name_type>
+<name_type>&masc;</name_type>
+<trans_det>Yafumi</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5294339</ent_seq>
+<k_ele>
+<keb>国語研究所</keb>
+</k_ele>
+<r_ele>
+<reb>こくごけんきゅうじょ</reb>
+</r_ele>
+<trans>
+<name_type>&organization;</name_type>
+<xref>国立国語研究所</xref>
+<trans_det>National Institute for Japanese Language and Linguistics</trans_det>
+<trans_det>NINJAL</trans_det>
+<trans_det>Kokken</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5295347</ent_seq>
+<k_ele>
+<keb>国立国語研究所</keb>
+</k_ele>
+<r_ele>
+<reb>こくりつこくごけんきゅうしょ</reb>
+</r_ele>
+<trans>
+<name_type>&organization;</name_type>
+<trans_det>National Institute for Japanese Language and Linguistics</trans_det>
+<trans_det>NINJAL</trans_det>
+<trans_det>Kokken</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5307278</ent_seq>
+<k_ele>
+<keb>済州国際空港</keb>
+</k_ele>
+<r_ele>
+<reb>さいしゅうこくさいくうこう</reb>
+</r_ele>
+<r_ele>
+<reb>チェジュこくさいくうこう</reb>
+</r_ele>
+<trans>
+<name_type>&place;</name_type>
+<trans_det>Jeju International Airport</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5567603</ent_seq>
+<k_ele>
+<keb>独立行政法人国立国語研究所</keb>
+</k_ele>
+<r_ele>
+<reb>どくりつぎょうせいほうじんこくりつこくごけんきゅうじょ</reb>
+</r_ele>
+<trans>
+<name_type>&organization;</name_type>
+<trans_det>National Institute for Japanese Language</trans_det>
+<trans_det>NIJLA</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5586900</ent_seq>
+<k_ele>
+<keb>能野里</keb>
+</k_ele>
+<r_ele>
+<reb>よきのさと</reb>
+</r_ele>
+<trans>
+<name_type>&place;</name_type>
+<trans_det>Yokinosato</trans_det>
+</trans>
+</entry>
+<entry>
+<ent_seq>5740590</ent_seq>
+<k_ele>
+<keb>浪芲</keb>
+</k_ele>
+<r_ele>
+<reb>なみはな</reb>
+</r_ele>
+<trans>
+<name_type>&surname;</name_type>
+<trans_det>Namihana</trans_det>
+</trans>
+</entry>
+</JMnedict>
