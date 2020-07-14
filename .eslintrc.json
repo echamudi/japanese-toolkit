@@ -1,5 +1,4 @@
-{
-    "env": {
+{    "env": {
         "browser": true,
         "commonjs": true,
         "es2020": true,
@@ -19,8 +18,15 @@
             "error",
             4
         ],
-        "import/extensions": "off"
+        "prefer-destructuring": "off",
+        "import/extensions": "off",
+        "no-console": "off"
     },
+    "ignorePatterns": [
+        "node_modules/**/*.*",
+        "packages/**/dist/**/*.*",
+        "packages/kyarakuta/src/gen/**/*.*"
+    ],
     "overrides": [
         {
             "files": [
