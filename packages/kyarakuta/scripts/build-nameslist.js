@@ -68,7 +68,9 @@ BlockRangesList.forEach((br) => {
     const name = br.block.toLowerCase();
 
     /** @type {import('./../src/types/types').BlockStat} */
-    const stats = {};
+    const stats = {
+        bl: 1,
+    };
     if (name.includes('letter')) stats.ltr = 1;
     if (name.includes('digit')) stats.dig = 1;
     if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
@@ -80,16 +82,21 @@ BlockRangesList.forEach((br) => {
     if (name.includes('sign')) stats.sig = 1;
     if (name.includes('syllable')) stats.syl = 1;
 
-    if (Object.keys(stats).length > 0) {
-        BlockStats[name] = stats;
-    }
+    stats.range = [br.start, br.end];
+    BlockStats[name] = stats;
 });
 
 Object.values(SubBlocksLibrary.subblocks).forEach((sb) => {
     const name = sb.toLowerCase();
 
     /** @type {import('./../src/types/types').BlockStat} */
-    const stats = {};
+    const stats = {
+        sb: 1,
+    };
+
+    // If it already exists, it means it is a block, generated from the previous looper.
+    if (BlockStats[sb]) stats.bl = 1;
+
     if (name.includes('letter')) stats.ltr = 1;
     if (name.includes('digit')) stats.dig = 1;
     if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
@@ -101,12 +108,10 @@ Object.values(SubBlocksLibrary.subblocks).forEach((sb) => {
     if (name.includes('sign')) stats.sig = 1;
     if (name.includes('syllable')) stats.syl = 1;
 
-    if (Object.keys(stats).length > 0) {
-        BlockStats[name] = stats;
-    }
+    if (Object.keys(stats).length > 0) BlockStats[name] = stats;
 });
 
-let script = `
+const script = `
 // Generated code, don't edit this file.
 
 import { SubBlocksLibraryInterface, BlockRange, RangeTuple, BlockStat } from '../types/types';
@@ -124,13 +129,6 @@ ${JSON.stringify(BlockStats)}
 \`);
 
 `;
-
-BlockRangesList.forEach((blockRange) => {
-    if (blockRange.block !== 'Unassigned') {
-        script += `export const BlockRange__${blockRange.block.replace(/\((.*?)\)/g, '').trim().replace(/ |-/g, '_')}: RangeTuple = [${blockRange.start}, ${blockRange.end}];
-`;
-    }
-});
 
 fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
 fs.writeFileSync(`${__dirname}/../raw-data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));

@@ -28,6 +28,12 @@ export interface BlockCondition {
 }
 
 export interface BlockStat {
+    /** Is it a block? */
+    bl?: 1,
+
+    /** Is it a subblock? */
+    sb?: 1,
+
     /** Does the block/subblock name contain the word "letter"? */
     ltr?: 1,
     /** Does the block/subblock name contain the word "digit"? */
@@ -51,4 +57,11 @@ export interface BlockStat {
     sig?: 1,
     /** Does the block/subblock name contain the word "syllable"? */
     syl?: 1,
+
+    /**
+     * [start codepoint, end codepoint]
+     *
+     * Not available for subblocks
+     */
+    range?: RangeTuple;
 }
