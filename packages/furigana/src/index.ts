@@ -55,7 +55,10 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     const isReadingValid = isKana(readingText) || readingText === '';
     if (!isReadingValid) throw new Error('Currently, reading argument accept kana only.');
 
-    function executor(writing: string, reading: string): ReturnType<typeof fitObj> {
+    function executor(writingArray: string[], readingArray: string[]): ReturnType<typeof fitObj> {
+        const writing: string = writingArray.join('');
+        const reading: string = readingArray.join('');
+
         if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
             return memo[writing][reading];
         }
@@ -67,9 +70,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (writing.length !== 0 && reading.length === 0) return null;
         if (writing.length === 0 && reading.length !== 0) return null;
         if (writing.length === 0 && reading.length === 0) return [];
-
-        const writingArray = [...writing];
-        const readingArray = [...reading];
 
         // eslint-disable-next-line no-irregular-whitespace
         // Commented to allow reading less than writing char: e.g. １０００　＝＞　せん
@@ -150,8 +150,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             }
 
             const next = executor(
-                writingArray.slice(matchCounter).join(''),
-                reading.slice(matchCounter),
+                writingArray.slice(matchCounter),
+                readingArray.slice(matchCounter),
             );
 
             if (next === null) {
@@ -216,8 +216,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (doesFirstCharMatch) {
             for (let i = 0; i < firstCharMatches.length; i += 1) {
                 const trial = executor(
-                    writingArray.slice(1).join(''),
-                    reading.slice(firstCharMatches[i].readingSlice.length),
+                    writingArray.slice(1),
+                    readingArray.slice(firstCharMatches[i].readingSlice.length),
                 );
 
                 if (trial !== null) {
@@ -253,8 +253,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
             for (;;) {
                 let trial = executor(
-                    writingArray.slice(1).join(''),
-                    reading.slice(i),
+                    writingArray.slice(1),
+                    readingArray.slice(i),
                 );
 
                 trial = trial ? [...trial] : null;
@@ -335,7 +335,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         return currentResult;
     }
 
-    return executor(writingText, readingText);
+    return executor([...writingText], [...readingText]);
 }
 
 export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
