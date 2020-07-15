@@ -192,7 +192,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
 
         /**
-         * If first leter is hiragana and matches
+         * If first letter is hiragana and matches
          * example:
          *            v                    v
          * writing = 'まで漢字', reading = 'までかんじ'
