@@ -314,21 +314,25 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             }
         }
 
-        // Find the best reading
-        let highestScore = -1;
-        let currentResult: ReturnType<typeof fitObj> = null;
+        /**
+         * Find the best reading from possibleResults
+         */
+        {
+            let highestScore = -1;
+            let currentResult: ReturnType<typeof fitObj> = null;
 
-        possibleResults.forEach((result) => {
-            const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;
+            possibleResults.forEach((result) => {
+                const currentScore = result?.reduce((ax, el) => ax + el.match, 0) ?? 0;
 
-            if (currentScore > highestScore) {
-                currentResult = result;
-                highestScore = currentScore;
-            }
-        });
+                if (currentScore > highestScore) {
+                    currentResult = result;
+                    highestScore = currentScore;
+                }
+            });
 
-        memo[writing][reading] = currentResult;
-        return currentResult;
+            memo[writing][reading] = currentResult;
+            return currentResult;
+        }
     }
 
     return executor([...writingText], [...readingText]);
