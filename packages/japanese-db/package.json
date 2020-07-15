@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:build-db": "npx rimraf ./test/result && npx . sqlite -s ./test/fixtures -d ./test/result",
-    "build": "node scripts/postinstall.js",
+    "build": "node scripts/build-source.js",
     "watch": "",
     "test": "npm run test:build-db && npx jest ./test/test.js"
   },
