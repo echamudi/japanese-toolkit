@@ -1,7 +1,7 @@
 {
     "name": "kyarakuta",
     "version": "0.11.5-alpha.0",
-    "description": "[⏳ WIP] Japanese strings and characters manipulator",
+    "description": "Categorize and manipulate characters",
     "main": "./dist/index.js",
     "scripts": {
         "build": "node ./scripts/download-source.js && node ./scripts/build-nameslist.js && node ./scripts/build-kanamap.js && tsc",

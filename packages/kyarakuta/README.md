@@ -1,6 +1,6 @@
 # Kyarakuta
 
-Get character unicode block and sublock names of a string.
+Categorize and manipulate characters
 
 ## Installation
 
