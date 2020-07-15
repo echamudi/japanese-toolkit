@@ -33,3 +33,7 @@ export const KanaRanges: Ranges = [
     [0x30A0, 0x30FF], // Katakana
     [0x31F0, 0x31FF], // Katakana Phonetic Extensions
 ];
+
+export const CJKsymbols: Ranges = [
+    [0x3000, 0x303F], // CJK Symbols and Punctuation
+];
