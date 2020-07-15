@@ -1,3 +1,5 @@
+// @ts-check
+
 /* eslint-disable no-underscore-dangle */
 
 const fs = require('fs');
@@ -6,7 +8,14 @@ const _ノ_ = null;
 const _正_ = true;
 // const _不_ = false;
 
-let kanaArray = [
+/** @type
+ * {[string,
+ *  {
+ *      hiragana: string | boolean,
+ *      katakana: string | boolean,
+ *      vocal: string | boolean,
+ *  }][]} */
+const kanaArray = [
     ['ぁ', { hiragana: _正_, katakana: 'ァ', vocal: 'あ' }],
     ['あ', { hiragana: _正_, katakana: 'ア', vocal: 'あ' }],
     ['ぃ', { hiragana: _正_, katakana: 'ィ', vocal: 'い' }],
@@ -197,7 +206,14 @@ let kanaArray = [
     ['ヿ', { hiragana: _ノ_, katakana: _正_, vocal: _ノ_ }],
 ];
 
-kanaArray = kanaArray.map((el) => {
+/** @type
+ * {[number,
+ *  {
+ *      hiragana: number | boolean,
+ *      katakana: number | boolean,
+ *      vocal: number | boolean,
+ *  }][]} */
+const kanaArrayCP = kanaArray.map((el) => {
     const key = el[0].codePointAt(0);
     const obj = el[1];
 
@@ -210,7 +226,7 @@ kanaArray = kanaArray.map((el) => {
 
 const kanaMap = {};
 
-kanaArray.forEach((el) => {
+kanaArrayCP.forEach((el) => {
     kanaMap[el[0]] = el[1];
 });
 
