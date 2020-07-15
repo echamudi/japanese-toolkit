@@ -248,3 +248,9 @@ describe('kyarakuta', () => {
         });
     });
 });
+
+// Test flat data
+// "yi radicals": {
+//     "sb": 1,
+//     "bl": 1
+//   },
