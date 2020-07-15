@@ -180,7 +180,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             return null;
         }
 
-        let doesFirstCharMatch = false;
         const firstCharMatches: {
             /** For reading strings taken from ReadingLib */
             readingLibItem: string,
@@ -193,7 +192,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 const readingSlice = reading.slice(0, readingLibItem.length);
 
                 if (readingMatch(readingSlice, readingLibItem)) {
-                    doesFirstCharMatch = true;
                     firstCharMatches.push({ readingSlice, readingLibItem });
                 }
             });
@@ -209,7 +207,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * According to dict, '田' can match 'で' and 'でん'
          * we will traverse to both path ['で', 'でん']
          */
-        if (doesFirstCharMatch) {
+        if (firstCharMatches.length > 0) {
             for (let i = 0; i < firstCharMatches.length; i += 1) {
                 const trial = executor(
                     writingArray.slice(1),
