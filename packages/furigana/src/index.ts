@@ -1,6 +1,6 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, isCJK,
+    isKana, toHiragana, isCJK, getBlockNames,
 } from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
@@ -54,6 +54,25 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     // Validate reading
     const isReadingValid = isKana(readingText) || readingText === '';
     if (!isReadingValid) throw new Error('Currently, reading argument accept kana only.');
+
+    const writingBlocks = getBlockNames(writingText);
+
+    const tokens: {
+        /** Original character */
+        char: string,
+
+        /** Is it CJK character? */
+        isCJK: boolean,
+
+        /** Is it in Hiragana + Katakana blocks? */
+        isKana: boolean,
+
+        /** Is the block or subblock name contains the word punctuation? */
+        isPunctuation: boolean,
+
+        /** Is the block or subblock name contains the word symbol? */
+        isPunctuation: boolean
+    }[];
 
     function executor(writingArray: string[], readingArray: string[]): ReturnType<typeof fitObj> {
         const writing: string = writingArray.join('');
