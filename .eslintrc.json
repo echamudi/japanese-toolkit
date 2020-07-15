@@ -34,7 +34,9 @@
                 "packages/japanese-db/**/*.test.js",
                 "packages/japanese-db/**/test.js",
                 "packages/kyarakuta/**/*.test.js",
-                "packages/kyarakuta/**/test.js"
+                "packages/kyarakuta/**/test.js",
+                "packages/furigana/**/*.test.js",
+                "packages/furigana/**/test.js"
             ],
             "env": {
                 "jest": true
@@ -42,8 +44,6 @@
         },
         {
             "files": [
-                "packages/furigana/**/*.test.js",
-                "packages/furigana/**/test.js",
                 "packages/kanji/**/*.test.js",
                 "packages/kanji/**/test.js"
             ],
