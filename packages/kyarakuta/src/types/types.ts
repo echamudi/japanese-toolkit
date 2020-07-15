@@ -40,6 +40,8 @@ export interface BlockStat {
     dig?: 1,
     /** Does the block/subblock name contain the word "number/numeral/numeric"? */
     num?: 1,
+    /** Does the block/subblock name contain the word "CJK"? */
+    cjk?: 1,
 
     /** Does the block/subblock name contain the word "symbol"? */
     sym?: 1,

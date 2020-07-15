@@ -74,6 +74,7 @@ BlockRangesList.forEach((br) => {
     if (name.includes('letter')) stats.ltr = 1;
     if (name.includes('digit')) stats.dig = 1;
     if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
+    if (name.includes('cjk')) stats.cjk = 1;
 
     if (name.includes('symbol')) stats.sym = 1;
     if (name.includes('punctuation')) stats.pun = 1;
@@ -106,6 +107,7 @@ Object.values(SubBlocksLibrary.subblocks).forEach((sb) => {
     if (name.includes('letter')) stats.ltr = 1;
     if (name.includes('digit')) stats.dig = 1;
     if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
+    if (name.includes('cjk')) stats.cjk = 1;
 
     if (name.includes('symbol')) stats.sym = 1;
     if (name.includes('punctuation')) stats.pun = 1;
