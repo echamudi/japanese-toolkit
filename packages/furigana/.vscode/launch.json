@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Playground",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/playground.js"
+        }
+    ]
+}
