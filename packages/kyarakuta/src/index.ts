@@ -11,6 +11,7 @@ export { default as some } from './some';
 
 export { default as every } from './every';
 
+export * from './gen/blocks-library';
 export * from './is-within-ranges';
 export * from './ranges';
 export * from './converter';

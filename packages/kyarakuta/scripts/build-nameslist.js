@@ -59,10 +59,10 @@ for (let i = 0; i < namesListRaw.length; i += 1) {
     }
 }
 
-const script = `
+let script = `
 // Generated code, don't edit this file.
 
-import { SubBlocksLibraryInterface, BlockRange } from '../types/types';
+import { SubBlocksLibraryInterface, BlockRange, RangeTuple } from '../types/types';
 
 export const SubBlocksLibrary: SubBlocksLibraryInterface = JSON.parse(\`
 ${JSON.stringify(SubBlocksLibrary)}
@@ -71,7 +71,15 @@ ${JSON.stringify(SubBlocksLibrary)}
 export const BlockRangesList: BlockRange[] = JSON.parse(\`
 ${JSON.stringify(BlockRangesList)}
 \`);
+
 `;
+
+BlockRangesList.forEach((blockRange) => {
+    if (blockRange.block !== 'Unassigned') {
+        script += `export const BlockRange__${blockRange.block.replace(/\((.*?)\)/g, '').trim().replace(/ |-/g, '_')}: RangeTuple = [${blockRange.start}, ${blockRange.end}];
+`;
+    }
+});
 
 fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
 fs.writeFileSync(`${__dirname}/../raw-data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));
