@@ -3,9 +3,7 @@
 
 // eslint-disable-next-line spaced-comment
 
-const { execSync } = require('child_process');
 const assert = require('assert');
-const console = require('console');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
@@ -43,6 +41,7 @@ describe('japanese-db', function () {
                 );
             });
 
+            // @ts-ignore
             assert.deepStrictEqual(
                 JSON.stringify(result),
                 '[{"kanji":"圧","tree_json":"{\\"element\\":\\"圧\\",\\"g\\":[{\\"element\\":\\"厂\\"},{\\"element\\":\\"土\\"}]}"}]',
@@ -59,6 +58,7 @@ describe('japanese-db', function () {
                 );
             });
 
+            // @ts-ignore
             assert.deepStrictEqual(
                 JSON.stringify(result),
                 '[{"key":"jmdict-date","value":"2019-08-16"},{"key":"jmnedict-date","value":"2019-09-20"}]',
@@ -94,6 +94,7 @@ describe('japanese-db', function () {
                 );
             });
 
+            // @ts-ignore
             assert.deepStrictEqual(
                 JSON.stringify(result),
                 '[{"kanji":"寡婦","reading":"かふ"},{"kanji":"寡黙","reading":"かもく"},{"kanji":"寧ろ","reading":"むしろ"},{"kanji":"審判","reading":"しんぱん"},{"kanji":"審査","reading":"しんさ"},{"kanji":"寮","reading":"りょう"}]',
