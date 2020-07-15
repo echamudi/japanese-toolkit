@@ -185,13 +185,20 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
 
         let doesFirstCharMatch = false;
-        const firstCharMatches: string[] = [];
+        const firstCharMatches: {
+            /** For reading strings taken from ReadingLib */
+            readingLibItem: string,
+            /** For reading strings taken from sliced inputted string */
+            readingSlice: string
+        }[] = [];
 
         if (readingLib[writingArray[0]] !== undefined) {
-            readingLib[writingArray[0]].forEach((charReading) => {
-                if (readingMatch(reading.slice(0, charReading.length), charReading)) {
+            readingLib[writingArray[0]].forEach((readingLibItem) => {
+                const readingSlice = reading.slice(0, readingLibItem.length);
+
+                if (readingMatch(readingSlice, readingLibItem)) {
                     doesFirstCharMatch = true;
-                    firstCharMatches.push(charReading);
+                    firstCharMatches.push({ readingSlice, readingLibItem });
                 }
             });
         }
@@ -210,14 +217,14 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             for (let i = 0; i < firstCharMatches.length; i += 1) {
                 const trial = executor(
                     writingArray.slice(1).join(''),
-                    reading.slice(firstCharMatches[i].length),
+                    reading.slice(firstCharMatches[i].readingSlice.length),
                 );
 
                 if (trial !== null) {
                     possibleResults.push([
                         {
                             w: writingArray[0],
-                            r: firstCharMatches[i],
+                            r: firstCharMatches[i].readingSlice,
                             match: 1 as 0 | 1,
                             isKanji: true,
                             returnId: 4,
