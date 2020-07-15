@@ -285,6 +285,38 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes iteration mark tests', () => {
+        assert.deepStrictEqual(
+            fit(
+                '人々',
+                'ひとびと',
+                { type: 'object' },
+            ),
+            [
+                { w: '人', r: 'ひと' },
+                { w: '々', r: 'びと' },
+            ],
+        );
+
+        assert.deepStrictEqual(
+            fit(
+                '最近の日々の中で',
+                'さいきんのひびのなかで',
+                { type: 'object' },
+            ),
+            [
+                { w: '最', r: 'さい' },
+                { w: '近', r: 'きん' },
+                { w: 'の', r: 'の' },
+                { w: '日', r: 'ひ' },
+                { w: '々', r: 'び' },
+                { w: 'の', r: 'の' },
+                { w: '中', r: 'なか' },
+                { w: 'で', r: 'で' },
+            ],
+        );
+    });
+
     // Known issues
     // console.log(fitObj('今日50,000人がいます', 'きょうごじゅうまんにんがいます'));
     // console.log(fitObj('勿来駅', 'なこそ駅'));
