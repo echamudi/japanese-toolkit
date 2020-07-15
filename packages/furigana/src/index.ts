@@ -401,7 +401,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
     }
 
-    return executor([...writingText], 0, [...readingText], 0);
+    return executor([...writingText], [...readingText]);
 }
 
 export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
