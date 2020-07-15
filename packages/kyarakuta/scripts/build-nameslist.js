@@ -1,3 +1,5 @@
+// @ts-check
+
 const fs = require('fs');
 
 const namesListRaw = fs.readFileSync(
@@ -6,7 +8,7 @@ const namesListRaw = fs.readFileSync(
     },
 ).toString().split('\n');
 
-/** @type {Map<{name: string, subname: string}, number>} */
+/** @type {Map<string, number>} */
 const block2id = new Map();
 
 /** @type {import('./../src/types/types').SubBlocksLibraryInterface} */
@@ -17,6 +19,9 @@ const SubBlocksLibrary = {
 
 /** @type {import('./../src/types/types').BlockRange[]} */
 const BlockRangesList = [];
+
+/** @type {Record<string, import('./../src/types/types').BlockStat>} */
+const BlockStats = {};
 
 let currentBlock = '';
 let currentSubBlock = '';
@@ -59,10 +64,52 @@ for (let i = 0; i < namesListRaw.length; i += 1) {
     }
 }
 
+BlockRangesList.forEach((br) => {
+    const name = br.block.toLowerCase();
+
+    /** @type {import('./../src/types/types').BlockStat} */
+    const stats = {};
+    if (name.includes('letter')) stats.ltr = 1;
+    if (name.includes('digit')) stats.dig = 1;
+    if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
+    if (name.includes('symbol')) stats.sym = 1;
+    if (name.includes('punctuation')) stats.pun = 1;
+    if (name.includes('mark')) stats.mrk = 1;
+    if (name.includes('vowel')) stats.vow = 1;
+    if (name.includes('consonant')) stats.con = 1;
+    if (name.includes('sign')) stats.sig = 1;
+    if (name.includes('syllable')) stats.syl = 1;
+
+    if (Object.keys(stats).length > 0) {
+        BlockStats[name] = stats;
+    }
+});
+
+Object.values(SubBlocksLibrary.subblocks).forEach((sb) => {
+    const name = sb.toLowerCase();
+
+    /** @type {import('./../src/types/types').BlockStat} */
+    const stats = {};
+    if (name.includes('letter')) stats.ltr = 1;
+    if (name.includes('digit')) stats.dig = 1;
+    if (name.includes('number') || name.includes('numeral') || name.includes('numeric')) stats.num = 1;
+    if (name.includes('symbol')) stats.sym = 1;
+    if (name.includes('punctuation')) stats.pun = 1;
+    if (name.includes('mark')) stats.mrk = 1;
+    if (name.includes('vowel')) stats.vow = 1;
+    if (name.includes('consonant')) stats.con = 1;
+    if (name.includes('sign')) stats.sig = 1;
+    if (name.includes('syllable')) stats.syl = 1;
+
+    if (Object.keys(stats).length > 0) {
+        BlockStats[name] = stats;
+    }
+});
+
 let script = `
 // Generated code, don't edit this file.
 
-import { SubBlocksLibraryInterface, BlockRange, RangeTuple } from '../types/types';
+import { SubBlocksLibraryInterface, BlockRange, RangeTuple, BlockStat } from '../types/types';
 
 export const SubBlocksLibrary: SubBlocksLibraryInterface = JSON.parse(\`
 ${JSON.stringify(SubBlocksLibrary)}
@@ -70,6 +117,10 @@ ${JSON.stringify(SubBlocksLibrary)}
 
 export const BlockRangesList: BlockRange[] = JSON.parse(\`
 ${JSON.stringify(BlockRangesList)}
+\`);
+
+export const BlockStats: Record<string, BlockStat> = JSON.parse(\`
+${JSON.stringify(BlockStats)}
 \`);
 
 `;
@@ -84,4 +135,5 @@ BlockRangesList.forEach((blockRange) => {
 fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
 fs.writeFileSync(`${__dirname}/../raw-data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));
 fs.writeFileSync(`${__dirname}/../raw-data/BlockRangesList.json`, JSON.stringify(BlockRangesList, null, 2));
+fs.writeFileSync(`${__dirname}/../raw-data/BlockStats.json`, JSON.stringify(BlockStats, null, 2));
 fs.writeFileSync(`${__dirname}/../src/gen/blocks-library.ts`, script);

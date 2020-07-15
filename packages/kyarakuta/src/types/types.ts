@@ -26,3 +26,29 @@ export interface BlockCondition {
     block?: string | undefined,
     subblock?: string | undefined
 }
+
+export interface BlockStat {
+    /** Does the block/subblock name contain the word "letter"? */
+    ltr?: 1,
+    /** Does the block/subblock name contain the word "digit"? */
+    dig?: 1,
+    /** Does the block/subblock name contain the word "number/numeral/numeric"? */
+    num?: 1,
+
+    /** Does the block/subblock name contain the word "symbol"? */
+    sym?: 1,
+    /** Does the block/subblock name contain the word "punctuation"? */
+    pun?: 1,
+    /** Does the block/subblock name contain the word "mark"? */
+    mrk?:1,
+
+    /** Does the block/subblock name contain the word "vowel"? */
+    vow?: 1,
+    /** Does the block/subblock name contain the word "consonant"? */
+    con?: 1,
+
+    /** Does the block/subblock name contain the word "sign"? */
+    sig?: 1,
+    /** Does the block/subblock name contain the word "syllable"? */
+    syl?: 1,
+}
