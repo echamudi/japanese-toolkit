@@ -10,8 +10,6 @@
     "publish:latest": "npx lerna publish"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.4",
-    "@types/mocha": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "eslint": "^7.4.0",
