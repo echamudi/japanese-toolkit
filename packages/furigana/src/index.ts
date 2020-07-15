@@ -74,6 +74,9 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (writing.length === 0 && reading.length !== 0) return null;
         if (writing.length === 0 && reading.length === 0) return [];
 
+        /*
+         * Prepare constants
+         */
         const isOneChar = writingArray.length === 1;
         const writingHiragana = toHiragana(writing);
         const readingHiragana = toHiragana(reading);
