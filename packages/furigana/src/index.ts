@@ -90,16 +90,10 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * example: writing = '今', reading = 'きょう'
          */
         if (!isKana(writing) && isOneChar) {
-            let match: 0 | 1 = 0;
+            const r: string[] = readingLib[writing] ?? [];
 
-            const r: string[] = readingLib[writing];
-
-            for (let i = 0; i < r.length; i += 1) {
-                if (readingMatch(reading, r[i])) {
-                    match = 1;
-                    break;
-                }
-            }
+            const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
+                ? 1 : 0;
 
             memo[writing][reading] = [
                 {
