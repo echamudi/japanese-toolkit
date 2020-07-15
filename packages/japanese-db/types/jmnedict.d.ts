@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 // JMdict and JMnedict descriptions are taken from:
 // https://www.edrdg.org/jmdict/edict_doc.html
 // https://www.edrdg.org/enamdict/enamdict_doc.html

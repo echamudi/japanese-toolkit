@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import * as JMdict from './jmdict';
 import * as JMnedict from './jmnedict';
 
@@ -28,14 +30,14 @@ export interface DictIndexRow {
   meaning: string
 }
 
-export interface JMdictEntitiesRow extends NameValuePair { }
+export type JMdictEntitiesRow = NameValuePair;
 
 export interface JMdictJsonsRow {
   ent_seq: number,
   json: JMdict.entry
 }
 
-export interface JMnedictEntitiesRow extends NameValuePair { }
+export type JMnedictEntitiesRow = NameValuePair;
 
 export interface JMnedictJsonsRow {
   ent_seq: number,
@@ -80,15 +82,10 @@ export interface MetadataRow {
   value: string
 }
 
-export interface MetadataRow {
-  key: number,
-  value: string
-}
-
-export interface RelatedAntonymsRow extends KanjiArrayPair { }
-export interface RelatedLookalikesRow extends KanjiArrayPair { }
-export interface RelatedSynonyms extends KanjiArrayPair { }
-export interface RelatedVariants extends KanjiArrayPair { }
+export type RelatedAntonymsRow = KanjiArrayPair;
+export type RelatedLookalikesRow = KanjiArrayPair;
+export type RelatedSynonyms = KanjiArrayPair;
+export type RelatedVariants = KanjiArrayPair;
 
 export interface WanikaniAudioRow {
   kanji: string,

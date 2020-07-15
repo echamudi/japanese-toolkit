@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 // JMdict and JMnedict descriptions are taken from:
 // https://www.edrdg.org/jmdict/edict_doc.html
 // https://www.edrdg.org/enamdict/enamdict_doc.html
@@ -155,6 +157,7 @@ export interface r_ele {
    * such as foreign place names, gairaigo which can be in kanji or
    * katakana, etc.
    */
+  // eslint-disable-next-line @typescript-eslint/ban-types
   re_nokanji?: [{}],
 
   /**
@@ -315,7 +318,7 @@ export interface lsource {
    * code from the ISO 639-2 standard. When absent, the value "eng" (i.e.
    * English) is the default value. The bibliographic (B) codes are used.
    */
-  "xml:lang"?: string,
+  'xml:lang'?: string,
 
   /**
    * The ls_type attribute indicates whether the lsource element
@@ -331,7 +334,7 @@ export interface lsource {
    * not from an actual phrase in that language. Most commonly used to
    * indicate "waseieigo".
    */
-  ls_wasei?: "y",
+  ls_wasei?: 'y',
 
   /**
    * lsource text content
@@ -352,7 +355,7 @@ export interface gloss {
    * the ISO 639 standard. When absent, the value "eng" (i.e. English)
    * is the default value.
    */
-  "xml:lang"?: string,
+  'xml:lang'?: string,
 
   /**
    * The g_gend attribute defines the gender of the gloss (typically
