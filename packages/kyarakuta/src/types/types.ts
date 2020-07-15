@@ -47,6 +47,12 @@ export interface BlockStat {
     pun?: 1,
     /** Does the block/subblock name contain the word "mark"? */
     mrk?:1,
+    /** Does the block/subblock name contain the word "bracket"? */
+    bra?: 1,
+    /** Does the block/subblock name contain the word "annotation"? */
+    ann?: 1,
+    /** Does the block/subblock name contain the word "stroke"? */
+    str?: 1,
 
     /** Does the block/subblock name contain the word "vowel"? */
     vow?: 1,
