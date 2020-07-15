@@ -1,6 +1,6 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, isCJK, getBlockNames, BlockStats
+    isKana, toHiragana, isCJK, getBlockNames, BlockStats,
 } from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
@@ -57,7 +57,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
     const writingBlocks = getBlockNames(writingText);
 
-    const tokens: {
+    const charData: Record<string, {
         /** Original character */
         char: string,
 
@@ -76,9 +76,14 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * symbol, punctuation, marks, brackets, annotation, stroke, and sign
          */
         voiceless: boolean,
-    }[] = writingBlocks.map((charDetails) => {
+    }> = {};
+
+    writingBlocks.forEach((charDetails) => {
         const char = charDetails.char;
         const cp = char.codePointAt(0) as number;
+
+        if (charData[cp]) return;
+
         const cjk = isCJK(char);
         const kana = isKana(char);
         const block = charDetails.block?.toLowerCase();
@@ -107,7 +112,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             || BlockStats[subblock].sig);
         }
 
-        return {
+        charData[cp] = {
             char,
             cp,
             cjk,
@@ -397,7 +402,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
     }
 
-    return executor([...writingText], [...readingText]);
+    return executor([...writingText], 0, [...readingText], 0);
 }
 
 export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
