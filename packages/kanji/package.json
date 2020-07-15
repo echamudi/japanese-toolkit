@@ -37,6 +37,7 @@
     "README.md"
   ],
   "devDependencies": {
+    "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.14",
     "csvtojson": "^2.0.10",
     "mocha": "^6.2.0",
