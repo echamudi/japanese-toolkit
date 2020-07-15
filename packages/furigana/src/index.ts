@@ -1,6 +1,6 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, isCJK, getBlockNames,
+    isKana, toHiragana, isCJK, getBlockNames, BlockStats
 } from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
@@ -61,18 +61,60 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         /** Original character */
         char: string,
 
+        /** Codepoint of the char */
+        cp: number,
+
         /** Is it CJK character? */
-        isCJK: boolean,
+        cjk: boolean,
 
         /** Is it in Hiragana + Katakana blocks? */
-        isKana: boolean,
+        kana: boolean,
 
-        /** Is the block or subblock name contains the word punctuation? */
-        isPunctuation: boolean,
+        /**
+         * Possibly voiceless character.
+         * The value is true if the block or subblock names contains one of the following words:
+         * symbol, punctuation, marks, brackets, annotation, stroke, and sign
+         */
+        voiceless: boolean,
+    }[] = writingBlocks.map((charDetails) => {
+        const char = charDetails.char;
+        const cp = char.codePointAt(0) as number;
+        const cjk = isCJK(char);
+        const kana = isKana(char);
+        const block = charDetails.block?.toLowerCase();
+        const subblock = charDetails.subblock?.toLowerCase();
+        let voiceless = false;
 
-        /** Is the block or subblock name contains the word symbol? */
-        isPunctuation: boolean
-    }[];
+        if (block) {
+            voiceless = !!(voiceless
+            || BlockStats[block].sym
+            || BlockStats[block].pun
+            || BlockStats[block].mrk
+            || BlockStats[block].bra
+            || BlockStats[block].ann
+            || BlockStats[block].str
+            || BlockStats[block].sig);
+        }
+
+        if (subblock) {
+            voiceless = !!(voiceless
+            || BlockStats[subblock].sym
+            || BlockStats[subblock].pun
+            || BlockStats[subblock].mrk
+            || BlockStats[subblock].bra
+            || BlockStats[subblock].ann
+            || BlockStats[subblock].str
+            || BlockStats[subblock].sig);
+        }
+
+        return {
+            char,
+            cp,
+            cjk,
+            kana,
+            voiceless,
+        };
+    });
 
     function executor(writingArray: string[], readingArray: string[]): ReturnType<typeof fitObj> {
         const writing: string = writingArray.join('');
