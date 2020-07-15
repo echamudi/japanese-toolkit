@@ -59,6 +59,9 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const writing: string = writingArray.join('');
         const reading: string = readingArray.join('');
 
+        /**
+         * Load memo
+         */
         if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
             return memo[writing][reading];
         }
