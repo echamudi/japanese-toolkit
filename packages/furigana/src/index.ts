@@ -80,10 +80,9 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
     writingBlocks.forEach((charDetails) => {
         const char = charDetails.char;
+        if (charData[char]) return;
+
         const cp = char.codePointAt(0) as number;
-
-        if (charData[cp]) return;
-
         const cjk = isCJK(char);
         const kana = isKana(char);
         const block = charDetails.block?.toLowerCase();
@@ -112,7 +111,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             || BlockStats[subblock].sig);
         }
 
-        charData[cp] = {
+        charData[char] = {
             char,
             cp,
             cjk,
