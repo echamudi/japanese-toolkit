@@ -8,7 +8,7 @@
 import { Ranges } from './types/types';
 import { KanaRanges, CJKranges } from './ranges';
 
-function isWithinRanges(string: string, rangesCollection: Ranges[]): boolean {
+export function isWithinRanges(string: string, rangesCollection: Ranges[]): boolean {
     const cpArray: Readonly<number[]> = [...string].map((char) => {
         const cp = char.codePointAt(0);
         if (cp === undefined) throw new Error();
