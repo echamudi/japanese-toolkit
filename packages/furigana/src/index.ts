@@ -1,6 +1,6 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana,
+    isKana, toHiragana, isCJK,
 } from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
@@ -82,10 +82,10 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const isWritingKana = isKana(writing);
 
         /**
-         * If writing is only one character
+         * If writing is only one CJK character (+ 々)
          * example: writing = '今', reading = 'きょう'
          */
-        if (!isKana(writing) && isOneChar) {
+        if (isOneChar && (isCJK(writing) || writing === '々')) {
             const r: string[] = readingLib[writing] ?? [];
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
