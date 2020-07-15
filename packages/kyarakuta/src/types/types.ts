@@ -6,7 +6,7 @@
  */
 
 export interface SubBlocksLibraryInterface {
-    readonly blocks: Record<number, string>;
+    readonly subblocks: Record<number, string>;
     readonly codePoints: Record<number, number>;
 }
 

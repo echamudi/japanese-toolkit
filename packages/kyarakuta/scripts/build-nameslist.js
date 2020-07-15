@@ -11,7 +11,7 @@ const block2id = new Map();
 
 /** @type {import('./../src/types/types').SubBlocksLibraryInterface} */
 const SubBlocksLibrary = {
-    blocks: {},
+    subblocks: {},
     codePoints: {},
 };
 
@@ -41,9 +41,9 @@ for (let i = 0; i < namesListRaw.length; i += 1) {
         currentSubBlock = matchSubBlock[1];
         const name = currentSubBlock;
 
-        if (!Object.values(SubBlocksLibrary.blocks).some((el) => el === name)) {
+        if (!Object.values(SubBlocksLibrary.subblocks).some((el) => el === name)) {
             currentId += 1;
-            SubBlocksLibrary.blocks[currentId] = name;
+            SubBlocksLibrary.subblocks[currentId] = name;
             block2id.set(name, currentId);
         }
     }
@@ -74,4 +74,6 @@ ${JSON.stringify(BlockRangesList)}
 `;
 
 fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
+fs.writeFileSync(`${__dirname}/../raw-data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));
+fs.writeFileSync(`${__dirname}/../raw-data/BlockRangesList.json`, JSON.stringify(BlockRangesList, null, 2));
 fs.writeFileSync(`${__dirname}/../src/gen/blocks-library.ts`, script);

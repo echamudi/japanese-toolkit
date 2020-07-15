@@ -45,7 +45,7 @@ export default function getBlockNames(string: string): Array<{
 
         // Get subblock name
         const blockId = SubBlocksLibrary.codePoints[codePoint];
-        const subblock = SubBlocksLibrary.blocks[blockId];
+        const subblock = SubBlocksLibrary.subblocks[blockId];
 
         result.push({ char, block, subblock });
     });
