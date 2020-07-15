@@ -11,5 +11,6 @@ export { default as some } from './some';
 
 export { default as every } from './every';
 
-export { isKana, isCJK, isJapanese } from './is-within-ranges';
-export { toHiragana, toKatakana } from './converter';
+export * from './is-within-ranges';
+export * from './ranges';
+export * from './converter';
