@@ -74,13 +74,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (writing.length === 0 && reading.length !== 0) return null;
         if (writing.length === 0 && reading.length === 0) return [];
 
-        // eslint-disable-next-line no-irregular-whitespace
-        // Commented to allow reading less than writing char: e.g. １０００　＝＞　せん
-        // if (readingArray.length < writingArray.length) {
-        //     memo[writing][reading] = null;
-        //     return null;
-        // }
-
         const isOneChar = writingArray.length === 1;
         const writingHiragana = toHiragana(writing);
         const readingHiragana = toHiragana(reading);
