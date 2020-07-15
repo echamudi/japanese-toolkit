@@ -55,16 +55,15 @@ export interface BlockStat {
     ann?: 1,
     /** Does the block/subblock name contain the word "stroke"? */
     str?: 1,
+    /** Does the block/subblock name contain the word "sign"? */
+    sig?: 1,
+    /** Does the block/subblock name contain the word "syllable"? */
+    syl?: 1,
 
     /** Does the block/subblock name contain the word "vowel"? */
     vow?: 1,
     /** Does the block/subblock name contain the word "consonant"? */
     con?: 1,
-
-    /** Does the block/subblock name contain the word "sign"? */
-    sig?: 1,
-    /** Does the block/subblock name contain the word "syllable"? */
-    syl?: 1,
 
     /**
      * [start codepoint, end codepoint]
