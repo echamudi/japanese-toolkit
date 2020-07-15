@@ -102,7 +102,7 @@ Object.values(SubBlocksLibrary.subblocks).forEach((sb) => {
     };
 
     // If it already exists, it means it is a block, generated from the previous looper.
-    if (BlockStats[sb]) stats.bl = 1;
+    if (BlockStats[name]) stats.bl = 1;
 
     if (name.includes('letter')) stats.ltr = 1;
     if (name.includes('digit')) stats.dig = 1;
