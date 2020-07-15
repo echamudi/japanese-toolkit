@@ -11,8 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/echamudi/japanese-db.git"
+    "url": "git+https://echamudi@github.com/echamudi/japanese-toolkit.git"
   },
+  "bugs": {
+    "url": "https://github.com/echamudi/japanese-toolkit/issues"
+  },
+  "homepage": "https://github.com/echamudi/japanese-toolkit/tree/master/packages/japanese-db#readme",
   "keywords": [
     "japanese",
     "jmdict",
