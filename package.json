@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "watch": "npx lerna run --parallel watch",
-    "install": "npx lerna exec -- npm install && npx lerna bootstrap",
+    "install-all": "npm install && npx lerna exec -- npm install && npx lerna bootstrap",
     "build": "npx lerna run build",
     "test": "npx lerna run test",
     "publish:next": "npx lerna publish --dist-tag next",
