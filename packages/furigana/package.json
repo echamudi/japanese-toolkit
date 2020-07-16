@@ -4,7 +4,8 @@
   "description": "Fit kana text into Japanese writing",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "node ./scripts/build-readings.js && npx tsc",
+    "clean": "npx rimraf dist",
+    "build": "npm run clean && node ./scripts/build-readings.js && npx tsc",
     "watch": "npx tsc --watch",
     "test": "npx jest ./test/test.js"
   },
