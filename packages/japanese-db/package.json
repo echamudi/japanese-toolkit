@@ -4,8 +4,9 @@
   "description": "Japanese language resources database maker from open source materials.",
   "main": "index.js",
   "scripts": {
+    "clean": "npx rimraf source",
     "test:build-db": "npx rimraf ./test/result && npx . sqlite -s ./test/fixtures -d ./test/result",
-    "build": "node scripts/build-source.js",
+    "build": "npm run clean && node scripts/build-source.js",
     "watch": "",
     "test": "npm run test:build-db && npx jest ./test/test.js"
   },
