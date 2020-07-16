@@ -16,6 +16,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "lerna": "^3.22.1",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "rimraf": "^3.0.2"
   }
 }
