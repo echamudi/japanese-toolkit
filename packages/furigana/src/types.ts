@@ -10,6 +10,9 @@ export interface Match {
     r: string,
 }
 
+/**
+ * Similar to Match, but it contains more information for debugging purposes
+ */
 export interface MatchDetailed extends Match {
     /**
      * 1 - matches according to kanjilib
@@ -26,7 +29,12 @@ export interface MatchDetailed extends Match {
     /**
      * return source (for debugging purpose)
      */
-    returnId?: number
+    returnId?: number,
+
+    /**
+     * Silent
+     */
+    silent?: boolean
 }
 
 export interface FitConfig {

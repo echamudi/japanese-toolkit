@@ -1,6 +1,6 @@
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, isCJK, getBlockNames, BlockStats,
+    isKana, toHiragana, isCJK, getBlockNames, BlockStats, isWithinRanges,
 } from 'kyarakuta';
 import * as fs from 'fs';
 import { join } from 'path';
@@ -71,11 +71,11 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         kana: boolean,
 
         /**
-         * Possibly voiceless character.
+         * Possibly silent character.
          * The value is true if the block or subblock names contains one of the following words:
          * symbol, punctuation, marks, brackets, annotation, stroke, and sign
          */
-        voiceless: boolean,
+        silent: boolean,
     }> = {};
 
     writingBlocks.forEach((charDetails) => {
@@ -87,10 +87,18 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const kana = isKana(char);
         const block = charDetails.block?.toLowerCase();
         const subblock = charDetails.subblock?.toLowerCase();
-        let voiceless = false;
+        let silent = false;
+
+        silent = silent || isWithinRanges(char, [[
+            // Some Fullwidth ASCII variants
+            [0xFF01, 0xFF0F],
+            [0xFF1A, 0xFF20],
+            [0xFF3B, 0xFF40],
+            [0xFF5B, 0xFF5E],
+        ]]);
 
         if (block) {
-            voiceless = !!(voiceless
+            silent = !!(silent
             || BlockStats[block].sym
             || BlockStats[block].pun
             || BlockStats[block].mrk
@@ -101,7 +109,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
 
         if (subblock) {
-            voiceless = !!(voiceless
+            silent = !!(silent
             || BlockStats[subblock].sym
             || BlockStats[subblock].pun
             || BlockStats[subblock].mrk
@@ -111,12 +119,20 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             || BlockStats[subblock].sig);
         }
 
+        // Iteration marks have voice
+        silent = silent
+            && char !== '々'
+            && char !== 'ゝ'
+            && char !== 'ゞ'
+            && char !== 'ヽ'
+            && char !== 'ヾ';
+
         charData[char] = {
             char,
             cp,
             cjk,
             kana,
-            voiceless,
+            silent,
         };
     });
 
@@ -237,6 +253,53 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             return memo[writing][reading];
         }
 
+        // TODO: Add kana repetition letter algorithm
+        // TODO: Allow space in the reading
+
+        /**
+         * If letter is voiceless, skip the letter
+         */
+        if (charData[writingArray[0]]?.silent) {
+            const next = executor(
+                writingArray.slice(1),
+                readingArray,
+            );
+
+            if (next === null) {
+                memo[writing][reading] = null;
+                return null;
+            }
+
+            // If the next word is also silent, merge them
+            if (next[0].silent) {
+                const chunk = next.slice(0, 1)[0];
+
+                memo[writing][reading] = [
+                    {
+                        w: writingArray[0] + chunk.w,
+                        r: '',
+                        match: 0,
+                        isKanji: false,
+                        silent: true,
+                    },
+                    ...next.slice(1),
+                ];
+            } else {
+                memo[writing][reading] = [
+                    {
+                        w: writingArray[0],
+                        r: '',
+                        match: 1 as 0 | 1,
+                        isKanji: false,
+                        silent: true,
+                    },
+                    ...next,
+                ];
+            }
+
+            return memo[writing][reading];
+        }
+
         /**
          * If first letter is hiragana and doesn't match, return undefined
          * example:
@@ -319,6 +382,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     readingArray.slice(i),
                 );
 
+                // If trial has result, clone the array
                 trial = trial ? [...trial] : null;
 
                 // Only push to possibleResults if the current path is possible
