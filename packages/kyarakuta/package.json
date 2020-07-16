@@ -1,6 +1,6 @@
 {
     "name": "kyarakuta",
-    "version": "0.11.5-alpha.0",
+    "version": "0.12.0",
     "description": "Categorize and manipulate characters",
     "main": "./dist/index.js",
     "scripts": {
