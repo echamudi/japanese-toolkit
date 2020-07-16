@@ -1,5 +1,6 @@
 {
   "packages": [
+    "packages/bunpou",
     "packages/kyarakuta",
     "packages/japanese-db",
     "packages/kanji",
