@@ -13,12 +13,14 @@
 | /src/gen         | generated codes | [gitignore] [npminclude] |
 ||||
 | /lib             | codes that doesn't require compilation | [npminclude] |
+| /lib/data        | required data (jsons, csvs, databases, etc) | [npminclude] |
 | /lib/gen         | generated code | [gitignore] [npminclude] |
 | /lib/cli         | cli codes | [npminclude]|
 ||||
 | /scripts         | scripts for building the module and preparing the data | |
 ||||
-| /temp/data       | pre processed data, usually generated from scripts | |
+| /temp/data       | pre processed data, usually generated from scripts | [gitignore] |
+||||
 | /test            | test scripts | |
 | /test/temp       | temporary test results | [gitignore] |
 | /test/fixtures   | test fixtures | |
