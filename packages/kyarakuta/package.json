@@ -4,7 +4,7 @@
     "description": "Categorize and manipulate characters",
     "main": "./dist/commonjs/index.js",
     "scripts": {
-        "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp/data ./test/temp",
+        "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",
         "build": "npm run clean && node ./scripts/download-source.js && node ./scripts/build-nameslist.js && node ./scripts/build-kanamap.js && tsc",
         "watch": "npx tsc --watch",
         "test": "npx jest --verbose \"./test/.*\\.test\\.js\""
