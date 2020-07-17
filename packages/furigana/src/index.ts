@@ -81,6 +81,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (charData[char]) return;
 
         const cp = char.codePointAt(0) as number;
+        const iterationKana = cp === 12445 || cp === 12446 || cp === 12541 || cp === 12542;
+        const iterationKanji = cp === 12293;
         const cjk = isCJK(char) || isIterationMark(cp);
         const kana = isKana(char) && !isIterationMark(cp);
         const block = charDetails.block?.toLowerCase();
@@ -133,6 +135,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             cjk,
             kana,
             silent,
+            iterationKana,
+            iterationKanji,
         };
     });
 
