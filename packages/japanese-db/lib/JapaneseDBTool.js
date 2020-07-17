@@ -14,7 +14,7 @@ const JMdictUtil = require('./JMdictUtil');
 const JMnedictUtil = require('./JMnedictUtil');
 const KanjidicUtil = require('./KanjidicUtil');
 
-const wkAudio = require('../source/wk-audio-index.json');
+const wkAudio = require('../dist/data/wk-audio-index.json');
 
 /**
  * @class

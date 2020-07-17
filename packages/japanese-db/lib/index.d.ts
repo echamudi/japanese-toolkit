@@ -17,7 +17,7 @@ export { JMdict };
 export { JMnedict };
 export { JapaneseDB };
 
-export { default as JMdictUtil } from './lib/JMdictUtil';
-export { default as JapaneseDBTool } from './lib/JapaneseDBTool';
-export { default as JMnedictUtil } from './lib/JMnedictUtil';
-export { default as KanjidicUtil } from './lib/KanjidicUtil';
+export { default as JMdictUtil } from './JMdictUtil';
+export { default as JMnedictUtil } from './JMnedictUtil';
+export { default as JapaneseDBTool } from './JapaneseDBTool';
+export { default as KanjidicUtil } from './KanjidicUtil';

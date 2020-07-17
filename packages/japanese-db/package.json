@@ -2,10 +2,10 @@
   "name": "japanese-db",
   "version": "0.12.0",
   "description": "Japanese language resources database maker from open source materials.",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "clean": "npx rimraf source",
-    "test:build-db": "npx rimraf ./test/result && npx . sqlite -s ./test/fixtures -d ./test/result",
+    "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",
+    "test:build-db": "npx rimraf ./test/temp && npx . sqlite -s ./test/fixtures -d ./test/temp",
     "build": "npm run clean && node scripts/build-source.js",
     "watch": "",
     "test": "npm run test:build-db && npx jest ./test/test.js"
@@ -24,16 +24,13 @@
     "sqlite",
     "json"
   ],
-  "bin": "cli.js",
+  "bin": "./lib/bin/cli.js",
   "author": "Ezzat Chamudi",
   "license": "MPL-2.0",
   "files": [
+    "/dist",
+    "/src",
     "/lib",
-    "/source",
-    "/types",
-    "cli.js",
-    "index.js",
-    "index.d.ts",
     "LICENSE",
     "README.md"
   ],
