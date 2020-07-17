@@ -112,3 +112,4 @@ dist
 /packages/*/lib/gen
 /packages/*/temp
 /packages/*/test/temp
+/packages/*/playground.js
