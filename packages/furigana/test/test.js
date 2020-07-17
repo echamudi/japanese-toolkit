@@ -380,6 +380,33 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes some examples from JMdict', () => {
+        deepStrictEqual(
+            fit('ＡＢＣ順', 'エービーシーじゅん', { type: 'object' }),
+            [{ w: 'ＡＢＣ', r: 'エービーシー' }, { w: '順', r: 'じゅん' }],
+        );
+        deepStrictEqual(
+            fit('ＣＤプレイヤー', 'シーディープレイヤー', { type: 'object' }),
+            [{ w: 'ＣＤ', r: 'シーディー' }, { w: 'プレイヤー', r: 'ぷれいやあ' }],
+        );
+
+        deepStrictEqual(
+            fit('いすゞ', 'いすず', { type: 'object' }),
+            [{ w: 'いす', r: 'いす' }, { w: 'ゞ', r: 'ず' }],
+        );
+
+        deepStrictEqual(
+            fit('いすゞ自動車', 'いすずじどうしゃ', { type: 'object' }),
+            [
+                { w: 'いす', r: 'いす' },
+                { w: 'ゞ', r: 'ず' },
+                { w: '自', r: 'じ' },
+                { w: '動', r: 'どう' },
+                { w: '車', r: 'しゃ' },
+            ],
+        );
+    });
+
     // Known issues
     // console.log(fitObj('今日50,000人がいます', 'きょうごじゅうまんにんがいます'));
     // console.log(fitObj('勿来駅', 'なこそ駅'));
