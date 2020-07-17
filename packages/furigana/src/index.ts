@@ -26,7 +26,7 @@ const handakuten: {[x: string]: string} = JSON.parse(`{
 }`);
 
 const readingLib = JSON.parse(
-    fs.readFileSync(join(__dirname, './readings.json')).toString(),
+    fs.readFileSync(join(__dirname, '../data/readings.json')).toString(),
 ) as {[x: string]: string[]};
 
 /**

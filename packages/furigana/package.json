@@ -2,9 +2,9 @@
   "name": "furigana",
   "version": "0.12.0",
   "description": "Fit kana text into Japanese writing",
-  "main": "./dist/index.js",
+  "main": "./dist/commonjs/index.js",
   "scripts": {
-    "clean": "npx rimraf dist",
+    "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",
     "build": "npm run clean && node ./scripts/build-readings.js && npx tsc",
     "watch": "npx tsc --watch",
     "test": "npx jest ./test/test.js"
@@ -22,6 +22,7 @@
   "files": [
     "/dist",
     "/src",
+    "/lib",
     "LICENSE",
     "README.md"
   ],
