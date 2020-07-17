@@ -75,7 +75,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const cp = char.codePointAt(0) as number;
         const iterationKana = cp === 12445 || cp === 12446 || cp === 12541 || cp === 12542;
         const iterationKanji = cp === 12293;
-        const cjk = isCJK(char) || (iterationKana || iterationKanji);
+        const cjk = isCJK(char);
         const kana = isKana(char) && !(iterationKana || iterationKanji);
         const block = charDetails.block?.toLowerCase();
         const subblock = charDetails.subblock?.toLowerCase();
@@ -167,7 +167,15 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * If writing is only one CJK character (+ 々)
          * example: writing = '今', reading = 'きょう'
          */
-        if (isOneChar && (char0data.cjk)) {
+        if (isOneChar
+                && (
+                    // Either the writing is a kanji
+                    (char0data.cjk || char0data.iterationKanji)
+
+                    // OR a kana iteration mark (e.g. ゞ) and have 1 letter reading (e.g. ず)
+                    || (char0data.iterationKana && readingArray.length === 1)
+                )
+        ) {
             const r: string[] = readingLib[writing] ?? [];
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
