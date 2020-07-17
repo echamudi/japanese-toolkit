@@ -118,7 +118,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             }
 
             // Exceptions: iteration marks are not silent
-            silent = silent && !(iterationKana || iterationKanji);
+            silent = silent && !iterationKana && !iterationKanji;
         }
 
         charData[char] = {
