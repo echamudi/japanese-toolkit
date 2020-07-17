@@ -49,14 +49,6 @@ function readingMatch(s1: string, s2: string): boolean {
     return s1Mod === s2Mod;
 }
 
-function isIterationMark(字: number | string): boolean {
-    if (typeof 字 === 'number') {
-        return 字 === 12293 || 字 === 12445 || 字 === 12446 || 字 === 12541 || 字 === 12542;
-    }
-
-    return 字 === '々' || 字 === 'ゝ' || 字 === 'ゞ' || 字 === 'ヽ' || 字 === 'ヾ';
-}
-
 /**
  * @param writingText
  * @param readingText
@@ -83,8 +75,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const cp = char.codePointAt(0) as number;
         const iterationKana = cp === 12445 || cp === 12446 || cp === 12541 || cp === 12542;
         const iterationKanji = cp === 12293;
-        const cjk = isCJK(char) || isIterationMark(cp);
-        const kana = isKana(char) && !isIterationMark(cp);
+        const cjk = isCJK(char) || (iterationKana || iterationKanji);
+        const kana = isKana(char) && !(iterationKana || iterationKanji);
         const block = charDetails.block?.toLowerCase();
         const subblock = charDetails.subblock?.toLowerCase();
         let silent = false;
@@ -126,7 +118,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             }
 
             // Exceptions: iteration marks are not silent
-            silent = silent && !isIterationMark(cp);
+            silent = silent && !(iterationKana || iterationKanji);
         }
 
         charData[char] = {
