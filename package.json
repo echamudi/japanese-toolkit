@@ -4,8 +4,8 @@
   "scripts": {
     "watch": "npx lerna run --parallel watch",
     "install-all": "npm install && npx lerna exec -- npm install && npx lerna bootstrap",
-    "build": "npx lerna run build",
-    "test": "npx lerna run test",
+    "build": "npx lerna run --concurrency 1 --stream build",
+    "test": "npx lerna run --concurrency 1 --stream test",
     "publish:next": "npx lerna publish --dist-tag next",
     "publish:latest": "npx lerna publish"
   },
