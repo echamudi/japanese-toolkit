@@ -132,9 +132,18 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         };
     });
 
-    function executor(writingArray: string[], readingArray: string[]): ReturnType<typeof fitObj> {
-        const writing: string = writingArray.join('');
-        const reading: string = readingArray.join('');
+    const writingArray = [...writingText];
+    const readingArray = [...readingText];
+
+    Object.freeze(writingArray);
+    Object.freeze(readingArray);
+
+    function executor(writingIndex: number, readingIndex: number): ReturnType<typeof fitObj> {
+        // console.log(writingIndex, readingIndex);
+        const writing: string = writingArray.slice(writingIndex).join('');
+        const reading: string = readingArray.slice(readingIndex).join('');
+
+        // console.log(writing, reading);
 
         /**
          * Load memo
@@ -154,14 +163,15 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         /*
          * Prepare constants
          */
-        const isOneChar = writingArray.length === 1;
+        const isOneChar = (writingArray.length - writingIndex) === 1;
         const writingHiragana = toHiragana(writing);
         const readingHiragana = toHiragana(reading);
 
         // const isWritingKanji = isKanji(writing);
         const isWritingKana = isKana(writing);
 
-        const char0data = charData[writing[0]];
+        const char0data = charData[writingArray[writingIndex]];
+        // console.log(char0data);
 
         /**
          * If writing is only one CJK character (+ 々)
@@ -173,7 +183,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     (char0data.cjk || char0data.iterationKanji)
 
                     // OR a kana iteration mark (e.g. ゞ) and have 1 letter reading (e.g. ず)
-                    || (char0data.iterationKana && readingArray.length === 1)
+                    || (char0data.iterationKana && (readingArray.length - readingIndex) === 1)
                 )
         ) {
             const r: string[] = readingLib[writing] ?? [];
@@ -220,15 +230,17 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * writing = 'まで漢字', reading = 'までかんじ'
          */
         if (char0data.kana
-            && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
+            && toHiragana(writingArray[writingIndex]) === toHiragana(readingArray[readingIndex])) {
             let matchCounter = 0;
 
-            for (let i = 0; i < writingArray.length; i += 1) {
-                if (writingArray[i] === undefined || readingArray[i] === undefined) {
+            for (let i = 0; i < readingArray.length; i += 1) {
+                if (writingArray[writingIndex + i] === undefined
+                    || readingArray[readingIndex + i] === undefined) {
                     break;
                 }
 
-                if (toHiragana(writingArray[i]) !== toHiragana(readingArray[i])) {
+                if (toHiragana(writingArray[writingIndex + i])
+                    !== toHiragana(readingArray[readingIndex + i])) {
                     break;
                 } else {
                     matchCounter += 1;
@@ -236,8 +248,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             }
 
             const next = executor(
-                writingArray.slice(matchCounter),
-                readingArray.slice(matchCounter),
+                writingIndex + matchCounter,
+                readingIndex + matchCounter,
             );
 
             if (next === null) {
@@ -247,8 +259,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
             memo[writing][reading] = [
                 {
-                    w: writingArray.slice(0, matchCounter).join(''),
-                    r: toHiragana(readingArray.slice(0, matchCounter).join('')),
+                    w: writingArray.slice(writingIndex, writingIndex + matchCounter).join(''),
+                    r: toHiragana(readingArray.slice(readingIndex, readingIndex + matchCounter).join('')),
                     match: 1 as 0 | 1,
                     isKanji: false,
                     returnId: 3,
@@ -266,8 +278,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          */
         if (char0data?.silent) {
             const next = executor(
-                writingArray.slice(1),
-                readingArray,
+                writingIndex + 1,
+                readingIndex,
             );
 
             if (next === null) {
@@ -281,7 +293,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
                 memo[writing][reading] = [
                     {
-                        w: writingArray[0] + chunk.w,
+                        w: writingArray[writingIndex] + chunk.w,
                         r: '',
                         match: 0,
                         isKanji: false,
@@ -292,7 +304,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             } else {
                 memo[writing][reading] = [
                     {
-                        w: writingArray[0],
+                        w: writingArray[writingIndex],
                         r: '',
                         match: 1 as 0 | 1,
                         isKanji: false,
@@ -323,8 +335,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             readingSlice: string
         }[] = [];
 
-        if (readingLib[writingArray[0]] !== undefined) {
-            readingLib[writingArray[0]].forEach((readingLibItem) => {
+        if (readingLib[writingArray[writingIndex]] !== undefined) {
+            readingLib[writingArray[writingIndex]].forEach((readingLibItem) => {
                 const readingSlice = reading.slice(0, readingLibItem.length);
 
                 if (readingMatch(readingSlice, readingLibItem)) {
@@ -346,14 +358,14 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (firstCharMatches.length > 0) {
             for (let i = 0; i < firstCharMatches.length; i += 1) {
                 const trial = executor(
-                    writingArray.slice(1),
-                    readingArray.slice(firstCharMatches[i].readingSlice.length),
+                    writingIndex + 1,
+                    readingIndex + firstCharMatches[i].readingSlice.length,
                 );
 
                 if (trial !== null) {
                     possibleResults.push([
                         {
-                            w: writingArray[0],
+                            w: writingArray[writingIndex],
                             r: firstCharMatches[i].readingSlice,
                             match: 1 as 0 | 1,
                             isKanji: true,
@@ -377,14 +389,12 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * 3 2 1 0 6 5 4 9 8 7 12 11 10 ...
          */
         {
-            let start = 3;
-            let i = 3;
-            let nextStop = 0;
-
-            for (;;) {
+            for (let i = 10; i >= 0; i -= 1) {
+                // if (readingIndex + i > readingArray.length) continue;
+                // console.log('ex');
                 let trial = executor(
-                    writingArray.slice(1),
-                    readingArray.slice(i),
+                    writingIndex + 1,
+                    readingIndex + i,
                 );
 
                 // If trial has result, clone the array
@@ -393,8 +403,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 // Only push to possibleResults if the current path is possible
                 if (trial !== null) {
                     const currentObj = {
-                        w: writingArray[0],
-                        r: reading.slice(0, i),
+                        w: writingArray[writingIndex],
+                        r: readingArray.slice(readingIndex, readingIndex + i).join(''),
                         match: 0 as 0 | 1,
                         isKanji: true,
                         returnId: 5,
@@ -436,16 +446,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     }
                 }
 
-                if (i === readingArray.length) break;
-
-                // Loop calculation
-                if (i === nextStop) {
-                    nextStop = start + 1;
-                    start = nextStop + 2;
-                    i = start;
-                } else {
-                    i -= 1;
-                }
+                // if (i === (readingArray.length - readingIndex)) break;
             }
         }
 
@@ -470,7 +471,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         }
     }
 
-    return executor([...writingText], [...readingText]);
+    return executor(0, 0);
 }
 
 export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
