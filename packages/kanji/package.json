@@ -4,7 +4,7 @@
   "description": "Get kanji characters in an array based on categorization",
   "main": "./dist/index.js",
   "scripts": {
-    "clean": "npx rimraf dist raw-data",
+    "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp/data ./test/temp",
     "download-source": "node ./scripts/download-source.js",
     "extract-kanjivg-tree": "node ./scripts/extract-kanjivg-tree.js",
     "extract-kanjium-data": "node ./scripts/extract-kanjium-data.js",
