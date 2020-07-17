@@ -306,7 +306,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          *            v                    v
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
-        if (isKana(writingArray[0]) && writingHiragana !== readingHiragana) {
+        if (charData[writingArray[0]].kana && writingHiragana !== readingHiragana) {
             memo[writing][reading] = null;
             return null;
         }
