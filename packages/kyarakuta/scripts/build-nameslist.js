@@ -10,7 +10,7 @@
 const fs = require('fs');
 
 const namesListRaw = fs.readFileSync(
-    `${__dirname}/../raw-data/NamesList.txt`, {
+    `${__dirname}/../temp/data/NamesList.txt`, {
         encoding: 'utf-8',
     },
 ).toString().split('\n');
@@ -152,7 +152,7 @@ ${JSON.stringify(BlockStats)}
 `;
 
 fs.mkdirSync(`${__dirname}/../src/gen`, { recursive: true });
-fs.writeFileSync(`${__dirname}/../raw-data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));
-fs.writeFileSync(`${__dirname}/../raw-data/BlockRangesList.json`, JSON.stringify(BlockRangesList, null, 2));
-fs.writeFileSync(`${__dirname}/../raw-data/BlockStats.json`, JSON.stringify(BlockStats, null, 2));
+fs.writeFileSync(`${__dirname}/../temp/data/SubBlocksLibrary.json`, JSON.stringify(SubBlocksLibrary, null, 2));
+fs.writeFileSync(`${__dirname}/../temp/data/BlockRangesList.json`, JSON.stringify(BlockRangesList, null, 2));
+fs.writeFileSync(`${__dirname}/../temp/data/BlockStats.json`, JSON.stringify(BlockStats, null, 2));
 fs.writeFileSync(`${__dirname}/../src/gen/blocks-library.ts`, script);

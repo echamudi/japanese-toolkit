@@ -8,7 +8,7 @@
 const fs = require('fs');
 const https = require('https');
 
-fs.mkdirSync('./raw-data/', { recursive: true });
+fs.mkdirSync('./temp/data/', { recursive: true });
 
 // Download files
 (async () => {
@@ -17,7 +17,7 @@ fs.mkdirSync('./raw-data/', { recursive: true });
         (() => new Promise((resolve) => {
             // Download Names List
             https.get('https://raw.githubusercontent.com/echamudi/unicode-mirror/master/13.0.0/ucd/NamesList.txt', (response) => {
-                response.pipe(fs.createWriteStream('./raw-data/NamesList.txt'));
+                response.pipe(fs.createWriteStream('./temp/data/NamesList.txt'));
                 resolve();
             });
         }))(),
