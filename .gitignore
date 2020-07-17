@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+##
+# Japanese Toolkit
+##
+
+/packages/*/dist
+/packages/*/src/gen
+/packages/*/lib/gen
+/packages/*/temp
+/packages/*/test/temp
