@@ -11,7 +11,7 @@ const path = require('path');
 const csvtojson = require('csvtojson');
 
 (async () => {
-    const targetDir = path.join('.', 'dist', 'kanjium');
+    const targetDir = path.join('.', 'dist', 'data', 'kanjium');
     const csvtojsonConfig = {
         delimiter: '\t',
         noheader: 'true',
@@ -30,7 +30,7 @@ const csvtojson = require('csvtojson');
 
         const objRaw = await csvtojson(csvtojsonConfig)
             .fromFile(
-                path.join(__dirname, '..', 'raw-data', `kanjium-${name}.txt`),
+                path.join(__dirname, '..', 'temp', `kanjium-${name}.txt`),
             );
 
         objRaw.forEach((el) => {

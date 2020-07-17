@@ -14,8 +14,8 @@ const fs = require('fs');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const xml2json = require('xml2json');
 
-let files = fs.readdirSync(path.join('.', 'raw-data', 'kanjivg', 'kanji'));
-fs.mkdirSync(path.join('.', 'dist', 'kanji-tree'), { recursive: true });
+let files = fs.readdirSync(path.join('.', 'temp', 'kanjivg', 'kanji'));
+fs.mkdirSync(path.join('.', 'dist', 'data', 'kanji-tree'), { recursive: true });
 
 // Only svg files
 files = files.filter((el) => el.slice(-3) === 'svg');
@@ -82,7 +82,7 @@ function deleteEmpties(outerNode) {
 files.forEach((fileNameSvg) => {
     const fileNameOnly = fileNameSvg.slice(0, fileNameSvg.length - 4);
 
-    const data = fs.readFileSync(path.join('.', 'raw-data', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
+    const data = fs.readFileSync(path.join('.', 'temp', 'kanjivg', 'kanji', fileNameSvg), 'utf8');
     const svgObj = xml2json.toJson(data, {
         object: true,
         arrayNotation: true,
@@ -100,7 +100,7 @@ files.forEach((fileNameSvg) => {
         jsonString = '{}';
     }
 
-    fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', `${fileNameOnly}.json`), jsonString, (err) => {
+    fs.writeFileSync(path.join('.', 'dist', 'data', 'kanji-tree', `${fileNameOnly}.json`), jsonString, (err) => {
         if (err) {
             console.log(err);
         }
@@ -114,7 +114,7 @@ KanjiVG is copyright © 2009-2018 Ulrich Apel and released under the Creative Co
 `;
 
 // Add notice
-fs.writeFileSync(path.join('.', 'dist', 'kanji-tree', '_notice.txt'), notice, (err) => {
+fs.writeFileSync(path.join('.', 'dist', 'data', 'kanji-tree', '_notice.txt'), notice, (err) => {
     if (err) {
         console.log(err);
     }

@@ -5,7 +5,7 @@
         "target": "ES2015",
         "noImplicitAny": true,
         "rootDir": "./src",
-        "outDir": "./dist",
+        "outDir": "./dist/commonjs",
         "declaration": true,
         "moduleResolution": "node",
         "resolveJsonModule": true

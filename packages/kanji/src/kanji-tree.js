@@ -25,7 +25,7 @@ function kanjiTree(char) {
     if (char.length > 1) throw new Error('kanjiTree only supports 1 character length');
 
     const charCode = char.charCodeAt(0).toString(16);
-    const fileDir = path.join(__dirname, 'kanji-tree', `0${charCode}.json`);
+    const fileDir = path.join(__dirname, '..', 'data', 'kanji-tree', `0${charCode}.json`);
 
     if (fs.existsSync(fileDir)) {
         const json = JSON.parse(fs.readFileSync(fileDir).toString());

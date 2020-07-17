@@ -37,7 +37,7 @@ function readings(char) {
         throw new Error('f readings code logic error');
     })();
 
-    const filePath = path.join(__dirname, 'kanjidic', `${unicode}.json`);
+    const filePath = path.join(__dirname, '..', 'data', 'kanjidic', `${unicode}.json`);
 
     if (!fs.existsSync(filePath)) return null;
 
