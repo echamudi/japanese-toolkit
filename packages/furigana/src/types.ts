@@ -67,4 +67,16 @@ export interface CharDataItem {
      * symbol, punctuation, marks, brackets, annotation, stroke, and sign
      */
     silent: boolean,
+
+    /**
+     * Iteration kana mark
+     * 'ゝ', etc.
+     */
+    iterationKana: boolean
+
+    /**
+     * Iteration kanji mark
+     * '々'
+     */
+    iterationKanji: boolean
 }
