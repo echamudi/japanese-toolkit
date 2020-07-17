@@ -21,7 +21,8 @@
         ],
         "prefer-destructuring": "off",
         "import/extensions": "off",
-        "no-console": "off"
+        "no-console": "off",
+        "no-lone-blocks": "off"
     },
     "ignorePatterns": [
         "node_modules/**/*.*",
