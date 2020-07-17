@@ -259,7 +259,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             return memo[writing][reading];
         }
 
-        // TODO: Add kana repetition letter algorithm
         // TODO: Allow space in the reading
 
         /**
