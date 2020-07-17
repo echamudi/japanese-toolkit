@@ -36,8 +36,8 @@ kanji.all.list().forEach((char) => {
     fin[char] = [...new Set(readingsArray)];
 });
 
-const dir = path.resolve(__dirname, '../dist');
+const dir = path.resolve(__dirname, '../dist/data');
 const filename = path.resolve(dir, 'readings.json');
 
-fs.mkdirSync(path.resolve(__dirname, '../dist'), { recursive: true });
+fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(filename, JSON.stringify(fin));

@@ -11,7 +11,7 @@
 const assert = require('assert');
 const path = require('path');
 const kanji = require('..');
-const jsonLoader = require('../dist/json-loader');
+const jsonLoader = require('../dist/commonjs/json-loader');
 
 const collectionArray = [
     kanji.kanken.lv10(), // 0

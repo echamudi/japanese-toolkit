@@ -8,8 +8,8 @@
     },
     "include": [
         "lib/**/*.js",
+        "lib/index.d.ts",
         "test/**/*.js",
-        "index.d.ts",
         "index.js"
     ]
 }

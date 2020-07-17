@@ -16,7 +16,7 @@ const gunzip = promisify(zlib.gunzip);
 // const sleep = promisify(setTimeout);
 
 (async () => {
-    const kanjidicGzipPath = path.resolve(__dirname, '../raw-data/kanjidic2.xml.gz');
+    const kanjidicGzipPath = path.resolve(__dirname, '../temp/kanjidic2.xml.gz');
     const kanjidicGzipBuffer = fs.readFileSync(kanjidicGzipPath);
 
     const kanjidicXml = await gunzip(kanjidicGzipBuffer);
@@ -32,7 +32,7 @@ const gunzip = promisify(zlib.gunzip);
     //     JSON.stringify(jmdictObj, null, 2)
     // );
 
-    const targetDir = path.resolve(__dirname, '../dist/kanjidic');
+    const targetDir = path.resolve(__dirname, '../dist/data/kanjidic');
 
     fs.mkdirSync(targetDir, { recursive: true });
 

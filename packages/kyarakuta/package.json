@@ -2,9 +2,9 @@
     "name": "kyarakuta",
     "version": "0.12.0",
     "description": "Categorize and manipulate characters",
-    "main": "./dist/index.js",
+    "main": "./dist/commonjs/index.js",
     "scripts": {
-        "clean": "npx rimraf ./dist ./raw-data ./src/gen",
+        "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",
         "build": "npm run clean && node ./scripts/download-source.js && node ./scripts/build-nameslist.js && node ./scripts/build-kanamap.js && tsc",
         "watch": "npx tsc --watch",
         "test": "npx jest --verbose \"./test/.*\\.test\\.js\""
@@ -16,6 +16,7 @@
     "files": [
         "/dist",
         "/src",
+        "/lib",
         "LICENSE",
         "README.md"
     ],

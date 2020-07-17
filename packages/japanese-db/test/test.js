@@ -40,7 +40,7 @@ describe('japanese-db', function () {
 
         it('extracts kanjivg_tree table correctly', async function () {
             /** @type { import("sqlite3").Database } */
-            const db = new sqlite3.Database(path.join(__dirname, 'result', 'japanese.db'));
+            const db = new sqlite3.Database(path.join(__dirname, 'temp', 'japanese.db'));
             const result = await new Promise((resolve) => {
                 db.all(
                     'SELECT * FROM kanjivg_tree WHERE kanji="圧"',
@@ -57,7 +57,7 @@ describe('japanese-db', function () {
 
         it('extracts metadata table correctly', async function () {
             /** @type { import("sqlite3").Database } */
-            const db = new sqlite3.Database(path.join(__dirname, 'result', 'japanese.db'));
+            const db = new sqlite3.Database(path.join(__dirname, 'temp', 'japanese.db'));
             const result = await new Promise((resolve) => {
                 db.all(
                     'SELECT * FROM metadata',
@@ -87,7 +87,7 @@ describe('japanese-db', function () {
 
         it('extracts wanikani_audio table correctly', async function () {
             /** @type { import("sqlite3").Database } */
-            const db = new sqlite3.Database(path.join(__dirname, 'result', 'japanese.db'));
+            const db = new sqlite3.Database(path.join(__dirname, 'temp', 'japanese.db'));
             const result = await new Promise((resolve) => {
                 db.all(
                     `SELECT * FROM wanikani_audio WHERE 

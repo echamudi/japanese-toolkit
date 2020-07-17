@@ -15,7 +15,7 @@
  */
 
 const string = process.argv[2];
-const kanji = require('..');
+const kanji = require('../..');
 
 function printTree(node, path = [], depth = 0, lastChild = true) {
     let element;
