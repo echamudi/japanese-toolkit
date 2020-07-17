@@ -165,11 +165,13 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         // const isWritingKanji = isKanji(writing);
         const isWritingKana = isKana(writing);
 
+        const char0data = charData[writing[0]];
+
         /**
          * If writing is only one CJK character (+ 々)
          * example: writing = '今', reading = 'きょう'
          */
-        if (isOneChar && (charData[writing].cjk)) {
+        if (isOneChar && (char0data.cjk)) {
             const r: string[] = readingLib[writing] ?? [];
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
@@ -213,7 +215,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          *            v                    v
          * writing = 'まで漢字', reading = 'までかんじ'
          */
-        if (charData[writingArray[0]].kana
+        if (char0data.kana
             && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
             let matchCounter = 0;
 
@@ -259,7 +261,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         /**
          * If letter is voiceless, skip the letter
          */
-        if (charData[writingArray[0]]?.silent) {
+        if (char0data?.silent) {
             const next = executor(
                 writingArray.slice(1),
                 readingArray,
@@ -306,7 +308,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          *            v                    v
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
-        if (charData[writingArray[0]].kana && writingHiragana !== readingHiragana) {
+        if (char0data.kana && writingHiragana !== readingHiragana) {
             memo[writing][reading] = null;
             return null;
         }
