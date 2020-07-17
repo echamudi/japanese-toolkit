@@ -2,20 +2,20 @@
 
 | dir | description | ignore/include |
 | - | - | - |
-| /dist            | compiled code collection | [gitignore] [npminclude] |
-| /dist/data       | compiled required data | [gitignore] [npminclude] |
-| /dist/commonjs   | compiled commonjs | [gitignore] [npminclude] |
-| /dist/umd        | compiled umd (web) | [gitignore] [npminclude] |
-| /dist/es6        | compiled es6 module | [gitignore] [npminclude] |
-| /dist/cli        | compiled cli codes | [gitignore] [npminclude] |
+| /dist            | compiled things from **src** or **scripts** | [gitignore] [npminclude] |
+| /dist/data       | data (jsons, csvs, databases, etc)  | [gitignore] [npminclude] |
+| /dist/commonjs   | commonjs | [gitignore] [npminclude] |
+| /dist/umd        | umd (web) | [gitignore] [npminclude] |
+| /dist/es6        | es6 module | [gitignore] [npminclude] |
+| /dist/bin        | cli codes | [gitignore] [npminclude] |
 ||||
-| /src             | source codes collection that will be compiled to dist | [npminclude] |
+| /src             | things that will be compiled to **dist** | [npminclude] |
 | /src/gen         | generated codes | [gitignore] [npminclude] |
 ||||
-| /lib             | codes that doesn't require compilation | [npminclude] |
-| /lib/data        | required data (jsons, csvs, databases, etc) | [npminclude] |
+| /lib             | things that don't need to be compiled | [npminclude] |
 | /lib/gen         | generated code | [gitignore] [npminclude] |
-| /lib/cli         | cli codes | [npminclude]|
+| /lib/data        | required data (jsons, csvs, databases, etc) | [npminclude] |
+| /lib/bin         | cli codes | [npminclude] |
 ||||
 | /scripts         | scripts for building the module and preparing the data | |
 ||||
