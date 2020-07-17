@@ -47,3 +47,24 @@ export interface MatchDetailed extends Match {
 export interface FitConfig {
     type?: 'object' | 'string'
 }
+
+export interface CharDataItem {
+    /** Original character */
+    char: string,
+
+    /** Codepoint of the char */
+    cp: number,
+
+    /** Is it CJK character? */
+    cjk: boolean,
+
+    /** Is it in Hiragana + Katakana blocks? */
+    kana: boolean,
+
+    /**
+     * Possibly silent character.
+     * The value is true if the block or subblock names contains one of the following words:
+     * symbol, punctuation, marks, brackets, annotation, stroke, and sign
+     */
+    silent: boolean,
+}

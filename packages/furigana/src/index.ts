@@ -12,7 +12,9 @@ import {
 import * as fs from 'fs';
 import { join } from 'path';
 
-import { FitConfig, MatchDetailed, Match } from './types';
+import {
+    FitConfig, MatchDetailed, Match, CharDataItem,
+} from './types';
 
 const dakuten: {[x: string]: string} = JSON.parse(`{
     "が": "か", "ぎ": "き", "ぐ": "く", "げ": "け", "ご": "こ",
@@ -47,6 +49,14 @@ function readingMatch(s1: string, s2: string): boolean {
     return s1Mod === s2Mod;
 }
 
+function isIterationMark(字: number | string): boolean {
+    if (typeof 字 === 'number') {
+        return 字 === 12293 || 字 === 12445 || 字 === 12446 || 字 === 12541 || 字 === 12542;
+    }
+
+    return 字 === '々' || 字 === 'ゝ' || 字 === 'ゞ' || 字 === 'ヽ' || 字 === 'ヾ';
+}
+
 /**
  * @param writingText
  * @param readingText
@@ -64,75 +74,58 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
     const writingBlocks = getBlockNames(writingText);
 
-    const charData: Record<string, {
-        /** Original character */
-        char: string,
-
-        /** Codepoint of the char */
-        cp: number,
-
-        /** Is it CJK character? */
-        cjk: boolean,
-
-        /** Is it in Hiragana + Katakana blocks? */
-        kana: boolean,
-
-        /**
-         * Possibly silent character.
-         * The value is true if the block or subblock names contains one of the following words:
-         * symbol, punctuation, marks, brackets, annotation, stroke, and sign
-         */
-        silent: boolean,
-    }> = {};
+    const charData: Record<string, CharDataItem> = {};
 
     writingBlocks.forEach((charDetails) => {
         const char = charDetails.char;
         if (charData[char]) return;
 
         const cp = char.codePointAt(0) as number;
-        const cjk = isCJK(char);
-        const kana = isKana(char);
+        const cjk = isCJK(char) || isIterationMark(cp);
+        const kana = isKana(char) && !isIterationMark(cp);
         const block = charDetails.block?.toLowerCase();
         const subblock = charDetails.subblock?.toLowerCase();
         let silent = false;
 
-        silent = silent || isWithinRanges(char, [[
-            // Some Fullwidth ASCII variants
-            [0xFF01, 0xFF0F],
-            [0xFF1A, 0xFF20],
-            [0xFF3B, 0xFF40],
-            [0xFF5B, 0xFF5E],
-        ]]);
+        /**
+         * Get silent information
+         */
+        {
+            silent = silent || isWithinRanges(char, [[
+                // Some Fullwidth ASCII variants (？,！, etc)
+                [0xFF01, 0xFF0F],
+                [0xFF1A, 0xFF20],
+                [0xFF3B, 0xFF40],
+                [0xFF5B, 0xFF5E],
+            ]]);
 
-        if (block) {
-            silent = !!(silent
-            || BlockStats[block].sym
-            || BlockStats[block].pun
-            || BlockStats[block].mrk
-            || BlockStats[block].bra
-            || BlockStats[block].ann
-            || BlockStats[block].str
-            || BlockStats[block].sig);
+            // If the block name has the following labels, assume it silent
+            if (block) {
+                silent = !!(silent
+                || BlockStats[block].sym
+                || BlockStats[block].pun
+                || BlockStats[block].mrk
+                || BlockStats[block].bra
+                || BlockStats[block].ann
+                || BlockStats[block].str
+                || BlockStats[block].sig);
+            }
+
+            // If the subblock name has the following labels, assume it silent
+            if (subblock) {
+                silent = !!(silent
+                || BlockStats[subblock].sym
+                || BlockStats[subblock].pun
+                || BlockStats[subblock].mrk
+                || BlockStats[subblock].bra
+                || BlockStats[subblock].ann
+                || BlockStats[subblock].str
+                || BlockStats[subblock].sig);
+            }
+
+            // Exceptions: iteration marks are not silent
+            silent = silent && !isIterationMark(cp);
         }
-
-        if (subblock) {
-            silent = !!(silent
-            || BlockStats[subblock].sym
-            || BlockStats[subblock].pun
-            || BlockStats[subblock].mrk
-            || BlockStats[subblock].bra
-            || BlockStats[subblock].ann
-            || BlockStats[subblock].str
-            || BlockStats[subblock].sig);
-        }
-
-        // Iteration marks have voice
-        silent = silent
-            && char !== '々'
-            && char !== 'ゝ'
-            && char !== 'ゞ'
-            && char !== 'ヽ'
-            && char !== 'ヾ';
 
         charData[char] = {
             char,
@@ -176,7 +169,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * If writing is only one CJK character (+ 々)
          * example: writing = '今', reading = 'きょう'
          */
-        if (isOneChar && (isCJK(writing) || writing === '々')) {
+        if (isOneChar && (charData[writing].cjk)) {
             const r: string[] = readingLib[writing] ?? [];
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
@@ -220,7 +213,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          *            v                    v
          * writing = 'まで漢字', reading = 'までかんじ'
          */
-        if (isKana(writingArray[0])
+        if (charData[writingArray[0]].kana
             && toHiragana(writingArray[0]) === toHiragana(readingArray[0])) {
             let matchCounter = 0;
 
