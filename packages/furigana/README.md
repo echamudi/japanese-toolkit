@@ -5,12 +5,12 @@ Fit kana text into Japanese writing.
 ## API
 
 ```ts
-function fit(writing: string, reading: string): string | null;
+function fit(writingText: string, readingText: string): string | null;
 ```
 
-- `writing`: The japanese writing. Currently, it only accepts kanji, kana, and numbers.
+- `writingText`: The japanese writing. Currently, it only accepts kanji, kana, and numbers.
 
-- `reading`: The reading of the inputted writing. Currently, it only accepts kana.
+- `readingText`: The reading of the inputted writing. Currently, it only accepts kana.
 
 ## Examples
 
@@ -37,17 +37,62 @@ console.log(fit('一社長と十先生', 'にのまえしゃちょうとつな�
 // 一[にのまえ] 社[しゃ] 長[ちょう]と 十[つなし] 先[せん] 生[せい]
 ```
 
-Pass `{ type: 'object' }` for getting tokens instead of string.
+Pass `{ type: 'object' }` for getting tokens instead of string:
 
 ```js
 console.log(fit('九段下', 'くだんした', { type: 'object' }));
-/*
+// Output:
 [
      { w: '九', r: 'く' },
      { w: '段', r: 'だん' },
-     { w: '下', r: 'した' }
+     { w: '下', r: 'した' },
+];
+
+console.log(fit('勿来駅', 'なこそえき', { type: 'object' }));
+// Output:
+[
+     { w: '勿来', r: 'なこそ' },
+     { w: '駅', r: 'えき' },
+];
+```
+
+Another input example with many of the readings don't exist in the dictionary:
+
+```js
+fit(
+    '安居院と生明と安栖と馬酔木と東奥と旦来と流井と行町と五百蔵',
+    'あぐいとあざみとあずまいとあせびとあちおくとあっそとあらいとあるきまちといおろい',
+    { type: 'object' },
+)
+// Output:
+[
+  { w: '安', r: 'あ' },
+  { w: '居', r: 'ぐ' },
+  { w: '院', r: 'い' }, // Guessed
+  { w: 'と', r: 'と' },
+  { w: '生', r: 'あざ' }, // Guessed
+  { w: '明', r: 'み' },
+  { w: 'と', r: 'と' },
+  { w: '安', r: 'あ' },
+  { w: '栖', r: 'ずまい' }, // Guessed
+  { w: 'と', r: 'と' },
+  { w: '馬酔木', r: 'あせび' }, // Guessed
+  { w: 'と', r: 'と' },
+  { w: '東', r: 'あち' }, // Guessed
+  { w: '奥', r: 'おく'},
+  { w: 'と', r: 'と' },
+  { w: '旦来', r: 'あっそ' }, // Guessed
+  { w: 'と', r: 'と' },
+  { w: '流', r: 'あら' }, // Guessed
+  { w: '井', r: 'い' },
+  { w: 'と', r: 'と' },
+  { w: '行', r: 'あるき' }, // Guessed
+  { w: '町', r: 'まち' },
+  { w: 'と', r: 'と' },
+  { w: '五', r: 'い' },
+  { w: '百', r: 'お' },
+  { w: '蔵', r: 'ろい' } // Guessed
 ]
-*/
 ```
 
 ## Acknowledgements
