@@ -95,6 +95,14 @@ fit(
 ]
 ```
 
+## Use Case
+
+This tool can be used when you have a list of Japanese writing and reading pairs and you want to link the readings to each character of the writings.
+
+For example, the furigana column in the following table is generated from the strings in kanji and reading column by using this furigana tool.
+
+<img src="https://raw.githubusercontent.com/echamudi/japanese-toolkit/master/images/japanese-db-furigana.png" alt="furigana usage in japanese db">
+
 ## Acknowledgements
 
 - This repo contains reading definitions from KANJIDIC.
