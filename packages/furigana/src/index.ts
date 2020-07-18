@@ -130,7 +130,11 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             iterationKana,
             iterationKanji,
         };
+
+        Object.freeze(charData[char]);
     });
+
+    Object.freeze(charData);
 
     const writingArray = [...writingText];
     const readingArray = [...readingText];
