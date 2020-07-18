@@ -2,6 +2,8 @@
 
 Categorize and manipulate characters
 
+<pre><div align="center"><a href="https://github.com/echamudi/japanese-toolkit/"><img src="https://raw.githubusercontent.com/echamudi/japanese-toolkit/master/images/japanese-toolkit.svg" alt="Japanese Toolkit Logo" width="160" height="128"></a></div><div align="center">This package is part of <a href="https://github.com/echamudi/japanese-toolkit/">Japanese Toolkit JS</a> suite</pre>
+
 ## Installation
 
 ```
