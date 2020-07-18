@@ -449,7 +449,6 @@ describe('fitObj', () => {
     });
 
     // Known issues
-    // console.log(fitObj('今日50,000人がいます', 'きょうごじゅうまんにんがいます'));
-    // console.log(fitObj('勿来駅', 'なこそ駅'));
-    // console.log(fit('学校に１０００人がいます', 'がっこうにせんにんがいます'))/
+    // console.log(fit('今日50,000人がいます', 'きょうごじゅうまんにんがいます', config));
+    // console.log(fit('Ｗ', 'ウェブ', config));
 });
