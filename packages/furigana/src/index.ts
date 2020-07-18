@@ -13,7 +13,7 @@ import * as fs from 'fs';
 import { join } from 'path';
 
 import {
-    FitConfig, MatchDetailed, Match, CharDataItem,
+    FitConfig, FuriganaMatchDetailed, FuriganaMatch, CharDataItem,
 } from './types';
 
 const dakuten: {[x: string]: string} = JSON.parse(`{
@@ -53,7 +53,7 @@ function readingMatch(s1: string, s2: string): boolean {
  * @param writingText
  * @param readingText
  */
-export function fitObj(writingText: string, readingText: string): MatchDetailed[] | null {
+export function fitObj(writingText: string, readingText: string): FuriganaMatchDetailed[] | null {
     const memo: Record<number, Record<number, ReturnType<typeof fitObj>>> = {};
 
     // Validate writing
@@ -483,11 +483,12 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     return executor(0, 0);
 }
 
-export function fit(writing: string, reading: string, config: {type: 'object'}): Match[] | null;
+export function fit(writing: string, reading: string, config: {type: 'object'}): FuriganaMatch[] | null;
 export function fit(writing: string, reading: string, config: {type: 'string'}): string | null;
 export function fit(writing: string, reading: string): string | null;
 
-export function fit(writing: string, reading: string, config?: FitConfig): Match[] | string | null {
+export function fit(writing: string, reading: string, config?: FitConfig):
+    FuriganaMatch[] | string | null {
     const fitObjResult = fitObj(writing, reading);
 
     if (config?.type === 'object') {
@@ -508,3 +509,5 @@ export function fit(writing: string, reading: string, config?: FitConfig): Match
         return tokens.join('').trim();
     }
 }
+
+export { FuriganaMatch };

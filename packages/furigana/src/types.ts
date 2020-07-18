@@ -5,7 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export interface Match {
+export interface FuriganaMatch {
     /**
      * Writing
      */
@@ -20,7 +20,7 @@ export interface Match {
 /**
  * Similar to Match, but it contains more information for debugging purposes
  */
-export interface MatchDetailed extends Match {
+export interface FuriganaMatchDetailed extends FuriganaMatch {
     /**
      * 1 - matches according to kanjilib
      * 0 - doesn't match according to kanjilib
