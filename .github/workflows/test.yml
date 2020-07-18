@@ -1,4 +1,4 @@
-name: Test Japanese Toolkit
+name: Japanese Toolkit JS
 
 on: [push, pull_request]
 
