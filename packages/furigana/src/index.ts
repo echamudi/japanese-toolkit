@@ -148,7 +148,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         /**
          * Load memo
          */
-        if (memo[writingIndex] && Object.prototype.hasOwnProperty.call(memo[writingIndex], readingIndex)) {
+        if (memo[writingIndex]
+            && Object.prototype.hasOwnProperty.call(memo[writingIndex], readingIndex)) {
             return memo[writingIndex][readingIndex];
         }
 
