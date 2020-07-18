@@ -10,6 +10,7 @@ const fs = require('fs');
 // const console = require('console');
 const kanji = require('kanji');
 const readline = require('readline');
+const furigana = require('furigana');
 const JMdictUtil = require('./JMdictUtil');
 const JMnedictUtil = require('./JMnedictUtil');
 const KanjidicUtil = require('./KanjidicUtil');
@@ -46,6 +47,7 @@ class JapaneseDBTool {
                     id INTEGER,
                     kanji TEXT,
                     reading TEXT,
+                    furigana TEXT,
                     pri_point INTEGER,
                     meaning TEXT,
                     PRIMARY KEY(source, id, kanji,reading)
@@ -92,6 +94,7 @@ class JapaneseDBTool {
                         id: number,
                         kanji: string,
                         reading: string,
+                        furigana: string|null,
                         priPoint: number,
                         meaning: string}[]} */
                         const vocabRows = [];
@@ -119,6 +122,17 @@ class JapaneseDBTool {
                                     const priPoint = kElePriPoint > rElePriPoints[reb]
                                         ? kElePriPoint : rElePriPoints[reb];
 
+                                    // Get furigana tokens
+                                    /** @type {string|null} */
+                                    let furiganaString = null;
+
+                                    try {
+                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object' }));
+                                        if (furiganaString === 'null') furiganaString = null;
+                                    } catch {
+                                        furiganaString = null;
+                                    }
+
                                     // If the reading has no kanji tag
                                     if (Object.hasOwnProperty.call(rEle, 're_nokanji')) {
                                         vocabRows.push(
@@ -127,6 +141,7 @@ class JapaneseDBTool {
                                                 id: entSeq,
                                                 kanji: null,
                                                 reading: reb,
+                                                furigana: null,
                                                 priPoint,
                                                 meaning: '',
                                             },
@@ -141,6 +156,7 @@ class JapaneseDBTool {
                                                     id: entSeq,
                                                     kanji: keb,
                                                     reading: reb,
+                                                    furigana: furiganaString,
                                                     priPoint,
                                                     meaning: '',
                                                 },
@@ -156,6 +172,7 @@ class JapaneseDBTool {
                                                 id: entSeq,
                                                 kanji: keb,
                                                 reading: reb,
+                                                furigana: furiganaString,
                                                 priPoint,
                                                 meaning: '',
                                             },
@@ -174,6 +191,7 @@ class JapaneseDBTool {
                                         id: entSeq,
                                         kanji: null,
                                         reading: rEle.reb[0],
+                                        furigana: null,
                                         priPoint: rElePriPoints[rEle.reb[0]],
                                         meaning: '',
                                     },
@@ -207,11 +225,12 @@ class JapaneseDBTool {
 
                         // Put in db
                         vocabRows.forEach((row) => {
-                            db.run('INSERT INTO dict_index VALUES (?, ?, ?, ?, ?, ?)', [
+                            db.run('INSERT INTO dict_index VALUES (?, ?, ?, ?, ?, ?, ?)', [
                                 row.source,
                                 row.id,
                                 row.kanji,
                                 row.reading,
+                                row.furigana,
                                 row.priPoint,
                                 row.meaning,
                             ]);
@@ -285,6 +304,7 @@ class JapaneseDBTool {
                          * id: number,
                          * kanji: string,
                          * reading: string,
+                         * furigana: string|null,
                          * meaning: string}[]} */
                         const vocabRows = [];
 
@@ -297,11 +317,23 @@ class JapaneseDBTool {
                                     /** @type {string} kanji reading */
                                     const reb = rEle.reb[0];
 
+                                    // Get furigana tokens
+                                    /** @type {string|null} */
+                                    let furiganaString = null;
+
+                                    try {
+                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object' }));
+                                        if (furiganaString === 'null') furiganaString = null;
+                                    } catch {
+                                        furiganaString = null;
+                                    }
+
                                     vocabRows.push({
                                         source: 2,
                                         id: entSeq,
                                         kanji: keb,
                                         reading: reb,
+                                        furigana: furiganaString,
                                         meaning: '',
                                     });
                                 });
@@ -316,6 +348,7 @@ class JapaneseDBTool {
                                     id: entSeq,
                                     kanji: null,
                                     reading: rEle.reb[0],
+                                    furigana: null,
                                     meaning: '',
                                 });
                             });
@@ -335,11 +368,12 @@ class JapaneseDBTool {
 
                         // Put in db
                         vocabRows.forEach((row) => {
-                            db.run('INSERT INTO dict_index(`source`, `id`, `kanji`, `reading`, `meaning`) VALUES (?, ?, ?, ?, ?)', [
+                            db.run('INSERT INTO dict_index(`source`, `id`, `kanji`, `reading`, `furigana`, `meaning`) VALUES (?, ?, ?, ?, ?, ?)', [
                                 row.source,
                                 row.id,
                                 row.kanji,
                                 row.reading,
+                                row.furigana,
                                 row.meaning,
                             ]);
 
