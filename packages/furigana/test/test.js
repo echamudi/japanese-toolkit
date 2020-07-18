@@ -448,6 +448,13 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes some other tests', () => {
+        deepStrictEqual(
+            fit('勿来駅に', 'なこそえきに', config),
+            [{ w: '勿来', r: 'なこそ' }, { w: '駅', r: 'えき' }, { w: 'に', r: 'に' }],
+        );
+    });
+
     // Known issues
     // console.log(fit('今日50,000人がいます', 'きょうごじゅうまんにんがいます', config));
     // console.log(fit('Ｗ', 'ウェブ', config));
