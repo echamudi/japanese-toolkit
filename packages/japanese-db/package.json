@@ -35,6 +35,7 @@
     "README.md"
   ],
   "dependencies": {
+    "furigana": "^0.14.0",
     "commander": "^5.1.0",
     "kanji": "^0.14.0",
     "sqlite3": "^4.2.0",
