@@ -140,6 +140,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
     const readingArray = [...readingText];
     const writingLength = writingArray.length;
     const readingLength = readingArray.length;
+    const writingHiragana = [...toHiragana(writingText)];
+    const readingHiragana = [...toHiragana(readingText)];
 
     Object.freeze(writingArray);
     Object.freeze(readingArray);
@@ -174,8 +176,8 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * Prepare constants
          */
         const isOneChar = (writingArray.length - writingIndex) === 1;
-        const writingHiragana = toHiragana(writing);
-        const readingHiragana = toHiragana(reading);
+        const writingHiraganaSlice = writingHiragana.slice(writingIndex).join('');
+        const readingHiraganaSlice = readingHiragana.slice(readingIndex).join('');
 
         // const isWritingKanji = isKanji(writing);
         const isWritingKana = isKana(writing);
@@ -219,11 +221,11 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * example: writing = 'くろ', reading = 'くろ'
          * example: writing = 'ボーブは', reading = 'ぼーぶは'
          */
-        if (isWritingKana && writingHiragana === readingHiragana) {
+        if (isWritingKana && writingHiraganaSlice === readingHiraganaSlice) {
             memo[writingIndex][readingIndex] = [
                 {
                     w: writing,
-                    r: readingHiragana,
+                    r: readingHiraganaSlice,
                     match: 1 as 0 | 1,
                     isKanji: false,
                     returnId: 2,
@@ -333,7 +335,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          *            v                    v
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
-        if (char0data.kana && writingHiragana !== readingHiragana) {
+        if (char0data.kana && writingHiraganaSlice !== readingHiraganaSlice) {
             memo[writingIndex][readingIndex] = null;
             return null;
         }
