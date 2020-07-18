@@ -1,3 +1,5 @@
 # Bunpou
 
-[⏳ WIP] Japanese grammar manipulator
+⏳ *Work in Progress*
+
+Japanese words conjugator

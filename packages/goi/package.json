@@ -1,7 +1,7 @@
 {
     "name": "goi",
     "version": "0.10.0",
-    "description": "[⏳ WIP] Japanese writing and reading pairs",
+    "description": "[⏳ WIP] Japanese words data (writings, readings, meaning, etc)",
     "main": "index.js",
     "scripts": {
         "build": "",

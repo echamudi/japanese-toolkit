@@ -1,3 +1,5 @@
 # Goi
 
-[⏳ WIP] Japanese writing and reading pairs.
+⏳ *Work in Progress*
+
+Japanese words data (writings, readings, meaning, etc).

@@ -1,7 +1,7 @@
 {
     "name": "bunpou",
     "version": "0.14.0",
-    "description": "[⏳ WIP] Japanese grammar manipulator",
+    "description": "[⏳ WIP] Japanese words conjugator",
     "main": "index.js",
     "scripts": {
         "build": "",
