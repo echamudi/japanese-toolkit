@@ -1,6 +1,6 @@
 {
   "name": "japanese-db",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Japanese language resources database maker from open source materials.",
   "main": "./lib/index.js",
   "scripts": {
@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "commander": "^5.1.0",
-    "kanji": "^0.13.0",
+    "kanji": "^0.14.0",
     "sqlite3": "^4.2.0",
     "xml2json": "^0.12.0"
   },
