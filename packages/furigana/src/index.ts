@@ -389,9 +389,11 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * 3 2 1 0 6 5 4 9 8 7 12 11 10 ...
          */
         {
-            for (let i = 10; i >= 0; i -= 1) {
-                // if (readingIndex + i > readingArray.length) continue;
-                // console.log('ex');
+            let start = 3;
+            let i = 3;
+            let nextStop = 0;
+
+            for (;;) {
                 let trial = executor(
                     writingIndex + 1,
                     readingIndex + i,
@@ -446,7 +448,22 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     }
                 }
 
-                // if (i === (readingArray.length - readingIndex)) break;
+                if (
+                    ((i - 1) % 3 === 0 || i === 0) // IF current i is 0, 4, 7, 10, 13, ...
+                    && (i > readingArray.length - writingIndex
+                        || i > readingArray.length - readingIndex) // AND it is out of bound
+                ) {
+                    break;
+                }
+
+                // Loop calculation
+                if (i === nextStop) {
+                    nextStop = start + 1;
+                    start = nextStop + 2;
+                    i = start;
+                } else {
+                    i -= 1;
+                }
             }
         }
 
