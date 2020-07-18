@@ -1,10 +1,12 @@
 {
   "packages": [
     "packages/bunpou",
-    "packages/kyarakuta",
+    "packages/furigana",
+    "packages/goi",
     "packages/japanese-db",
+    "packages/japanese-toolkit",
     "packages/kanji",
-    "packages/furigana"
+    "packages/kyarakuta"
   ],
   "version": "0.14.0"
 }
