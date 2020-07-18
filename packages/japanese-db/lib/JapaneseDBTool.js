@@ -132,7 +132,7 @@ class JapaneseDBTool {
                                             },
                                         );
 
-                                        // If the reading has reading restriction to the kanji
+                                    // If the reading has reading restriction to the kanji
                                     } else if (Object.hasOwnProperty.call(rEle, 're_restr')) {
                                         if (rEle.re_restr.indexOf(keb) !== -1) {
                                             vocabRows.push(
@@ -147,8 +147,8 @@ class JapaneseDBTool {
                                             );
                                         }
 
-                                        // If the reading doesn't have tags above,
-                                        // it applies to all kanji
+                                    // If the reading doesn't have tags above,
+                                    // it applies to all kanji
                                     } else {
                                         vocabRows.push(
                                             {
