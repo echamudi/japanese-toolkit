@@ -458,4 +458,5 @@ describe('fitObj', () => {
     // Known issues
     // console.log(fit('今日50,000人がいます', 'きょうごじゅうまんにんがいます', config));
     // console.log(fit('Ｗ', 'ウェブ', config));
+    // console.log(fit('上上上上上', 'かみあいうえおじょうばびぶべぼあがり', config));
 });
