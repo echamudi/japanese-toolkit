@@ -157,7 +157,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (writingLength === writingIndex && readingLength !== readingIndex) return null;
         if (writingLength === writingIndex && readingLength === readingIndex) return [];
 
-        const writing: string = writingArray.slice(writingIndex).join('');
+        // const writing: string = writingArray.slice(writingIndex).join('');
         const reading: string = readingArray.slice(readingIndex).join('');
 
         /**
@@ -182,6 +182,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         // const isWritingKanji = isKanji(writing);
         // const isWritingKana = isKana(writing);
 
+        const char0 = writingArray[writingIndex];
         const char0data = charData[writingArray[writingIndex]];
         // console.log(char0data);
 
@@ -198,14 +199,14 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     || (char0data.iterationKana && (readingArray.length - readingIndex) === 1)
                 )
         ) {
-            const r: string[] = readingLib[writing] ?? [];
+            const r: string[] = readingLib[char0] ?? [];
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
                 ? 1 : 0;
 
             memo[writingIndex][readingIndex] = [
                 {
-                    w: writing,
+                    w: char0,
                     r: reading,
                     match,
                     isKanji: true,
