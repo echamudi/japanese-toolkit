@@ -180,7 +180,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         const readingHiraganaSlice = readingHiragana.slice(readingIndex).join('');
 
         // const isWritingKanji = isKanji(writing);
-        const isWritingKana = isKana(writing);
+        // const isWritingKana = isKana(writing);
 
         const char0data = charData[writingArray[writingIndex]];
         // console.log(char0data);
@@ -210,25 +210,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     match,
                     isKanji: true,
                     returnId: 1,
-                },
-            ];
-
-            return memo[writingIndex][readingIndex];
-        }
-
-        /**
-         * If writing kana matches exaclty like the reading kana
-         * example: writing = 'くろ', reading = 'くろ'
-         * example: writing = 'ボーブは', reading = 'ぼーぶは'
-         */
-        if (isWritingKana && writingHiraganaSlice === readingHiraganaSlice) {
-            memo[writingIndex][readingIndex] = [
-                {
-                    w: writing,
-                    r: readingHiraganaSlice,
-                    match: 1 as 0 | 1,
-                    isKanji: false,
-                    returnId: 2,
                 },
             ];
 
