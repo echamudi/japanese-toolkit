@@ -113,6 +113,8 @@ For example, the furigana column in the following table is generated from the st
 
 ## License
 
-Copyright © 2020 Ezzat Chamudi
+Copyright © 2020 [Ezzat Chamudi](https://github.com/echamudi)
 
-MPL-2.0
+Furigana code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+
+Libraries, dependencies, and tools used in this project are tied with their licenses.
