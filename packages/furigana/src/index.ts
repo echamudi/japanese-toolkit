@@ -184,7 +184,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
         const char0 = writingArray[writingIndex];
         const char0data = charData[writingArray[writingIndex]];
-        // console.log(char0data);
 
         /**
          * If writing is only one CJK character (+ 々)
