@@ -7,6 +7,7 @@
 
 /* eslint-disable camelcase */
 
+import { FuriganaMatch } from 'furigana';
 import * as JMdict from './jmdict';
 import * as JMnedict from './jmnedict';
 
@@ -33,6 +34,7 @@ export interface DictIndexRow {
   id: number,
   kanji: string | null,
   reading: string,
+  furigana: FuriganaMatch[] | null,
   pri_point: number | null,
   meaning: string
 }
