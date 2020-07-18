@@ -134,16 +134,25 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
 
     const writingArray = [...writingText];
     const readingArray = [...readingText];
+    const writingLength = writingArray.length;
+    const readingLength = readingArray.length;
 
     Object.freeze(writingArray);
     Object.freeze(readingArray);
 
+    /**
+     * @param writingIndex Start pointer of writing array
+     * @param readingIndex Start pointer of reading array
+     */
     function executor(writingIndex: number, readingIndex: number): ReturnType<typeof fitObj> {
-        // console.log(writingIndex, readingIndex);
+        if (readingIndex > readingLength) return null;
+        if (writingIndex > writingLength) return null;
+        if (writingLength !== writingIndex && readingLength === readingIndex) return null;
+        if (writingLength === writingIndex && readingLength !== readingIndex) return null;
+        if (writingLength === writingIndex && readingLength === readingIndex) return [];
+
         const writing: string = writingArray.slice(writingIndex).join('');
         const reading: string = readingArray.slice(readingIndex).join('');
-
-        // console.log(writing, reading);
 
         /**
          * Load memo
@@ -156,10 +165,6 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         if (!Object.prototype.hasOwnProperty.call(memo, writingIndex)) {
             memo[writingIndex] = {};
         }
-
-        if (writing.length !== 0 && reading.length === 0) return null;
-        if (writing.length === 0 && reading.length !== 0) return null;
-        if (writing.length === 0 && reading.length === 0) return [];
 
         /*
          * Prepare constants
