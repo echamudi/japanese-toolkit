@@ -449,13 +449,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     }
                 }
 
-                if (
-                    ((i - 1) % 3 === 0 || i === 0) // IF current i is 0, 4, 7, 10, 13, ...
-                    && (i > readingArray.length - writingIndex
-                        || i > readingArray.length - readingIndex) // AND it is out of bound
-                ) {
-                    break;
-                }
+                if (i > (readingArray.length - readingIndex) + 2) break;
 
                 // Loop calculation
                 if (i === nextStop) {
