@@ -27,4 +27,4 @@ Copyright © 2020 [Ezzat Chamudi](https://github.com/echamudi)
 
 Japanese Toolit code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
-Some packages have their own acknowledgement list and additional license notices, please the readme file of each package.
+Some packages have their own acknowledgement list and additional license notices. Please refer to the readme file of each package.
