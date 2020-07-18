@@ -1,7 +1,7 @@
 {
   "name": "kanji",
   "version": "0.14.0",
-  "description": "Get kanji characters in an array based on categorization",
+  "description": "Get kanji readings, kanji composition trees, and groupings",
   "main": "./dist/commonjs/index.js",
   "scripts": {
     "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",

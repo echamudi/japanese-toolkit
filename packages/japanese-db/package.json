@@ -1,7 +1,7 @@
 {
   "name": "japanese-db",
   "version": "0.14.0",
-  "description": "Japanese language resources database maker from open source materials.",
+  "description": "Generate Japanese dictionary SQLite database from open source materials",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",

@@ -1,6 +1,6 @@
 # Japanese DB
 
-Japanese language resources database maker from various open source materials.
+Generate Japanese dictionary SQLite database from open source materials.
 
 ## Usage
 
