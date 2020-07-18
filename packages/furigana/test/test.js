@@ -2,9 +2,11 @@
 const { deepStrictEqual } = require('assert');
 const { fit } = require('..');
 
+const config = { type: 'object' };
+
 describe('fitObj', () => {
     it('passes single letter tests', () => {
-        deepStrictEqual(fit('く', 'く', { type: 'object' }), [
+        deepStrictEqual(fit('く', 'く', config), [
             { w: 'く', r: 'く' },
         ]);
 
@@ -13,7 +15,7 @@ describe('fitObj', () => {
             'く',
         );
 
-        deepStrictEqual(fit('コヤ', 'こや', { type: 'object' }), [
+        deepStrictEqual(fit('コヤ', 'こや', config), [
             { w: 'コヤ', r: 'こや' },
         ]);
 
@@ -22,7 +24,7 @@ describe('fitObj', () => {
             'コヤ',
         );
 
-        deepStrictEqual(fit('食', 'しょく', { type: 'object' }), [
+        deepStrictEqual(fit('食', 'しょく', config), [
             { w: '食', r: 'しょく' },
         ]);
 
@@ -31,7 +33,7 @@ describe('fitObj', () => {
             '食[しょく]',
         );
 
-        deepStrictEqual(fit('裕', 'ひろし', { type: 'object' }), [
+        deepStrictEqual(fit('裕', 'ひろし', config), [
             { w: '裕', r: 'ひろし' },
         ]);
 
@@ -42,16 +44,16 @@ describe('fitObj', () => {
     });
 
     it('passes null tests', () => {
-        deepStrictEqual(fit('ひ', 'は', { type: 'object' }), null);
+        deepStrictEqual(fit('ひ', 'は', config), null);
         deepStrictEqual(fit('ひ', 'は'), null);
-        deepStrictEqual(fit('はは', 'は', { type: 'object' }), null);
+        deepStrictEqual(fit('はは', 'は', config), null);
         deepStrictEqual(fit('はは', 'は'), null);
-        deepStrictEqual(fit('は', 'はた', { type: 'object' }), null);
+        deepStrictEqual(fit('は', 'はた', config), null);
         deepStrictEqual(fit('は', 'はた'), null);
     });
 
     it('passes multi-letter kanji letters', () => {
-        deepStrictEqual(fit('九段下', 'くだんした', { type: 'object' }), [
+        deepStrictEqual(fit('九段下', 'くだんした', config), [
             { w: '九', r: 'く' },
             { w: '段', r: 'だん' },
             { w: '下', r: 'した' },
@@ -62,7 +64,7 @@ describe('fitObj', () => {
             '九[く] 段[だん] 下[した]',
         );
 
-        deepStrictEqual(fit('軍畑駅', 'いくさばたえき', { type: 'object' }), [
+        deepStrictEqual(fit('軍畑駅', 'いくさばたえき', config), [
             { w: '軍', r: 'いくさ' },
             { w: '畑', r: 'ばた' },
             { w: '駅', r: 'えき' },
@@ -75,7 +77,7 @@ describe('fitObj', () => {
     });
 
     it('passes merge kana tests', () => {
-        deepStrictEqual(fit('田中さんとボーブさんはすごいと思います', 'たなかさんとぼーぶさんはすごいとおもいます', { type: 'object' }), [
+        deepStrictEqual(fit('田中さんとボーブさんはすごいと思います', 'たなかさんとぼーぶさんはすごいとおもいます', config), [
             { w: '田', r: 'た' },
             { w: '中', r: 'なか' },
             { w: 'さんとボーブさんはすごいと', r: 'さんとぼーぶさんはすごいと' },
@@ -90,12 +92,12 @@ describe('fitObj', () => {
     });
 
     it('passes some basic tests', () => {
-        deepStrictEqual(fit('私は', 'わたしは', { type: 'object' }), [
+        deepStrictEqual(fit('私は', 'わたしは', config), [
             { w: '私', r: 'わたし' },
             { w: 'は', r: 'は' },
         ]);
 
-        deepStrictEqual(fit('彼女は一番です', 'かのじょはいちばんです', { type: 'object' }), [
+        deepStrictEqual(fit('彼女は一番です', 'かのじょはいちばんです', config), [
             { w: '彼', r: 'かの' },
             { w: '女', r: 'じょ' },
             { w: 'は', r: 'は' },
@@ -104,7 +106,7 @@ describe('fitObj', () => {
             { w: 'です', r: 'です' },
         ]);
 
-        deepStrictEqual(fit('一は一と行っています', 'よこいちはにのまえといっています', { type: 'object' }), [
+        deepStrictEqual(fit('一は一と行っています', 'よこいちはにのまえといっています', config), [
             { w: '一', r: 'よこいち' },
             { w: 'は', r: 'は' },
             { w: '一', r: 'にのまえ' },
@@ -115,7 +117,7 @@ describe('fitObj', () => {
     });
 
     it('passes unmatched kanji tests', () => {
-        deepStrictEqual(fit('食一二三午後', 'しょくあいうえおごご', { type: 'object' }), [
+        deepStrictEqual(fit('食一二三午後', 'しょくあいうえおごご', config), [
             { w: '食', r: 'しょく' },
             { w: '一二三', r: 'あいうえお' },
             { w: '午', r: 'ご' },
@@ -127,7 +129,7 @@ describe('fitObj', () => {
             '食[しょく] 一二三[あいうえお] 午[ご] 後[ご]',
         );
 
-        deepStrictEqual(fit('高輪ゲートウェイ駅と風合瀬駅は大きい', 'たかなわゲートウェイえきとかそせえきはおおきい', { type: 'object' }), [
+        deepStrictEqual(fit('高輪ゲートウェイ駅と風合瀬駅は大きい', 'たかなわゲートウェイえきとかそせえきはおおきい', config), [
             { w: '高', r: 'たか' },
             { w: '輪', r: 'なわ' },
             { w: 'ゲートウェイ', r: 'げえとうぇい' },
@@ -148,7 +150,7 @@ describe('fitObj', () => {
     });
 
     it('passes number tests', () => {
-        deepStrictEqual(fit('５０人', 'ごじゅうにん', { type: 'object' }), [
+        deepStrictEqual(fit('５０人', 'ごじゅうにん', config), [
             { w: '５０', r: 'ごじゅう' },
             { w: '人', r: 'にん' },
         ]);
@@ -158,7 +160,7 @@ describe('fitObj', () => {
             '５０[ごじゅう] 人[にん]',
         );
 
-        deepStrictEqual(fit('五十人', 'ごじゅうにん', { type: 'object' }), [
+        deepStrictEqual(fit('五十人', 'ごじゅうにん', config), [
             { w: '五', r: 'ご' },
             { w: '十', r: 'じゅう' },
             { w: '人', r: 'にん' },
@@ -169,7 +171,7 @@ describe('fitObj', () => {
             '五[ご] 十[じゅう] 人[にん]',
         );
 
-        deepStrictEqual(fit('50人', 'ごじゅうにん', { type: 'object' }), [
+        deepStrictEqual(fit('50人', 'ごじゅうにん', config), [
             { w: '50', r: 'ごじゅう' },
             { w: '人', r: 'にん' },
         ]);
@@ -182,7 +184,7 @@ describe('fitObj', () => {
 
     it('passes reading text shorter than thw writing', () => {
         deepStrictEqual(
-            fit('工場に１０００人がいます', 'こうじょうにせんにんがいます', { type: 'object' }),
+            fit('工場に１０００人がいます', 'こうじょうにせんにんがいます', config),
             [
                 { w: '工', r: 'こう' },
                 { w: '場', r: 'じょう' },
@@ -206,7 +208,7 @@ describe('fitObj', () => {
             fit(
                 '田中さんは安足間駅と風合瀬駅と小牛田駅に行ったことがある',
                 'たなかさんはあんたろまえきとかそせえきとこごたえきにいったことがある',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '田', r: 'た' },
@@ -235,7 +237,7 @@ describe('fitObj', () => {
             fit(
                 '東江と審と安居院と生明と安栖と馬酔木と東奥と明父と旦来と流井と行町と雷と五百蔵',
                 'あがりえとあきらとあぐいとあざみとあずまいとあせびとあちおくとあぢちとあっそとあらいとあるきまちといかづちといおろい',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '東', r: 'あがり' }, { w: '江', r: 'え' },
@@ -274,7 +276,7 @@ describe('fitObj', () => {
             fit(
                 '十十です',
                 'かきくけこかきくけこかきくけこかきくけこかきくけこかきくけこかきくけこかきくけこです',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '十', r: 'か' },
@@ -292,7 +294,7 @@ describe('fitObj', () => {
             fit(
                 '人々',
                 'ひとびと',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '人', r: 'ひと' },
@@ -304,7 +306,7 @@ describe('fitObj', () => {
             fit(
                 '最近の日々の中で',
                 'さいきんのひびのなかで',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '最', r: 'さい' },
@@ -324,7 +326,7 @@ describe('fitObj', () => {
             fit(
                 '月曜日、、、楽しい',
                 'げつようびたのしい',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '月', r: 'げつ' },
@@ -340,7 +342,7 @@ describe('fitObj', () => {
             fit(
                 '日曜日だ！すごい日だ',
                 'にちようびだすごいひだ',
-                { type: 'object' },
+                config,
             ),
             [
                 { w: '日', r: 'にち' },
@@ -355,7 +357,7 @@ describe('fitObj', () => {
         );
 
         deepStrictEqual(
-            fit('田中、待って、忘れないで', 'たなかまってわすれないで', { type: 'object' }),
+            fit('田中、待って、忘れないで', 'たなかまってわすれないで', config),
             [
                 { w: '田', r: 'た' },
                 { w: '中', r: 'なか' },
@@ -369,7 +371,7 @@ describe('fitObj', () => {
         );
 
         deepStrictEqual(
-            fit('田、。、田。?.？・田', 'たでんた', { type: 'object' }),
+            fit('田、。、田。?.？・田', 'たでんた', config),
             [
                 { w: '田', r: 'た' },
                 { w: '、。、', r: '' },
@@ -380,23 +382,62 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes various length of unmatched kanji', () => {
+        deepStrictEqual(fit('人は', 'あは', config), [{ w: '人', r: 'あ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人は', 'あいは', config), [{ w: '人', r: 'あい' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人は', 'あいうは', config), [{ w: '人', r: 'あいう' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人は', 'あいうえは', config), [{ w: '人', r: 'あいうえ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人は', 'あいうえおは', config), [{ w: '人', r: 'あいうえお' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人は', 'あいうえおあは', config), [{ w: '人', r: 'あいうえおあ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あは', config), [{ w: '人人', r: 'あ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あいは', config), [{ w: '人人', r: 'あい' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あいうは', config), [{ w: '人人', r: 'あいう' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あいうえは', config), [{ w: '人人', r: 'あいうえ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あいうえおは', config), [{ w: '人人', r: 'あいうえお' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人は', 'あいうえおあは', config), [{ w: '人人', r: 'あいうえおあ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あは', config), [{ w: '人人人', r: 'あ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あいは', config), [{ w: '人人人', r: 'あい' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あいうは', config), [{ w: '人人人', r: 'あいう' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あいうえは', config), [{ w: '人人人', r: 'あいうえ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あいうえおは', config), [{ w: '人人人', r: 'あいうえお' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人人人は', 'あいうえおあは', config), [{ w: '人人人', r: 'あいうえおあ' }, { w: 'は', r: 'は' }]);
+        deepStrictEqual(fit('人', 'あ', config), [{ w: '人', r: 'あ' }]);
+        deepStrictEqual(fit('人', 'あい', config), [{ w: '人', r: 'あい' }]);
+        deepStrictEqual(fit('人', 'あいう', config), [{ w: '人', r: 'あいう' }]);
+        deepStrictEqual(fit('人', 'あいうえ', config), [{ w: '人', r: 'あいうえ' }]);
+        deepStrictEqual(fit('人', 'あいうえお', config), [{ w: '人', r: 'あいうえお' }]);
+        deepStrictEqual(fit('人', 'あいうえおあ', config), [{ w: '人', r: 'あいうえおあ' }]);
+        deepStrictEqual(fit('人人', 'あ', config), [{ w: '人人', r: 'あ' }]);
+        deepStrictEqual(fit('人人', 'あい', config), [{ w: '人人', r: 'あい' }]);
+        deepStrictEqual(fit('人人', 'あいう', config), [{ w: '人人', r: 'あいう' }]);
+        deepStrictEqual(fit('人人', 'あいうえ', config), [{ w: '人人', r: 'あいうえ' }]);
+        deepStrictEqual(fit('人人', 'あいうえお', config), [{ w: '人人', r: 'あいうえお' }]);
+        deepStrictEqual(fit('人人', 'あいうえおあ', config), [{ w: '人人', r: 'あいうえおあ' }]);
+        deepStrictEqual(fit('人人人', 'あ', config), [{ w: '人人人', r: 'あ' }]);
+        deepStrictEqual(fit('人人人', 'あい', config), [{ w: '人人人', r: 'あい' }]);
+        deepStrictEqual(fit('人人人', 'あいう', config), [{ w: '人人人', r: 'あいう' }]);
+        deepStrictEqual(fit('人人人', 'あいうえ', config), [{ w: '人人人', r: 'あいうえ' }]);
+        deepStrictEqual(fit('人人人', 'あいうえお', config), [{ w: '人人人', r: 'あいうえお' }]);
+        deepStrictEqual(fit('人人人', 'あいうえおあ', config), [{ w: '人人人', r: 'あいうえおあ' }]);
+    });
+
     it('passes some examples from JMdict', () => {
         deepStrictEqual(
-            fit('ＡＢＣ順', 'エービーシーじゅん', { type: 'object' }),
+            fit('ＡＢＣ順', 'エービーシーじゅん', config),
             [{ w: 'ＡＢＣ', r: 'エービーシー' }, { w: '順', r: 'じゅん' }],
         );
         deepStrictEqual(
-            fit('ＣＤプレイヤー', 'シーディープレイヤー', { type: 'object' }),
+            fit('ＣＤプレイヤー', 'シーディープレイヤー', config),
             [{ w: 'ＣＤ', r: 'シーディー' }, { w: 'プレイヤー', r: 'ぷれいやあ' }],
         );
 
         deepStrictEqual(
-            fit('いすゞ', 'いすず', { type: 'object' }),
+            fit('いすゞ', 'いすず', config),
             [{ w: 'いす', r: 'いす' }, { w: 'ゞ', r: 'ず' }],
         );
 
         deepStrictEqual(
-            fit('いすゞ自動車', 'いすずじどうしゃ', { type: 'object' }),
+            fit('いすゞ自動車', 'いすずじどうしゃ', config),
             [
                 { w: 'いす', r: 'いす' },
                 { w: 'ゞ', r: 'ず' },
