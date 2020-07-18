@@ -54,7 +54,7 @@ function readingMatch(s1: string, s2: string): boolean {
  * @param readingText
  */
 export function fitObj(writingText: string, readingText: string): MatchDetailed[] | null {
-    const memo: Record<number, Record<number, ReturnType<typeof fitObj>>> = {};
+    const memo: Record<string, Record<string, ReturnType<typeof fitObj>>> = {};
 
     // Validate writing
     // const isWritingValid = isJapanese(writingText);
@@ -148,13 +148,12 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
         /**
          * Load memo
          */
-        if (memo[writingIndex]
-            && Object.prototype.hasOwnProperty.call(memo[writingIndex], reading)) {
-            return memo[writingIndex][readingIndex];
+        if (memo[writing] && Object.prototype.hasOwnProperty.call(memo[writing], reading)) {
+            return memo[writing][reading];
         }
 
         if (!Object.prototype.hasOwnProperty.call(memo, writing)) {
-            memo[writingIndex] = {};
+            memo[writing] = {};
         }
 
         if (writing.length !== 0 && reading.length === 0) return null;
@@ -192,7 +191,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(reading, readingLibItem))
                 ? 1 : 0;
 
-            memo[writingIndex][readingIndex] = [
+            memo[writing][reading] = [
                 {
                     w: writing,
                     r: reading,
@@ -202,7 +201,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 },
             ];
 
-            return memo[writingIndex][readingIndex];
+            return memo[writing][reading];
         }
 
         /**
@@ -211,7 +210,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * example: writing = 'ボーブは', reading = 'ぼーぶは'
          */
         if (isWritingKana && writingHiragana === readingHiragana) {
-            memo[writingIndex][readingIndex] = [
+            memo[writing][reading] = [
                 {
                     w: writing,
                     r: readingHiragana,
@@ -221,7 +220,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 },
             ];
 
-            return memo[writingIndex][readingIndex];
+            return memo[writing][reading];
         }
 
         /**
@@ -254,11 +253,11 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             );
 
             if (next === null) {
-                memo[writingIndex][readingIndex] = null;
+                memo[writing][reading] = null;
                 return null;
             }
 
-            memo[writingIndex][readingIndex] = [
+            memo[writing][reading] = [
                 {
                     w: writingArray.slice(writingIndex, writingIndex + matchCounter).join(''),
                     r: toHiragana(readingArray.slice(readingIndex, readingIndex + matchCounter).join('')),
@@ -269,7 +268,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 ...next,
             ];
 
-            return memo[writingIndex][readingIndex];
+            return memo[writing][reading];
         }
 
         // TODO: Allow space in the reading
@@ -284,7 +283,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             );
 
             if (next === null) {
-                memo[writingIndex][readingIndex] = null;
+                memo[writing][reading] = null;
                 return null;
             }
 
@@ -292,7 +291,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
             if (next[0].silent) {
                 const chunk = next.slice(0, 1)[0];
 
-                memo[writingIndex][readingIndex] = [
+                memo[writing][reading] = [
                     {
                         w: writingArray[writingIndex] + chunk.w,
                         r: '',
@@ -303,7 +302,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                     ...next.slice(1),
                 ];
             } else {
-                memo[writingIndex][readingIndex] = [
+                memo[writing][reading] = [
                     {
                         w: writingArray[writingIndex],
                         r: '',
@@ -315,7 +314,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 ];
             }
 
-            return memo[writingIndex][readingIndex];
+            return memo[writing][reading];
         }
 
         /**
@@ -325,7 +324,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
          * writing = 'まで漢字', reading = 'はでかんじ'
          */
         if (char0data.kana && writingHiragana !== readingHiragana) {
-            memo[writingIndex][readingIndex] = null;
+            memo[writing][reading] = null;
             return null;
         }
 
@@ -478,7 +477,7 @@ export function fitObj(writingText: string, readingText: string): MatchDetailed[
                 }
             });
 
-            memo[writingIndex][readingIndex] = currentResult;
+            memo[writing][reading] = currentResult;
             return currentResult;
         }
     }
