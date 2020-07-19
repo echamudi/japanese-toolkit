@@ -493,6 +493,14 @@ export function fit(writing: string, reading: string, config?: FitConfig):
 
     if (config?.type === 'object') {
         if (fitObjResult === null) return null;
+
+        if (config.kanaReading === false) {
+            return fitObjResult.map((el) => {
+                if (el.isKanji) return { w: el.w, r: el.r };
+                return { w: el.w };
+            });
+        }
+
         return fitObjResult.map((el) => ({ w: el.w, r: el.r }));
     }
 
