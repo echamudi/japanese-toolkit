@@ -483,7 +483,7 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
     return executor(0, 0);
 }
 
-export function fit(writing: string, reading: string, config: {type: 'object'}): FuriganaMatch[] | null;
+export function fit(writing: string, reading: string, config: {type: 'object', kanaReading?: boolean }): FuriganaMatch[] | null;
 export function fit(writing: string, reading: string, config: {type: 'string'}): string | null;
 export function fit(writing: string, reading: string): string | null;
 
