@@ -104,12 +104,6 @@ kyarakuta.every('アパート', [
 ]);
 // Output: true
 
-kyarakuta.every('アパート', [
-  { block: 'Hiragana' },
-  { block: 'Katakana' }
-]);
-// Output: true
-
 kyarakuta.every('アパート Apartment', [
   { block: 'Hiragana' },
   { block: 'Katakana' }
