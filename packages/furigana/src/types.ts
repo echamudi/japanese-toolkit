@@ -14,7 +14,7 @@ export interface FuriganaMatch {
     /**
      * Reading
      */
-    r: string,
+    r?: string,
 }
 
 /**
