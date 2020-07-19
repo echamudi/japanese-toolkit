@@ -45,7 +45,21 @@ export interface FuriganaMatchDetailed extends FuriganaMatch {
 }
 
 export interface FitConfig {
-    type?: 'object' | 'string'
+    /**
+     * 'object' => [ { w: '下', r: 'くだ' }, { w: 'る', r: 'る' } ]
+     *
+     * 'string' => "下[くだ]る"
+     */
+    type?: 'object' | 'string',
+
+    /**
+     * 'true' => [ { w: '下', r: 'くだ' }, { w: 'る', r: 'る' } ]
+     *
+     * 'false' => [ { w: '下', r: 'くだ' }, { w: 'る' } ]
+     *
+     * Works only when the type is 'object'. If the type is 'string', it's always false.
+     */
+    kanaReading?: boolean
 }
 
 export interface CharDataItem {
