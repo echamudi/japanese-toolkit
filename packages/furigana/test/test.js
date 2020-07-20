@@ -517,6 +517,30 @@ describe('fitObj', () => {
         );
     });
 
+    it('passes test kanaReading: false', () => {
+        deepStrictEqual(
+            fit('下り電車が', 'くだりでんしゃが', { type: 'object', kanaReading: false }),
+            [
+                { w: '下', r: 'くだ' },
+                { w: 'り' },
+                { w: '電', r: 'でん' },
+                { w: '車', r: 'しゃ' },
+                { w: 'が' },
+            ],
+        );
+
+        deepStrictEqual(
+            fit('下り電車が', 'くだりでんしゃが', { type: 'object', kanaReading: true }),
+            [
+                { w: '下', r: 'くだ' },
+                { w: 'り', r: 'り' },
+                { w: '電', r: 'でん' },
+                { w: '車', r: 'しゃ' },
+                { w: 'が', r: 'が' },
+            ],
+        );
+    });
+
     // Known issues
     // console.log(fit('今日50,000人がいます', 'きょうごじゅうまんにんがいます', config));
     // console.log(fit('Ｗ', 'ウェブ', config));
