@@ -9,12 +9,11 @@
 import {
     isKana, toHiragana, isCJK, getBlockNames, BlockStats, isWithinRanges,
 } from 'kyarakuta';
-import * as fs from 'fs';
-import { join } from 'path';
-
 import {
     FitConfig, FuriganaMatchDetailed, FuriganaMatch, CharDataItem,
 } from './types';
+
+import { ReadingLib } from './gen/reading-lib';
 
 const dakuten: {[x: string]: string} = JSON.parse(`{
     "が": "か", "ぎ": "き", "ぐ": "く", "げ": "け", "ご": "こ",
@@ -26,10 +25,6 @@ const dakuten: {[x: string]: string} = JSON.parse(`{
 const handakuten: {[x: string]: string} = JSON.parse(`{
     "ぱ": "は", "ぴ": "ひ", "ぷ": "ふ", "ぺ": "へ", "ぽ": "ほ"
 }`);
-
-const readingLib = JSON.parse(
-    fs.readFileSync(join(__dirname, '../data/readings.json')).toString(),
-) as {[x: string]: string[]};
 
 /**
  * If s1 is ひょう and s2 is ひょう, ぴょう, or びょう, return true
@@ -198,7 +193,7 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
                     || (char0data.iterationKana && (readingArray.length - readingIndex) === 1)
                 )
         ) {
-            const r: string[] = readingLib[char0] ?? [];
+            const r: string[] = ReadingLib[char0] ?? [];
             const readingSlice = readingArray.slice(readingIndex).join('');
 
             const match: 0 | 1 = r.some((readingLibItem) => readingMatch(
@@ -330,8 +325,8 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
             readingSlice: string
         }[] = [];
 
-        if (readingLib[writingArray[writingIndex]] !== undefined) {
-            readingLib[writingArray[writingIndex]].forEach((readingLibItem) => {
+        if (ReadingLib[writingArray[writingIndex]] !== undefined) {
+            ReadingLib[writingArray[writingIndex]].forEach((readingLibItem) => {
                 const readingSlice = readingArray.slice(
                     readingIndex,
                     readingIndex + readingLibItem.length,

@@ -1,3 +1,4 @@
+// @ts-check
 // eslint-disable-next-line import/no-extraneous-dependencies
 const kanji = require('kanji');
 const kyarakuta = require('kyarakuta');
@@ -36,8 +37,15 @@ kanji.all.list().forEach((char) => {
     fin[char] = [...new Set(readingsArray)];
 });
 
-const dir = path.resolve(__dirname, '../dist/data');
-const filename = path.resolve(dir, 'readings.json');
+const dir = path.resolve(__dirname, '../src/gen');
+const filename = path.resolve(dir, 'reading-lib.ts');
 
+const ts = `
+// Generated code, don't edit this file
+
+export const ReadingLib: Record<string, string[]> = JSON.parse(
+    '${JSON.stringify(fin)}',
+);
+`;
 fs.mkdirSync(dir, { recursive: true });
-fs.writeFileSync(filename, JSON.stringify(fin));
+fs.writeFileSync(filename, ts);
