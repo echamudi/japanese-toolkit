@@ -14,17 +14,7 @@ import {
 } from './types';
 
 import { ReadingLib } from './gen/reading-lib';
-
-const dakuten: {[x: string]: string} = JSON.parse(`{
-    "が": "か", "ぎ": "き", "ぐ": "く", "げ": "け", "ご": "こ",
-    "ざ": "さ", "じ": "し", "ず": "す", "ぜ": "せ", "ぞ": "そ",
-    "だ": "た", "ぢ": "ち", "づ": "つ", "で": "て", "ど": "と",
-    "ば": "は", "び": "ひ", "ぶ": "ふ", "べ": "へ", "ぼ": "ほ"
-}`);
-
-const handakuten: {[x: string]: string} = JSON.parse(`{
-    "ぱ": "は", "ぴ": "ひ", "ぷ": "ふ", "ぺ": "へ", "ぽ": "ほ"
-}`);
+import { Dakuten, Handakuten } from './lib';
 
 /**
  * If s1 is ひょう and s2 is ひょう, ぴょう, or びょう, return true
@@ -36,8 +26,8 @@ function readingMatch(s1: string, s2: string): boolean {
     if (s1 === s2) return true;
 
     const [s1Mod, s2Mod] = [s1, s2].map((reading) => {
-        if (dakuten[reading[0]]) return dakuten[reading[0]] + reading.slice(1);
-        if (handakuten[reading[0]]) return handakuten[reading[0]] + reading.slice(1);
+        if (Dakuten[reading[0]]) return Dakuten[reading[0]] + reading.slice(1);
+        if (Handakuten[reading[0]]) return Handakuten[reading[0]] + reading.slice(1);
         return reading;
     });
 
