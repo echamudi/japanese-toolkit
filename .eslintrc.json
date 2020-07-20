@@ -56,6 +56,10 @@
             "files": [
                 "**/*.ts"
             ],
+            "excludedFiles": [
+                "packages/**/lib/gen/**/*.ts",
+                "packages/**/src/gen/**/*.ts"
+            ],
             "parser": "@typescript-eslint/parser",
             "extends": [
                 "plugin:@typescript-eslint/eslint-recommended",
