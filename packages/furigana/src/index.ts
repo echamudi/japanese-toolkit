@@ -326,7 +326,7 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
         }[] = [];
 
         if (ReadingLib[writingArray[writingIndex]] !== undefined) {
-            ReadingLib[writingArray[writingIndex]].forEach((readingLibItem) => {
+            ReadingLib[writingArray[writingIndex]].forEach((readingLibItem: string) => {
                 const readingSlice = readingArray.slice(
                     readingIndex,
                     readingIndex + readingLibItem.length,
