@@ -73,7 +73,7 @@ export function getCharData(stringArr: string[]): Record<string, CharDataItem> {
             }
 
             // Exceptions: iteration marks are not silent
-            silent = silent && !iterationKana && !iterationKanji && cp !== 12294;
+            silent = silent && !iterationKana && !iterationKanji && cp !== 12294; // 〆
         }
 
         charData[char] = {
