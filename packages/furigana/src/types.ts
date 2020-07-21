@@ -94,3 +94,5 @@ export interface CharDataItem {
      */
     iterationKanji: boolean
 }
+
+export type CharData = Record<string, CharDataItem>;

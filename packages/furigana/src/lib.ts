@@ -1,7 +1,7 @@
 import {
     BlockStats, getBlockNames, isCJK, isKana, isWithinRanges,
 } from 'kyarakuta';
-import { CharDataItem } from './types';
+import { CharData, CharDataItem } from './types';
 
 export const Dakuten: Record<string, string> = JSON.parse(`{
     "が": "か", "ぎ": "き", "ぐ": "く", "げ": "け", "ご": "こ",
@@ -19,14 +19,13 @@ export const Handakuten: Record<string, string> = JSON.parse(`{
  * The data will be alive during the process.
  * Use flushCharData() to clear it.
  */
-let charData: Record<string, CharDataItem> = {};
+let charData: CharData = {};
 
 export function getCharData(stringArr: string[]): Record<string, CharDataItem> {
-    const writingBlocks = getBlockNames(stringArr.join());
-
-    writingBlocks.forEach((charDetails) => {
-        const char = charDetails.char;
+    stringArr.forEach((char) => {
         if (charData[char]) return;
+
+        const charDetails = getBlockNames(char)[0];
 
         const cp = char.codePointAt(0) as number;
         const iterationKana = cp === 12445 || cp === 12446 || cp === 12541 || cp === 12542;
