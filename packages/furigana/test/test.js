@@ -517,7 +517,7 @@ describe('fitObj', () => {
         );
     });
 
-    it('passes test kanaReading: false', () => {
+    it('passes test "kanaReading: false"', () => {
         deepStrictEqual(
             fit('下り電車が', 'くだりでんしゃが', { type: 'object', kanaReading: false }),
             [
@@ -530,14 +530,18 @@ describe('fitObj', () => {
         );
 
         deepStrictEqual(
-            fit('下り電車が', 'くだりでんしゃが', { type: 'object', kanaReading: true }),
+            fit('佐々木さん', 'ささきさん', { type: 'object', kanaReading: false }),
             [
-                { w: '下', r: 'くだ' },
-                { w: 'り', r: 'り' },
-                { w: '電', r: 'でん' },
-                { w: '車', r: 'しゃ' },
-                { w: 'が', r: 'が' },
+                { w: '佐', r: 'さ' },
+                { w: '々', r: 'さ' },
+                { w: '木', r: 'き' },
+                { w: 'さん' },
             ],
+        );
+
+        deepStrictEqual(
+            fit('あゝさ', 'ああさ', { type: 'object', kanaReading: false }),
+            [{ w: 'あ' }, { w: 'ゝ', r: 'あ' }, { w: 'さ' }],
         );
     });
 
