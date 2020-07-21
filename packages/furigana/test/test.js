@@ -423,6 +423,10 @@ describe('fitObj', () => {
 
     it('passes some examples from JMdict', () => {
         deepStrictEqual(
+            fit('〆谷', 'しめたに', config),
+            [{ w: '〆', r: 'しめ' }, { w: '谷', r: 'たに' }],
+        );
+        deepStrictEqual(
             fit('ＡＢＣ順', 'エービーシーじゅん', config),
             [{ w: 'ＡＢＣ', r: 'エービーシー' }, { w: '順', r: 'じゅん' }],
         );
