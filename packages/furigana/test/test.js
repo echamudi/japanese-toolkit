@@ -547,6 +547,11 @@ describe('fitObj', () => {
             fit('あゝさ', 'ああさ', { type: 'object', kanaReading: false }),
             [{ w: 'あ' }, { w: 'ゝ', r: 'あ' }, { w: 'さ' }],
         );
+
+        deepStrictEqual(
+            fit('プー太郎', 'プーたろう', { type: 'object', kanaReading: false }),
+            [{ w: 'プー' }, { w: '太', r: 'た' }, { w: '郎', r: 'ろう' }],
+        );
     });
 
     // Known issues
