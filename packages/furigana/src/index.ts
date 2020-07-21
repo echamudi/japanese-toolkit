@@ -103,7 +103,7 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
             }
 
             // Exceptions: iteration marks are not silent
-            silent = silent && !iterationKana && !iterationKanji;
+            silent = silent && !iterationKana && !iterationKanji && cp !== 12294;
         }
 
         charData[char] = {
