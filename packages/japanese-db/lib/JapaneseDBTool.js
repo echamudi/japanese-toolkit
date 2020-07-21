@@ -127,7 +127,7 @@ class JapaneseDBTool {
                                     let furiganaString = null;
 
                                     try {
-                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object' }));
+                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object', kanaReading: false }));
                                         if (furiganaString === 'null') furiganaString = null;
                                     } catch {
                                         furiganaString = null;
@@ -322,7 +322,7 @@ class JapaneseDBTool {
                                     let furiganaString = null;
 
                                     try {
-                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object' }));
+                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object', kanaReading: false }));
                                         if (furiganaString === 'null') furiganaString = null;
                                     } catch {
                                         furiganaString = null;
