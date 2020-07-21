@@ -14,9 +14,15 @@ export const Handakuten: Record<string, string> = JSON.parse(`{
     "ぱ": "は", "ぴ": "ひ", "ぷ": "ふ", "ぺ": "へ", "ぽ": "ほ"
 }`);
 
+/**
+ * Char data collection.
+ * The data will be alive during the process.
+ * Use flushCharData() to clear it.
+ */
+let charData: Record<string, CharDataItem> = {};
+
 export function getCharData(stringArr: string[]): Record<string, CharDataItem> {
     const writingBlocks = getBlockNames(stringArr.join());
-    const charData: Record<string, CharDataItem> = {};
 
     writingBlocks.forEach((charDetails) => {
         const char = charDetails.char;
@@ -85,4 +91,8 @@ export function getCharData(stringArr: string[]): Record<string, CharDataItem> {
     });
 
     return charData;
+}
+
+export function flushCharData(): void {
+    charData = {};
 }

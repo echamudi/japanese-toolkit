@@ -60,7 +60,7 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
     Object.freeze(readingArray);
 
     const charData = getCharData(writingArray);
-    Object.freeze(charData);
+    // Object.freeze(charData);
 
     /**
      * @param writingIndex Start pointer of writing array
