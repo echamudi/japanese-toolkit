@@ -7,14 +7,14 @@
 
 // import * as kanji from 'kanji';
 import {
-    isKana, toHiragana, isCJK, getBlockNames, BlockStats, isWithinRanges,
+    isKana, toHiragana,
 } from 'kyarakuta';
 import {
-    FitConfig, FuriganaMatchDetailed, FuriganaMatch, CharDataItem,
+    FitConfig, FuriganaMatchDetailed, FuriganaMatch,
 } from './types';
 
 import { ReadingLib } from './gen/reading-lib';
-import { Dakuten, Handakuten } from './lib';
+import { Dakuten, Handakuten, getCharData } from './lib';
 
 /**
  * If s1 is ひょう and s2 is ひょう, ぴょう, or びょう, return true
@@ -49,78 +49,6 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
     const isReadingValid = isKana(readingText) || readingText === '';
     if (!isReadingValid) throw new Error('Currently, reading argument accept kana only.');
 
-    const writingBlocks = getBlockNames(writingText);
-
-    const charData: Record<string, CharDataItem> = {};
-
-    writingBlocks.forEach((charDetails) => {
-        const char = charDetails.char;
-        if (charData[char]) return;
-
-        const cp = char.codePointAt(0) as number;
-        const iterationKana = cp === 12445 || cp === 12446 || cp === 12541 || cp === 12542;
-        const iterationKanji = cp === 12293;
-        const cjk = isCJK(char);
-        const kana = isKana(char) && !(iterationKana || iterationKanji);
-        const block = charDetails.block?.toLowerCase();
-        const subblock = charDetails.subblock?.toLowerCase();
-        let silent = false;
-
-        /**
-         * Get silent information
-         */
-        {
-            silent = silent || isWithinRanges(char, [[
-                // Some Fullwidth ASCII variants (？,！, etc)
-                [0xFF01, 0xFF0F],
-                [0xFF1A, 0xFF20],
-                [0xFF3B, 0xFF40],
-                [0xFF5B, 0xFF5E],
-            ]]);
-
-            // If the block name has the following labels, assume it silent
-            if (block) {
-                silent = !!(silent
-                || BlockStats[block].sym
-                || BlockStats[block].pun
-                || BlockStats[block].mrk
-                || BlockStats[block].bra
-                || BlockStats[block].ann
-                || BlockStats[block].str
-                || BlockStats[block].sig);
-            }
-
-            // If the subblock name has the following labels, assume it silent
-            if (subblock) {
-                silent = !!(silent
-                || BlockStats[subblock].sym
-                || BlockStats[subblock].pun
-                || BlockStats[subblock].mrk
-                || BlockStats[subblock].bra
-                || BlockStats[subblock].ann
-                || BlockStats[subblock].str
-                || BlockStats[subblock].sig);
-            }
-
-            // Exceptions: iteration marks are not silent
-            silent = silent && !iterationKana && !iterationKanji && cp !== 12294;
-        }
-
-        charData[char] = {
-            char,
-            cp,
-            cjk,
-            kana,
-            silent,
-            iterationKana,
-            iterationKanji,
-        };
-
-        Object.freeze(charData[char]);
-    });
-
-    Object.freeze(charData);
-
     const writingArray = [...writingText];
     const readingArray = [...readingText];
     const writingLength = writingArray.length;
@@ -130,6 +58,9 @@ export function fitObj(writingText: string, readingText: string): FuriganaMatchD
 
     Object.freeze(writingArray);
     Object.freeze(readingArray);
+
+    const charData = getCharData(writingArray);
+    Object.freeze(charData);
 
     /**
      * @param writingIndex Start pointer of writing array
