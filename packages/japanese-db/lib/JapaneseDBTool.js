@@ -119,8 +119,7 @@ class JapaneseDBTool {
                                     const reb = rEle.reb[0];
 
                                     /** @type {number} */
-                                    const priPoint = kElePriPoint > rElePriPoints[reb]
-                                        ? kElePriPoint : rElePriPoints[reb];
+                                    const priPoint = Math.max(kElePriPoint, rElePriPoints[reb]);
 
                                     // Get furigana tokens
                                     /** @type {string|null} */
