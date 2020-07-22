@@ -138,17 +138,7 @@ class JapaneseDBTool {
 
                                     // If the reading has no kanji tag
                                     if (Object.hasOwnProperty.call(rEle, 're_nokanji')) {
-                                        vocabRows.push(
-                                            {
-                                                source: 1,
-                                                id: entSeq,
-                                                kanji: null,
-                                                reading: reb,
-                                                furigana: null,
-                                                priPoint,
-                                                meaning: '',
-                                            },
-                                        );
+                                        // Skip it, we will add it later.
 
                                     // If the reading has reading restriction to the kanji
                                     } else if (Object.hasOwnProperty.call(rEle, 're_restr')) {
@@ -182,6 +172,28 @@ class JapaneseDBTool {
                                         );
                                     }
                                 });
+                            });
+
+                            // Look for readings that are not bound with kanji
+                            jmdictEntry.r_ele.forEach((rEle) => {
+                                if (Object.hasOwnProperty.call(rEle, 're_nokanji')) {
+                                    const reb = rEle.reb[0];
+
+                                    /** @type {number} */
+                                    const priPoint = rElePriPoints[reb];
+
+                                    vocabRows.push(
+                                        {
+                                            source: 1,
+                                            id: entSeq,
+                                            kanji: null,
+                                            reading: reb,
+                                            furigana: null,
+                                            priPoint,
+                                            meaning: '',
+                                        },
+                                    );
+                                }
                             });
                         }
 
