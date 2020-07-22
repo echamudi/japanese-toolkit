@@ -5,6 +5,17 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+/** @typedef {{
+ source: 1,
+ id: number,
+ kanji: string,
+ reading: string,
+ furigana: string|null,
+ priPoint: number,
+ meaning: string}} DictIndexRow */
+
+/** */
+
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 // const console = require('console');
@@ -89,14 +100,7 @@ class JapaneseDBTool {
                         const entSeq = jmdictEntry.ent_seq[0];
                         // console.log(`==${entSeq}==`);
 
-                        /** @type {{
-                        source: 1,
-                        id: number,
-                        kanji: string,
-                        reading: string,
-                        furigana: string|null,
-                        priPoint: number,
-                        meaning: string}[]} */
+                        /** @type {DictIndexRow[]} */
                         const vocabRows = [];
 
                         // Calculate reading element priority points
