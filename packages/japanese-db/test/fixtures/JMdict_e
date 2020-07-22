@@ -719,6 +719,46 @@ various information fields.
 </sense>
 </entry>
 <entry>
+<ent_seq>1571170</ent_seq>
+<k_ele>
+<keb>臍</keb>
+<ke_pri>ichi1</ke_pri>
+</k_ele>
+<k_ele>
+<keb>𦜝</keb>
+</k_ele>
+<r_ele>
+<reb>へそ</reb>
+<re_pri>ichi1</re_pri>
+</r_ele>
+<r_ele>
+<reb>ほぞ</reb>
+</r_ele>
+<r_ele>
+<reb>ヘソ</reb>
+<re_nokanji/>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<gloss>navel</gloss>
+<gloss>belly button</gloss>
+</sense>
+<sense>
+<stagr>へそ</stagr>
+<stagr>ヘソ</stagr>
+<misc>&uk;</misc>
+<gloss>protrusion or depression in the middle of an object</gloss>
+</sense>
+<sense>
+<misc>&uk;</misc>
+<gloss>center</gloss>
+<gloss>centre</gloss>
+<gloss>most important part</gloss>
+<gloss>main point</gloss>
+</sense>
+</entry>
+<entry>
 <ent_seq>1283860</ent_seq>
 <k_ele>
 <keb>高等学校</keb>
