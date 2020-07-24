@@ -54,6 +54,10 @@ JMdict, JMnedict, and KANJIDIC License:
 
 > Copyright (C) 2017 The Electronic Dictionary Research and Development Group. Creative Commons Attribution-ShareAlike Licence (V3.0)
 
+Kanji Alive Licesnse:
+
+> Copyright Harumi Hibino Lory & Arno Bosse (Creative Common Attribution International 4.0 license)
+
 Additional licenses for KANJIDIC:
 
 > Jack HALPERN: The SKIP codes. Creative Commons Attribution-ShareAlike 4.0 International
