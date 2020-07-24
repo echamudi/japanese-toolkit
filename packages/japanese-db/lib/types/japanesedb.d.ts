@@ -112,7 +112,7 @@ export interface KanjiAliveRow {
   kunyomi: string | null,
   onyomi_ja: string | null,
   onyomi: string | null,
-  examples: string,
+  examples: [string, string][],
   radical: string | null,
   rad_order: number,
   rad_stroke: number,

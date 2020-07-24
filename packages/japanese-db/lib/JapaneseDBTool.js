@@ -6,6 +6,7 @@
  */
 
 /** @typedef {import("./types/japanesedb").DictIndexRow} DictIndexRow */
+/** @typedef {import("./types/japanesedb").KanjiAliveRow} KanjiAliveRow */
 
 /** */
 
@@ -15,6 +16,7 @@ const fs = require('fs');
 const kanji = require('kanji');
 const readline = require('readline');
 const furigana = require('furigana');
+const papaparse = require('papaparse');
 const JMdictUtil = require('./JMdictUtil');
 const JMnedictUtil = require('./JMnedictUtil');
 const KanjidicUtil = require('./KanjidicUtil');
@@ -709,6 +711,94 @@ class JapaneseDBTool {
                         db.run('INSERT INTO related_variants VALUES (?,?)',
                             char,
                             JSON.stringify(variants[char]));
+                    });
+
+                    db.run('END');
+                });
+
+                // kanjialive
+                db.serialize(() => {
+                    process.stdout.write('Loading KanjiAlive\n');
+                    db.run('BEGIN');
+
+                    db.run(`CREATE TABLE kanjialive (
+                        kanji TEXT,
+                        kname TEXT,
+                        kstroke INTEGER,
+                        kmeaning TEXT,
+                        kgrade INTEGER,
+                        kunyomi_ja TEXT,
+                        kunyomi TEXT,
+                        onyomi_ja TEXT,
+                        onyomi TEXT,
+                        examples TEXT,
+                        radical TEXT,
+                        rad_order INTEGER,
+                        rad_stroke INTEGER,
+                        rad_name_ja TEXT,
+                        rad_name TEXT,
+                        rad_meaning TEXT,
+                        rad_position_ja TEXT,
+                        rad_position TEXT,
+                        PRIMARY KEY(kanji)
+                    )`);
+
+                    /** @type {Array<Record<string, string>>} */
+                    const kaRaw = papaparse.parse(fs.readFileSync(sources.kanjialive, 'utf-8'), {
+                        header: true,
+                    }).data;
+
+                    /**
+                     * @param {string} x
+                     * @returns {string|null}
+                     */
+                    const checkNull = (x) => {
+                        if (x === '' || x === 'n/a') return null;
+                        return x;
+                    };
+
+                    /** @type {KanjiAliveRow[]} */
+                    const ka = kaRaw.map((kaRawItem) => ({
+                        kanji: kaRawItem.kanji,
+                        kname: kaRawItem.kname,
+                        kstroke: parseInt(kaRawItem.kstroke, 10),
+                        kmeaning: kaRawItem.kmeaning,
+                        kgrade: parseInt(kaRawItem.kgrade, 10),
+                        kunyomi_ja: checkNull(kaRawItem.kunyomi_ja),
+                        kunyomi: checkNull(kaRawItem.kunyomi),
+                        onyomi_ja: checkNull(kaRawItem.onyomi_ja),
+                        onyomi: checkNull(kaRawItem.onyomi),
+                        examples: JSON.parse(kaRawItem.examples),
+                        radical: checkNull(kaRawItem.radical),
+                        rad_order: parseInt(kaRawItem.rad_order, 10),
+                        rad_stroke: parseInt(kaRawItem.rad_stroke, 10),
+                        rad_name_ja: kaRawItem.rad_name_ja,
+                        rad_name: kaRawItem.rad_name,
+                        rad_meaning: kaRawItem.rad_meaning,
+                        rad_position_ja: checkNull(kaRawItem.rad_position_ja),
+                        rad_position: checkNull(kaRawItem.rad_position),
+                    }));
+
+                    ka.forEach((el) => {
+                        db.run('INSERT INTO kanjialive VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                            el.kanji,
+                            el.kname,
+                            el.kstroke,
+                            el.kmeaning,
+                            el.kgrade,
+                            el.kunyomi_ja,
+                            el.kunyomi,
+                            el.onyomi_ja,
+                            el.onyomi,
+                            JSON.stringify(el.examples),
+                            el.radical,
+                            el.rad_order,
+                            el.rad_stroke,
+                            el.rad_name_ja,
+                            el.rad_name,
+                            el.rad_meaning,
+                            el.rad_position_ja,
+                            el.rad_position);
                     });
 
                     db.run('END');
