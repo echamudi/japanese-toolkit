@@ -1,6 +1,6 @@
 {
   "name": "japanese-db",
-  "version": "0.15.2",
+  "version": "0.16.0",
   "description": "Generate Japanese dictionary SQLite database from open source materials",
   "main": "./lib/index.js",
   "scripts": {
@@ -36,8 +36,8 @@
   ],
   "dependencies": {
     "commander": "^5.1.0",
-    "furigana": "^0.15.2",
-    "kanji": "^0.15.1",
+    "furigana": "^0.16.0",
+    "kanji": "^0.16.0",
     "papaparse": "^5.2.0",
     "sqlite3": "^4.2.0",
     "xml2json": "^0.12.0"
