@@ -215,7 +215,7 @@ export interface r_ele {
    * on occasions a priority is only associated with a particular
    * kanji/reading pair.
    */
-  re_pri: string[]
+  re_pri?: string[]
 }
 
 /**
