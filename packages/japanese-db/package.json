@@ -38,6 +38,7 @@
     "commander": "^5.1.0",
     "furigana": "^0.15.2",
     "kanji": "^0.15.1",
+    "papaparse": "^5.2.0",
     "sqlite3": "^4.2.0",
     "xml2json": "^0.12.0"
   },
