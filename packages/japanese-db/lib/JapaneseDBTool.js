@@ -5,14 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-/** @typedef {{
- source: 1,
- id: number,
- kanji: string,
- reading: string,
- furigana: string|null,
- priPoint: number,
- meaning: string}} DictIndexRow */
+/** @typedef {import("./types/japanesedb").DictIndexRow} DictIndexRow */
 
 /** */
 
@@ -61,7 +54,8 @@ class JapaneseDBTool {
                     furigana TEXT,
                     pri_point INTEGER,
                     meaning TEXT,
-                    PRIMARY KEY(source, id, kanji,reading)
+                    tags TEXT,
+                    PRIMARY KEY(source, id, kanji, reading)
                     )`);
 
                     db.run('END');
@@ -118,6 +112,9 @@ class JapaneseDBTool {
                                 const keb = kEle.keb[0];
                                 const kElePriPoint = JMdictUtil.priCalc(kEle.ke_pri);
 
+                                // Get tags
+                                const kTags = kEle.ke_pri ? [...kEle.ke_pri] : [];
+
                                 jmdictEntry.r_ele.forEach((rEle) => {
                                     /** @type {string} kanji reading */
                                     const reb = rEle.reb[0];
@@ -125,13 +122,25 @@ class JapaneseDBTool {
                                     /** @type {number} */
                                     const priPoint = Math.max(kElePriPoint, rElePriPoints[reb]);
 
+                                    // Combine kanji tags with reading tags
+                                    const rTags = rEle.re_pri
+                                        ? [...kTags, ...rEle.re_pri] : [...kTags];
+
+                                    /** @type {string[]|null} */
+                                    let tags;
+
+                                    if (rTags.length > 0) {
+                                        // Remove duplicates
+                                        tags = [...new Set(rTags)];
+                                    } else {
+                                        tags = null;
+                                    }
+
                                     // Get furigana tokens
-                                    /** @type {string|null} */
                                     let furiganaString = null;
 
                                     try {
-                                        furiganaString = JSON.stringify(furigana.fit(keb, reb, { type: 'object', kanaReading: false }));
-                                        if (furiganaString === 'null') furiganaString = null;
+                                        furiganaString = furigana.fit(keb, reb, { type: 'object', kanaReading: false });
                                     } catch {
                                         furiganaString = null;
                                     }
@@ -150,13 +159,14 @@ class JapaneseDBTool {
                                                     kanji: keb,
                                                     reading: reb,
                                                     furigana: furiganaString,
-                                                    priPoint,
+                                                    pri_point: priPoint,
                                                     meaning: '',
+                                                    tags,
                                                 },
                                             );
                                         }
 
-                                    // If the reading doesn't have tags above,
+                                    // If the reading doesn't have properties above,
                                     // it applies to all kanji
                                     } else {
                                         vocabRows.push(
@@ -166,8 +176,9 @@ class JapaneseDBTool {
                                                 kanji: keb,
                                                 reading: reb,
                                                 furigana: furiganaString,
-                                                priPoint,
+                                                pri_point: priPoint,
                                                 meaning: '',
+                                                tags,
                                             },
                                         );
                                     }
@@ -177,6 +188,7 @@ class JapaneseDBTool {
                             // Look for readings that are not bound with kanji
                             jmdictEntry.r_ele.forEach((rEle) => {
                                 if (Object.hasOwnProperty.call(rEle, 're_nokanji')) {
+                                    const tags = rEle.re_pri ? [...rEle.re_pri] : null;
                                     const reb = rEle.reb[0];
 
                                     /** @type {number} */
@@ -189,8 +201,9 @@ class JapaneseDBTool {
                                             kanji: null,
                                             reading: reb,
                                             furigana: null,
-                                            priPoint,
+                                            pri_point: priPoint,
                                             meaning: '',
+                                            tags,
                                         },
                                     );
                                 }
@@ -200,6 +213,8 @@ class JapaneseDBTool {
                         // If the vocab doesn't have kanji element
                         if (!jmdictEntry.k_ele) {
                             jmdictEntry.r_ele.forEach((rEle) => {
+                                const tags = rEle.re_pri ? [...rEle.re_pri] : null;
+
                                 vocabRows.push(
                                     {
                                         source: 1,
@@ -207,8 +222,9 @@ class JapaneseDBTool {
                                         kanji: null,
                                         reading: rEle.reb[0],
                                         furigana: null,
-                                        priPoint: rElePriPoints[rEle.reb[0]],
+                                        pri_point: rElePriPoints[rEle.reb[0]],
                                         meaning: '',
+                                        tags,
                                     },
                                 );
                             });
@@ -240,14 +256,15 @@ class JapaneseDBTool {
 
                         // Put in db
                         vocabRows.forEach((row) => {
-                            db.run('INSERT INTO dict_index VALUES (?, ?, ?, ?, ?, ?, ?)', [
+                            db.run('INSERT INTO dict_index VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [
                                 row.source,
                                 row.id,
                                 row.kanji,
                                 row.reading,
-                                row.furigana,
-                                row.priPoint,
+                                row.furigana ? JSON.stringify(row.furigana) : row.furigana,
+                                row.pri_point,
                                 row.meaning,
+                                row.tags ? JSON.stringify(row.tags) : row.tags,
                             ]);
 
                             readline.clearLine(process.stdout, 0);

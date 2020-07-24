@@ -36,7 +36,8 @@ export interface DictIndexRow {
   reading: string,
   furigana: FuriganaMatch[] | null,
   pri_point: number | null,
-  meaning: string
+  meaning: string,
+  tags: string[] | null
 }
 
 export type JMdictEntitiesRow = NameValuePair;
