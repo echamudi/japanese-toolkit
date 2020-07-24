@@ -101,3 +101,24 @@ export interface WanikaniAudioRow {
   kanji: string,
   reading: string
 }
+
+export interface KanjiAliveRow {
+  kanji: string,
+  kname: string,
+  kstroke: number,
+  kmeaning: string,
+  kgrade: number,
+  kunyomi_ja: string | null,
+  kunyomi: string | null,
+  onyomi_ja: string | null,
+  onyomi: string | null,
+  examples: string,
+  radical: string | null,
+  rad_order: number,
+  rad_stroke: number,
+  rad_name_ja: string,
+  rad_name: string,
+  rad_meaning: string,
+  rad_position_ja: string | null,
+  rad_position: string | null
+}
