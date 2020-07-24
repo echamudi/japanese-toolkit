@@ -35,6 +35,7 @@ program
                     jmdict: path.join(args.source, 'JMdict_e'),
                     jmnedict: path.join(args.source, 'JMnedict.xml'),
                     kanjidic: path.join(args.source, 'kanjidic2.xml'),
+                    kanjialive: path.join(args.source, 'ka_data.csv'),
                 },
                 // destination file
                 `${args.destination}/japanese.db`,
