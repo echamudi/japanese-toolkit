@@ -19,6 +19,7 @@ This package is part of <a href="https://github.com/echamudi/japanese-toolkit/">
     - Download `JMdict_e.gz` from http://www.edrdg.org/jmdict/edict_doc.html.
     - Download `JMnedict.xml.gz` from https://www.edrdg.org/enamdict/enamdict_doc.html.
     - Download `kanjidic2.xml.gz` from http://www.edrdg.org/wiki/index.php/KANJIDIC_Project.
+    - Download `ka_data.csv` from https://github.com/echamudi/kanji-data-media/raw/master/language-data/ka_data.csv
 
 1. Extract all the files and create folder structure as follow:
     ```
@@ -26,7 +27,8 @@ This package is part of <a href="https://github.com/echamudi/japanese-toolkit/">
     ├── sourceFolder/
     │   ├── JMdict_e
     │   ├── JMnedict.xml
-    │   └── kanjidic2.xml
+    │   ├── kanjidic2.xml
+    │   └── ka_data.csv
     └── destinationFolder/
         └── (empty)
     ```
