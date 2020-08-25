@@ -1,4 +1,4 @@
-# Planned folder structure for each package
+# Folder Structure for Each Package
 
 | dir | description | ignore/include |
 | - | - | - |
