@@ -3,12 +3,15 @@
         "allowJs": true,
         "checkJs": true,
         "target": "es6",
+        "module": "CommonJS",
         "rootDir": "./src",
         "outDir": "./dist/commonjs",
         "declaration": true,
         "noImplicitAny": false,
         "moduleResolution": "node",
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": [
         "./src/**/*.js",
