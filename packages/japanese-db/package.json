@@ -1,6 +1,6 @@
 {
   "name": "japanese-db",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "description": "Generate Japanese dictionary SQLite database from open source materials",
   "main": "./dist/commonjs/index.js",
   "scripts": {
