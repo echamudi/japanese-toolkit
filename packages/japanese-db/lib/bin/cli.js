@@ -12,7 +12,7 @@ const program = require('commander');
 const console = require('console');
 const {
     JapaneseDBTool,
-} = require('../index');
+} = require('../../dist/commonjs/index');
 
 program
     .command('sqlite')

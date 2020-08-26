@@ -9,3 +9,7 @@ module.exports.JMdictUtil = require('./JMdictUtil');
 module.exports.JMnedictUtil = require('./JMnedictUtil');
 module.exports.KanjidicUtil = require('./KanjidicUtil');
 module.exports.JapaneseDBTool = require('./JapaneseDBTool');
+
+/** @typedef {import("./types/jmdict")} JMdict */
+/** @typedef {import("./types/jmnedict")} JMnedict */
+/** @typedef {import("./types/japanesedb")} JapaneseDB */

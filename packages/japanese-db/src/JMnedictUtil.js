@@ -6,8 +6,8 @@
  */
 
 /**
- * @typedef {import("..").JMnedict.JMnedict} JMnedict.JMnedict
- * @typedef {import("..").JMnedict.entry} JMnedict.entry
+ * @typedef {import("./types/jmnedict").JMnedict} JMnedict.JMnedict
+ * @typedef {import("./types/jmnedict").entry} JMnedict.entry
  */
 
 /** */

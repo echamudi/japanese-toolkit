@@ -2,12 +2,12 @@
   "name": "japanese-db",
   "version": "0.16.0",
   "description": "Generate Japanese dictionary SQLite database from open source materials",
-  "main": "./lib/index.js",
+  "main": "./dist/commonjs/index.js",
   "scripts": {
     "clean": "npx rimraf ./dist ./src/gen ./lib/gen ./temp ./test/temp",
     "test:build-db": "npx rimraf ./test/temp && npx . sqlite -s ./test/fixtures -d ./test/temp",
-    "build": "npm run clean && node scripts/build-source.js",
-    "watch": "",
+    "build": "npm run clean && node scripts/build-source.js && npx tsc",
+    "watch": "npx tsc --watch",
     "test": "npm run test:build-db && npx jest ./test/test.js"
   },
   "repository": {

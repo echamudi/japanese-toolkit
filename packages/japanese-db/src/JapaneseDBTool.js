@@ -12,6 +12,7 @@
 
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
+const path = require('path');
 // const console = require('console');
 const kanji = require('kanji');
 const readline = require('readline');
@@ -21,7 +22,8 @@ const JMdictUtil = require('./JMdictUtil');
 const JMnedictUtil = require('./JMnedictUtil');
 const KanjidicUtil = require('./KanjidicUtil');
 
-const wkAudio = require('../dist/data/wk-audio-index.json');
+/** @type {{k: string, r: string}[]} */
+const wkAudio = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/wk-audio-index.json')).toString());
 
 /**
  * @class

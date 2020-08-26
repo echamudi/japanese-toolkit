@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "target": "es6",
+        "rootDir": "./src",
+        "outDir": "./dist/commonjs",
+        "declaration": true,
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "./src/**/*.js",
+        "./src/**/*.ts"
+    ]
+}
