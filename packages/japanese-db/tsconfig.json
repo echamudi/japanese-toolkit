@@ -8,10 +8,7 @@
         "outDir": "./dist/commonjs",
         "declaration": true,
         "noImplicitAny": false,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
+        "moduleResolution": "node"
     },
     "include": [
         "./src/**/*.js",

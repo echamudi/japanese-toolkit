@@ -140,4 +140,4 @@ class JMdictUtil {
         return priNum;
     }
 }
-module.exports = JMdictUtil;
+module.exports.JMdictUtil = JMdictUtil;

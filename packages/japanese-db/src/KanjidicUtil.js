@@ -51,4 +51,4 @@ class KanjidicUtil {
         return kanjidicObj.kanjidic2[0].character;
     }
 }
-module.exports = KanjidicUtil;
+module.exports.KanjidicUtil = KanjidicUtil;

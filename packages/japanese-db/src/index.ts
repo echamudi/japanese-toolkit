@@ -5,10 +5,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import JMdictUtil from './JMdictUtil';
-import JMnedictUtil from './JMnedictUtil';
-import KanjidicUtil from './KanjidicUtil';
-import JapaneseDBTool from './JapaneseDBTool';
+import { JMdictUtil } from './JMdictUtil';
+import { JMnedictUtil } from './JMnedictUtil';
+import { KanjidicUtil } from './KanjidicUtil';
+import { JapaneseDBTool } from './JapaneseDBTool';
 
 import * as JMdict from './types/jmdict';
 import * as JMnedict from './types/jmnedict';

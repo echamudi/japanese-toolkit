@@ -89,4 +89,4 @@ class JMnedictUtil {
         return jmnedictObj.JMnedict[0].entry;
     }
 }
-module.exports = JMnedictUtil;
+module.exports.JMnedictUtil = JMnedictUtil;

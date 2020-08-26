@@ -18,9 +18,9 @@ const kanji = require('kanji');
 const readline = require('readline');
 const furigana = require('furigana');
 const papaparse = require('papaparse');
-const JMdictUtil = require('./JMdictUtil');
-const JMnedictUtil = require('./JMnedictUtil');
-const KanjidicUtil = require('./KanjidicUtil');
+const { JMdictUtil } = require('./JMdictUtil');
+const { JMnedictUtil } = require('./JMnedictUtil');
+const { KanjidicUtil } = require('./KanjidicUtil');
 
 /** @type {{k: string, r: string}[]} */
 const wkAudio = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/wk-audio-index.json')).toString());
@@ -815,4 +815,4 @@ class JapaneseDBTool {
         });
     }
 }
-module.exports = JapaneseDBTool;
+module.exports.JapaneseDBTool = JapaneseDBTool;
