@@ -1,5 +1,7 @@
 # Kanji
 
+<img src="https://github.com/echamudi/japanese-toolkit/workflows/Japanese%20Toolkit%20JS/badge.svg">
+
 With Kanji you can:
 
 - Get readings information of kanji characters.
@@ -16,6 +18,12 @@ This package is part of <a href="https://github.com/echamudi/japanese-toolkit/">
 </p>
 
 ---
+
+## Demo
+
+<a href="https://repl.it/@echamudi/demo-kanji">
+    <img width="250" height="40" src="https://raw.githubusercontent.com/echamudi/badges/master/try-now-replit-light%402x.png" alt="Try now in Repl.it">
+</a>
 
 ## Usage as Module
 
@@ -132,7 +140,7 @@ console.log(kanji.kanjiTree('国'));
 ### Notes
 
 Everytime you call the functions above, it reads the json file from the data or dist folder.
-If you call the same call frequently, please use memoization techniques to reduce file read.
+If you call the same function frequently, please use memoization techniques to reduce file read.
 
 ## Usage as CLI Tool
 
