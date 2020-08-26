@@ -8,7 +8,8 @@
 const fs = require('fs');
 const xml2json = require('xml2json');
 
-class KanjidicUtil {
+// eslint-disable-next-line import/prefer-default-export
+export class KanjidicUtil {
     /**
      * @param {string} path
      */
@@ -51,4 +52,3 @@ class KanjidicUtil {
         return kanjidicObj.kanjidic2[0].character;
     }
 }
-module.exports.KanjidicUtil = KanjidicUtil;

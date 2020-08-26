@@ -25,10 +25,8 @@ const { KanjidicUtil } = require('./KanjidicUtil');
 /** @type {{k: string, r: string}[]} */
 const wkAudio = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/wk-audio-index.json')).toString());
 
-/**
- * @class
- */
-class JapaneseDBTool {
+// eslint-disable-next-line import/prefer-default-export
+export class JapaneseDBTool {
     /**
      * @param {Object<string, string>} sources
      * @param {string} targetPath
@@ -815,4 +813,3 @@ class JapaneseDBTool {
         });
     }
 }
-module.exports.JapaneseDBTool = JapaneseDBTool;

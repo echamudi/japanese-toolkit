@@ -14,7 +14,8 @@
 const fs = require('fs');
 const xml2json = require('xml2json');
 
-class JMdictUtil {
+// eslint-disable-next-line import/prefer-default-export
+export class JMdictUtil {
     /**
      * @param {string} path
      */
@@ -140,4 +141,3 @@ class JMdictUtil {
         return priNum;
     }
 }
-module.exports.JMdictUtil = JMdictUtil;

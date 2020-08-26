@@ -15,7 +15,8 @@
 const fs = require('fs');
 const xml2json = require('xml2json');
 
-class JMnedictUtil {
+// eslint-disable-next-line import/prefer-default-export
+export class JMnedictUtil {
     /**
      * @param {string} path
      */
@@ -89,4 +90,3 @@ class JMnedictUtil {
         return jmnedictObj.JMnedict[0].entry;
     }
 }
-module.exports.JMnedictUtil = JMnedictUtil;
