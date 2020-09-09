@@ -1,6 +1,8 @@
 # Japanese DB
 
-Generate Japanese dictionary SQLite database from open source materials.
+Japanese DB is a utility for generating a Japanese dictionary SQLite database from open-source materials. Some resources (e.g., JMdict, JMnedict) are constantly updated. Therefore, this utility is suitable to automate the process of creating your Japanese database, and keep it up to date.
+
+This repo also contains the [typescript type definitions](https://github.com/echamudi/japanese-toolkit/blob/master/packages/japanese-db/src/types/japanesedb.ts) for each row in the database. The types which can be imported in your typescript code or javascript through JSDoc.  
 
 ---
 
