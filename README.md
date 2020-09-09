@@ -14,10 +14,10 @@ Monorepo for Kanji, Furigana, Japanese DB, and others.
 
 | Name | Description | NPM |
 | - | - | - |
-| Kyarakuta | Categorize and manipulate characters | [kyarakuta](https://www.npmjs.com/package/kyarakuta) <br> <a href="https://www.npmjs.com/package/kyarakuta"><img alt="npm" src="https://img.shields.io/npm/dm/kyarakuta"></a> |
-| Kanji | Get kanji readings, kanji composition trees, and groupings | [kanji](https://www.npmjs.com/package/kanji) <br> <a href="https://www.npmjs.com/package/kanji"><img alt="npm" src="https://img.shields.io/npm/dm/kanji"></a> |
-| Furigana | Fit kana text into Japanese writing | [furigana](https://www.npmjs.com/package/furigana) <br> <a href="https://www.npmjs.com/package/furigana"><img alt="npm" src="https://img.shields.io/npm/dm/furigana"></a> |
-| Japanese-DB | Generate Japanese dictionary SQLite database from open source materials | [japanese-db](https://www.npmjs.com/package/japanese-db) <br> <a href="https://www.npmjs.com/package/japanese-db"><img alt="npm" src="https://img.shields.io/npm/dm/japanese-db"></a> |
+| Kyarakuta | Categorize and manipulate characters. [Open readme](https://github.com/echamudi/japanese-toolkit/tree/master/packages/kyarakuta) | [kyarakuta](https://www.npmjs.com/package/kyarakuta) <br> <a href="https://www.npmjs.com/package/kyarakuta"><img alt="npm" src="https://img.shields.io/npm/dm/kyarakuta"></a> |
+| Kanji | Get kanji readings, kanji composition trees, and groupings. [Open readme](https://github.com/echamudi/japanese-toolkit/tree/master/packages/kanji) | [kanji](https://www.npmjs.com/package/kanji) <br> <a href="https://www.npmjs.com/package/kanji"><img alt="npm" src="https://img.shields.io/npm/dm/kanji"></a> |
+| Furigana | Fit kana text into Japanese writing. [Open readme](https://github.com/echamudi/japanese-toolkit/tree/master/packages/furigana) | [furigana](https://www.npmjs.com/package/furigana) <br> <a href="https://www.npmjs.com/package/furigana"><img alt="npm" src="https://img.shields.io/npm/dm/furigana"></a> |
+| Japanese-DB | Generate Japanese dictionary SQLite database from open source materials. [Open readme](https://github.com/echamudi/japanese-toolkit/tree/master/packages/japanese-db) | [japanese-db](https://www.npmjs.com/package/japanese-db) <br> <a href="https://www.npmjs.com/package/japanese-db"><img alt="npm" src="https://img.shields.io/npm/dm/japanese-db"></a> |
 | Goi | ⏳ *Work in Progress* <br> Japanese words data (writings, readings, meaning, etc) | [goi](https://www.npmjs.com/package/goi) |
 | Bunpou | ⏳ *Work in Progress* <br>  Japanese word conjugator | [bunpou](https://www.npmjs.com/package/bunpou) |
 
