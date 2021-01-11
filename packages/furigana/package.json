@@ -1,6 +1,6 @@
 {
   "name": "furigana",
-  "version": "0.19.2",
+  "version": "0.19.3",
   "description": "Fit kana text into Japanese writing",
   "main": "./dist/commonjs/index.js",
   "scripts": {
@@ -27,13 +27,13 @@
     "README.md"
   ],
   "dependencies": {
-    "kyarakuta": "^0.19.2"
+    "kyarakuta": "^0.19.3"
   },
   "devDependencies": {
     "@types/jest": "^26.0.4",
     "@types/node": "^14.0.14",
     "jest": "^26.1.0",
-    "kanji": "^0.19.1",
+    "kanji": "^0.19.3",
     "typescript": "^3.9.6"
   }
 }
