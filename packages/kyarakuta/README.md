@@ -13,6 +13,13 @@ This package is part of <a href="https://github.com/echamudi/japanese-toolkit/">
 
 ---
 
+## Demo
+
+<a href="https://repl.it/@echamudi/demo-kyarakuta" target="_blank">
+    <img width="250" height="40" src="https://raw.githubusercontent.com/echamudi/badges/master/try-now-replit-light%402x.png" alt="Try now in Repl.it">
+</a>
+
+
 ## Installation
 
 ```
